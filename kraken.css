@@ -10,7 +10,6 @@
 
 
 	COLORS
-	
 	Blue: #0088cc
 	Dark Blue: #005580
 	Dark Gray: #272727
@@ -19,13 +18,12 @@
 
 
 	FONT STACKS
-
-	Georgia, Times, serif
-	"Helvetica Neue", Arial, sans-serif
+    Serif: Georgia, Times, serif
+	Sans-Serif: "Helvetica Neue", Arial, sans-serif
+	Add your own here...
 
 
 	TYPOGRAPHIC SCALE
-
 	4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
     
 
@@ -59,7 +57,7 @@ time, mark, audio, video {
     margin: 0; 
     padding: 0; 
     border: 0; 
-    font-family: Georgia, Times, serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 100%; 
     font: inherit; 
     vertical-align: baseline; 
@@ -249,7 +247,7 @@ table {
 /*  TYPOGRAPHY */
 
 body { 
-    font-family: Georgia, Times, serif; 
+    font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 106.25%; 
     line-height: 1.470588235; 
     color: #272727; 
@@ -296,12 +294,12 @@ p {
 /*  Links */
 
 a { 
-    color: #3892d0; 
+    color: #0088cc;
     text-decoration: none;
 }
 
 a:hover { 
-    color: #266ea0; 
+    color: #005580; 
     text-decoration: underline; 
 }
 
@@ -322,7 +320,7 @@ a:hover img {
 
 ul, ol { 
     margin-bottom: 1.529411765em; 
-    margin-left: 1.529411765em;
+    margin-left: 2em;
 }
 
 ul ul, ul ol, ol ol, ol ul { 
@@ -470,6 +468,100 @@ pre code {
 
 
 
+/*  BUTTONS */
+
+.btn {
+    display: inline-block;
+    font-size: .882352941em;
+    padding: .4em .666666667em;
+    line-height: 1.333333333;
+    font-weight: normal;
+    color: #272727;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: .071428571em solid #b8b8b8;
+    border-radius: .235294118em;
+    -webkit-box-shadow: inset 0 .071428571em 0 rgba(255, 255, 255, 0.2), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 .071428571em 0 rgba(255, 255, 255, 0.2), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
+    margin-left: .3em;
+    margin-bottom: .3em;
+}
+
+.btn:hover, a .btn:hover {
+    color: #272727;
+    background: #e6e6e6;
+    text-decoration: none;
+}
+
+.btn-color, .btn-color:hover, a .btn-color:hover {
+color: white; }
+
+.btn-color {
+    background: #0088cc;
+    background-image: -webkit-linear-gradient(top, #0088cc, #005580);
+    background-image: -moz-linear-gradient(top, #0088cc, #005580);
+    background-image: -ms-linear-gradient(top, #0088cc, #005580);
+    background-image: -o-linear-gradient(top, #0088cc, #005580);
+    background-image: linear-gradient(top, #0088cc, #005580);
+    background-repeat: repeat-x;
+    border-color: #0088cc; 
+}
+
+.btn-color:hover, a .btn-color:hover {
+    background: #005580;
+    border-color: #005580; 
+}
+
+.btn:active {
+    -webkit-box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
+    outline: 0; 
+}
+
+.btn-large {
+    padding: .588235294em .882352941em;
+    font-size: 1em;
+    line-height: normal;
+    border-radius: .294117647em; 
+}
+
+.btn-block,
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box; 
+}
+
+.btn-block + .btn-block {
+    margin-top: .333333333em; 
+}
+
+button, .btn {
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-appearance: none; 
+}
+
+.btn:first-child {
+    margin-left: 0; 
+}
+
+
+
+
+
 /*  FORMS */
 
 form, fieldset { 
@@ -547,95 +639,98 @@ select:focus {
 
 
 
-/*  BUTTONS */
+/*  ICONS */
+/*  A placeholder for icon fonts.
+ *  Learn more at http://gomakethings.com/icon-fonts/ */
 
-.btn {
-    display: inline-block;
-    font-size: .882352941em;
-    padding: .4em .666666667em;
-    line-height: 1.333333333;
-    font-weight: normal;
-    color: #272727;
-    background-color: #f5f5f5;
-    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-    background-repeat: repeat-x;
-    border: .071428571em solid #b8b8b8;
-    border-radius: .235294118em;
-    -webkit-box-shadow: inset 0 .071428571em 0 rgba(255, 255, 255, 0.2), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
-            box-shadow: inset 0 .071428571em 0 rgba(255, 255, 255, 0.2), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
-    margin-left: .3em;
-    margin-bottom: .3em;
+/*  @font-face code.
+ *  Commented Out.
+@font-face { 
+    font-family: 'icomoon'; 
+    src: url('fonts/icomoon.eot'); 
+    src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), 
+         url('fonts/icomoon.woff') format('woff'), 
+         url('fonts/icomoon.ttf') format('truetype'), 
+         url('fonts/icomoon.svg#IcoMoon') format('svg'); 
+    font-weight: normal; 
+    font-style: normal; 
 }
 
-.btn:hover, a .btn:hover {
-    color: #272727;
-    background: #e6e6e6;
-    text-decoration: none;
+[class^="icon-"]:before, 
+[class*=" icon-"]:before { 
+    font-family: 'icomoon'; 
+    font-style: normal; 
+    speak: none; 
+    font-weight: normal; 
+    -webkit-font-smoothing: antialiased; 
+    font-smoothing: antialiased; 
+    text-rendering: optimizeLegibility; 
 }
+*/
 
-.btn-color, .btn-color:hover, a .btn-color:hover {
-color: white; }
 
-.btn-color {
-    background: #3892d0;
-    background-image: -webkit-linear-gradient(top, #3892d0, #266ea0);
-    background-image: -moz-linear-gradient(top, #3892d0, #266ea0);
-    background-image: -ms-linear-gradient(top, #3892d0, #266ea0);
-    background-image: -o-linear-gradient(top, #3892d0, #266ea0);
-    background-image: linear-gradient(top, #3892d0, #266ea0);
-    background-repeat: repeat-x;
-    border-color: #3892d0; 
-}
 
-.btn-color:hover, a .btn-color:hover {
-    background: #266ea0;
-    border-color: #266ea0; 
-}
 
-.btn:active {
-    -webkit-box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
-            box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
-    outline: 0; 
-}
 
-.btn-large {
-    padding: .588235294em .882352941em;
-    font-size: 1em;
-    line-height: normal;
-    border-radius: .294117647em; 
-}
+/*  IMAGES */
+/*  A placeholder for image styling.
+ *  Try Snapshot: Basic image styling.
+ *  ADD URL */
 
-.btn-block,
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
-    display: block;
-    width: 100%;
-    margin-left: 0;
-    padding-right: 0;
-    padding-left: 0;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box; 
-}
 
-.btn-block + .btn-block {
-    margin-top: .333333333em; 
-}
 
-button, .btn {
-    cursor: pointer;
-    vertical-align: middle;
-    -webkit-appearance: none; 
-}
 
-.btn:first-child {
-    margin-left: 0; 
-}
+
+/*  TABLES */
+/*  A placeholder for table styling.
+ *  Try Tables: Simple CSS tables.
+ *  ADD URL */
+
+
+
+
+
+/*  NAVIGATION */
+/*  A placeholder for navigation styling.
+ *  Try Astro: A collection of mobile-first navigation patterns.
+ *  http://cferdinandi.github.com/astro/ */
+
+
+
+
+
+/*  DROPDOWN MENUS */
+/*  A placeholder for dropdown menu styling.
+ *  Try Drop: Mobile-first dropdown menus. 
+ *  ADD URL */
+
+
+
+
+
+/*  COLLAPSE & EXPAND */
+/*  A placeholder for collapse-and-expand widget styling.
+ *  Try Houdini: A simple collapse-and-expand widget.
+ *  http://cferdinandi.github.com/houdini/ */
+
+
+
+
+
+/*  TABS */
+/*  A placeholder for taggle tab styling.
+ *  Try Tabby: Lightweight, mobile-first toggle tabs.
+ *  http://cferdinandi.github.com/tabby/ */
+
+
+
+
+
+/*  CAROUSELS */
+/*  A placeholder for image carousel styling.
+ *  Try FlexSlider by WooThemes.
+ *  https://github.com/cferdinandi/FlexSlider */
+
 
 
 
@@ -653,39 +748,6 @@ button, .btn {
 
 .text-left { 
     text-align: left; 
-}
-
-
-/*  Image Aligns for WordPress */
-
-.alignleft,
-.alignright, 
-.aligncenter,
-.alignnone { 
-    display: block; 
-    text-align: center; 
-    margin-left: auto; 
-    margin-right: auto;
-}
-
-.wp-caption-text { 
-    font-size: .882352941em; 
-    font-style: italic; 
-    color: #808080; 
-    padding-top: .470588235em; 
-    text-align: center; 
-}
-
-@media (min-width: 40em) {
-	.alignleft { 
-	    float: left; 
-	    margin-right: .882352941em; 
-	}
-
-	.alignright { 
-	    float: right; 
-	    margin-left: .882352941em; 
-	}
 }
 
 
@@ -718,6 +780,9 @@ button, .btn {
 .space-top { 
     padding-top: .82352941234/em; 
 }
+
+
+/*  Hides */
 
 .screen-reader { 
     position: absolute; 
