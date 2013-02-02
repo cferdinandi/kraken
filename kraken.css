@@ -104,8 +104,8 @@ img {
 a:focus,
 button:focus { 
     outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color; 
-    outline-offset: -2px; 
+    outline: .294117647em auto -webkit-focus-ring-color; 
+    outline-offset: -.142857143em; 
 }
 
 a:hover, a:active { 
@@ -252,7 +252,7 @@ table {
 
 body { 
     font-family: Georgia, Times, serif; 
-    font-size: 206.5%; 
+    font-size: 106.25%; 
     line-height: 1.470588235; 
     color: #272727; 
     background: #ffffff;
@@ -388,8 +388,8 @@ h4, .h4 {
 hr { 
     margin: 2em auto; 
     border: 0; 
-    border-top: 1px solid #e5e5e5; 
-    border-bottom: 1px solid #ffffff; 
+    border-top: .071428571em solid #e5e5e5; 
+    border-bottom: .071428571em solid #ffffff; 
 }
 
 strong { 
@@ -423,7 +423,7 @@ sub {
 }
 
 blockquote { 
-    border-left: 4px solid #e5e5e5; 
+    border-left: .235294118em solid #e5e5e5; 
     margin-bottom:1.529411765em; 
     padding-left: 1.529411765em;
     padding-right: 1.529411765em;
@@ -438,14 +438,14 @@ blockquote {
 code, pre { 
     font-family: Menlo, Monaco, "Courier New", monospace; 
     font-size: .764705882em;
-    border-radius: 3px;
+    border-radius: .176470588em;
 }
 
 code { 
     color: #d14;
     background-color: #f7f7f9;
     padding: .235294118em;
-    border: 1px solid #e1e1e8;
+    border: .085em solid #e1e1e8;
 }
 
 pre { 
@@ -454,8 +454,8 @@ pre {
     line-height: 1.538461538em;
     background-color: #f5f5f5;
     padding: .5em;
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
+    border: .085em solid #ccc; 
+    border-radius: .235294118em; 
     white-space: pre; 
     white-space: pre-wrap; 
     word-break: break-all; 
@@ -494,7 +494,7 @@ input, textarea, select {
     vertical-align: middle; 
     margin-bottom: 1.176470588em; 
     padding: .294117647em; 
-    border: 1px solid #b8b8b8; 
+    border: .071428571em solid #b8b8b8; 
     border-radius: .176470588em; 
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -523,8 +523,8 @@ input[type="radio"] {
 input:focus, 
 textarea:focus { 
     border-color: rgba(82, 168, 236, 0.8); 
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    -webkit-box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em rgba(82, 168, 236, 0.6);
+            box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em rgba(82, 168, 236, 0.6);
     outline: 0; 
     outline: thin dotted \9; 
 }
@@ -535,7 +535,7 @@ select:focus {
     -webkit-box-shadow: none;
             box-shadow: none;
     outline: thin dotted; 
-    outline: .294117647 auto -webkit-focus-ring-color; 
+    outline: .294117647em auto -webkit-focus-ring-color; 
     outline-offset: -.117647059em; 
 }
 
@@ -565,10 +565,10 @@ select:focus {
     background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
     background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
     background-repeat: repeat-x;
-    border: 1px solid #b8b8b8;
+    border: .071428571em solid #b8b8b8;
     border-radius: .235294118em;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: inset 0 .071428571em 0 rgba(255, 255, 255, 0.2), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 .071428571em 0 rgba(255, 255, 255, 0.2), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
     margin-left: .3em;
     margin-bottom: .3em;
 }
@@ -599,8 +599,8 @@ color: white; }
 }
 
 .btn:active {
-    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
     outline: 0; 
 }
 
