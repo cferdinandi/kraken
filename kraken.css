@@ -108,22 +108,6 @@ a:hover, a:active {
     outline: 0; 
 }
 
-blockquote, q {
-	quotes: none;
-}
-
-blockquote:before, blockquote:after, 
-q:before, q:after { 
-    content: ''; 
-    content: none; 
-}
-
-table { 
-    max-width: 100%; 
-    border-collapse: collapse; 
-    border-spacing: 0; 
-}
-
 
 
 
@@ -425,6 +409,16 @@ blockquote {
     padding-right: 1.529411765em;
 }
 
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, 
+q:before, q:after { 
+    content: ''; 
+    content: none; 
+}
+
 
 
 
@@ -675,7 +669,7 @@ select:focus {
 /*  IMAGES */
 /*  A placeholder for image styling.
  *  Try Snapshot: Basic image styling.
- *  ADD URL */
+ *  http://cferdinandi.github.com/snapshot/ */
 
 
 
@@ -683,17 +677,8 @@ select:focus {
 
 /*  TABLES */
 /*  A placeholder for table styling.
- *  Try Tables: Simple CSS tables.
- *  ADD URL */
-
-
-
-
-
-/*  NAVIGATION */
-/*  A placeholder for navigation styling.
- *  Try Astro: A collection of mobile-first navigation patterns.
- *  http://cferdinandi.github.com/astro/ */
+ *  Try Tables: Simple CSS table styling.
+ *  http://cferdinandi.github.com/tables/ */
 
 
 
@@ -701,8 +686,8 @@ select:focus {
 
 /*  DROPDOWN MENUS */
 /*  A placeholder for dropdown menu styling.
- *  Try Drop: Mobile-first dropdown menus. 
- *  ADD URL */
+ *  Try Drop: Simple, mobile-friendly dropdown menus. 
+ *  http://cferdinandi.github.com/drop/ */
 
 
 
@@ -726,11 +711,19 @@ select:focus {
 
 
 
+/*  NAVIGATION */
+/*  A placeholder for navigation styling.
+ *  Try Astro: A collection of mobile-first navigation patterns.
+ *  http://cferdinandi.github.com/astro/ */
+
+
+
+
+
 /*  CAROUSELS */
 /*  A placeholder for image carousel styling.
  *  Try FlexSlider by WooThemes.
  *  https://github.com/cferdinandi/FlexSlider */
-
 
 
 
@@ -778,7 +771,7 @@ select:focus {
 }
 
 .space-top { 
-    padding-top: .82352941234/em; 
+    padding-top: .82352941234em; 
 }
 
 
