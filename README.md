@@ -1,5 +1,5 @@
 # Kraken
-Kraken is a lightweight front-end boilerplate to help you start your responsive web projects.
+Kraken is a lightweight, mobile-first boilerplate for front-end web developers.
 
 It includes just the essentials:
 
@@ -10,13 +10,10 @@ It includes just the essentials:
 * Basic form styling
 
 ### Designed to Expand
-
-CSS frameworks often include a lot more stuff than you need, and a lot of boilerplates are missing a lot of stuff you want.
-
 Kraken was built to be lightweight but expandable. It includes links to a variety of tools that were designed to work together - icon-fonts, navigation menus, dropdowns, toggle tabs and more.
 
 ## How It Works
-Getting started with Kraken is really easy. [View the online tutorial](http://cferdinandi.github.com/origami/) or dig through the example.html file.
+Getting started with Kraken is really easy. [View the online tutorial](http://cferdinandi.github.com/kraken/), or dig through the example.html file.
 
 ## Changelog
 * 2/7/2013
