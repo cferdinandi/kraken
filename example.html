@@ -8,8 +8,8 @@
         <!-- stylesheets -->
         <link rel="stylesheet" href="kraken.css" type="text/css" />
 
-        <!-- HTML5 Shim for IE -->
-        <!--[if IE]>
+        <!-- HTML5 Shim for IE 6-8 -->
+        <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
@@ -17,160 +17,212 @@
     <body>
 	    <section class="container">
 
-	        <h1 class="text-center no-space-bottom">Kraken</h1>
-	        <p class="text-center"><span class="text-tall text-muted">A lightweight front-end boilerplate.</span></p>
+	        <h1>The Grid</h1>
 
-	        <hr>
+            <div class="row" style="text-align: center;">
+                <div class="grid-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-1</div></div>
+                <div class="grid-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-1</div></div>
+                <div class="grid-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-1</div></div>
+                <div class="grid-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-1</div></div>
+                <div class="grid-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-1</div></div>
+                <div class="grid-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-1</div></div>
+            </div>
 
-	        <h2 class="text-center">The Grid</h2>
+            <div class="row" style="text-align: center;">
+                <div class="grid-2"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-2</div></div>
+                <div class="grid-2"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-2</div></div>
+                <div class="grid-2"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-2</div></div>
+            </div>
 
-	        <div class="row text-center">
-	            <div class="grid-1">1</div>
-	            <div class="grid-1">1</div>
-	            <div class="grid-1">1</div>
-	            <div class="grid-1">1</div>
-	            <div class="grid-1">1</div>
-	            <div class="grid-1">1</div>
-	            <div class="grid-1">1</div>
-	        </div>
+            <div class="row" style="text-align: center;">
+                <div class="grid-third"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-third</div></div>
+                <div class="grid-third"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-third</div></div>
+                <div class="grid-third"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-third</div></div>
+            </div>
 
-	        <div class="row text-center">
-	            <div class="grid-2">2</div>
-	            <div class="grid-2">2</div>
-	            <div class="grid-2">2</div>
-	        </div>
+            <div class="row" style="text-align: center;">
+                <div class="grid-3"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-3</div></div>
+                <div class="grid-3"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-3</div></div>
+            </div>
 
-            <div class="row text-center">
-	            <div class="grid-third">Third</div>
-	            <div class="grid-third">Third</div>
-	            <div class="grid-third">Third</div>
-	        </div>
+            <div class="row" style="text-align: center;">
+                <div class="grid-half"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-half</div></div>
+                <div class="grid-half"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-half</div></div>
+            </div>
 
-	        <div class="row text-center">
-	            <div class="grid-3">3</div>
-	            <div class="grid-3">3</div>
-	        </div>
+            <div class="row" style="text-align: center;">
+                <div class="grid-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-1</div></div>
+                <div class="grid-4"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-4</div></div>
+                <div class="grid-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-1</div></div>
+            </div>
 
-	        <div class="row text-center">
-	            <div class="grid-half">Half</div>
-	            <div class="grid-half">Half</div>
-	        </div>
-
-	        
-
-            <p>Text</p>
-	        <p class="text-muted">text-muted</p>
-	        <p><span class="text-small">text-small</span></p>
-	        <p><span class="text-tall">text-tall</span></p>
-	        <p><a href="#">hyperlink</a></p>
-
-	        <hr>
-
-	        <strong>Ordered List</strong>
-	        <ol>
-	            <li>Item 1</li>
-	            <li>Item 2</li>
-	            <li>Item 3</li>
-	        </ol>
-
-	        <strong>Unordered List</strong>
-	        <ul>
-	            <li>Item 1</li>
-	            <li>Item 2</li>
-	            <li>Item 3</li>
-	        </ul>
-
-	        <strong>Unstyled List</strong>
-	        <ul class="unstyled">
-	            <li>Item 1</li>
-	            <li>Item 2</li>
-	            <li>Item 3</li>
-	        </ul>
-
-	        <hr>
-
-	        <h1>h1. Header 1</h1>
-	        <p>Sample text</p>
-	        <h2>h2. Header 2</h2>
-	        <p>Sample text</p>
-	        <h3>h3. Header 3</h3>
-	        <p>Sample text</p>
-	        <h4>h4. Header 4</h4>
-	        <p>Sample text</p>
-	        <h5>h5. Header 5</h5>
-	        <p>Sample text</p>
-	        <h6>h6. Header 6</h6>
-	        <p>Sample text</p>
-
-	        <hr>
-
-	        <p><strong>bold</strong> and <em>italics</em>.</p>
-	        <p>Superscript<sup>1</sup> and subscript<sub>abc</sub>.</p>
+            <div class="row" style="text-align: center;">
+                <div class="grid-6"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-6</div></div>
+            </div>
 
 
-	        <blockquote>
-	            Here's something really important that someone said. So important, in fact, that it was worth quoting here in all it's glory!
-	        </blockquote>
+	        <h2>Offsets</h2>
+
+            <div class="row" style="text-align: center;">
+                <div class="grid-4 offset-2"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-4 .offset-2</div></div>
+            </div>
+
+            <div class="row" style="text-align: center;">
+                <div class="grid-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-1</div></div>
+                <div class="grid-3 offset-1"><div style="background-color: #e5e5e5; padding: 4px 8px; margin-bottom: 1em;">.grid-3 .offset-1</div></div>
+            </div>
 
 
-	        <hr>
+	        <h2>Content Choreography</h2>
 
-	        <p>here's some code that's within a sentence. The <code>.js</code> file is very important.</p>
+            <div class="row">
+                <div class="grid-2 grid-flip"><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></div>
+                <div class="grid-4"><p>Here's some information. It's listed second in the HTML, but will appear first on bigger screens. On smaller screens, the picture of that awesome emu will appear first instead.</p></div>
+            </div>
 
-	        <pre>.js {
+
+            	<h2>Images</h2>
+
+            <div class="row" style="text-align: center;">
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+                <div class="grid-img"><p><img src="http://cferdinandi.github.com/origami/img/emu.jpg" title="Picture an emu"></p></div>
+            </div>
+
+
+            <hr>
+
+            <h1>Typography</h1>
+
+            <p>Default text.</p>
+            <p><span class="text-muted">Muted text.</span></p>
+            <p><span class="text-small">Small text.</span></p>
+            <p><span class="text-tall">Tall text.</span></p>
+            <p><a href="#">Hyperlinks.</a></p>
+            <p><strong>Bold</strong> and <em>italics</em>.</p>
+
+
+            <h2>Headings</h2>
+
+            <h1>h1. Heading 1</h1>
+            <h2>h2. Heading 2</h2>
+            <h3>h3. Heading 3</h3>
+            <h4>h4. Heading 4</h4>
+            <h5>h5. Heading 5</h5>
+            <h6>h6. Heading 6</h6>
+
+            
+            <h2>Quotes & Citations</h2>
+
+            <blockquote>Once someone said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.</blockquote>
+
+            <p>You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.</p>
+
+
+            <h2>Code</h2>
+
+            <p>Here's some code that's within a sentence. The <code>.js</code> file is very important.</p>
+
+            <p>Here's some preformatted text:</p>
+
+            <pre>.js {
     color: #272727;
     background: #ffffff;
-}
-	        </pre>
+}</pre>
 
-	        <hr>
+            <hr>
 
-	        <h2>Forms</h2>
 
-	        <form>
-	            <label>Label</label>
-	            <input type="text">
-	            <label>
-	                <input type="checkbox">
-	                Option 1
-	            </label>
-	            <label>
-	                <input type="checkbox">
-	                Option 2
-	            </label>
-	            <label>
-	                <input type="radio" name="radioset">
-	                Option 1
-	            </label>
-	            <label>
-	                <input type="radio" name="radioset">
-	                Option 2
-	            </label>
+            <h1>Buttons</h1>
+
+            <p>
+                <button class="btn">Button</button>
+                <button class="btn btn-color">Button Color</button>
+                <button class="btn btn-large">Button Large</button>
+            </p>
+
+            <p>
+                <button class="btn btn-color btn-block">Button Block</button>
+                <button class="btn btn-block">Button Block</button>
+            </p>
+
+            <hr>
+
+
+            <h1>Forms</h1>
+
+            <form>
+                <label>Label</label>
+                <input type="text">
+                <label>
+                    <input type="checkbox">
+                    Option 1
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Option 2
+                </label>
+                <label>
+                    <input type="radio" name="radioset">
+                    Option 1
+                </label>
+                <label>
+                    <input type="radio" name="radioset">
+                    Option 2
+                </label>
                 <select>
                     <option>Select 1</option>
                     <option>Select 2</option>
                     <option>Select 3</option>
                 </select>
                 <textarea></textarea>
-	        </form>
+            </form>
 
-	        <hr>
-
-	        <p><button class="btn">Button</button> <button class="btn btn-color">Button Color</button> <button class="btn btn-large">Button Large</button></p>
-
-	        <p><button class="btn btn-color btn-block">Button Block</button><button class="btn btn-block">Button Block</button></p>
-
-	        <hr>
-
-	        <h1 class="space-bottom">Here's an h1 element</h1>
-
-	        <p class="space-bottom"><span class="text-small text-muted">Here's a sub-element</span></p>
-
-	        <p>More text</p>
+            <hr>
 
 
+            <h1>Alignment, Spacing, & Visibility</h1>
+
+            <h2>Alignment</h2>
+
+            <p class="text-left">This paragraph doesn't really need a <code>.text-left</code> class. That's the default for text.</p>
+
+            <p class="text-center">This text is centered.</p>
+
+            <p class="text-right">This text is aligned to the right.</p>
 
 
+            <h2>Spacing</h2>
+
+            <h3 class="no-space">This is an h3 element with no margins or padding</h3>
+
+            <h3 class="no-space-bottom">This h3 element has no margin-bottom or padding-bottom</h3>
+
+            <h3 class="no-space-top">This h3 element has no margin-top or padding-top</h3>
+
+            <p class="space-bottom">This paragraph has an extra big margin-bottom</p>
+
+            <p class="space-bottom-small">This paragraph has an extra small margin-bottom</p>
+
+            <p>This is a normal paragraph for comparison</p>
+
+            <p class="space-top">This text has a little extra space at the top</p>
+
+
+            <h2>Visibility</h2>
+
+            <p>The text below this is still displayed in the HTML but hidden offscreen.</p>
+
+            <p class="screen-reader">This is only visible to screen-readers.</p>
 	    </section>
 
     </body>
