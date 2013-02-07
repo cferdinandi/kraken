@@ -352,7 +352,7 @@ ol {
 }
 
 
-/*  Headers 
+/*  Headings
  *  h1 through h6 styling
  *  Heading class lets you use one heading type for semantics
  *  but style it as another heading type. */
@@ -388,7 +388,7 @@ h4, .h4 {
 }
 
 @media (min-width: 40em) {
-    h1 {
+    h1, .h1 {
         font-size: 1.764705882em;
     }
 }
