@@ -129,7 +129,7 @@ a:hover, a:active {
 /*  Mobile-first. Single-column layout by default
  *  Container sets the maximum page width. Adjust as needed. */
 .container { 
-    max-width: 75.3em;
+    max-width: 80em;
     width: 88%;
     margin-left: auto; 
     margin-right: auto;
@@ -139,7 +139,7 @@ a:hover, a:active {
 /*  Still mostly single-column.
  *  Grid-third, grid-half, and grid-img 
  *  provide sub-gridding on smaller screens.  */
-@media (min-width: 28.25em) {
+@media (min-width: 30em) {
 
 	.row {
         margin-left: -1.515151515152%;
@@ -235,7 +235,7 @@ a:hover, a:active {
 
 /*  Additional gridding for grid-img on bigger screens.
  *  Adjust as needed. */
-@media (min-width: 56.53em) {
+@media (min-width: 60em) {
     .grid-img {
         width: 13.636363636364%;
     }
