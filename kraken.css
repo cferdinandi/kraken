@@ -33,14 +33,13 @@
 /*  Meyer's CSS Reset, Normalized.css, and custom code */
 
 /*  Mobile Screen Resizing */
-
 @-webkit-viewport { width: device-width; zoom: 1.0; }
    @-moz-viewport { width: device-width; zoom: 1.0; }
     @-ms-viewport { width: device-width; zoom: 1.0; }
      @-o-viewport { width: device-width; zoom: 1.0; }
         @viewport { width: device-width; zoom: 1.0; }
 
-
+/*  Remove browser defaults */
 html, body, div, span, applet, object, iframe, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
 a, abbr, acronym, address, big, cite, code, 
@@ -63,40 +62,51 @@ time, mark, audio, video {
     vertical-align: baseline; 
 }
 
+/*  Set display type for HTML5 semantic elements */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section { 
     display: block; 
 }
 
+/*  Force scrollbar display to prevent jumping on pages. 
+ *  Fix text resize bug on mobile devices. */
 html { 
     overflow-y: scroll; 
     -webkit-text-size-adjust: 100%; 
         -ms-text-size-adjust: 100%; 
 } 
 
+/*  Display audio, canvas, and video elements as inline block elements. */
 audio, canvas, video { 
     display: inline-block; 
     *display: inline; 
     *zoom: 1; 
 }
 
+/*  Prevent modern browsers from displaying audio without controls. */
 audio:not([controls]) { 
     display: none; 
 }
 
+/*  Prevent img and video elements from spilling 
+ *  outside of the page on smaller screens. */
 img, video { 
     max-width: 100%; 
     height: auto; 
 }
 
+/*  Prevent iframe, object, and embed elements from 
+ *  spilling outside of the page on smaller screens. */
 iframe, object, embed {
     max-width: 100%; 
 }
 
+/*  Prevents IE from making scaled images look like crap */
 img { 
     -ms-interpolation-mode: bicubic; 
 }
 
+/*  Address outline inconsistency between Chrome and other browsers. */
 a:focus,
 button:focus { 
     outline: thin dotted;
@@ -104,6 +114,7 @@ button:focus {
     outline-offset: -.142857143em; 
 }
 
+/*  Improve readability when focused and also mouse hovered in all browsers. */
 a:hover, a:active { 
     outline: 0; 
 }
@@ -113,6 +124,7 @@ a:hover, a:active {
 
 
 /*  THE GRID */
+/*  Structure and layout */
 
 /*  Mobile-first. Single-column layout by default
  *  Container sets the maximum page width. Adjust as needed. */
@@ -151,6 +163,10 @@ a:hover, a:active {
         width: 46.969696969697%;
     }
 
+    .grid-two-thirds {
+        width: 63.636363636364%;
+    }
+
     /*  Reverses order of grid for content choreography */
     .grid-flip {
         float: right;
@@ -177,7 +193,8 @@ a:hover, a:active {
         width: 46.969696969697%;
     }
 
-    .grid-4 { 
+    .grid-4,
+    .grid-two-thirds { 
         width: 63.636363636364%;
     }
 
@@ -229,6 +246,7 @@ a:hover, a:active {
 
 
 /*  TYPOGRAPHY */
+/*  Sets font styles for entire site. */
 
 body { 
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -249,7 +267,8 @@ p {
 }
 
 
-/*  Sizes */
+/*  Sizes 
+ *  For smaller and larger text */
 
 .text-small { 
     font-size: .882352941em; 
@@ -268,14 +287,16 @@ p {
 }
 
 
-/*  Colors */
+/*  Colors 
+ *  For alternate text colors */
 
 .text-muted { 
     color: #808080; 
 }
 
 
-/*  Links */
+/*  Links 
+ *  Hyperlink styling */
 
 a { 
     color: #0088cc;
@@ -292,6 +313,8 @@ a img {
     background: none; 
 } 
 
+/*  Prevents border/background on linked image hover.
+ *  Adds slight opacity. */
 a:hover img { 
     border: none; 
     background: none; 
@@ -300,7 +323,8 @@ a:hover img {
 }
 
 
-/*  Lists */
+/*  Lists 
+ *  Styling for lists */
 
 ul, ol { 
     margin-bottom: 1.529411765em; 
@@ -319,13 +343,19 @@ ol {
     list-style: decimal; 
 }
 
+/*  Removes list styling.
+ *  For semantic reasons, should only 
+ *  be used on unordered lists. */
 .unstyled { 
     margin-left: 0; 
     list-style: none; 
 }
 
 
-/*  Headers */
+/*  Headers 
+ *  h1 through h6 styling
+ *  Heading class lets you use one heading type for semantics
+ *  but style it as another heading type. */
 
 h1, h2, h3, h4, h5, h6 { 
     line-height: 1.2; 
@@ -334,20 +364,21 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1em;
 }
 
-h1 { 
+h1, .h1 { 
     font-size: 1.529411765em; 
     padding-top: .5em;
 }
 
-h2 { 
+h2, .h2 { 
     font-size: 1.352941176em; 
 }
 
-h3 { 
+h3, .h3 { 
     font-size: 1.176470588em; 
 }
 
-h4, h5, h6 { 
+h4, h5, h6,
+.h4, .h5, .h6 { 
     font-size: .882352941em; 
     font-style: italic; 
 }
@@ -365,6 +396,7 @@ h4, .h4 {
 
 /*  Lines, Quotes and Emphasis */
 
+/*  Lines */
 hr { 
     margin: 2em auto; 
     border: 0; 
@@ -372,14 +404,17 @@ hr {
     border-bottom: .071428571em solid #ffffff; 
 }
 
+/*  Bold */
 strong { 
     font-weight: bold; 
 }
 
+/*  Italics */
 em { 
     font-style: italic; 
 }
 
+/*  Subscript & Superscript */
 sub, sup { 
     position: relative; 
     font-size: 85%; 
@@ -397,11 +432,13 @@ sub {
     bottom: -0.25em; 
 }
 
+/*  Highlighting colors */
 ::selection, ::-moz-selection { 
     color: #ffffff; 
     background: #3892d0; 
 }
 
+/*  Blockquotes */
 blockquote { 
     border-left: .235294118em solid #e5e5e5; 
     margin-bottom:1.529411765em; 
@@ -424,6 +461,7 @@ q:before, q:after {
 
 
 /*  CODE */
+/*  Styling for code and preformatted text */
 
 code, pre { 
     font-family: Menlo, Monaco, "Courier New", monospace; 
@@ -463,6 +501,7 @@ pre code {
 
 
 /*  BUTTONS */
+/*  Styling for CSS3 buttons */
 
 .btn {
     display: inline-block;
@@ -557,6 +596,7 @@ button, .btn {
 
 
 /*  FORMS */
+/*  Styling for form elements */
 
 form, fieldset { 
     margin-bottom: 1.529411765em;
@@ -637,7 +677,7 @@ select:focus {
 /*  A placeholder for icon fonts.
  *  Learn more at http://gomakethings.com/icon-fonts/ */
 
-/*  @font-face code.
+/*  @font-face code. Change font names and URLs as need.
  *  Commented Out.
 @font-face { 
     font-family: 'icomoon'; 
@@ -729,7 +769,9 @@ select:focus {
 
 
 
-/*  FLOATS & HIDES */
+/*  ALIGNMENT, SPACING & VISIBILITY */
+
+/*  Text alignment */
 
 .text-center { 
     text-align: center; 
@@ -775,7 +817,7 @@ select:focus {
 }
 
 
-/*  Hides */
+/*  Screen Reader Text */
 
 .screen-reader { 
     position: absolute; 
