@@ -863,6 +863,11 @@ select:focus {
         text-shadow: none !important;
     }
 
+    /*  Specifies page margin */
+    @page {
+        margin: 0.5cm;
+    }
+
     /*  Underline all links */
     a, a:visited {
         text-decoration: underline;
@@ -878,30 +883,6 @@ select:focus {
         content: "";
     }
 
-    /*  Display code and blockquotes with a border.
-     *  Avoid page breaks inside the content */
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*  Displayed as a table header row group */
-    thead {
-        display: table-header-group;
-    }
-
-    /*  Avoid inserting a page break inside table rows and images */
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    /*  Specifies page margin */
-    @page {
-        margin: 0.5cm;
-    }
-
     /*  Specifies the minimum number of lines to print at the top and bottom of a page. */
     p, h1, h2, h3 {
         orphans: 3;
@@ -911,6 +892,23 @@ select:focus {
     /*  Avoid inserting a page break after headers */
     h1, h2, h3 {
         page-break-after: avoid;
+    }
+
+    /*  Change border color on blockquotes and preformatted text.
+     *  Avoid page breaks inside the content */
+    pre, blockquote {
+        border-color: #999;
+        page-break-inside: avoid;
+    }
+
+    /*  Displayed as a table header row group */
+    thead {
+        display: table-header-group;
+    }
+
+    /*  Avoid inserting a page break inside table rows and images */
+    tr, img {
+        page-break-inside: avoid;
     }
     
 }
