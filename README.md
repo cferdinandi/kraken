@@ -16,6 +16,8 @@ Kraken was built to be lightweight but expandable. It includes links to a variet
 Getting started with Kraken is really easy. [View the online tutorial](http://cferdinandi.github.com/kraken/), or dig through the example.html file.
 
 ## Changelog
+* 2/15/2013
+  * Added print styling.
 * 2/7/2013
   * Initial release.
 
