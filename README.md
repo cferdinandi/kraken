@@ -13,7 +13,7 @@ It includes just the essentials:
 Kraken was built to be lightweight but expandable. It includes links to a variety of tools that were designed to work together - icon-fonts, navigation menus, dropdowns, toggle tabs and more.
 
 ## How It Works
-Getting started with Kraken is really easy. [View the online tutorial](http://cferdinandi.github.com/kraken/), or dig through the example.html file.
+Getting started with Kraken is really easy. [View the online tutorial](http://cferdinandi.github.com/kraken/), or dig through the `example.html` file.
 
 ## Changelog
 * 2/15/2013
