@@ -346,7 +346,7 @@ ol {
 /*  Removes list styling.
  *  For semantic reasons, should only 
  *  be used on unordered lists. */
-.unstyled { 
+.list-unstyled { 
     margin-left: 0; 
     list-style: none; 
 }
