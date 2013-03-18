@@ -547,7 +547,7 @@ a .btn-color:hover {
 }
 
 .btn-large {
-    padding: .588235294em .882352941em .48em;
+    padding: .588235294em .882352941em;
     font-size: 1em;
     line-height: normal;
     border-radius: .294117647em;
