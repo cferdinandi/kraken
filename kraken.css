@@ -531,8 +531,11 @@ pre code {
     text-decoration: none;
 }
 
-.btn-color, .btn-color:hover, a .btn-color:hover {
-color: white; }
+.btn-color, 
+.btn-color:hover, 
+a .btn-color:hover {
+    color: #ffffff; 
+}
 
 .btn-color {
     background: #0088cc;
@@ -545,7 +548,8 @@ color: white; }
     border-color: #0088cc; 
 }
 
-.btn-color:hover, a .btn-color:hover {
+.btn-color:hover, 
+a .btn-color:hover {
     background: #005580;
     border-color: #005580; 
 }
