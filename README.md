@@ -9,7 +9,7 @@ Kraken is a lightweight, mobile-first boilerplate for front-end web developers. 
 * Optional add-ons for more functionality.
 
 ## How It Works
-Getting started with Kraken is really easy. [View the online tutorial](http://cferdinandi.github.com/kraken/), or dig through the `example.html` file.
+Getting started with Kraken is really easy. [View the online tutorial](http://cferdinandi.github.com/kraken/).
 
 ## Get Involved
 Kraken is an open-source project. If you build an add-on, fix a bug, or figure out a better way to do something, let me know!
