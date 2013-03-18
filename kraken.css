@@ -9,22 +9,22 @@
     http://www.wtfpl.net/
 
 
-	COLORS
-	Blue: #0088cc
-	Dark Blue: #005580
-	Dark Gray: #272727
-	Meta Gray: #808080
-	Lite Gray: #e5e5e5
+    COLORS
+    Blue: #0088cc
+    Dark Blue: #005580
+    Dark Gray: #272727
+    Meta Gray: #808080
+    Lite Gray: #e5e5e5
 
 
-	FONT STACKS
+    FONT STACKS
     Serif: Georgia, Times, serif
-	Sans-Serif: "Helvetica Neue", Arial, sans-serif
-	Add your own here...
+    Sans-Serif: "Helvetica Neue", Arial, sans-serif
+    Add your own here...
 
 
-	TYPOGRAPHIC SCALE
-	4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
+    TYPOGRAPHIC SCALE
+    4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
     
 
 */
@@ -433,9 +433,14 @@ sub {
 }
 
 /*  Highlighting colors */
-::selection, ::-moz-selection { 
+::selection { 
     color: #ffffff; 
-    background: #3892d0; 
+    background: #0088cc; 
+}
+
+::-moz-selection { 
+    color: #ffffff; 
+    background: #0088cc; 
 }
 
 /*  Blockquotes */
