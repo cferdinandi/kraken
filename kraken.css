@@ -534,13 +534,13 @@ a .btn:hover {
     text-decoration: none;
 }
 
-.btn-color {
+.btn-blue {
     background-color: #0088cc;
     border-color: #0088cc;
 }
 
-.btn-color:hover, 
-a .btn-color:hover {
+.btn-blue:hover, 
+a .btn-blue:hover {
     background-color: #005580;
     border-color: #005580; 
 }
