@@ -775,7 +775,7 @@ select:focus {
 /*  CAROUSELS */
 /*  A placeholder for image carousel styling.
  *  Try FlexSlider by WooThemes.
- *  https://github.com/cferdinandi/FlexSlider */
+ *  https://github.com/cferdinandi/slider */
 
 
 
@@ -842,8 +842,8 @@ select:focus {
 
 .screen-reader { 
     position: absolute; 
-    top: -9999px; 
-    left:-9999px; 
+    top: -9999em; 
+    left:-9999em; 
 }
 
 
