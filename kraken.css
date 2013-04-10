@@ -657,6 +657,21 @@ select:focus {
     outline-offset: -.117647059em; 
 }
 
+
+/*  Inline Inputs */
+.input-inline {
+    display: inline;
+    width: auto;
+}
+
+
+/*  Condensed Inputs */
+.input-condensed {
+    line-height: 1;
+    padding: .117647059em;
+}
+
+
 @media (min-width: 40em) {
     input, textarea, select {
         line-height: 1.588235294;
