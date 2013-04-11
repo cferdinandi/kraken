@@ -831,6 +831,23 @@ select:focus {
 }
 
 
+/*  Floats */
+
+.float-left {
+    float: left;
+}
+
+.float-center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.float-right {
+    float: right;
+}
+
+
 /*  Spacing */
 
 .no-space { 
