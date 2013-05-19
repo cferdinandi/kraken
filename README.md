@@ -1,5 +1,5 @@
 # Kraken
-Kraken is a modular, mobile-first boilerplate for front-end web developers. It includes just the essentials:
+Kraken is a lightweight, mobile-first boilerplate for front-end web developers. It includes just the essentials:
 
 * A CSS reset to ensure cross-browser compatibility.
 * A responsive, mobile-first grid.
