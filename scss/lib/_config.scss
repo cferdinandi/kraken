@@ -28,10 +28,19 @@
 
 */
 
-// Config for SCSS
+// Config for Kraken
 // COLORS
 $blue: #0088cc;
 $dark-blue: #005580;
 $dark-gray: #272727;
 $meta-gray: #808080;
 $lite-gray: #e5e5e5;
+$muted: #808080;
+
+// Grid Settings
+$containerMaxWidth: 80em;
+$containerWidth: 88%;
+
+$rowMargin: -1.515151515152%;
+$gridWidth: 96.969696969697%;
+$gridMargin: 1.515151515152%;

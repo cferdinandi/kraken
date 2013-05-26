@@ -1,0 +1,255 @@
+/*  TYPOGRAPHY */
+/*  Sets font styles for entire site. */
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 106.25%;
+    line-height: 1.470588235;
+    color: $dark-grey;
+    background: $body-bg;
+}
+
+p {
+    margin-bottom: 1.529411765em;
+}
+
+@media (min-width: 40em) {
+    body {
+        line-height: 1.588235294;
+    }
+}
+
+
+/*  Sizes
+ *  For smaller and larger text */
+
+.text-small {
+    font-size: .882352941em;
+    line-height: 1.533333333;
+}
+
+.text-tall {
+    font-size: 1.166666667em;
+    line-height: 1.4;
+}
+
+@media (min-width: 40em) {
+    .text-tall {
+        font-size: 1.352941176em;
+    }
+}
+
+
+/*  Colors
+ *  For alternate text colors */
+
+.text-muted {
+    color: $muted;
+}
+
+
+/*  Links
+ *  Hyperlink styling */
+
+a {
+    color: $blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $dark-blue;
+    text-decoration: underline;
+}
+
+a img {
+    border: none;
+    background: none;
+}
+
+/*  Prevents border/background on linked image hover.
+ *  Adds slight opacity. */
+a:hover img {
+    border: none;
+    background: none;
+    opacity:0.8;
+    filter:alpha(opacity=80);
+}
+
+
+/*  Lists
+ *  Styling for lists */
+
+ul, ol {
+    margin-bottom: 1.529411765em;
+    margin-left: 2em;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+/*  Removes list styling.
+ *  For semantic reasons, should only
+ *  be used on unordered lists. */
+.list-unstyled {
+    margin-left: 0;
+    list-style: none;
+}
+
+
+/*  Headings
+ *  h1 through h6 styling
+ *  Heading class lets you use one heading type for semantics
+ *  but style it as another heading type. */
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: normal;
+    margin-bottom: 1em;
+    padding-top: 1em;
+}
+
+h1, .h1 {
+    font-size: 1.529411765em;
+    padding-top: .5em;
+}
+
+h2, .h2 {
+    font-size: 1.352941176em;
+}
+
+h3, .h3 {
+    font-size: 1.176470588em;
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+    font-size: .882352941em;
+    font-style: italic;
+}
+
+h4, .h4 {
+    text-transform: uppercase;
+}
+
+@media (min-width: 40em) {
+    h1, .h1 {
+        font-size: 1.764705882em;
+    }
+}
+
+
+/*  Lines, Quotes and Emphasis */
+
+/*  Lines */
+hr {
+    margin: 2em auto;
+    border: 0;
+    border-top: .071428571em solid $lite-gray;
+    border-bottom: .071428571em solid $white;
+}
+
+/*  Bold */
+strong {
+    font-weight: bold;
+}
+
+/*  Italics */
+em {
+    font-style: italic;
+}
+
+/*  Subscript & Superscript */
+sub, sup {
+    position: relative;
+    font-size: 85%;
+    font-weight: bold;
+    line-height: 0;
+    vertical-align: baseline;
+    margin-left: .3em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/*  Highlighting colors */
+::selection {
+    color: $white;
+    background: $blue;
+}
+
+::-moz-selection {
+    color: $white;
+    background: $blue;
+}
+
+/*  Blockquotes */
+blockquote {
+    border-left: .235294118em solid $lite-gray;
+    margin-bottom:1.529411765em;
+    padding-left: 1.529411765em;
+    padding-right: 1.529411765em;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+
+
+
+
+/*  CODE */
+/*  Styling for code and preformatted text */
+
+code, pre {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-size: .764705882em;
+    border-radius: .176470588em;
+}
+
+code {
+    color: #d14;
+    background-color: #f7f7f9;
+    padding: .235294118em;
+    border: .085em solid #e1e1e8;
+}
+
+pre {
+    display: block;
+    margin-bottom: 1.529411765em;
+    line-height: 1.538461538em;
+    background-color: #f5f5f5;
+    padding: .5em;
+    border: .085em solid #ccc;
+    border-radius: .235294118em;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+pre code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+}
