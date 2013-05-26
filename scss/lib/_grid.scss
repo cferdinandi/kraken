@@ -25,8 +25,8 @@
     [class*=" grid-"] {
         float: left;
         width: $gridWidth;
-        margin-left: 1.515151515152%;
-        margin-right: 1.515151515152%;
+        margin-left: $gridMargin;
+        margin-right: $gridMargin;
     }
 
     .grid-third {
