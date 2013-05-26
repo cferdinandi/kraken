@@ -2,17 +2,17 @@
 $break-small: 320px;
 $break-large: 1024px;
 
-@mixin  adjust-to($media) {
-    @if  $media == handhelds {
+@mixin adjust-to($media) {
+    @if $media == handhelds {
       @media  only screen and (max-width: $break-small) { @content; }
     }
-    @else  if $media == medium-screens {
+    @else if $media == medium-screens {
       @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
     }
-    @else  if $media == wide-screens {
+    @else if $media == wide-screens {
       @media only screen and (min-width: $break-large) { @content; }
     }
-    @else  if $media == retina-screens {
+    @else if $media == retina-screens {
       @media  only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) and (min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5) { @content; }
     }
 }
@@ -46,8 +46,63 @@ $break-large: 1024px;
 
 // grid mixins
 
-@mixin container(){
+@mixin container() {
     max-width: $containerMaxWidth;
     width: $containerWidth;
     margin: 0 $containerMargin;
+}
+
+@mixin row() {
+    margin: 0 $rowMargin;
+}
+
+@mixin grid($size) {
+    @if $size == 1 {
+      width: 13.636363636364%;
+    }
+    @else if $size == 2 {
+      width: 30.30303030303%;
+    }
+    @else if $size == third {
+      width: 30.30303030303%;
+    }
+    @else if $size == img {
+      width: 30.30303030303%;
+    }
+    @else if $size == 3 {
+      width: 46.969696969697%;
+    }
+    @else if $size == 4 {
+      width: 63.636363636364%;
+    }
+    @else if $size == two-thirds {
+      width: 63.636363636364%;
+    }
+    @else if $size == 5 {
+      width: 80.30303030303%;
+    }
+    @else if $size == 6 {
+      width: 96.969696969697%;
+    }
+    @else if $size == full {
+      width: 96.969696969697%;
+    }
+}
+
+@mixin offset($shift) {
+    @if $shift == 1 {
+        margin-left: 18.181818181818%;
+    }
+    @if $shift == 2 {
+        margin-left: 34.848484848485%;
+    }
+    @if $shift == 3 {
+        margin-left: 51.515151515152%;
+    }
+    @if $shift == 4 {
+        margin-left: 68.181818181818%;
+    }
+    @if $shift == 5 {
+        margin-left: 84.848484848485%;
+    }
 }
