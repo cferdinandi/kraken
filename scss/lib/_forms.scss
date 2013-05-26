@@ -1,0 +1,86 @@
+/*  FORMS */
+/*  Styling for form elements */
+
+form, fieldset {
+    margin-bottom: 1.529411765em;
+}
+
+legend, label {
+    display: block;
+    font-weight: normal;
+    padding: 0;
+    margin-bottom: .294117647em;
+}
+
+input, textarea, select {
+    display: block;
+    width: 100%;
+    font: inherit;
+    line-height: 1.470588235;
+    color: #555555;
+    vertical-align: middle;
+    margin-bottom: 1.176470588em;
+    padding: .294117647em;
+    border: .071428571em solid #b8b8b8;
+    border-radius: .176470588em;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+form button, form .btn {
+    margin-bottom: 1.176470588em;
+}
+
+textarea {
+    height: 12em;
+}
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-bottom: .294117647em;
+    cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    -webkit-box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em rgba(82, 168, 236, 0.6);
+            box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em rgba(82, 168, 236, 0.6);
+    outline: 0;
+    outline: thin dotted \9;
+}
+
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+    outline: thin dotted;
+    outline: .294117647em auto -webkit-focus-ring-color;
+    outline-offset: -.117647059em;
+}
+
+
+/*  Inline Inputs */
+.input-inline {
+    display: inline;
+    width: auto;
+}
+
+
+/*  Condensed Inputs */
+.input-condensed {
+    line-height: 1;
+    padding: .117647059em;
+}
+
+
+@media (min-width: 40em) {
+    input, textarea, select {
+        line-height: 1.588235294;
+    }
+}

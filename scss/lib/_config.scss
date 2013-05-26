@@ -36,11 +36,20 @@ $dark-gray: #272727;
 $meta-gray: #808080;
 $lite-gray: #e5e5e5;
 $muted: #808080;
+$white: #ffffff;
+
+// additional color settings:
+$body-bg: #ffffff;
+$btn-hover: #595959;
 
 // Grid Settings
 $containerMaxWidth: 80em;
 $containerWidth: 88%;
-
 $rowMargin: -1.515151515152%;
 $gridWidth: 96.969696969697%;
 $gridMargin: 1.515151515152%;
+
+// settings for mixins
+$base-font-size: 17px;
+$break-small: 320px;
+$break-large: 1024px;

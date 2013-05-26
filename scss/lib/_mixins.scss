@@ -72,6 +72,9 @@ $break-large: 1024px;
     @else if $size == 3 {
       width: 46.969696969697%;
     }
+    @else if $size == half {
+      width: 46.969696969697%;
+    }
     @else if $size == 4 {
       width: 63.636363636364%;
     }
@@ -105,4 +108,10 @@ $break-large: 1024px;
     @if $shift == 5 {
         margin-left: 84.848484848485%;
     }
+}
+
+// px to em function
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
 }
