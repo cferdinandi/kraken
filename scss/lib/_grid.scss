@@ -4,7 +4,7 @@
 /*  Mobile-first. Single-column layout by default
  *  Container sets the maximum page width. Adjust as needed. */
 .container {
-    max-width: 80em;
+    max-width: $containerMaxWidth;
     width: 88%;
     margin-left: auto;
     margin-right: auto;
