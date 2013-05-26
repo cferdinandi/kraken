@@ -5,7 +5,7 @@
  *  Container sets the maximum page width. Adjust as needed. */
 .container {
     max-width: $containerMaxWidth;
-    width: 88%;
+    width: $containerWidth;
     margin-left: auto;
     margin-right: auto;
 }
@@ -17,14 +17,14 @@
 @media (min-width: 30em) {
 
     .row {
-        margin-left: -1.515151515152%;
-        margin-right: -1.515151515152%;
+        margin-left: $rowMargin;
+        margin-right: $rowMargin;
     }
 
     [class^="grid-"],
     [class*=" grid-"] {
         float: left;
-        width:96.969696969697%;
+        width: $gridWidth;
         margin-left: 1.515151515152%;
         margin-right: 1.515151515152%;
     }
