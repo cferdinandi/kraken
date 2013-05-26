@@ -1,3 +1,51 @@
+// settings for adjust-to()
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin  adjust-to($media) {
+    @if  $media == handhelds {
+      @media  only screen and (max-width: $break-small) { @content; }
+    }
+    @else  if $media == medium-screens {
+      @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    }
+    @else  if $media == wide-screens {
+      @media only screen and (min-width: $break-large) { @content; }
+    }
+    @else  if $media == retina-screens {
+      @media  only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) and (min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 1.5) { @content; }
+    }
+}
+
+// example use for adjust-to()
+// .profile-pic {
+//     float: left;
+//     width: 250px;
+//     @include  adjust-to(handhelds) { width: 100% ;}
+//     @include  adjust-to(medium-screens) { width: 125px; }
+//     @include  adjust-to(wide-screens) { float: none; }
+//     @include  adjust-to(retina-screens) {background-image:url()}
+// }
+
+// or like this
+// @include adjust-to(handhelds) {
+//     .profile-pic {
+//         width: 100%;
+//     }
+//         .profile-header {
+//             font-size: 1.3em;
+//         }
+// }
+
+// Mixinfor individual Media Queries
+
+// $breakpoint in respond-to() can be px or ems
+@mixin respond-to($breakpoint) {
+    @media only screen and (max-width: $breakpoint + px) { @content; }
+}
+
+// grid mixins
+
 @mixin container(){
     max-width: $containerMaxWidth;
     width: $containerWidth;
