@@ -1,6 +1,9 @@
 // import config
 @import "lib/config";
 
+// import custom mixins
+@import "lib/mixins";
+
 // import main kraken library
 @import "lib/reset";
 @import "lib/grid";
@@ -11,9 +14,6 @@
 @import "lib/addons";
 @import "lib/spacing";
 @import "lib/print";
-
-// import custom mixins
-@import "lib/mixins";
 
 // import _shame
 @import "lib/shame";
