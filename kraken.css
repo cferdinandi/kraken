@@ -1,6 +1,6 @@
 /*
 
-    KRAKEN.CSS
+    Kraken v2.1
     A lightweight front-end boilerplate by Chris Ferdinandi.
     http://gomakethings.com
 
@@ -10,20 +10,22 @@
 
 
     COLORS
-    Blue: #0088cc
-    Dark Blue: #005580
-    Dark Gray: #272727
-    Meta Gray: #808080
-    Lite Gray: #e5e5e5
+    Primary (Blue): #0088cc
+    Secondary (Dark Blue): #005580
+    Black: #272727
+    White: #ffffff
+    Gray: #808080
+    Light Gray: #e5e5e5
 
 
     FONT STACKS
-    Serif: Georgia, Times, serif
-    Sans-Serif: "Helvetica Neue", Arial, sans-serif
+    Sans-Serif (default): "Helvetica Neue", Arial, sans-serif
+    Serif (suggested): Georgia, Times, serif
     Add your own here...
 
 
-    TYPOGRAPHIC SCALE
+    TYPOGRAPHIC SCALE 
+    (For math purposes. Actual font sizes in ems.)
     4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
     
 
