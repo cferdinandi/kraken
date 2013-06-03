@@ -15,6 +15,8 @@ Getting started with Kraken is really easy. [View the online tutorial](http://cf
 Kraken is an open-source project. If you build an add-on, fix a bug, or figure out a better way to do something, let me know!
 
 ## Changelog
+* 6/2/2013
+  * Added version numbering.
 * 3/19/2013
   * Changed `.screen-reader` class to ems.
 * 3/18/2013
