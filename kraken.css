@@ -1,4 +1,4 @@
-/*
+/* =============================================================
 
     Kraken v2.1
     A lightweight front-end boilerplate by Chris Ferdinandi.
@@ -28,11 +28,13 @@
     (For math purposes. Actual font sizes in ems.)
     4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
     
+ * ============================================================= */
 
-*/
 
-/*  CSS RESET */
-/*  Meyer's CSS Reset, Normalized.css, and custom code */
+/* =============================================================
+    CSS RESET
+    Meyer's CSS Reset, Normalized.css, and custom code.
+ * ============================================================= */
 
 /*  Mobile Screen Resizing */
 @-webkit-viewport { width: device-width; zoom: 1.0; }
@@ -125,8 +127,10 @@ a:hover, a:active {
 
 
 
-/*  THE GRID */
-/*  Structure and layout */
+/* =============================================================
+    THE GRID
+    Structure and layout.
+ * ============================================================= */
 
 /*  Mobile-first. Single-column layout by default
  *  Container sets the maximum page width. Adjust as needed. */
@@ -247,8 +251,10 @@ a:hover, a:active {
 
 
 
-/*  TYPOGRAPHY */
-/*  Sets font styles for entire site. */
+/* =============================================================
+    TYPOGRAPHY
+    Sets font styles for entire site.
+ * ============================================================= */
 
 body { 
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -467,8 +473,10 @@ q:before, q:after {
 
 
 
-/*  CODE */
-/*  Styling for code and preformatted text */
+/* =============================================================
+    CODE
+    Styling for code and preformatted text.
+ * ============================================================= */
 
 code, pre { 
     font-family: Menlo, Monaco, "Courier New", monospace; 
@@ -507,8 +515,10 @@ pre code {
 
 
 
-/*  BUTTONS */
-/*  Styling for CSS3 buttons */
+/* =============================================================
+    BUTTONS
+    Styling for CSS buttons.
+ * ============================================================= */
 
 .btn {
     display: inline-block;
@@ -593,8 +603,10 @@ button, .btn {
 
 
 
-/*  FORMS */
-/*  Styling for form elements */
+/* =============================================================
+    FORMS
+    Styling for form elements.
+ * ============================================================= */
 
 form, fieldset { 
     margin-bottom: 1.529411765em;
@@ -684,9 +696,11 @@ select:focus {
 
 
 
-/*  ICONS */
-/*  A placeholder for icon fonts.
- *  Learn more at http://gomakethings.com/icon-fonts/ */
+/* =============================================================
+    ICONS
+    A placeholder for icon fonts.
+    Learn more at http://gomakethings.com/icon-fonts/
+ * ============================================================= */
 
 /*  @font-face code. Change font names and URLs as need.
  *  Commented Out.
@@ -717,16 +731,21 @@ select:focus {
 
 
 
-/*  ADD-ONS PLACEHOLDER */
-/*  A placeholder for add-on styling.
- *  Expand the functionality of Kraken.
- *  http://cferdinandi.github.io/kraken/addons.html */
+/* =============================================================
+    ADD-ONS PLACEHOLDER
+    A placeholder for add-on styling.
+    Expand the functionality of Kraken.
+    http://cferdinandi.github.io/kraken/addons.html
+ * ============================================================= */
 
 
 
 
 
-/*  ALIGNMENT, SPACING & VISIBILITY */
+/* =============================================================
+    ALIGNMENT, SPACING & VISIBILITY
+    Override default alignment, spacing and visibilty.
+ * ============================================================= */
 
 /*  Text alignment */
 
@@ -820,10 +839,11 @@ select:focus {
 
 
 
-/*  PRINT STYLES */
-/*  Styling for printed content. 
- *  Adapted from HTML5BP.
- *  http://html5boilerplate.com/ */
+/* =============================================================
+    PRINT STYLES
+    Styling for printed content. Adapted from HTML5BP.
+    http://html5boilerplate.com
+ * ============================================================= */
 
 @media print {
 
