@@ -1,0 +1,118 @@
+/*  THE GRID */
+/*  Structure and layout */
+
+/*  Mobile-first. Single-column layout by default
+ *  Container sets the maximum page width. Adjust as needed. */
+.container {
+    max-width: $containerMaxWidth;
+    width: $containerWidth;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*  Still mostly single-column.
+ *  Grid-third, grid-half, and grid-img
+ *  provide sub-gridding on smaller screens.  */
+@media (min-width: 30em) {
+
+    .row {
+        margin-left: $rowMargin;
+        margin-right: $rowMargin;
+    }
+
+    [class^="grid-"],
+    [class*=" grid-"] {
+        float: left;
+        width: $gridWidth;
+        margin-left: $gridMargin;
+        margin-right: $gridMargin;
+    }
+
+    .grid-third {
+        width: 30.30303030303%;
+    }
+
+    .grid-half,
+    .grid-img {
+        width: 46.969696969697%;
+    }
+
+    .grid-two-thirds {
+        width: 63.636363636364%;
+    }
+
+    /*  Reverses order of grid for content choreography */
+    .grid-flip {
+        float: right;
+    }
+
+}
+
+
+/*  6-column grid  */
+@media (min-width: 40em) {
+
+    .grid-1 {
+        width: 13.636363636364%;
+    }
+
+    .grid-2,
+    .grid-third,
+    .grid-img {
+        width: 30.30303030303%;
+    }
+
+    .grid-3,
+    .grid-half {
+        width: 46.969696969697%;
+    }
+
+    .grid-4,
+    .grid-two-thirds {
+        width: 63.636363636364%;
+    }
+
+    .grid-5 {
+        width: 80.30303030303%;
+    }
+
+    .grid-6,
+    .grid-full {
+        width: 96.969696969697%;
+    }
+
+
+    /*  Offets let you shift grid elements to the right
+     *  but stay aligned to the grid. */
+    .offset-1 {
+        margin-left: 18.181818181818%;
+    }
+
+    .offset-2 {
+        margin-left: 34.848484848485%;
+    }
+
+    .offset-3 {
+        margin-left: 51.515151515152%;
+    }
+
+    .offset-4 {
+        margin-left: 68.181818181818%;
+    }
+
+    .offset-5 {
+        margin-left: 84.848484848485%;
+    }
+
+}
+
+
+/*  Additional gridding for grid-img on bigger screens.
+ *  Adjust as needed. */
+@media (min-width: 60em) {
+    .grid-img {
+        width: 13.636363636364%;
+    }
+}
+

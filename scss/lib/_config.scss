@@ -1,0 +1,56 @@
+/*
+
+    KRAKEN.CSS
+    A lightweight front-end boilerplate by Chris Ferdinandi.
+    http://gomakethings.com
+
+
+    Licensed under WTFPL.
+    http://www.wtfpl.net/
+
+
+    COLORS
+    Blue: #0088cc
+    Dark Blue: #005580
+    Dark Gray: #272727
+    Meta Gray: #808080
+    Lite Gray: #e5e5e5
+
+
+    FONT STACKS
+    Serif: Georgia, Times, serif
+    Sans-Serif: "Helvetica Neue", Arial, sans-serif
+    Add your own here...
+
+
+    TYPOGRAPHIC SCALE
+    4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
+
+*/
+
+// Config for Kraken
+// COLORS
+$blue: #0088cc;
+$dark-blue: #005580;
+$dark-gray: #272727;
+$meta-gray: #808080;
+$lite-gray: #e5e5e5;
+$muted: #808080;
+$white: #ffffff;
+
+// additional color settings:
+$body-bg: #ffffff;
+$btn-hover: #595959;
+
+// Grid Settings
+$containerMaxWidth: 80em;
+$containerWidth: 88%;
+$containerMargin: auto;
+$rowMargin: -1.515151515152%;
+$gridWidth: 96.969696969697%;
+$gridMargin: 1.515151515152%;
+
+// settings for mixins
+$base-font-size: 17px;
+$break-small: 320px;
+$break-large: 1024px;
