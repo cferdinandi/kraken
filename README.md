@@ -15,18 +15,18 @@ Getting started with Kraken is really easy. [View the online tutorial](http://cf
 Kraken is an open-source project. [Learn how you can get involved.](http://cferdinandi.github.io/kraken/get-involved.html)
 
 ## Changelog
-* 6/2/2013
+* v2.1 (June 2, 2013)
   * Added version numbering.
-* 3/19/2013
+* v2.1 (March 19,2013)
   * Changed `.screen-reader` class to ems.
-* 3/18/2013
+* v2.0 (March 18, 2013)
   * Removed gradients on buttons.
   * Changed `.btn-color` to `.btn-blue`, breaking previous pattern.
-* 3/15/2013
+* v2.0 March 15, 2013)
   * Changed `.unstyled` to `.list-unstyled`, breaking previous pattern.
-* 3/14/2013
+* v1.1 March 14, 2013)
   * Added print styling.
-* 3/7/2013
+* v1.0 (Mary 7, 2013)
   * Initial release.
 
 ## License
