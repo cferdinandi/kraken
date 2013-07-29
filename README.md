@@ -15,6 +15,8 @@ Getting started with Kraken is really easy. [View the online tutorial](http://cf
 Kraken is an open-source project. [Learn how you can get involved.](http://cferdinandi.github.io/kraken/get-involved.html)
 
 ## Changelog
+* v2.2 (July 29, 2013)
+  * Removed iOS Rotation Zoom Bug Fix JS (bug fixed from iOS6 on).
 * v2.1 (June 7, 2013)
   * Switched to MIT license.
 * v2.1 (June 2, 2013)
