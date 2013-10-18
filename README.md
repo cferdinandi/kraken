@@ -15,6 +15,8 @@ Getting started with Kraken is really easy. [View the online tutorial](http://cf
 Kraken is an open-source project. [Learn how you can get involved.](http://cferdinandi.github.io/kraken/get-involved.html)
 
 ## Changelog
+* v2.4 (October 18, 2013)
+  * Fixed [`input-inline`](https://github.com/cferdinandi/kraken/issues/6).
 * v2.3 (August 24,2013)
   * Minor styling update for Code section
 * v2.2 (July 29, 2013)
