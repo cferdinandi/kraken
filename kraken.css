@@ -80,28 +80,40 @@ html {
 }
 
 /*  Display audio, canvas, and video elements as inline block elements. */
-audio, canvas, video {
+audio,
+canvas,
+video {
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
 }
 
 /*  Prevent modern browsers from displaying audio without controls. */
 audio:not([controls]) {
     display: none;
+    height: 0;
 }
 
 /*  Prevent img and video elements from spilling
  *  outside of the page on smaller screens. */
-img, video {
+img,
+video {
     max-width: 100%;
     height: auto;
 }
 
 /*  Prevent iframe, object, and embed elements from
  *  spilling outside of the page on smaller screens. */
-iframe, object, embed {
+iframe,
+object,
+embed {
     max-width: 100%;
+}
+
+/* Address [hidden] styling not present in IE 8/9.
+ * Hide the template element in IE, Safari, and Firefox < 22. */
+[hidden],
+template {
+    display: none;
+    visibility: hidden;
 }
 
 /*  Prevents IE from making scaled images look like crap */
@@ -118,7 +130,8 @@ button:focus {
 }
 
 /*  Improve readability when focused and also mouse hovered in all browsers. */
-a:hover, a:active {
+a:hover,
+a:active {
     outline: 0;
 }
 
@@ -826,7 +839,6 @@ select:focus {
 .row:before, .row:after {
     display: table;
     content: "";
-    *zoom: 1;
 }
 
 .group:after,
