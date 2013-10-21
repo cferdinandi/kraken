@@ -22,6 +22,7 @@ Kraken is an open-source project. [Learn how you can get involved.](http://cferd
   * [Removed IE7- hacks](https://github.com/cferdinandi/kraken/issues/7).
   * [Updated grid for better performance](https://github.com/cferdinandi/kraken/issues/9).
   * [Converted from spaces to tabs](https://github.com/cferdinandi/kraken/issues/11).
+  * [Fixed `vertical-align` and `display: block` conflict for forms](https://github.com/cferdinandi/kraken/issues/13).
 * v2.4 (October 18, 2013)
   * Fixed [`input-inline`](https://github.com/cferdinandi/kraken/issues/6).
 * v2.3 (August 24,2013)

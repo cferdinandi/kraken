@@ -396,16 +396,19 @@ h1, h2, h3, h4, h5, h6 {
 	padding-top: 1em;
 }
 
-h1, .h1 {
+h1,
+.h1 {
 	font-size: 1.529411765em;
 	padding-top: .5em;
 }
 
-h2, .h2 {
+h2,
+.h2 {
 	font-size: 1.352941176em;
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	font-size: 1.176470588em;
 }
 
@@ -415,12 +418,14 @@ h4, h5, h6,
 	font-style: italic;
 }
 
-h4, .h4 {
+h4,
+.h4 {
 	text-transform: uppercase;
 }
 
 @media (min-width: 40em) {
-	h1, .h1 {
+	h1,
+	.h1 {
 		font-size: 1.764705882em;
 	}
 }
@@ -657,7 +662,6 @@ select {
 	font: inherit;
 	line-height: 1.470588235;
 	color: #555555;
-	vertical-align: middle;
 	margin-bottom: 1.176470588em;
 	padding: .294117647em;
 	border: .071428571em solid #b8b8b8;
@@ -667,7 +671,8 @@ select {
 	        box-sizing: border-box;
 }
 
-form button, form .btn {
+form button,
+form .btn {
 	margin-bottom: 1.176470588em;
 }
 
@@ -708,6 +713,7 @@ select:focus {
 .input-inline {
 	display: inline-block;
 	width: auto;
+	vertical-align: middle;
 }
 
 
