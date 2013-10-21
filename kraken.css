@@ -164,8 +164,16 @@ a:active {
         margin-right: -1.515151515152%;
 	}
 
-    [class^="grid-"],
-    [class*=" grid-"] {
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6,
+    .grid-half,
+    .grid-third,
+    .grid-two-thirds,
+    .grid-img {
         float: left;
         width:96.969696969697%;
         margin-left: 1.515151515152%;
@@ -220,8 +228,7 @@ a:active {
         width: 80.30303030303%;
     }
 
-    .grid-6,
-    .grid-full {
+    .grid-6 {
         width: 96.969696969697%;
     }
 
