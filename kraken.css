@@ -495,7 +495,9 @@ pre {
     line-height: 1.538461538em;
     background-color: #f5f5f5;
     padding: .823529412em;
-    white-space: pre;
+    -moz-tab-size: 4;
+      -o-tab-size: 4;
+         tab-size: 4;
     white-space: pre-wrap;
     word-break: break-all;
 }
