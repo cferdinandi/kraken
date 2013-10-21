@@ -308,6 +308,7 @@ p {
 a {
     color: #0088cc;
     text-decoration: none;
+    word-wrap: break-word;
 }
 
 a:hover {
