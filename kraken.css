@@ -339,8 +339,8 @@ a img {
 a:hover img {
     border: none;
     background: none;
-    opacity:0.8;
-    filter:alpha(opacity=80);
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 
 
@@ -436,7 +436,8 @@ em {
 }
 
 /*  Subscript & Superscript */
-sub, sup {
+sub,
+sup {
     position: relative;
     font-size: 85%;
     font-weight: bold;
@@ -735,7 +736,6 @@ select:focus {
     speak: none;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
 */
