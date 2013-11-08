@@ -38,11 +38,11 @@ Kraken is an open-source project. [Learn how you can get involved.](http://cferd
 * v2.0 (March 18, 2013)
   * Removed gradients on buttons.
   * Changed `.btn-color` to `.btn-blue`, breaking previous pattern.
-* v2.0 March 15, 2013)
+* v2.0 (March 15, 2013)
   * Changed `.unstyled` to `.list-unstyled`, breaking previous pattern.
-* v1.1 March 14, 2013)
+* v1.1 (March 14, 2013)
   * Added print styling.
-* v1.0 (Mary 7, 2013)
+* v1.0 (May 7, 2013)
   * Initial release.
 
 ## License
