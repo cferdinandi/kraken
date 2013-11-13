@@ -15,6 +15,8 @@ Getting started with Kraken is really easy. [View the online tutorial](http://cf
 Kraken is an open-source project. [Learn how you can get involved.](http://cferdinandi.github.io/kraken/get-involved.html)
 
 ## Changelog
+* v2.6 (November 13, 2013)
+  * [Added definition list styling](https://github.com/cferdinandi/kraken/issues/14).
 * v2.5 (October 21, 2013)
   * [Added `tab-size` property to the `pre` element](https://github.com/cferdinandi/kraken/issues/12).
   * [Added `word-break` property to links](https://github.com/cferdinandi/kraken/issues/5) to fix convert overflow issues.

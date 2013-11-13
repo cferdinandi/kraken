@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Kraken v2.5
+	Kraken v2.6
 	A lightweight front-end boilerplate by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -38,9 +38,9 @@
 /*  Mobile Screen Resizing */
 @-webkit-viewport { width: device-width; zoom: 1.0; }
    @-moz-viewport { width: device-width; zoom: 1.0; }
-    @-ms-viewport { width: device-width; zoom: 1.0; }
-     @-o-viewport { width: device-width; zoom: 1.0; }
-        @viewport { width: device-width; zoom: 1.0; }
+	@-ms-viewport { width: device-width; zoom: 1.0; }
+	 @-o-viewport { width: device-width; zoom: 1.0; }
+		@viewport { width: device-width; zoom: 1.0; }
 
 /*  Remove browser defaults */
 html, body, div, span, applet, object, iframe,
@@ -76,7 +76,7 @@ footer, header, hgroup, menu, nav, section {
 html {
 	overflow-y: scroll;
 	-webkit-text-size-adjust: 100%;
-	    -ms-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
 }
 
 /*  Display audio, canvas, and video elements as inline block elements. */
@@ -355,7 +355,8 @@ a:hover img {
  *  Styling for lists */
 
 ul,
-ol {
+ol,
+dl {
 	margin-bottom: 1.529411765em;
 	margin-left: 2em;
 }
@@ -373,6 +374,14 @@ ul {
 
 ol {
 	list-style: decimal;
+}
+
+dl {
+	margin-left: 0;
+}
+
+dt {
+	font-weight: bold;
 }
 
 /*  Removes list styling.
@@ -531,7 +540,7 @@ pre {
 	padding: .823529412em;
 	-moz-tab-size: 4;
 	  -o-tab-size: 4;
-	     tab-size: 4;
+		 tab-size: 4;
 	white-space: pre-wrap;
 	word-break: break-all;
 }
@@ -592,7 +601,7 @@ a .btn-blue:hover {
 
 .btn:active {
 	-webkit-box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
-	        box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
+			box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
 	outline: 0;
 }
 
@@ -614,7 +623,7 @@ input[type="button"].btn-block {
 	padding-left: 0;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 .btn-block + .btn-block {
@@ -668,7 +677,7 @@ select {
 	border-radius: .176470588em;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 form button,
@@ -695,7 +704,7 @@ input:focus,
 textarea:focus {
 	border-color: rgba(82, 168, 236, 0.8);
 	-webkit-box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em rgba(82, 168, 236, 0.6);
-	        box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em rgba(82, 168, 236, 0.6);
+			box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em rgba(82, 168, 236, 0.6);
 	outline: 0;
 	outline: thin dotted \9;
 }
