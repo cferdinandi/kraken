@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Kraken v2.6
+	Kraken v3.0
 	A lightweight front-end boilerplate by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -24,8 +24,11 @@
 
 
 	# Typographic Scale
-	(For math purposes. Actual font sizes in ems.)
-	4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
+	line height: 1.5625 (alt 1.5)
+	px:  4,   5,     8,  9,     11,    12,  13,    15,   16, 19,     21,     24,  28,   32, 48, 64, 80, 96
+	em: .25, .3125, .5, .5625, .6875, .75, .8125, .9375, 1,  1.1875, 1.3125, 1.5, 1.75, 2,  3,  4,  5,  6
+
+	1px cheat: .0725em
 
  * ============================================================= */
 
@@ -125,8 +128,8 @@ img {
 a:focus,
 button:focus {
 	outline: thin dotted;
-	outline: .294117647em auto -webkit-focus-ring-color;
-	outline-offset: -.142857143em;
+	outline: .3125em auto -webkit-focus-ring-color;
+	outline-offset: -.15625em;
 }
 
 /*  Improve readability when focused and also mouse hovered in all browsers. */
@@ -277,19 +280,19 @@ a:active {
 
 body {
 	font-family: "Helvetica Neue", Arial, sans-serif;
-	font-size: 106.25%;
-	line-height: 1.470588235;
+	font-size: 100%;
+	line-height: 1.5;
 	color: #272727;
 	background: #ffffff;
 }
 
 p {
-	margin-bottom: 1.529411765em;
+	margin-bottom: 1.5625em;
 }
 
 @media (min-width: 40em) {
 	body {
-		line-height: 1.588235294;
+		line-height: 1.5625;
 	}
 }
 
@@ -298,18 +301,17 @@ p {
  *  For smaller and larger text */
 
 .text-small {
-	font-size: .882352941em;
-	line-height: 1.533333333;
+	font-size: .9375em;
 }
 
 .text-tall {
-	font-size: 1.166666667em;
+	font-size: 1.1875em;
 	line-height: 1.4;
 }
 
 @media (min-width: 40em) {
 	.text-tall {
-		font-size: 1.352941176em;
+		font-size: 1.3125em;
 	}
 }
 
@@ -357,7 +359,7 @@ a:hover img {
 ul,
 ol,
 dl {
-	margin-bottom: 1.529411765em;
+	margin-bottom: 1.5625em;
 	margin-left: 2em;
 }
 
@@ -407,23 +409,23 @@ h1, h2, h3, h4, h5, h6 {
 
 h1,
 .h1 {
-	font-size: 1.529411765em;
+	font-size: 1.5em;
 	padding-top: .5em;
 }
 
 h2,
 .h2 {
-	font-size: 1.352941176em;
+	font-size: 1.3125em;
 }
 
 h3,
 .h3 {
-	font-size: 1.176470588em;
+	font-size: 1.1875em;
 }
 
 h4, h5, h6,
 .h4, .h5, .h6 {
-	font-size: .882352941em;
+	font-size: .9375em;
 	font-style: italic;
 }
 
@@ -435,7 +437,7 @@ h4,
 @media (min-width: 40em) {
 	h1,
 	.h1 {
-		font-size: 1.764705882em;
+		font-size: 1.75em;
 	}
 }
 
@@ -446,8 +448,8 @@ h4,
 hr {
 	margin: 2em auto;
 	border: 0;
-	border-top: .071428571em solid #e5e5e5;
-	border-bottom: .071428571em solid #ffffff;
+	border-top: .0725em solid #e5e5e5;
+	border-bottom: .0725em solid #ffffff;
 }
 
 /*  Bold */
@@ -492,10 +494,10 @@ sub {
 
 /*  Blockquotes */
 blockquote {
-	border-left: .235294118em solid #e5e5e5;
-	margin-bottom:1.529411765em;
-	padding-left: 1.529411765em;
-	padding-right: 1.529411765em;
+	border-left: .25em solid #e5e5e5;
+	margin-bottom: 1.5625em;
+	padding-left: 1.5625em;
+	padding-right: 1.5625em;
 }
 
 blockquote, q {
@@ -522,22 +524,22 @@ q:after {
 code,
 pre {
 	font-family: Menlo, Monaco, "Courier New", monospace;
-	font-size: .823529412em;
-	border-radius: .071428571em;
+	font-size: .8125em;
+	border-radius: .0725em;
 }
 
 code {
 	color: #d14;
 	background-color: #f7f7f9;
-	padding: .235294118em;
+	padding: .25em;
 }
 
 pre {
 	display: block;
-	margin-bottom: 1.529411765em;
-	line-height: 1.538461538em;
+	margin-bottom: 1.5625em;
+	line-height: 1.5em;
 	background-color: #f5f5f5;
-	padding: .823529412em;
+	padding: .8125em;
 	-moz-tab-size: 4;
 	  -o-tab-size: 4;
 		 tab-size: 4;
@@ -564,25 +566,27 @@ pre code {
 
 .btn {
 	display: inline-block;
-	font-size: .882352941em;
-	padding: .4em .666666667em;
-	line-height: 1.333333333;
+	font-size: .9375em;
+	padding: .5em .6875em;
+	line-height: 1.2;
 	font-weight: normal;
 	background-color: #808080;
-	border: .071428571em solid #808080;
-	border-radius: .235294118em;
+	border: .0725em solid #808080;
+	border-radius: .25em;
 	margin-left: .3em;
 	margin-bottom: .3em;
 }
 
 .btn,
 .btn:hover,
-a .btn:hover {
+a .btn:hover,
+.btn.active {
 	color: #ffffff;
 }
 
 .btn:hover,
-a .btn:hover {
+a .btn:hover,
+.btn.active {
 	background-color: #595959;
 	border-color: #595959;
 	text-decoration: none;
@@ -594,22 +598,24 @@ a .btn:hover {
 }
 
 .btn-blue:hover,
-a .btn-blue:hover {
+a .btn-blue:hover,
+.btn-blue.active {
 	background-color: #005580;
 	border-color: #005580;
 }
 
-.btn:active {
-	-webkit-box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
-			box-shadow: inset 0 .142857143em .235294118em rgba(0, 0, 0, 0.15), 0 .071428571em .142857143em rgba(0, 0, 0, 0.05);
+.btn:active,
+.btn.active {
+	-webkit-box-shadow: inset 0 .15625em .25em rgba(0, 0, 0, 0.15), 0 .0725em .15625em rgba(0, 0, 0, 0.05);
+			box-shadow: inset 0 .156253em .25em rgba(0, 0, 0, 0.15), 0 .0725em .15625em rgba(0, 0, 0, 0.05);
 	outline: 0;
 }
 
 .btn-large {
-	padding: .588235294em .882352941em;
+	padding: .6875em .9375em;
 	font-size: 1em;
 	line-height: normal;
-	border-radius: .294117647em;
+	border-radius: .3125em;
 }
 
 .btn-block,
@@ -630,14 +636,16 @@ input[type="button"].btn-block {
 	margin-top: .333333333em;
 }
 
-button, .btn {
+button,
+.btn {
 	cursor: pointer;
 	text-align: center;
 	vertical-align: middle;
 	-webkit-appearance: none;
 }
 
-.btn:first-child, input.btn {
+.btn:first-child,
+input.btn {
 	margin-left: 0;
 }
 
@@ -652,7 +660,7 @@ button, .btn {
 
 form,
 fieldset {
-	margin-bottom: 1.529411765em;
+	margin-bottom: 1.5625em;
 }
 
 legend,
@@ -660,7 +668,7 @@ label {
 	display: block;
 	font-weight: normal;
 	padding: 0;
-	margin-bottom: .294117647em;
+	margin-bottom: .3125em;
 }
 
 input,
@@ -669,12 +677,12 @@ select {
 	display: block;
 	width: 100%;
 	font: inherit;
-	line-height: 1.470588235;
+	line-height: 1.5;
 	color: #555555;
-	margin-bottom: 1.176470588em;
-	padding: .294117647em;
-	border: .071428571em solid #b8b8b8;
-	border-radius: .176470588em;
+	margin-bottom: 1.1875em;
+	padding: .3125em;
+	border: .0725em solid #b8b8b8;
+	border-radius: .1875em;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 			box-sizing: border-box;
@@ -682,7 +690,7 @@ select {
 
 form button,
 form .btn {
-	margin-bottom: 1.176470588em;
+	margin-bottom: 1.1875em;
 }
 
 textarea {
@@ -696,15 +704,15 @@ input[type="radio"] {
 	width: auto;
 	height: auto;
 	padding: 0;
-	margin-bottom: .294117647em;
+	margin-bottom: .3125em;
 	cursor: pointer;
 }
 
 input:focus,
 textarea:focus {
 	border-color: rgba(82, 168, 236, 0.8);
-	-webkit-box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em rgba(82, 168, 236, 0.6);
-			box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em rgba(82, 168, 236, 0.6);
+	-webkit-box-shadow: inset 0 .0725em .0725em rgba(0, 0, 0, 0.075), 0 0 .5em rgba(82, 168, 236, 0.6);
+			box-shadow: inset 0 .0725em .0725em rgba(0, 0, 0, 0.075), 0 0 .5em rgba(82, 168, 236, 0.6);
 	outline: 0;
 	outline: thin dotted \9;
 }
@@ -713,7 +721,7 @@ input[type="file"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
 	outline: thin dotted;
-	outline: .294117647em auto -webkit-focus-ring-color;
+	outline: .3125em auto -webkit-focus-ring-color;
 	outline-offset: -.117647059em;
 }
 
@@ -729,13 +737,13 @@ select:focus {
 /*  Condensed Inputs */
 .input-condensed {
 	line-height: 1;
-	padding: .117647059em;
+	padding: .1875em;
 }
 
 
 @media (min-width: 40em) {
 	input, textarea, select {
-		line-height: 1.588235294;
+		line-height: 1.5625;
 	}
 }
 
@@ -847,12 +855,12 @@ select:focus {
 }
 
 .space-bottom-small {
-	margin-bottom: .470588235em;
+	margin-bottom: .5em;
 	padding-bottom: 0;
 }
 
 .space-top {
-	padding-top: .82352941234em;
+	padding-top: .8125em;
 }
 
 
