@@ -167,33 +167,17 @@ a:active {
 		margin-right: -1.515151515152%;
 	}
 
-	.grid-1,
-	.grid-2,
-	.grid-3,
-	.grid-4,
-	.grid-5,
-	.grid-6,
-	.grid-half,
+	.grid-fourth,
 	.grid-third,
+	.grid-half,
 	.grid-two-thirds,
+	.grid-three-fourths,
+	.grid-full,
 	.grid-img {
 		float: left;
 		width:96.969696969697%;
 		margin-left: 1.515151515152%;
 		margin-right: 1.515151515152%;
-	}
-
-	.grid-third {
-		width: 30.30303030303%;
-	}
-
-	.grid-half,
-	.grid-img {
-		width: 46.969696969697%;
-	}
-
-	.grid-two-thirds {
-		width: 63.636363636364%;
 	}
 
 	/*  Reverses order of grid for content choreography */
@@ -207,51 +191,52 @@ a:active {
 /*  6-column grid  */
 @media (min-width: 40em) {
 
-	.grid-1 {
-		width: 13.636363636364%;
+	.grid-fourth {
+		width: 21.96969696969%;
 	}
 
-	.grid-2,
 	.grid-third,
 	.grid-img {
 		width: 30.30303030303%;
 	}
 
-	.grid-3,
 	.grid-half {
 		width: 46.969696969697%;
 	}
 
-	.grid-4,
 	.grid-two-thirds {
 		width: 63.636363636364%;
 	}
 
-	.grid-5 {
-		width: 80.30303030303%;
+	.grid-three-fourths {
+		width: 71.969696969697%;
 	}
 
-	.grid-6 {
+	.grid-full {
 		width: 96.969696969697%;
 	}
 
 
 	/*  Offets let you shift grid elements to the right
 	 *  but stay aligned to the grid. */
-	.offset-1 {
-		margin-left: 18.181818181818%;
+	.offset-fourth {
+		margin-left: 26.484848484848%;
 	}
 
-	.offset-2 {
+	.offset-third {
 		margin-left: 34.848484848485%;
 	}
 
-	.offset-3 {
+	.offset-half {
 		margin-left: 51.515151515152%;
 	}
 
-	.offset-4 {
+	.offset-two-thirds {
 		margin-left: 68.181818181818%;
+	}
+
+	.offset-three-fourths {
+		margin-left: 76.484848484848%;
 	}
 
 	.offset-5 {
