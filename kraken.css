@@ -158,9 +158,9 @@ a:active {
 
 
 /*  Still mostly single-column.
- *  Grid-third, grid-half, and grid-img
- *  provide sub-gridding on smaller screens.  */
-@media (min-width: 30em) {
+ *  Option to activate grid on small screens.
+ *  Two-column layout for .grid-img. */
+@media (min-width: 1em) {
 
 	.row {
 		margin-left: -1.515151515152%;
@@ -185,18 +185,79 @@ a:active {
 		float: right;
 	}
 
-}
-
-
-/*  6-column grid  */
-@media (min-width: 40em) {
-
-	.grid-fourth {
+	/*  Optionally show grid for small screens */
+	.row-start-small .grid-fourth {
 		width: 21.96969696969%;
 	}
 
-	.grid-third,
+	.row-start-small .grid-third {
+		width: 30.30303030303%;
+	}
+
+	.row-start-small .grid-half,
 	.grid-img {
+		width: 46.969696969697%;
+	}
+
+	.row-start-small .grid-two-thirds {
+		width: 63.636363636364%;
+	}
+
+	.row-start-small .grid-three-fourths {
+		width: 71.969696969697%;
+	}
+
+	.row-start-small .grid-full {
+		width: 96.969696969697%;
+	}
+
+}
+
+
+/*  Still mostly single-column.
+ *  Option to activate grid on medium screens.
+ *  Three-column layout for .grid-img. */
+@media (min-width: 30em) {
+
+	/*  Show grid for small screens */
+	.row-start-medium .grid-fourth {
+		width: 21.96969696969%;
+	}
+
+	.row-start-medium .grid-third,
+	.grid-img {
+		width: 30.30303030303%;
+	}
+
+	.row-start-medium .grid-half {
+		width: 46.969696969697%;
+	}
+
+	.row-start-medium .grid-two-thirds {
+		width: 63.636363636364%;
+	}
+
+	.row-start-medium .grid-three-fourths {
+		width: 71.969696969697%;
+	}
+
+	.row-start-medium .grid-full {
+		width: 96.969696969697%;
+	}
+
+}
+
+
+/*  Full 6-column grid.
+ *  Four-column layout for .grid-img. */
+@media (min-width: 40em) {
+
+	.grid-fourth,
+	.grid-img {
+		width: 21.96969696969%;
+	}
+
+	.grid-third {
 		width: 30.30303030303%;
 	}
 
@@ -243,15 +304,6 @@ a:active {
 		margin-left: 84.848484848485%;
 	}
 
-}
-
-
-/*  Additional gridding for grid-img on bigger screens.
- *  Adjust as needed. */
-@media (min-width: 60em) {
-	.grid-img {
-		width: 13.636363636364%;
-	}
 }
 
 
