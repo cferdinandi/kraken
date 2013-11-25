@@ -34,6 +34,38 @@
 
 
 /* =============================================================
+	VARIABLES
+	Sass variables used throughout the stylesheet.
+ * ============================================================= */
+
+// Colors
+$color-primary: #0088cc;
+$color-secondary: #808080;
+$color-black: #272727;
+$color-white: #ffffff;
+$color-gray: #808080;
+$color-gray-light: #e5e5e5;
+
+// Font Stacks
+$font-primary: "Helvetica Neue", Arial, sans-serif;
+$font-secondary: Georgia, Times, serif;
+$font-monospace: Menlo, Monaco, "Courier New", monospace;
+
+// Breakpoints
+$bp-xsmall: 20em;
+$bp-small: 30em;
+$bp-medium: 40em;
+$bp-large: 60em;
+$bp-xlarge: 80em;
+
+// Sizing
+$spacing: 1.5625em;
+$container-max: 80em;
+$font-base: 100%;
+
+@import "bourbon";
+
+/* =============================================================
 	CSS RESET
 	Meyer's CSS Reset, Normalized.css, and custom code.
  * ============================================================= */
@@ -62,7 +94,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-family: $font-primary;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -150,7 +182,7 @@ a:active {
 /*  Mobile-first. Single-column layout by default
  *  Container sets the maximum page width. Adjust as needed. */
 .container {
-	max-width: 80em;
+	max-width: $container-max;
 	width: 88%;
 	margin-left: auto;
 	margin-right: auto;
@@ -160,7 +192,7 @@ a:active {
 /*  Still mostly single-column.
  *  Option to activate grid on small screens.
  *  Two-column layout for .grid-img. */
-@media (min-width: 1em) {
+@media (min-width: $bp-xsmall) {
 
 	.row {
 		margin-left: -1.515151515152%;
@@ -186,16 +218,50 @@ a:active {
 	}
 
 	/*  Optionally show grid for small screens */
+	.row-start-xsmall .grid-fourth {
+		width: 21.96969696969%;
+	}
+
+	.row-start-xsmall .grid-third {
+		width: 30.30303030303%;
+	}
+
+	.row-start-xsmall .grid-half,
+	.grid-img {
+		width: 46.969696969697%;
+	}
+
+	.row-start-xsmall .grid-two-thirds {
+		width: 63.636363636364%;
+	}
+
+	.row-start-xsmall .grid-three-fourths {
+		width: 71.969696969697%;
+	}
+
+	.row-start-xsmall .grid-full {
+		width: 96.969696969697%;
+	}
+
+}
+
+
+/*  Still mostly single-column.
+ *  Option to activate grid on medium screens.
+ *  Three-column layout for .grid-img. */
+@media (min-width: $bp-small) {
+
+	/*  Show grid for small screens */
 	.row-start-small .grid-fourth {
 		width: 21.96969696969%;
 	}
 
-	.row-start-small .grid-third {
+	.row-start-small .grid-third,
+	.grid-img {
 		width: 30.30303030303%;
 	}
 
-	.row-start-small .grid-half,
-	.grid-img {
+	.row-start-small .grid-half {
 		width: 46.969696969697%;
 	}
 
@@ -214,43 +280,9 @@ a:active {
 }
 
 
-/*  Still mostly single-column.
- *  Option to activate grid on medium screens.
- *  Three-column layout for .grid-img. */
-@media (min-width: 30em) {
-
-	/*  Show grid for small screens */
-	.row-start-medium .grid-fourth {
-		width: 21.96969696969%;
-	}
-
-	.row-start-medium .grid-third,
-	.grid-img {
-		width: 30.30303030303%;
-	}
-
-	.row-start-medium .grid-half {
-		width: 46.969696969697%;
-	}
-
-	.row-start-medium .grid-two-thirds {
-		width: 63.636363636364%;
-	}
-
-	.row-start-medium .grid-three-fourths {
-		width: 71.969696969697%;
-	}
-
-	.row-start-medium .grid-full {
-		width: 96.969696969697%;
-	}
-
-}
-
-
 /*  Full 6-column grid.
  *  Four-column layout for .grid-img. */
-@media (min-width: 40em) {
+@media (min-width: $bp-medium) {
 
 	.grid-fourth,
 	.grid-img {
@@ -316,18 +348,18 @@ a:active {
  * ============================================================= */
 
 body {
-	font-family: "Helvetica Neue", Arial, sans-serif;
-	font-size: 100%;
+	font-family: $font-primary;
+	font-size: $font-base;
 	line-height: 1.5;
-	color: #272727;
-	background: #ffffff;
+	color: $color-black;
+	background: $color-white;
 }
 
 p {
-	margin-bottom: 1.5625em;
+	margin-bottom: $spacing;
 }
 
-@media (min-width: 40em) {
+@media (min-width: $bp-medium) {
 	body {
 		line-height: 1.5625;
 	}
@@ -346,7 +378,7 @@ p {
 	line-height: 1.4;
 }
 
-@media (min-width: 40em) {
+@media (min-width: $bp-medium) {
 	.text-tall {
 		font-size: 1.3125em;
 	}
@@ -357,7 +389,7 @@ p {
  *  For alternate text colors */
 
 .text-muted {
-	color: #808080;
+	color: $color-gray;
 }
 
 
@@ -365,13 +397,13 @@ p {
  *  Hyperlink styling */
 
 a {
-	color: #0088cc;
+	color: $color-primary;
 	text-decoration: none;
 	word-wrap: break-word;
 }
 
 a:hover {
-	color: #005580;
+	color: darken( $color-primary, 15% );
 	text-decoration: underline;
 }
 
@@ -396,7 +428,7 @@ a:hover img {
 ul,
 ol,
 dl {
-	margin-bottom: 1.5625em;
+	margin-bottom: $spacing;
 	margin-left: 2em;
 }
 
@@ -471,7 +503,7 @@ h4,
 	text-transform: uppercase;
 }
 
-@media (min-width: 40em) {
+@media (min-width: $bp-medium) {
 	h1,
 	.h1 {
 		font-size: 1.75em;
@@ -485,8 +517,8 @@ h4,
 hr {
 	margin: 2em auto;
 	border: 0;
-	border-top: .0725em solid #e5e5e5;
-	border-bottom: .0725em solid #ffffff;
+	border-top: .0725em solid $color-gray-light;
+	border-bottom: .0725em solid $color-white;
 }
 
 /*  Bold */
@@ -520,21 +552,21 @@ sub {
 
 /*  Highlighting colors */
 ::selection {
-	color: #ffffff;
-	background: #0088cc;
+	color: $color-white;
+	background: $color-primary;
 }
 
 ::-moz-selection {
-	color: #ffffff;
-	background: #0088cc;
+	color: $color-white;
+	background: $color-primary;
 }
 
 /*  Blockquotes */
 blockquote {
-	border-left: .25em solid #e5e5e5;
-	margin-bottom: 1.5625em;
-	padding-left: 1.5625em;
-	padding-right: 1.5625em;
+	border-left: .25em solid $color-gray-light;
+	margin-bottom: $spacing;
+	padding-left: $spacing;
+	padding-right: $spacing;
 }
 
 blockquote, q {
@@ -557,10 +589,10 @@ q:after {
 	CODE
 	Styling for code and preformatted text.
  * ============================================================= */
-
+ /* @todo Add variables for code elements */
 code,
 pre {
-	font-family: Menlo, Monaco, "Courier New", monospace;
+	font-family: $font-monospace;
 	font-size: .8125em;
 	border-radius: .0725em;
 }
@@ -573,7 +605,7 @@ code {
 
 pre {
 	display: block;
-	margin-bottom: 1.5625em;
+	margin-bottom: $spacing;
 	line-height: 1.5em;
 	background-color: #f5f5f5;
 	padding: .8125em;
@@ -601,98 +633,93 @@ pre code {
 	Styling for CSS buttons.
  * ============================================================= */
 
-.btn {
+.button {
 	display: inline-block;
 	font-size: .9375em;
 	padding: .5em .6875em;
 	line-height: 1.2;
 	font-weight: normal;
-	background-color: #808080;
-	border: .0725em solid #808080;
-	border-radius: .25em;
+	background-color: $color-primary;
+	border: .0725em solid $color-primary;
+	border-radius: .0725em;
 	margin-left: .3em;
 	margin-bottom: .3em;
 }
 
-.btn,
-.btn:hover,
-a .btn:hover,
-.btn.active {
-	color: #ffffff;
+.button,
+.button:hover,
+a .button:hover,
+.button.active {
+	color: $color-white;
 }
 
-.btn:hover,
-a .btn:hover,
-.btn.active {
-	background-color: #595959;
-	border-color: #595959;
+.button:hover,
+a .button:hover,
+.button.active {
+	background-color: darken( $color-primary, 15% );
+	border-color: darken( $color-primary, 15% );
 	text-decoration: none;
 }
 
-.btn-blue {
-	background-color: #0088cc;
-	border-color: #0088cc;
+.button-secondary {
+	background-color: $color-secondary;
+	border-color: $color-secondary;
 }
 
-.btn-blue:hover,
-a .btn-blue:hover,
-.btn-blue.active {
-	background-color: #005580;
-	border-color: #005580;
+.button-secondary:hover,
+a .button-secondary:hover,
+.button-secondary.active {
+	background-color: darken( $color-secondary, 15% );
+	border-color: darken( $color-secondary, 15% );
 }
 
-.btn:active,
-.btn.active {
-	-webkit-box-shadow: inset 0 .15625em .25em rgba(0, 0, 0, 0.15), 0 .0725em .15625em rgba(0, 0, 0, 0.05);
-			box-shadow: inset 0 .156253em .25em rgba(0, 0, 0, 0.15), 0 .0725em .15625em rgba(0, 0, 0, 0.05);
+.button:active,
+.button.active {
+	box-shadow: inset 0 .156253em .25em rgba(0, 0, 0, 0.15), 0 .0725em .15625em rgba(0, 0, 0, 0.05);
 	outline: 0;
 }
 
-.btn.disabled,
-.btn[disabled] {
+.button.disabled,
+.button[disabled] {
 	pointer-events: none;
 	cursor: not-allowed;
 	opacity: 0.5;
 	filter: alpha(opacity=50);
-	-webkit-box-shadow: none;
-	        box-shadow: none;
+    box-shadow: none;
 }
 
-.btn-large {
+.button-large {
 	padding: .6875em .9375em;
 	font-size: 1em;
 	line-height: normal;
-	border-radius: .3125em;
 }
 
-.btn-block,
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
+.button-block,
+input[type="submit"].button-block,
+input[type="reset"].button-block,
+input[type="button"].button-block {
 	display: block;
 	width: 100%;
 	margin-left: 0;
 	padding-right: 0;
 	padding-left: 0;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-			box-sizing: border-box;
+	@include box-sizing(border-box);
 }
 
-.btn-block + .btn-block {
+.button-block + .button-block {
 	margin-top: .333333333em;
 }
 
 button,
-.btn {
+.button {
 	cursor: pointer;
 	text-align: center;
 	vertical-align: middle;
 	-webkit-appearance: none;
 }
 
-.btn:first-child,
-input.btn {
+.button:first-child,
+input.button {
 	margin-left: 0;
 }
 
@@ -707,7 +734,7 @@ input.btn {
 
 form,
 fieldset {
-	margin-bottom: 1.5625em;
+	margin-bottom: $spacing;
 }
 
 legend,
@@ -718,6 +745,7 @@ label {
 	margin-bottom: .3125em;
 }
 
+/* @todo Adjust form colors based on Sass variables */
 input,
 textarea,
 select {
@@ -730,13 +758,11 @@ select {
 	padding: .3125em;
 	border: .0725em solid #b8b8b8;
 	border-radius: .1875em;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-			box-sizing: border-box;
+	@include box-sizing(border-box);
 }
 
 form button,
-form .btn {
+form .button {
 	margin-bottom: 1.1875em;
 }
 
@@ -758,8 +784,7 @@ input[type="radio"] {
 input:focus,
 textarea:focus {
 	border-color: rgba(82, 168, 236, 0.8);
-	-webkit-box-shadow: inset 0 .0725em .0725em rgba(0, 0, 0, 0.075), 0 0 .5em rgba(82, 168, 236, 0.6);
-			box-shadow: inset 0 .0725em .0725em rgba(0, 0, 0, 0.075), 0 0 .5em rgba(82, 168, 236, 0.6);
+	box-shadow: inset 0 .0725em .0725em rgba(0, 0, 0, 0.075), 0 0 .5em rgba(82, 168, 236, 0.6);
 	outline: 0;
 	outline: thin dotted \9;
 }
@@ -788,7 +813,7 @@ select:focus {
 }
 
 
-@media (min-width: 40em) {
+@media (min-width: $bp-medium) {
 	input, textarea, select {
 		line-height: 1.5625;
 	}
@@ -804,18 +829,8 @@ select:focus {
 	Learn more at http://gomakethings.com/icon-fonts/
  * ============================================================= */
 
-/*  @font-face code. Change font names and URLs as need.
- *  Commented Out.
-@font-face {
-	font-family: 'icomoon';
-	src: url('fonts/icomoon.eot');
-	src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		 url('fonts/icomoon.woff') format('woff'),
-		 url('fonts/icomoon.ttf') format('truetype'),
-		 url('fonts/icomoon.svg#IcoMoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+/*  Change font names and URLs as need. */
+@include font-face('iconmoon', '/fonts/icomoon', normal, normal);
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
@@ -826,7 +841,6 @@ select:focus {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
-*/
 
 
 

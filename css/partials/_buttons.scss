@@ -1,0 +1,94 @@
+/* =============================================================
+	BUTTONS
+	Styling for CSS buttons.
+ * ============================================================= */
+
+.button {
+	display: inline-block;
+	font-size: .9375em;
+	padding: .5em .6875em;
+	line-height: 1.2;
+	font-weight: normal;
+	background-color: $color-primary;
+	border: .0725em solid $color-primary;
+	border-radius: .0725em;
+	margin-left: .3em;
+	margin-bottom: .3em;
+}
+
+.button,
+.button:hover,
+a .button:hover,
+.button.active {
+	color: $color-white;
+}
+
+.button:hover,
+a .button:hover,
+.button.active {
+	background-color: darken( $color-primary, 15% );
+	border-color: darken( $color-primary, 15% );
+	text-decoration: none;
+}
+
+.button-secondary {
+	background-color: $color-secondary;
+	border-color: $color-secondary;
+}
+
+.button-secondary:hover,
+a .button-secondary:hover,
+.button-secondary.active {
+	background-color: darken( $color-secondary, 15% );
+	border-color: darken( $color-secondary, 15% );
+}
+
+.button:active,
+.button.active {
+	box-shadow: inset 0 .156253em .25em rgba(0, 0, 0, 0.15), 0 .0725em .15625em rgba(0, 0, 0, 0.05);
+	outline: 0;
+}
+
+.button.disabled,
+.button[disabled] {
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+    box-shadow: none;
+}
+
+.button-large {
+	padding: .6875em .9375em;
+	font-size: 1em;
+	line-height: normal;
+}
+
+.button-block,
+input[type="submit"].button-block,
+input[type="reset"].button-block,
+input[type="button"].button-block {
+	display: block;
+	width: 100%;
+	margin-left: 0;
+	padding-right: 0;
+	padding-left: 0;
+	@include box-sizing(border-box);
+}
+
+.button-block + .button-block {
+	margin-top: .333333333em;
+}
+
+button,
+.button {
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-appearance: none;
+}
+
+.button:first-child,
+input.button {
+	margin-left: 0;
+}

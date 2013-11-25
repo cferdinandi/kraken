@@ -1,0 +1,91 @@
+/* =============================================================
+	FORMS
+	Styling for form elements.
+ * ============================================================= */
+
+form,
+fieldset {
+	margin-bottom: $spacing;
+}
+
+legend,
+label {
+	display: block;
+	font-weight: normal;
+	padding: 0;
+	margin-bottom: .3125em;
+}
+
+/* @todo Adjust form colors based on Sass variables */
+input,
+textarea,
+select {
+	display: block;
+	width: 100%;
+	font: inherit;
+	line-height: 1.5;
+	color: #555555;
+	margin-bottom: 1.1875em;
+	padding: .3125em;
+	border: .0725em solid #b8b8b8;
+	border-radius: .1875em;
+	@include box-sizing(border-box);
+}
+
+form button,
+form .button {
+	margin-bottom: 1.1875em;
+}
+
+textarea {
+	height: 12em;
+}
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin-bottom: .3125em;
+	cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	box-shadow: inset 0 .0725em .0725em rgba(0, 0, 0, 0.075), 0 0 .5em rgba(82, 168, 236, 0.6);
+	outline: 0;
+	outline: thin dotted \9;
+}
+
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+	outline: thin dotted;
+	outline: .3125em auto -webkit-focus-ring-color;
+	outline-offset: -.117647059em;
+}
+
+
+/*  Inline Inputs */
+.input-inline {
+	display: inline-block;
+	width: auto;
+	vertical-align: middle;
+}
+
+
+/*  Condensed Inputs */
+.input-condensed {
+	line-height: 1;
+	padding: .1875em;
+}
+
+
+@media (min-width: $bp-medium) {
+	input, textarea, select {
+		line-height: 1.5625;
+	}
+}
