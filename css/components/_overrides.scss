@@ -53,16 +53,16 @@
 }
 
 .space-bottom {
-	margin-bottom: 2em;
+	margin-bottom: calc-em(32px);
 }
 
 .space-bottom-small {
-	margin-bottom: .5em;
+	margin-bottom: calc-em(8px);
 	padding-bottom: 0;
 }
 
 .space-top {
-	padding-top: .8125em;
+	padding-top: calc-em(13px);
 }
 
 
@@ -76,7 +76,7 @@
 
 
 /*  Clearfix */
-
+/* @todo figure out how to extend so these can go with their appropriate containers */
 .group:before,
 .group:after,
 .container:before,

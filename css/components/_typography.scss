@@ -26,17 +26,17 @@ p {
  *  For smaller and larger text */
 
 .text-small {
-	font-size: .9375em;
+	font-size: calc-em(15px);
 }
 
 .text-tall {
-	font-size: 1.1875em;
+	font-size: calc-em(19px);
 	line-height: 1.4;
 }
 
 @media (min-width: $bp-medium) {
 	.text-tall {
-		font-size: 1.3125em;
+		font-size: calc-em(21px);
 	}
 }
 
@@ -85,7 +85,7 @@ ul,
 ol,
 dl {
 	margin-bottom: $spacing;
-	margin-left: 2em;
+	margin-left: calc-em(32px);
 }
 
 ul ul,
@@ -134,23 +134,23 @@ h1, h2, h3, h4, h5, h6 {
 
 h1,
 .h1 {
-	font-size: 1.5em;
+	font-size: calc-em(24px);
 	padding-top: .5em;
 }
 
 h2,
 .h2 {
-	font-size: 1.3125em;
+	font-size: calc-em(21px);
 }
 
 h3,
 .h3 {
-	font-size: 1.1875em;
+	font-size: calc-em(19px);
 }
 
 h4, h5, h6,
 .h4, .h5, .h6 {
-	font-size: .9375em;
+	font-size: calc-em(15px);
 	font-style: italic;
 }
 
@@ -162,7 +162,7 @@ h4,
 @media (min-width: $bp-medium) {
 	h1,
 	.h1 {
-		font-size: 1.75em;
+		font-size: calc-em(28px);
 	}
 }
 
@@ -171,10 +171,10 @@ h4,
 
 /*  Lines */
 hr {
-	margin: 2em auto;
+	margin: calc-em(32px) auto;
 	border: 0;
-	border-top: .0725em solid $color-gray-light;
-	border-bottom: .0725em solid $color-white;
+	border-top: calc-em(1px) solid $color-gray-light;
+	border-bottom: 0 solid $color-white;
 }
 
 /*  Bold */
@@ -195,15 +195,15 @@ sup {
 	font-weight: bold;
 	line-height: 0;
 	vertical-align: baseline;
-	margin-left: .3em;
+	margin-left: calc-em(4px);
 }
 
 sup {
-	top: -0.5em;
+	top: calc-em(-8px);
 }
 
 sub {
-	bottom: -0.25em;
+	bottom: calc-em(-4px);
 }
 
 /*  Highlighting colors */
@@ -219,7 +219,7 @@ sub {
 
 /*  Blockquotes */
 blockquote {
-	border-left: .25em solid $color-gray-light;
+	border-left: calc-em(4px) solid $color-gray-light;
 	margin-bottom: $spacing;
 	padding-left: $spacing;
 	padding-right: $spacing;

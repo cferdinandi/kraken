@@ -93,8 +93,8 @@ img {
 a:focus,
 button:focus {
 	outline: thin dotted;
-	outline: .3125em auto -webkit-focus-ring-color;
-	outline-offset: -.15625em;
+	outline: calc-em(5px) auto -webkit-focus-ring-color;
+	outline-offset: calc-em(-2.5px);
 }
 
 /*  Improve readability when focused and also mouse hovered in all browsers. */
