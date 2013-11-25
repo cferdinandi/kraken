@@ -503,22 +503,12 @@ a .button:hover,
   text-decoration: none; }
 
 .button-secondary {
-  background-color: #d43830;
-  border-color: #d43830; }
+  background-color: gray;
+  border-color: gray; }
 
 .button-secondary:hover,
 a .button-secondary:hover,
 .button-secondary.active {
-  background-color: #982520;
-  border-color: #982520; }
-
-.button-muted {
-  background-color: gray;
-  border-color: gray; }
-
-.button-muted:hover,
-a .button-muted:hover,
-.button-muted.active {
   background-color: #5a5a5a;
   border-color: #5a5a5a; }
 
