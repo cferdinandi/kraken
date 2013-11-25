@@ -43,6 +43,18 @@ a .button-secondary:hover,
 	border-color: darken( $color-secondary, 15% );
 }
 
+.button-muted {
+	background-color: $color-gray;
+	border-color: $color-gray;
+}
+
+.button-muted:hover,
+a .button-muted:hover,
+.button-muted.active {
+	background-color: darken( $color-gray, 15% );
+	border-color: darken( $color-gray, 15% );
+}
+
 .button:active,
 .button.active {
 	box-shadow: inset 0 calc-em(2.5px) calc-em(4px) rgba(0, 0, 0, 0.15), 0 calc-em(1px) calc-em(2.5px) rgba(0, 0, 0, 0.05);
