@@ -161,3 +161,9 @@
 	}
 
 }
+
+/* Add clearfix */
+.container,
+.row {
+	@extend .group;
+}

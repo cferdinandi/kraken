@@ -76,19 +76,12 @@
 
 
 /*  Clearfix */
-/* @todo figure out how to extend so these can go with their appropriate containers */
 .group:before,
-.group:after,
-.container:before,
-.container:after,
-.row:before,
-.row:after {
+.group:after {
 	display: table;
 	content: "";
 }
 
-.group:after,
-.container:after,
-.row:after {
+.group:after {
 	clear: both;
 }
