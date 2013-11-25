@@ -830,7 +830,7 @@ select:focus {
  * ============================================================= */
 
 /*  Change font names and URLs as need. */
-@include font-face('iconmoon', '/fonts/icomoon', normal, normal);
+@include font-face('icomoon', '/fonts/icomoon', normal, normal);
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {

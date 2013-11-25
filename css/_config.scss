@@ -1,4 +1,7 @@
-// Kraken v3.0 Configuration Settings
+//
+// CONFIGURATION SETTINGS
+// Adjust colors, font stacks, breakpoints and sizing.
+//
 
 // Colors
 $color-primary: #0088cc;
@@ -21,6 +24,6 @@ $bp-large: 60em;
 $bp-xlarge: 80em;
 
 // Sizing
+$font-base: 100%;
 $spacing: 1.5625em;
 $container-max: 80em;
-$font-base: 100%;

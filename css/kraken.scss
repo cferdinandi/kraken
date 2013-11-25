@@ -28,16 +28,16 @@
 
  * ============================================================= */
 
-/* @todo figure out how to properly include Bourbon mixins */
-@import "bourbon"; // A lightweight Sass mixin library. http://bourbon.io/
-@import "config";
-@import "css-reset";
-@import "grid";
-@import "typography";
-@import "code";
-@import "buttons";
-@import "forms";
-// @import "icons";
-// Important add-ons here...
-@import "overrides";
-@import "print";
+@import
+	"config",
+	"components/mixins-functions",
+	"components/css-reset",
+	"components/grid",
+	"components/typography",
+	"components/code",
+	"components/buttons",
+	"components/forms",
+	// "components/icons",
+	// "Import add-ons here...",
+	"components/overrides",
+	"components/print";

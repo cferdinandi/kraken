@@ -29,7 +29,7 @@ select {
 	padding: .3125em;
 	border: .0725em solid #b8b8b8;
 	border-radius: .1875em;
-	@include box-sizing(border-box);
+	@include prefixer(box-sizing, border-box, webkit moz spec);
 }
 
 form button,
