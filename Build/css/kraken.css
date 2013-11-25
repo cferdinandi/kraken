@@ -477,7 +477,7 @@ pre code {
 	BUTTONS
 	Styling for CSS buttons.
  * ============================================================= */
-.button {
+.btn {
   display: inline-block;
   font-size: 0.9375em;
   padding: 0.5em 0.6875em;
@@ -486,57 +486,57 @@ pre code {
   background-color: #0088cc;
   border: 0.0725em solid #0088cc;
   border-radius: 0.0725em;
-  margin-left: 0.3125em;
+  margin-right: 0.3125em;
   margin-bottom: 0.3125em; }
 
-.button,
-.button:hover,
-a .button:hover,
-.button.active {
+.btn,
+.btn:hover,
+a .btn:hover,
+.btn.active {
   color: white; }
 
-.button:hover,
-a .button:hover,
-.button.active {
+.btn:hover,
+a .btn:hover,
+.btn.active {
   background-color: #005580;
   border-color: #005580;
   text-decoration: none; }
 
-.button-secondary {
+.btn-secondary {
   background-color: gray;
   border-color: gray; }
 
-.button-secondary:hover,
-a .button-secondary:hover,
-.button-secondary.active {
+.btn-secondary:hover,
+a .btn-secondary:hover,
+.btn-secondary.active {
   background-color: #5a5a5a;
   border-color: #5a5a5a; }
 
-.button:active,
-.button.active {
+.btn:active,
+.btn.active {
   box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
   outline: 0; }
 
-.button.disabled,
-.button[disabled] {
+.btn.disabled,
+.btn[disabled] {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0.5;
   filter: alpha(opacity=50);
   box-shadow: none; }
 
-.button-large {
+.btn-large {
   padding: 0.6875em 0.9375em;
   font-size: 1em;
   line-height: normal; }
 
-.button-block,
-input[type="submit"].button-block,
-input[type="reset"].button-block,
-input[type="button"].button-block {
+.btn-block,
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
   display: block;
   width: 100%;
-  margin-left: 0;
+  margin-right: 0;
   padding-right: 0;
   padding-left: 0;
   -webkit-box-sizing: border-box;
@@ -544,15 +544,15 @@ input[type="button"].button-block {
   box-sizing: border-box; }
 
 button,
-.button {
+.btn {
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
   -webkit-appearance: none; }
 
-.button:first-child,
-input.button {
-  margin-left: 0; }
+.btn:last-child,
+input.btn {
+  margin-right: 0; }
 
 /* =============================================================
 	FORMS
