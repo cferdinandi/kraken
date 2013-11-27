@@ -24,10 +24,10 @@ select {
 	width: 100%;
 	font: inherit;
 	line-height: 1.5;
-	color: #555555;
+	color: lighten( $color-black, 18% );
 	margin-bottom: calc-em(19px);
 	padding: calc-em(5px);
-	border: calc-em(1px) solid #b8b8b8;
+	border: calc-em(1px) solid lighten( $color-gray-dark, 22% );
 	border-radius: calc-em(1px);
 	@include prefixer(box-sizing, border-box, webkit moz spec);
 }

@@ -8,24 +8,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 		<!-- Document Title & Description -->
-		<title></title>
-		<meta name="description" content="">
+		<title>Kraken</title>
 
 		<!-- Mobile Screen Resizing -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/ico" href="">
-
-		<!-- Apple Touch Icons -->
-		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png">
-
-		<!-- MS Homescreen Icons -->
-		<meta name="msapplication-TileColor" content="#0088cc">
-		<meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
 
 		<!-- stylesheet -->
 		<link rel="stylesheet" href="css/kraken.css" type="text/css">
@@ -219,14 +205,34 @@
 			<h1>Buttons</h1>
 
 			<p>
-				<button class="button disabled">Button</button>
-				<button class="button button-secondary disabled">Button Secondary</button>
-				<button class="button button-large active">Button Large</button>
-
-				<button class="button button-secondary button-block">Button Block</button>
-				<button class="button button-block">Button Block</button>
+				<button class="btn">Button</button>
+				<button class="btn btn-secondary">Button [secondary]</button>
+				<button class="btn btn-large">Button [large]</button>
 			</p>
 
+
+			<h2>Active Buttons</h2>
+
+			<p>
+				<button class="btn active">Button</button>
+				<button class="btn btn-secondary active">Button [secondary]</button>
+			</p>
+
+
+			<h2>Disabled Buttons</h2>
+
+			<p>
+				<button class="btn disabled">Button</button>
+				<button class="btn btn-secondary disabled">Button [secondary]</button>
+			</p>
+
+			<h2>Block Buttons</h2>
+
+			<p>
+				<button class="btn btn-block">Button</button>
+				<button class="btn btn-secondary btn-block">Button [secondary]</button>
+				<button class="btn btn-large btn-block">Button [large]</button>
+			</p>
 
 			<hr>
 
@@ -292,21 +298,6 @@
 			<hr>
 
 		</section>
-
-
-
-		<!-- Javascript -->
-		<!-- In the footer for better performance -->
-		<script src="js/kraken.js"></script>
-
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) -->
-		<script>
-			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g,s)}(document,'script'));
-		</script>
 
 	</body>
 </html>
