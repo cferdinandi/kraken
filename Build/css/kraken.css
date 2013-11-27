@@ -450,15 +450,15 @@ pre {
   border-radius: 0.0725em; }
 
 code {
-  color: #d14;
-  background-color: #f7f7f9;
+  color: #dd1144;
+  background-color: #f7f7f7;
   padding: 0.25em; }
 
 pre {
   display: block;
   margin-bottom: 1.5625em;
   line-height: 1.5;
-  background-color: #f5f5f5;
+  background-color: #f4f4f4;
   padding: 0.8125em;
   -moz-tab-size: 4;
   -o-tab-size: 4;

@@ -32,15 +32,15 @@ a .btn:hover,
 }
 
 .btn-secondary {
-	background-color: $color-gray;
-	border-color: $color-gray;
+	background-color: $color-gray-dark;
+	border-color: $color-gray-dark;
 }
 
 .btn-secondary:hover,
 a .btn-secondary:hover,
 .btn-secondary.active {
-	background-color: darken( $color-gray, 15% );
-	border-color: darken( $color-gray, 15% );
+	background-color: darken( $color-gray-dark, 15% );
+	border-color: darken( $color-gray-dark, 15% );
 }
 
 .btn:active,
