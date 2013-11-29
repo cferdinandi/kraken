@@ -1,0 +1,90 @@
+/* =============================================================
+	BUTTONS
+	Styling for CSS buttons.
+ * ============================================================= */
+
+.btn {
+	display: inline-block;
+	font-size: calc-em(15px);
+	padding: calc-em(8px) calc-em(11px);
+	line-height: 1.2;
+	font-weight: normal;
+	background-color: $color-primary;
+	border: calc-em(1px) solid $color-primary;
+	border-radius: calc-em(1px);
+	margin-right: calc-em(5px);
+	margin-bottom: calc-em(5px);
+}
+
+.btn,
+.btn:hover,
+a .btn:hover,
+.btn.active {
+	color: $color-white;
+}
+
+.btn:hover,
+a .btn:hover,
+.btn.active {
+	background-color: darken( $color-primary, 15% );
+	border-color: darken( $color-primary, 15% );
+	text-decoration: none;
+}
+
+.btn-secondary {
+	background-color: $color-gray-dark;
+	border-color: $color-gray-dark;
+}
+
+.btn-secondary:hover,
+a .btn-secondary:hover,
+.btn-secondary.active {
+	background-color: darken( $color-gray-dark, 15% );
+	border-color: darken( $color-gray-dark, 15% );
+}
+
+.btn:active,
+.btn.active {
+	box-shadow: inset 0 calc-em(2.5px) calc-em(4px) rgba(0, 0, 0, 0.15), 0 calc-em(1px) calc-em(2.5px) rgba(0, 0, 0, 0.05);
+	outline: 0;
+}
+
+.btn.disabled,
+.btn[disabled] {
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+    box-shadow: none;
+}
+
+.btn-large {
+	padding: calc-em(11px) calc-em(15px);
+	font-size: 1em;
+	line-height: normal;
+}
+
+.btn-block,
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+	display: block;
+	width: 100%;
+	margin-right: 0;
+	padding-right: 0;
+	padding-left: 0;
+	@include prefixer(box-sizing, border-box, webkit moz spec);
+}
+
+button,
+.btn {
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-appearance: none;
+}
+
+.btn:last-child,
+input.btn {
+	margin-right: 0;
+}

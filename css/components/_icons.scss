@@ -1,0 +1,18 @@
+/* =============================================================
+	ICONS
+	A placeholder for icon fonts.
+	Learn more at http://gomakethings.com/icon-fonts/
+ * ============================================================= */
+
+/*  Change font names and URLs as need. */
+@include font-face('icomoon', '../fonts/icomoon', normal, normal);
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family: 'icomoon';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,165 @@
+/* =============================================================
+	THE GRID
+	Structure and layout.
+ * ============================================================= */
+
+/*  Mobile-first. Single-column layout by default
+ *  Container sets the maximum page width. Adjust as needed. */
+.container {
+	max-width: $container-max;
+	width: 88%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*  Still mostly single-column.
+ *  Option to activate grid on small screens.
+ *  Two-column layout for .grid-img. */
+@media (min-width: $bp-xsmall) {
+
+	.row {
+		margin-left: -1.515151515152%;
+		margin-right: -1.515151515152%;
+	}
+
+	.grid-fourth,
+	.grid-third,
+	.grid-half,
+	.grid-two-thirds,
+	.grid-three-fourths,
+	.grid-full,
+	.grid-img {
+		float: left;
+		width: 96.969696969697%;
+		margin-left: 1.515151515152%;
+		margin-right: 1.515151515152%;
+	}
+
+	/*  Reverses order of grid for content choreography */
+	.grid-flip {
+		float: right;
+	}
+
+	/*  Optionally show grid for small screens */
+	.row-start-xsmall .grid-fourth {
+		width: 21.96969696969%;
+	}
+
+	.row-start-xsmall .grid-third {
+		width: 30.30303030303%;
+	}
+
+	.row-start-xsmall .grid-half,
+	.grid-img {
+		width: 46.969696969697%;
+	}
+
+	.row-start-xsmall .grid-two-thirds {
+		width: 63.636363636364%;
+	}
+
+	.row-start-xsmall .grid-three-fourths {
+		width: 71.969696969697%;
+	}
+
+	.row-start-xsmall .grid-full {
+		width: 96.969696969697%;
+	}
+
+}
+
+
+/*  Still mostly single-column.
+ *  Option to activate grid on medium screens.
+ *  Three-column layout for .grid-img. */
+@media (min-width: $bp-small) {
+
+	/*  Show grid for small screens */
+	.row-start-small .grid-fourth {
+		width: 21.96969696969%;
+	}
+
+	.row-start-small .grid-third,
+	.grid-img {
+		width: 30.30303030303%;
+	}
+
+	.row-start-small .grid-half {
+		width: 46.969696969697%;
+	}
+
+	.row-start-small .grid-two-thirds {
+		width: 63.636363636364%;
+	}
+
+	.row-start-small .grid-three-fourths {
+		width: 71.969696969697%;
+	}
+
+	.row-start-small .grid-full {
+		width: 96.969696969697%;
+	}
+
+}
+
+
+/*  Full 6-column grid.
+ *  Four-column layout for .grid-img. */
+@media (min-width: $bp-medium) {
+
+	.grid-fourth,
+	.grid-img {
+		width: 21.96969696969%;
+	}
+
+	.grid-third {
+		width: 30.30303030303%;
+	}
+
+	.grid-half {
+		width: 46.969696969697%;
+	}
+
+	.grid-two-thirds {
+		width: 63.636363636364%;
+	}
+
+	.grid-three-fourths {
+		width: 71.969696969697%;
+	}
+
+	.grid-full {
+		width: 96.969696969697%;
+	}
+
+
+	/*  Offets let you shift grid elements to the right
+	 *  but stay aligned to the grid. */
+	.offset-fourth {
+		margin-left: 26.484848484848%;
+	}
+
+	.offset-third {
+		margin-left: 34.848484848485%;
+	}
+
+	.offset-half {
+		margin-left: 51.515151515152%;
+	}
+
+	.offset-two-thirds {
+		margin-left: 68.181818181818%;
+	}
+
+	.offset-three-fourths {
+		margin-left: 76.484848484848%;
+	}
+
+}
+
+/* Add clearfix */
+.container,
+.row {
+	@extend .group;
+}

@@ -1,0 +1,91 @@
+/* =============================================================
+	FORMS
+	Styling for form elements.
+ * ============================================================= */
+/* @todo Integrate form styling with _config options */
+form,
+fieldset {
+	margin-bottom: $spacing;
+}
+
+legend,
+label {
+	display: block;
+	font-weight: normal;
+	padding: 0;
+	margin-bottom: calc-em(5px);
+}
+
+/* @todo Adjust form colors based on Sass variables */
+input,
+textarea,
+select {
+	display: block;
+	width: 100%;
+	font: inherit;
+	line-height: 1.5;
+	color: lighten( $color-black, 18% );
+	margin-bottom: calc-em(19px);
+	padding: calc-em(5px);
+	border: calc-em(1px) solid lighten( $color-gray-dark, 22% );
+	border-radius: calc-em(1px);
+	@include prefixer(box-sizing, border-box, webkit moz spec);
+}
+
+form button,
+form .button {
+	margin-bottom: calc-em(19px);
+}
+
+textarea {
+	height: 12em;
+}
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin-bottom: calc-em(5px);
+	cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	box-shadow: inset 0 calc-em(1px) calc-em(1px) rgba(0, 0, 0, 0.075), 0 0 calc-em(8px) rgba(82, 168, 236, 0.6);
+	outline: 0;
+	outline: thin dotted \9;
+}
+
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+	outline: thin dotted;
+	outline: calc-em(5px) auto -webkit-focus-ring-color;
+	outline-offset: calc-em(-2px);
+}
+
+
+/*  Inline Inputs */
+.input-inline {
+	display: inline-block;
+	width: auto;
+	vertical-align: middle;
+}
+
+
+/*  Condensed Inputs */
+.input-condensed {
+	padding: calc-em(1px) calc-em(5px);
+	font-size: calc-em(15px);
+}
+
+
+@media (min-width: $bp-medium) {
+	input, textarea, select {
+		line-height: 1.5625;
+	}
+}
