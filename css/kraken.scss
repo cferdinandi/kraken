@@ -10,11 +10,14 @@
 
 	# Colors
 	Primary (Blue): #0088cc
-	Secondary (Dark Blue): #005580
 	Black: #272727
 	White: #ffffff
-	Gray: #808080
-	Light Gray: #e5e5e5
+	Success (Green): #377f31;
+	Danger (Red): #880e14;
+	Warning (Yellow): #dba909;
+	Code (Fuscia): #dd1144;
+	Gray (Dark): #808080
+	Gray (Light): #e5e5e5
 
 	# Font Stack
 	Sans-Serif (default): "Helvetica Neue", Arial, sans-serif
@@ -22,9 +25,9 @@
 	Monospace: Menlo, Monaco, "Courier New", monospace
 
 	# Typographic Scale
-	line height: 1.5 on small screens, 1.5625 on big screens
-	px:  1,     4,   5,     8,  9,     11,    12,  13,    15,   16, 19,     21,     24,  28,   32, 48, 64, 80, 96
-	em: .0725, .25, .3125, .5, .5625, .6875, .75, .8125, .9375, 1,  1.1875, 1.3125, 1.5, 1.75, 2,  3,  4,  5,  6
+	(For math purposes. Actual font sizes in ems.)
+	1px, 4px, 5px, 8px, 9px, 11px, 12px, 13px, 15px, 16px, 19px, 21px, 24px, 28px, 32px, 48px, 64px, 80px, 96px
+	line height: 1.5em on small screens, 1.5625em on big screens
 
  * ============================================================= */
 
