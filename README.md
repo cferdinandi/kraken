@@ -15,6 +15,13 @@ Getting started with Kraken is really easy. [View the online tutorial](http://cf
 Kraken is an open-source project. [Learn how you can get involved.](http://cferdinandi.github.io/kraken/get-involved.html)
 
 ## Changelog
+* v3.0 (November 29, 2013)
+  * Added Sass integration.
+  * Changed naming conventions from `*-blue` to `*-secondary` for better abstraction.
+  * Updated typographic scale to a 16px base.
+  * Redesigned grid uses fraction-based naming (`.grid-third` instead of  `.grid-2`).
+  * Added `.active` and `.disabled` classes to buttons.
+  * Dropped rounded corners from buttons, forms, etc.
 * v2.6 (November 13, 2013)
   * [Added definition list styling](https://github.com/cferdinandi/kraken/issues/14).
 * v2.5 (October 21, 2013)
