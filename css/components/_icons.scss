@@ -5,7 +5,7 @@
  * ============================================================= */
 
 /*  Change font names and URLs as need. */
-@include font-face('icomoon', '/fonts/icomoon', normal, normal, true);
+@include font-face('icomoon', '../fonts/icomoon', normal, normal);
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
