@@ -37,23 +37,28 @@
 /*  Mobile Screen Resizing */
 @-webkit-viewport {
   width: device-width;
-  zoom: 1.0; }
+  zoom: 1.0;
+}
 
 @-moz-viewport {
   width: device-width;
-  zoom: 1.0; }
+  zoom: 1.0;
+}
 
 @-ms-viewport {
   width: device-width;
-  zoom: 1.0; }
+  zoom: 1.0;
+}
 
 @-o-viewport {
   width: device-width;
-  zoom: 1.0; }
+  zoom: 1.0;
+}
 
 @viewport {
   width: device-width;
-  zoom: 1.0; }
+  zoom: 1.0;
+}
 
 /*  Remove browser defaults */
 html, body, div, span, applet, object, iframe,
@@ -75,67 +80,78 @@ time, mark, audio, video {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /*  Set display type for HTML5 semantic elements */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 /*  Force scrollbar display to prevent jumping on pages.
  *  Fix text resize bug on mobile devices. */
 html {
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+  -ms-text-size-adjust: 100%;
+}
 
 /*  Display audio, canvas, and video elements as inline block elements. */
 audio,
 canvas,
 video {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /*  Prevent modern browsers from displaying audio without controls. */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 /*  Prevent img and video elements from spilling
  *  outside of the page on smaller screens. */
 img,
 video {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 /*  Prevent iframe, object, and embed elements from
  *  spilling outside of the page on smaller screens. */
 iframe,
 object,
 embed {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 /* Address [hidden] styling not present in IE 8/9.
  * Hide the template element in IE, Safari, and Firefox < 22. */
 [hidden],
 template {
   display: none;
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 /*  Prevents IE from making scaled images look like crap */
 img {
-  -ms-interpolation-mode: bicubic; }
+  -ms-interpolation-mode: bicubic;
+}
 
 /*  Address outline inconsistency between Chrome and other browsers. */
 a:focus,
 button:focus {
   outline: thin dotted;
   outline: 0.3125em auto -webkit-focus-ring-color;
-  outline-offset: -0.15625em; }
+  outline-offset: -0.15625em;
+}
 
 /*  Improve readability when focused and also mouse hovered in all browsers. */
 a:hover,
 a:active {
-  outline: 0; }
+  outline: 0;
+}
 
 /* =============================================================
 	THE GRID
@@ -147,7 +163,8 @@ a:active {
   max-width: 80em;
   width: 88%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 /*  Still mostly single-column.
  *  Option to activate grid on small screens.
@@ -155,7 +172,8 @@ a:active {
 @media (min-width: 20em) {
   .row {
     margin-left: -1.515151515152%;
-    margin-right: -1.515151515152%; }
+    margin-right: -1.515151515152%;
+  }
 
   .grid-fourth,
   .grid-third,
@@ -167,92 +185,120 @@ a:active {
     float: left;
     width: 96.969696969697%;
     margin-left: 1.515151515152%;
-    margin-right: 1.515151515152%; }
+    margin-right: 1.515151515152%;
+  }
 
   /*  Reverses order of grid for content choreography */
   .grid-flip {
-    float: right; }
+    float: right;
+  }
 
   /*  Optionally show grid for small screens */
   .row-start-xsmall .grid-fourth {
-    width: 21.96969696969%; }
+    width: 21.96969696969%;
+  }
 
   .row-start-xsmall .grid-third {
-    width: 30.30303030303%; }
+    width: 30.30303030303%;
+  }
 
   .row-start-xsmall .grid-half,
   .grid-img {
-    width: 46.969696969697%; }
+    width: 46.969696969697%;
+  }
 
   .row-start-xsmall .grid-two-thirds {
-    width: 63.636363636364%; }
+    width: 63.636363636364%;
+  }
 
   .row-start-xsmall .grid-three-fourths {
-    width: 71.969696969697%; }
+    width: 71.969696969697%;
+  }
 
   .row-start-xsmall .grid-full {
-    width: 96.969696969697%; } }
+    width: 96.969696969697%;
+  }
+}
 /*  Still mostly single-column.
  *  Option to activate grid on medium screens.
  *  Three-column layout for .grid-img. */
 @media (min-width: 30em) {
   /*  Show grid for small screens */
   .row-start-small .grid-fourth {
-    width: 21.96969696969%; }
+    width: 21.96969696969%;
+  }
 
   .row-start-small .grid-third,
   .grid-img {
-    width: 30.30303030303%; }
+    width: 30.30303030303%;
+  }
 
   .row-start-small .grid-half {
-    width: 46.969696969697%; }
+    width: 46.969696969697%;
+  }
 
   .row-start-small .grid-two-thirds {
-    width: 63.636363636364%; }
+    width: 63.636363636364%;
+  }
 
   .row-start-small .grid-three-fourths {
-    width: 71.969696969697%; }
+    width: 71.969696969697%;
+  }
 
   .row-start-small .grid-full {
-    width: 96.969696969697%; } }
+    width: 96.969696969697%;
+  }
+}
 /*  Full 6-column grid.
  *  Four-column layout for .grid-img. */
 @media (min-width: 40em) {
   .grid-fourth,
   .grid-img {
-    width: 21.96969696969%; }
+    width: 21.96969696969%;
+  }
 
   .grid-third {
-    width: 30.30303030303%; }
+    width: 30.30303030303%;
+  }
 
   .grid-half {
-    width: 46.969696969697%; }
+    width: 46.969696969697%;
+  }
 
   .grid-two-thirds {
-    width: 63.636363636364%; }
+    width: 63.636363636364%;
+  }
 
   .grid-three-fourths {
-    width: 71.969696969697%; }
+    width: 71.969696969697%;
+  }
 
   .grid-full {
-    width: 96.969696969697%; }
+    width: 96.969696969697%;
+  }
 
   /*  Offets let you shift grid elements to the right
    *  but stay aligned to the grid. */
   .offset-fourth {
-    margin-left: 26.484848484848%; }
+    margin-left: 26.484848484848%;
+  }
 
   .offset-third {
-    margin-left: 34.848484848485%; }
+    margin-left: 34.848484848485%;
+  }
 
   .offset-half {
-    margin-left: 51.515151515152%; }
+    margin-left: 51.515151515152%;
+  }
 
   .offset-two-thirds {
-    margin-left: 68.181818181818%; }
+    margin-left: 68.181818181818%;
+  }
 
   .offset-three-fourths {
-    margin-left: 76.484848484848%; } }
+    margin-left: 76.484848484848%;
+  }
+}
 /* Add clearfix */
 /* =============================================================
 	TYPOGRAPHY
@@ -263,45 +309,57 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #272727;
-  background: white; }
+  background: white;
+}
 
 p {
-  margin-bottom: 1.5625em; }
+  margin-bottom: 1.5625em;
+}
 
 @media (min-width: 40em) {
   body {
-    line-height: 1.5625; } }
+    line-height: 1.5625;
+  }
+}
 /*  Sizes
  *  For smaller and larger text */
 .text-small {
-  font-size: 0.9375em; }
+  font-size: 0.9375em;
+}
 
 .text-tall {
   font-size: 1.1875em;
-  line-height: 1.4; }
+  line-height: 1.4;
+}
 
 @media (min-width: 40em) {
   .text-tall {
-    font-size: 1.3125em; } }
+    font-size: 1.3125em;
+  }
+}
 /*  Colors
  *  For alternate text colors */
 .text-muted {
-  color: gray; }
+  color: gray;
+}
 
 /*  Links
  *  Hyperlink styling */
 a {
   color: #0088cc;
   text-decoration: none;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+}
 
 a:hover {
   color: #005580;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 a img {
   border: none;
-  background: none; }
+  background: none;
+}
 
 /*  Prevents border/background on linked image hover.
  *  Adds slight opacity. */
@@ -309,7 +367,8 @@ a:hover img {
   border: none;
   background: none;
   opacity: 0.8;
-  filter: alpha(opacity=80); }
+  filter: alpha(opacity=80);
+}
 
 /*  Lists
  *  Styling for lists */
@@ -317,32 +376,39 @@ ul,
 ol,
 dl {
   margin-bottom: 1.5625em;
-  margin-left: 2em; }
+  margin-left: 2em;
+}
 
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 ul {
-  list-style: disc; }
+  list-style: disc;
+}
 
 ol {
-  list-style: decimal; }
+  list-style: decimal;
+}
 
 dl {
-  margin-left: 0; }
+  margin-left: 0;
+}
 
 dt {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /*  Removes list styling.
  *  For semantic reasons, should only
  *  be used on unordered lists. */
 .list-unstyled {
   margin-left: 0;
-  list-style: none; }
+  list-style: none;
+}
 
 /*  Headings
  *  h1 through h6 styling
@@ -352,49 +418,60 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: normal;
   margin-bottom: 1em;
-  padding-top: 1em; }
+  padding-top: 1em;
+}
 
 h1,
 .h1 {
   font-size: 1.5em;
-  padding-top: .5em; }
+  padding-top: .5em;
+}
 
 h2,
 .h2 {
-  font-size: 1.3125em; }
+  font-size: 1.3125em;
+}
 
 h3,
 .h3 {
-  font-size: 1.1875em; }
+  font-size: 1.1875em;
+}
 
 h4, h5, h6,
 .h4, .h5, .h6 {
   font-size: 0.9375em;
-  font-style: italic; }
+  font-style: italic;
+}
 
 h4,
 .h4 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 @media (min-width: 40em) {
   h1,
   .h1 {
-    font-size: 1.75em; } }
+    font-size: 1.75em;
+  }
+}
 /*  Lines, Quotes and Emphasis */
 /*  Lines */
 hr {
   margin: 2em auto;
   border: 0;
   border-top: 0.0725em solid #e5e5e5;
-  border-bottom: 0 solid white; }
+  border-bottom: 0 solid white;
+}
 
 /*  Bold */
 strong {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /*  Italics */
 em {
-  font-style: italic; }
+  font-style: italic;
+}
 
 /*  Subscript & Superscript */
 sub,
@@ -404,39 +481,47 @@ sup {
   font-weight: bold;
   line-height: 0;
   vertical-align: baseline;
-  margin-left: 0.25em; }
+  margin-left: 0.25em;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 /*  Highlighting colors */
 ::selection {
   color: white;
-  background: #0088cc; }
+  background: #0088cc;
+}
 
 ::-moz-selection {
   color: white;
-  background: #0088cc; }
+  background: #0088cc;
+}
 
 /*  Blockquotes */
 blockquote {
   border-left: 0.25em solid #e5e5e5;
   margin-bottom: 1.5625em;
   padding-left: 1.5625em;
-  padding-right: 1.5625em; }
+  padding-right: 1.5625em;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 /* =============================================================
 	CODE
@@ -447,12 +532,14 @@ code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 0.875em;
-  border-radius: 0.0725em; }
+  border-radius: 0.0725em;
+}
 
 code {
   color: #dd1144;
   background-color: #f7f7f7;
-  padding: 0.25em; }
+  padding: 0.25em;
+}
 
 pre {
   display: block;
@@ -464,14 +551,16 @@ pre {
   -o-tab-size: 4;
   tab-size: 4;
   white-space: pre-wrap;
-  word-break: break-all; }
+  word-break: break-all;
+}
 
 pre code {
   font-size: 1em;
   padding: 0;
   color: inherit;
   background-color: transparent;
-  border: 0; }
+  border: 0;
+}
 
 /* =============================================================
 	BUTTONS
@@ -487,35 +576,41 @@ pre code {
   border: 0.0725em solid #0088cc;
   border-radius: 0.0725em;
   margin-right: 0.3125em;
-  margin-bottom: 0.3125em; }
+  margin-bottom: 0.3125em;
+}
 
 .btn,
 .btn:hover,
 a .btn:hover,
 .btn.active {
-  color: white; }
+  color: white;
+}
 
 .btn:hover,
 a .btn:hover,
 .btn.active {
   background-color: #005580;
   border-color: #005580;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .btn-secondary {
   background-color: gray;
-  border-color: gray; }
+  border-color: gray;
+}
 
 .btn-secondary:hover,
 a .btn-secondary:hover,
 .btn-secondary.active {
   background-color: #5a5a5a;
-  border-color: #5a5a5a; }
+  border-color: #5a5a5a;
+}
 
 .btn:active,
 .btn.active {
   box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
-  outline: 0; }
+  outline: 0;
+}
 
 .btn.disabled,
 .btn[disabled] {
@@ -523,12 +618,14 @@ a .btn-secondary:hover,
   cursor: not-allowed;
   opacity: 0.5;
   filter: alpha(opacity=50);
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 .btn-large {
   padding: 0.6875em 0.9375em;
   font-size: 1em;
-  line-height: normal; }
+  line-height: normal;
+}
 
 .btn-block,
 input[type="submit"].btn-block,
@@ -541,18 +638,21 @@ input[type="button"].btn-block {
   padding-left: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 button,
 .btn {
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 .btn:last-child,
 input.btn {
-  margin-right: 0; }
+  margin-right: 0;
+}
 
 /* =============================================================
 	FORMS
@@ -561,14 +661,16 @@ input.btn {
 /* @todo Integrate form styling with _config options */
 form,
 fieldset {
-  margin-bottom: 1.5625em; }
+  margin-bottom: 1.5625em;
+}
 
 legend,
 label {
   display: block;
   font-weight: normal;
   padding: 0;
-  margin-bottom: 0.3125em; }
+  margin-bottom: 0.3125em;
+}
 
 /* @todo Adjust form colors based on Sass variables */
 input,
@@ -585,14 +687,17 @@ select {
   border-radius: 0.0725em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 form button,
 form .button {
-  margin-bottom: 1.1875em; }
+  margin-bottom: 1.1875em;
+}
 
 textarea {
-  height: 12em; }
+  height: 12em;
+}
 
 input[type="image"],
 input[type="checkbox"],
@@ -602,90 +707,110 @@ input[type="radio"] {
   height: auto;
   padding: 0;
   margin-bottom: 0.3125em;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
   box-shadow: inset 0 0.0725em 0.0725em rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
   outline: 0;
-  outline: thin dotted \9; }
+  outline: thin dotted \9;
+}
 
 input[type="file"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
   outline: thin dotted;
   outline: 0.3125em auto -webkit-focus-ring-color;
-  outline-offset: -0.125em; }
+  outline-offset: -0.125em;
+}
 
 /*  Inline Inputs */
 .input-inline {
   display: inline-block;
   width: auto;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 /*  Condensed Inputs */
 .input-condensed {
   padding: 0.0725em 0.3125em;
-  font-size: 0.9375em; }
+  font-size: 0.9375em;
+}
 
 @media (min-width: 40em) {
   input, textarea, select {
-    line-height: 1.5625; } }
+    line-height: 1.5625;
+  }
+}
 /* =============================================================
 	ALIGNMENT, SPACING & VISIBILITY
 	Override default alignment, spacing and visibilty.
  * ============================================================= */
 /*  Text alignment */
 .text-center {
-  text-align: center; }
+  text-align: center;
+}
 
 .text-right {
-  text-align: right; }
+  text-align: right;
+}
 
 .text-left {
-  text-align: left; }
+  text-align: left;
+}
 
 /*  Floats */
 .float-left {
-  float: left; }
+  float: left;
+}
 
 .float-center {
   float: none;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+}
 
 .float-right {
-  float: right; }
+  float: right;
+}
 
 /*  Spacing */
 .no-space {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .no-space-bottom {
   margin-bottom: 0;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+}
 
 .no-space-top {
   margin-top: 0;
-  padding-top: 0; }
+  padding-top: 0;
+}
 
 .space-bottom {
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+}
 
 .space-bottom-small {
   margin-bottom: 0.5em;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+}
 
 .space-top {
-  padding-top: 0.8125em; }
+  padding-top: 0.8125em;
+}
 
 /*  Screen Reader Text */
 .screen-reader {
   position: absolute;
   top: -9999em;
-  left: -9999em; }
+  left: -9999em;
+}
 
 /*  Clearfix */
 .group:before, .container:before,
@@ -694,11 +819,13 @@ select:focus {
 .container:after,
 .row:after {
   display: table;
-  content: ""; }
+  content: "";
+}
 
 .group:after, .container:after,
 .row:after {
-  clear: both; }
+  clear: both;
+}
 
 /* =============================================================
 	PRINT STYLES
@@ -713,43 +840,54 @@ select:focus {
     background: transparent !important;
     color: #000 !important;
     box-shadow: none !important;
-    text-shadow: none !important; }
+    text-shadow: none !important;
+  }
 
   /*  Specifies page margin */
   @page {
-    margin: 0.5cm; }
+    margin: 0.5cm;
+}
 
   /*  Underline all links */
   a, a:visited {
-    text-decoration: underline; }
+    text-decoration: underline;
+  }
 
   /*  Show URL after links */
   a[href]:after {
-    content: " (" attr(href) ")"; }
+    content: " (" attr(href) ")";
+  }
 
   /*  Don't show URL for internal links */
   a[href^="#"]:after {
-    content: ""; }
+    content: "";
+  }
 
   /*  Specifies the minimum number of lines to print at the top and bottom of a page. */
   p, h1, h2, h3 {
     orphans: 3;
-    widows: 3; }
+    widows: 3;
+  }
 
   /*  Avoid inserting a page break after headers */
   h1, h2, h3 {
-    page-break-after: avoid; }
+    page-break-after: avoid;
+  }
 
   /*  Change border color on blockquotes and preformatted text.
    *  Avoid page breaks inside the content */
   pre, blockquote {
     border-color: #999;
-    page-break-inside: avoid; }
+    page-break-inside: avoid;
+  }
 
   /*  Displayed as a table header row group */
   thead {
-    display: table-header-group; }
+    display: table-header-group;
+  }
 
   /*  Avoid inserting a page break inside table rows and images */
   tr, img {
-    page-break-inside: avoid; } }
+    page-break-inside: avoid;
+  }
+}
