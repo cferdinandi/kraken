@@ -3,14 +3,14 @@
 	Meyer's CSS Reset, Normalized.css, and custom code.
  * ============================================================= */
 
-/*  Mobile Screen Resizing */
+/* Mobile Screen Resizing */
 @-webkit-viewport { width: device-width; zoom: 1.0; }
    @-moz-viewport { width: device-width; zoom: 1.0; }
 	@-ms-viewport { width: device-width; zoom: 1.0; }
 	 @-o-viewport { width: device-width; zoom: 1.0; }
 		@viewport { width: device-width; zoom: 1.0; }
 
-/*  Remove browser defaults */
+/* Remove browser defaults */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,6 +31,14 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+/* Add box sizing to everything
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+*,
+*:before,
+*:after {
+	@include prefixer(box-sizing, border-box, webkit moz spec);
 }
 
 /*  Set display type for HTML5 semantic elements */

@@ -73,7 +73,6 @@ input[type="button"].btn-block {
 	margin-right: 0;
 	padding-right: 0;
 	padding-left: 0;
-	@include prefixer(box-sizing, border-box, webkit moz spec);
 }
 
 button,

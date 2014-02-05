@@ -29,7 +29,6 @@ select {
 	padding: calc-em(5px);
 	border: calc-em(1px) solid lighten( $color-gray-dark, 22% );
 	border-radius: calc-em(1px);
-	@include prefixer(box-sizing, border-box, webkit moz spec);
 }
 
 form button,
