@@ -15,6 +15,10 @@ Getting started with Kraken is really easy. [View the online tutorial](http://cf
 Kraken is an open-source project. [Learn how you can get involved.](http://cferdinandi.github.io/kraken/get-involved.html)
 
 ## Changelog
+* v3.3 (February 4, 2014)
+  * [Added universal box-sizing.](https://github.com/cferdinandi/kraken/issues/32)
+  * Redesigned grid with simple percentages (made possible with universal box-sizing).
+  * Added `grid-margins` variable that let's users change the grid margins in the `config.scss` file.
 * v3.2 (January 13, 2014)
   * [Added word-break to long headings for better usability.](https://github.com/cferdinandi/kraken/issues/27)
 * v3.1 (December 2, 2013)

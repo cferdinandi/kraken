@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Kraken v3.2
+	Kraken v3.3
 	A lightweight front-end boilerplate by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -34,7 +34,7 @@
 	CSS RESET
 	Meyer's CSS Reset, Normalized.css, and custom code.
  * ============================================================= */
-/*  Mobile Screen Resizing */
+/* Mobile Screen Resizing */
 @-webkit-viewport {
   width: device-width;
   zoom: 1.0;
@@ -60,7 +60,7 @@
   zoom: 1.0;
 }
 
-/*  Remove browser defaults */
+/* Remove browser defaults */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -81,6 +81,16 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+
+/* Add box sizing to everything
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*  Set display type for HTML5 semantic elements */
@@ -171,8 +181,8 @@ a:active {
  *  Two-column layout for .grid-img. */
 @media (min-width: 20em) {
   .row {
-    margin-left: -1.515151515152%;
-    margin-right: -1.515151515152%;
+    margin-left: -1.4%;
+    margin-right: -1.4%;
   }
 
   .grid-fourth,
@@ -183,9 +193,9 @@ a:active {
   .grid-full,
   .grid-img {
     float: left;
-    width: 96.969696969697%;
-    margin-left: 1.515151515152%;
-    margin-right: 1.515151515152%;
+    width: 100%;
+    padding-left: 1.4%;
+    padding-right: 1.4%;
   }
 
   /*  Reverses order of grid for content choreography */
@@ -195,28 +205,24 @@ a:active {
 
   /*  Optionally show grid for small screens */
   .row-start-xsmall .grid-fourth {
-    width: 21.96969696969%;
+    width: 25%;
   }
 
   .row-start-xsmall .grid-third {
-    width: 30.30303030303%;
+    width: 33.33333333333%;
   }
 
   .row-start-xsmall .grid-half,
   .grid-img {
-    width: 46.969696969697%;
+    width: 50%;
   }
 
   .row-start-xsmall .grid-two-thirds {
-    width: 63.636363636364%;
+    width: 66.666666666667%;
   }
 
   .row-start-xsmall .grid-three-fourths {
-    width: 71.969696969697%;
-  }
-
-  .row-start-xsmall .grid-full {
-    width: 96.969696969697%;
+    width: 75%;
   }
 }
 /*  Still mostly single-column.
@@ -225,28 +231,24 @@ a:active {
 @media (min-width: 30em) {
   /*  Show grid for small screens */
   .row-start-small .grid-fourth {
-    width: 21.96969696969%;
+    width: 25%;
   }
 
   .row-start-small .grid-third,
   .grid-img {
-    width: 30.30303030303%;
+    width: 33.33333333333%;
   }
 
   .row-start-small .grid-half {
-    width: 46.969696969697%;
+    width: 50%;
   }
 
   .row-start-small .grid-two-thirds {
-    width: 63.636363636364%;
+    width: 66.666666666667%;
   }
 
   .row-start-small .grid-three-fourths {
-    width: 71.969696969697%;
-  }
-
-  .row-start-small .grid-full {
-    width: 96.969696969697%;
+    width: 75%;
   }
 }
 /*  Full 6-column grid.
@@ -254,49 +256,45 @@ a:active {
 @media (min-width: 40em) {
   .grid-fourth,
   .grid-img {
-    width: 21.96969696969%;
+    width: 25%;
   }
 
   .grid-third {
-    width: 30.30303030303%;
+    width: 33.33333333333%;
   }
 
   .grid-half {
-    width: 46.969696969697%;
+    width: 50%;
   }
 
   .grid-two-thirds {
-    width: 63.636363636364%;
+    width: 66.666666666667%;
   }
 
   .grid-three-fourths {
-    width: 71.969696969697%;
-  }
-
-  .grid-full {
-    width: 96.969696969697%;
+    width: 75%;
   }
 
   /*  Offets let you shift grid elements to the right
    *  but stay aligned to the grid. */
   .offset-fourth {
-    margin-left: 26.484848484848%;
+    margin-left: 25%;
   }
 
   .offset-third {
-    margin-left: 34.848484848485%;
+    margin-left: 33.33333333333%;
   }
 
   .offset-half {
-    margin-left: 51.515151515152%;
+    margin-left: 50%;
   }
 
   .offset-two-thirds {
-    margin-left: 68.181818181818%;
+    margin-left: 66.666666666667%;
   }
 
   .offset-three-fourths {
-    margin-left: 76.484848484848%;
+    margin-left: 75%;
   }
 }
 /* Add clearfix */
@@ -637,9 +635,6 @@ input[type="button"].btn-block {
   margin-right: 0;
   padding-right: 0;
   padding-left: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 button,
@@ -686,9 +681,6 @@ select {
   padding: 0.3125em;
   border: 0.0725em solid #b8b8b8;
   border-radius: 0.0725em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 form button,
