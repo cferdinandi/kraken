@@ -77,10 +77,11 @@ input[type="button"].btn-block {
 
 button,
 .btn {
-	background-image: none;
 	cursor: pointer;
 	text-align: center;
 	vertical-align: middle;
+	/* Override default Webkit/Firefox button styling */
+	background-image: none;
 	-webkit-appearance: none;
 }
 

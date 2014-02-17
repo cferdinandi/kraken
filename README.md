@@ -15,6 +15,8 @@ Getting started with Kraken is really easy. [View the online tutorial](http://cf
 Kraken is an open-source project. [Learn how you can get involved.](http://cferdinandi.github.io/kraken/get-involved.html)
 
 ## Changelog
+* v3.4 (February 16, 2014)
+  * [Added fix for Firefox on Android button styling quirk.](https://github.com/cferdinandi/kraken/pull/36)
 * v3.3 (February 4, 2014)
   * [Added universal box-sizing.](https://github.com/cferdinandi/kraken/issues/32)
   * Redesigned grid with simple percentages (made possible with universal box-sizing).

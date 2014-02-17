@@ -1,6 +1,6 @@
 /* =============================================================
 
-	Kraken v3.3
+	Kraken v3.4
 	A lightweight front-end boilerplate by Chris Ferdinandi.
 	http://gomakethings.com
 
@@ -639,10 +639,11 @@ input[type="button"].btn-block {
 
 button,
 .btn {
-  background-image: none;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
+  /* Override default Webkit/Firefox button styling */
+  background-image: none;
   -webkit-appearance: none;
 }
 
