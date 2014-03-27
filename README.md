@@ -16,6 +16,7 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 * v3.5 - March 26, 2014
     * Added `@font-face` feature test.
+    * Added fallback text for icons.
 * v3.4 - February 16, 2014
     * [Added fix for Firefox on Android button styling quirk.](https://github.com/cferdinandi/kraken/pull/36)
 * v3.3 - February 4, 2014
