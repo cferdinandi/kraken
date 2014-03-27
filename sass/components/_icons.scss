@@ -5,7 +5,7 @@
 	Learn more at http://gomakethings.com/icon-fonts/
  * ============================================================= */
 
-/*  @font-face mixin */
+/*	@font-face mixin */
 @include font-face('icomoon', '../fonts/icomoon', normal, normal);
 
 /*	Assign icon font to icons */
@@ -22,3 +22,11 @@
 /*	Define specific characters for each icon */
 /*	`.font-face` class added by `feature-test.js` */
 .font-face .icon-NAMESPACE:before { content: ""; }
+
+/*	Text that displays when @font-face is unsupported.
+ *	Also provides assistance for screen readers. */
+.font-face .icon-fallback-text {
+	position: absolute;
+	top: -9999em;
+	left:-9999em;
+}
