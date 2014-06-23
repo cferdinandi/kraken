@@ -3,31 +3,6 @@
 //	A few simple Sass helpers.
 //
 
-// Vendor prefix mixin
-// Forked from Bourbon. https://github.com/thoughtbot/bourbon/
-@mixin prefixer($property, $value, $prefixes) {
-	@each $prefix in $prefixes {
-		@if $prefix == webkit {
-			-webkit-#{$property}: $value;
-		}
-		@else if $prefix == moz {
-			-moz-#{$property}: $value;
-		}
-		@else if $prefix == ms {
-			-ms-#{$property}: $value;
-		}
-		@else if $prefix == o {
-			-o-#{$property}: $value;
-		}
-		@else if $prefix == spec {
-			#{$property}: $value;
-		}
-		@else  {
-			@warn "Unrecognized prefix: #{$prefix}";
-		}
-	}
-}
-
 // @font-face mixin
 // Order of the includes matters, and it is: normal, bold, italic, bold+italic.
 // Forked from Bourbon. https://github.com/thoughtbot/bourbon/

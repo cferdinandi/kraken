@@ -38,7 +38,7 @@ time, mark, audio, video {
 *,
 *:before,
 *:after {
-	@include prefixer(box-sizing, border-box, webkit moz spec);
+	box-sizing: border-box;
 }
 
 /*  Set display type for HTML5 semantic elements */

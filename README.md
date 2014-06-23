@@ -14,6 +14,16 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+* v3.6.0 - June 23, 2014
+    * Converted to gulp.js workflow.
+    * Added unit testing.
+    * Updated naming conventions.
+    * Removed unused `_mixins.scss` function.
+    * Added minified versions of files.
+    * Converted to three number versioning.
+    * [Replaced Google-hosted HTML5 shim with local version](https://github.com/cferdinandi/kraken/issues/60).
+    * [Updated icon recommendations](https://github.com/cferdinandi/kraken/issues/59).
+    * [Updated Google Analytics placeholder](https://github.com/cferdinandi/kraken/issues/66).
 * v3.5 - March 26, 2014
     * Added `@font-face` feature test.
     * Added fallback text for icons.

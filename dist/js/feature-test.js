@@ -1,17 +1,19 @@
-/* =============================================================
+/**
+ * Kraken v3.6.0
+ * A lightweight front-end boilerplate, by Chris Ferdinandi.
+ * http://github.com/cferdinandi/kraken
+ * 
+ * Free to use under the MIT License.
+ * http://gomakethings.com/mit/
+ */
 
-	Feature Test v1.0
-	Feature tests for browser support.
-	Includes @font-face and pseudo-selector support.
-
-	Licensed under MIT License.
-	http://www.opensource.org/licenses/mit-license.php/
-
- * ============================================================= */
-
-// Function to test for @font-face support
-// https://github.com/filamentgroup/face-off
-var isFontFaceSupported = (function( win, undefined ) {
+/**
+ * Test for @font-face support
+ * @param  {Node}  win Window
+ * @param  {String} undefined Prevents undefined from being defined in ES3
+ * @return {Boolean} Returns true if supported
+ */
+var isFontFaceSupported = function ( win, undefined ) {
 
 	"use strict";
 
@@ -44,15 +46,18 @@ var isFontFaceSupported = (function( win, undefined ) {
 	}
 
 	return supportFontFace;
-}( this ));
+}( this );
 
-// Function to test for pseudo selector support
-// https://gist.github.com/paulirish/441842
+/**
+ * Test for pseudo selector support
+ * @param  {String} selector Selector to test
+ * @return {Boolean} Returns true if supported
+ */
 var selectorSupported = function (selector) {
 
 	'use strict';
 
-	var support, link, sheet, doc = document,
+	var support, sheet, doc = document,
 		root = doc.documentElement,
 		head = root.getElementsByTagName('head')[0],
 
