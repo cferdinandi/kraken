@@ -1,5 +1,5 @@
 /**
- * Kraken v3.6.0
+ * Kraken v3.6.1
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
@@ -291,8 +291,7 @@ h3, .h3 {
   font-size: 1.1875em; }
 
 h4, h5, h6, .h4, .h5, .h6 {
-  font-size: 0.9375em;
-  font-style: italic; }
+  font-size: 0.9375em; }
 
 h4, .h4 {
   text-transform: uppercase; }
