@@ -1,5 +1,5 @@
 /**
- * Kraken v3.6.0
+ * Kraken v3.7.0
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
@@ -7,11 +7,16 @@
  * http://gomakethings.com/mit/
  */
 
-/* =============================================================
-	CSS RESET
-	Meyer's CSS Reset, Normalized.css, and custom code.
- * ============================================================= */
-/* Mobile Screen Resizing */
+/**
+ * @section CSS Reset
+ * Meyer's CSS Reset, Normalized.css, and custom code.
+ * @link http://meyerweb.com/eric/tools/css/reset/
+ * @link http://necolas.github.io/normalize.css/
+ */
+/**
+ * Mobile screen resizing
+ * @link http://dev.w3.org/csswg/css-device-adapt/
+ */
 @-webkit-viewport {
   width: device-width;
   zoom: 1; }
@@ -32,7 +37,9 @@
   width: device-width;
   zoom: 1; }
 
-/* Remove browser defaults */
+/**
+ * Remove browser defaults
+ */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, button, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -42,82 +49,106 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   vertical-align: baseline; }
 
-/* Add box sizing to everything
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/**
+ * Add box sizing to everything
+ * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/*  Set display type for HTML5 semantic elements */
+/**
+ * Set display type for HTML5 semantic elements
+ */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
-/*  Force scrollbar display to prevent jumping on pages.
- *  Fix text resize bug on mobile devices. */
+/**
+ * Force scrollbar display to prevent jumping on pages.
+ * Fix text resize bug on mobile devices.
+ */
 html {
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
-/*  Display audio, canvas, and video elements as inline block elements. */
+/**
+ * Display audio, canvas, and video elements as inline block elements.
+ */
 audio, canvas, video {
   display: inline-block; }
 
-/*  Prevent modern browsers from displaying audio without controls. */
+/**
+ * Prevent modern browsers from displaying audio without controls.
+ */
 audio:not([controls]) {
   display: none;
   height: 0; }
 
-/*  Prevent img and video elements from spilling
- *  outside of the page on smaller screens. */
+/**
+ * Prevent img and video elements from spilling outside of the page on smaller screens.
+ */
 img, video {
   max-width: 100%;
   height: auto; }
 
-/*  Prevent iframe, object, and embed elements from
- *  spilling outside of the page on smaller screens. */
+/**
+ * Prevent iframe, object, and embed elements from spilling outside of the page on smaller screens.
+ */
 iframe, object, embed {
   max-width: 100%; }
 
-/* Address [hidden] styling not present in IE 8/9.
- * Hide the template element in IE, Safari, and Firefox < 22. */
-[hidden], template {
+/**
+ * Hide the template element in IE, Safari, and Firefox < 22.
+ */
+template {
   display: none;
   visibility: hidden; }
 
-/*  Prevents IE from making scaled images look like crap */
+/**
+ * Prevents IE from making scaled images look like crap
+ */
 img {
   -ms-interpolation-mode: bicubic; }
 
-/*  Address outline inconsistency between Chrome and other browsers. */
+/**
+ * Address outline inconsistency between Chrome and other browsers.
+ */
 a:focus, button:focus {
   outline: thin dotted;
   outline: 0.3125em auto -webkit-focus-ring-color;
   outline-offset: -0.15625em; }
 
-/*  Improve readability when focused and also mouse hovered in all browsers. */
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
 a:hover, a:active {
   outline: 0; }
 
-/* =============================================================
-	THE GRID
-	Structure and layout.
- * ============================================================= */
-/*  Mobile-first. Single-column layout by default
- *  Container sets the maximum page width. Adjust as needed. */
+/**
+ * @section Grid
+ * Structure and layout
+ */
+/**
+ * Mobile-first, single-column layout by default.
+ * Container sets the maximum page width.
+ * Adjust as needed.
+ */
 .container {
   max-width: 80em;
   width: 88%;
   margin-left: auto;
   margin-right: auto; }
 
-/*  Still mostly single-column.
- *  Option to activate grid on small screens.
- *  Two-column layout for .grid-img. */
+/**
+ * Still mostly single-column.
+ * Option to activate grid on small screens.
+ * Two-column layout for .grid-img.
+ */
 @media (min-width: 20em) {
-  /*  Reverses order of grid for content choreography */
-  /*  Optionally show grid for small screens */
+  /* Reverses order of grid for content choreography */
+  /* Optionally show grid for small screens */
   .row {
     margin-left: -1.4%;
     margin-right: -1.4%; }
@@ -132,21 +163,23 @@ a:hover, a:active {
     width: 25%; }
   .row-start-xsmall .grid-third {
     width: 33.33333%; }
-  .row-start-xsmall .grid-half, .grid-img {
+  .row-start-xsmall .grid-half, .row-start-xsmall .grid-img {
     width: 50%; }
   .row-start-xsmall .grid-two-thirds {
     width: 66.66667%; }
   .row-start-xsmall .grid-three-fourths {
     width: 75%; } }
 
-/*  Still mostly single-column.
- *  Option to activate grid on medium screens.
- *  Three-column layout for .grid-img. */
+/**
+ * Still mostly single-column.
+ * Option to activate grid on medium screens.
+ * Three-column layout for .grid-img.
+ */
 @media (min-width: 30em) {
-  /*  Show grid for small screens */
+  /* Show grid for small screens */
   .row-start-small .grid-fourth {
     width: 25%; }
-  .row-start-small .grid-third, .grid-img {
+  .row-start-small .grid-third, .row-start-small .grid-img {
     width: 33.33333%; }
   .row-start-small .grid-half {
     width: 50%; }
@@ -155,11 +188,14 @@ a:hover, a:active {
   .row-start-small .grid-three-fourths {
     width: 75%; } }
 
-/*  Full 6-column grid.
- *  Four-column layout for .grid-img. */
+/**
+ * Full 6-column grid.
+ * Four-column layout for .grid-img.
+ */
 @media (min-width: 40em) {
-  /*  Offets let you shift grid elements to the right
-	 *  but stay aligned to the grid. */
+  /**
+	 * Offets let you shift grid elements to the right but stay aligned to the grid.
+	 */
   .grid-fourth, .grid-img {
     width: 25%; }
   .grid-third {
@@ -182,26 +218,26 @@ a:hover, a:active {
     margin-left: 75%; } }
 
 /* Add clearfix */
-/* =============================================================
-	TYPOGRAPHY
-	Sets font styles for entire site.
- * ============================================================= */
+/**
+ * @section Typography
+ * Sets font styles for entire site
+ */
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #272727;
   background: #ffffff; }
+  @media (min-width: 40em) {
+    body {
+      line-height: 1.5625; } }
 
 p {
   margin-bottom: 1.5625em; }
 
-@media (min-width: 40em) {
-  body {
-    line-height: 1.5625; } }
-
-/*  Sizes
- *  For smaller and larger text */
+/**
+ * Sizes for smaller and larger text
+ */
 .text-small {
   font-size: 0.9375em; }
 
@@ -213,19 +249,21 @@ p {
   .text-tall {
     font-size: 1.3125em; } }
 
-/*  Colors
- *  For alternate text colors */
+/**
+ * Alternate text colors
+ */
 .text-muted {
   color: #808080; }
 
-/*  Links
- *  Hyperlink styling */
-a {
+/**
+ * Hyperlink styling
+ */
+a, a:visited {
   color: #0088cc;
   text-decoration: none;
   word-wrap: break-word; }
 
-a:hover {
+a:hover, a:focus, a:active {
   color: #005580;
   text-decoration: underline; }
 
@@ -233,16 +271,19 @@ a img {
   border: none;
   background: none; }
 
-/*  Prevents border/background on linked image hover.
- *  Adds slight opacity. */
+/**
+ * Prevents border/background on linked image hover.
+ * Adds slight opacity.
+ */
 a:hover img {
   border: none;
   background: none;
   opacity: 0.8;
   filter: alpha(opacity=80); }
 
-/*  Lists
- *  Styling for lists */
+/**
+ * List styling
+ */
 ul, ol, dl {
   margin-bottom: 1.5625em;
   margin-left: 2em; }
@@ -262,17 +303,18 @@ dl {
 dt {
   font-weight: bold; }
 
-/*  Removes list styling.
- *  For semantic reasons, should only
- *  be used on unordered lists. */
+/**
+ * Removes list styling.
+ * For semantic reasons, should only be used on unordered lists.
+ */
 .list-unstyled {
   margin-left: 0;
   list-style: none; }
 
-/*  Headings
- *  h1 through h6 styling
- *  Heading class lets you use one heading type for semantics
- *  but style it as another heading type. */
+/**
+ * Heading styling for h1 through h6 elements.
+ * Heading class lets you use one heading type for semantics, but style it as another heading type.
+ */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: normal;
@@ -301,23 +343,21 @@ h4, .h4 {
   h1, .h1 {
     font-size: 1.75em; } }
 
-/*  Lines, Quotes and Emphasis */
-/*  Lines */
+/**
+ * Lines, Quotes and Emphasis
+ */
 hr {
   margin: 2em auto;
   border: 0;
   border-top: 0.0725em solid #e5e5e5;
   border-bottom: 0 solid #ffffff; }
 
-/*  Bold */
 strong {
   font-weight: bold; }
 
-/*  Italics */
 em {
   font-style: italic; }
 
-/*  Subscript & Superscript */
 sub, sup {
   position: relative;
   font-size: 85%;
@@ -332,7 +372,9 @@ sup {
 sub {
   bottom: -0.25em; }
 
-/*  Highlighting colors */
+/**
+ * Highlighting colors
+ */
 ::-moz-selection {
   color: #ffffff;
   background: #0088cc; }
@@ -344,7 +386,9 @@ sub {
   color: #ffffff;
   background: #0088cc; }
 
-/*  Blockquotes */
+/**
+ * Blockquotes
+ */
 blockquote {
   border-left: 0.25em solid #e5e5e5;
   margin-bottom: 1.5625em;
@@ -358,11 +402,10 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none; }
 
-/* =============================================================
-	CODE
-	Styling for code and preformatted text.
- * ============================================================= */
-/* @todo Add variables for code elements */
+/**
+ * @section Code
+ * Styling for code and preformatted text.
+ */
 code, pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 0.875em;
@@ -391,10 +434,10 @@ pre code {
   background-color: transparent;
   border: 0; }
 
-/* =============================================================
-	BUTTONS
-	Styling for CSS buttons.
- * ============================================================= */
+/**
+ * @section Buttons
+ * Styling for CSS buttons.
+ */
 .btn {
   display: inline-block;
   font-size: 0.9375em;
@@ -407,10 +450,10 @@ pre code {
   margin-right: 0.3125em;
   margin-bottom: 0.3125em; }
 
-.btn, .btn:hover, a .btn:hover, .btn.active {
+.btn, .btn:visited, a .btn:visited, .btn:hover, a .btn:hover, .btn:focus, a .btn:focus, .btn:active, a .btn:active, .btn.active {
   color: #ffffff; }
 
-.btn:hover, a .btn:hover, .btn.active {
+.btn:hover, a .btn:hover, .btn:focus, a .btn:focus, .btn:active, a .btn:active, .btn.active {
   background-color: #005580;
   border-color: #005580;
   text-decoration: none; }
@@ -419,7 +462,7 @@ pre code {
   background-color: #808080;
   border-color: #808080; }
 
-.btn-secondary:hover, a .btn-secondary:hover, .btn-secondary.active {
+.btn-secondary:hover, a .btn-secondary:hover, .btn-secondary:focus, a .btn-secondary:focus, .btn-secondary:active, a .btn-secondary:active, .btn-secondary.active {
   background-color: #5a5a5a;
   border-color: #5a5a5a; }
 
@@ -452,18 +495,20 @@ button, .btn {
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  /* Override default Webkit/Firefox button styling */
+  /**
+	 * @workaround Override default button styling
+	 * @affected Webkit/Firefox
+	 */
   background-image: none;
   -webkit-appearance: none; }
 
 .btn:last-child, input.btn {
   margin-right: 0; }
 
-/* =============================================================
-	FORMS
-	Styling for form elements.
- * ============================================================= */
-/* @todo Integrate form styling with _config options */
+/**
+ * @section Forms
+ * Styling for form elements.
+ */
 form, fieldset {
   margin-bottom: 1.5625em; }
 
@@ -473,7 +518,6 @@ legend, label {
   padding: 0;
   margin-bottom: 0.3125em; }
 
-/* @todo Adjust form colors based on Sass variables */
 input, textarea, select {
   display: block;
   width: 100%;
@@ -484,6 +528,9 @@ input, textarea, select {
   padding: 0.3125em;
   border: 0.0725em solid #b8b8b8;
   border-radius: 0.0725em; }
+  @media (min-width: 40em) {
+    input, textarea, select {
+      line-height: 1.5625; } }
 
 form button, form .button {
   margin-bottom: 1.1875em; }
@@ -511,26 +558,28 @@ input[type="file"]:focus, input[type="checkbox"]:focus, select:focus {
   outline: 0.3125em auto -webkit-focus-ring-color;
   outline-offset: -0.125em; }
 
-/*  Inline Inputs */
+/**
+ * Inline inputs
+ */
 .input-inline {
   display: inline-block;
   width: auto;
   vertical-align: middle; }
 
-/*  Condensed Inputs */
+/**
+ * Condensed inputs
+ */
 .input-condensed {
   padding: 0.0725em 0.3125em;
   font-size: 0.9375em; }
 
-@media (min-width: 40em) {
-  input, textarea, select {
-    line-height: 1.5625; } }
-
-/* =============================================================
-	ALIGNMENT, SPACING & VISIBILITY
-	Override default alignment, spacing and visibilty.
- * ============================================================= */
-/*  Text alignment */
+/**
+ * @section Alignment, Spacing, & Visibility
+ * Override defaults.
+ */
+/**
+ * Text alignment
+ */
 .text-center {
   text-align: center; }
 
@@ -540,7 +589,9 @@ input[type="file"]:focus, input[type="checkbox"]:focus, select:focus {
 .text-left {
   text-align: left; }
 
-/*  Floats */
+/**
+ * Floats
+ */
 .float-left {
   float: left; }
 
@@ -552,7 +603,9 @@ input[type="file"]:focus, input[type="checkbox"]:focus, select:focus {
 .float-right {
   float: right; }
 
-/*  Spacing */
+/**
+ * Spacing
+ */
 .no-space {
   margin: 0;
   padding: 0; }
@@ -575,13 +628,25 @@ input[type="file"]:focus, input[type="checkbox"]:focus, select:focus {
 .space-top {
   padding-top: 0.8125em; }
 
-/*  Screen Reader Text */
+/**
+ * Visibility
+ */
 .screen-reader {
   position: absolute;
   top: -9999em;
   left: -9999em; }
 
-/*  Clearfix */
+/**
+ * @workaround
+ * @affected IE 8/9/10
+ */
+[hidden] {
+  display: none;
+  visibility: hidden; }
+
+/**
+ * Clearfix
+ */
 .group:before, .container:before, .row:before, .group:after, .container:after, .row:after {
   display: table;
   content: ""; }
@@ -589,28 +654,47 @@ input[type="file"]:focus, input[type="checkbox"]:focus, select:focus {
 .group:after, .container:after, .row:after {
   clear: both; }
 
-/* =============================================================
-	PRINT STYLES
-	Styling for printed content. Adapted from HTML5BP.
-	http://html5boilerplate.com
- * ============================================================= */
+/**
+ * @section Print
+ * Styling for printed content. Adapted from HTML5BP.
+ * @link http://html5boilerplate.com
+ */
 @media print {
-  /*  Universal selector.
-	 *  Reset all content to transparent background,
-	 *  black color, and remove box and text shadows. */
-  /*  Specifies page margin */
+  /**
+	 * Universal selector.
+	 * Reset all content to transparent background, black color, and remove box and text shadows.
+	 */
+  /**
+	 * Specifies page margin
+	 */
   @page {
     margin: 0.5cm; }
 
-  /*  Underline all links */
-  /*  Show URL after links */
-  /*  Don't show URL for internal links */
-  /*  Specifies the minimum number of lines to print at the top and bottom of a page. */
-  /*  Avoid inserting a page break after headers */
-  /*  Change border color on blockquotes and preformatted text.
-	 *  Avoid page breaks inside the content */
-  /*  Displayed as a table header row group */
-  /*  Avoid inserting a page break inside table rows and images */
+  /**
+	 * Underline all links
+	 */
+  /**
+	 * Show URL after links
+	 */
+  /**
+	 * Don't show URL for internal links
+	 */
+  /**
+	 * Specifies the minimum number of lines to print at the top and bottom of a page.
+	 */
+  /**
+	 * Avoid inserting a page break after headers
+	 */
+  /**
+	 * Change border color on blockquotes and preformatted text.
+	 * Avoid page breaks inside the content
+	 */
+  /**
+	 * Displayed as a table header row group
+	 */
+  /**
+	 * Avoid inserting a page break inside table rows and images
+	 */
   * {
     background: transparent !important;
     color: #000 !important;

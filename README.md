@@ -14,6 +14,11 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
+* v3.7.0 - July 21, 2014
+    * Added `[hidden]` attribute polyfill.
+    * Converted to CSSDoc inline documentation.
+    * Added nested media queries for better readability.
+    * Added `:focus` and `:visited` styles for links and buttons.
 * v3.6.0 - June 23, 2014
     * Converted to gulp.js workflow.
     * Added unit testing.

@@ -1,8 +1,8 @@
-/* =============================================================
-	FORMS
-	Styling for form elements.
- * ============================================================= */
-/* @todo Integrate form styling with _config options */
+/**
+ * @section Forms
+ * Styling for form elements.
+ */
+
 form,
 fieldset {
 	margin-bottom: $spacing;
@@ -16,7 +16,6 @@ label {
 	margin-bottom: calc-em(5px);
 }
 
-/* @todo Adjust form colors based on Sass variables */
 input,
 textarea,
 select {
@@ -29,6 +28,10 @@ select {
 	padding: calc-em(5px);
 	border: calc-em(1px) solid lighten( $color-gray-dark, 22% );
 	border-radius: calc-em(1px);
+
+	@media (min-width: $bp-medium) {
+		line-height: 1.5625;
+	}
 }
 
 form button,
@@ -68,7 +71,9 @@ select:focus {
 }
 
 
-/*  Inline Inputs */
+/**
+ * Inline inputs
+ */
 .input-inline {
 	display: inline-block;
 	width: auto;
@@ -76,15 +81,10 @@ select:focus {
 }
 
 
-/*  Condensed Inputs */
+/**
+ * Condensed inputs
+ */
 .input-condensed {
 	padding: calc-em(1px) calc-em(5px);
 	font-size: calc-em(15px);
-}
-
-
-@media (min-width: $bp-medium) {
-	input, textarea, select {
-		line-height: 1.5625;
-	}
 }

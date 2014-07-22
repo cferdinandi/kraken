@@ -1,9 +1,11 @@
-/* =============================================================
-	ALIGNMENT, SPACING & VISIBILITY
-	Override default alignment, spacing and visibilty.
- * ============================================================= */
+/**
+ * @section Alignment, Spacing, & Visibility
+ * Override defaults.
+ */
 
-/*  Text alignment */
+/**
+ * Text alignment
+ */
 
 .text-center {
 	text-align: center;
@@ -18,7 +20,9 @@
 }
 
 
-/*  Floats */
+/**
+ * Floats
+ */
 
 .float-left {
 	float: left;
@@ -35,7 +39,9 @@
 }
 
 
-/*  Spacing */
+/**
+ * Spacing
+ */
 
 .no-space {
 	margin: 0;
@@ -66,7 +72,9 @@
 }
 
 
-/*  Screen Reader Text */
+/**
+ * Visibility
+ */
 
 .screen-reader {
 	position: absolute;
@@ -74,8 +82,20 @@
 	left:-9999em;
 }
 
+/**
+ * @workaround
+ * @affected IE 8/9/10
+ */
+[hidden] {
+	display: none;
+	visibility: hidden;
+}
 
-/*  Clearfix */
+
+/**
+ * Clearfix
+ */
+
 .group:before,
 .group:after {
 	display: table;

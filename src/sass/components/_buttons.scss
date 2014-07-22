@@ -1,7 +1,7 @@
-/* =============================================================
-	BUTTONS
-	Styling for CSS buttons.
- * ============================================================= */
+/**
+ * @section Buttons
+ * Styling for CSS buttons.
+ */
 
 .btn {
 	display: inline-block;
@@ -17,14 +17,24 @@
 }
 
 .btn,
+.btn:visited,
+a .btn:visited,
 .btn:hover,
 a .btn:hover,
+.btn:focus,
+a .btn:focus,
+.btn:active,
+a .btn:active,
 .btn.active {
 	color: $color-white;
 }
 
 .btn:hover,
 a .btn:hover,
+.btn:focus,
+a .btn:focus,
+.btn:active,
+a .btn:active,
 .btn.active {
 	background-color: darken( $color-primary, 15% );
 	border-color: darken( $color-primary, 15% );
@@ -38,6 +48,10 @@ a .btn:hover,
 
 .btn-secondary:hover,
 a .btn-secondary:hover,
+.btn-secondary:focus,
+a .btn-secondary:focus,
+.btn-secondary:active,
+a .btn-secondary:active,
 .btn-secondary.active {
 	background-color: darken( $color-gray-dark, 15% );
 	border-color: darken( $color-gray-dark, 15% );
@@ -80,7 +94,10 @@ button,
 	cursor: pointer;
 	text-align: center;
 	vertical-align: middle;
-	/* Override default Webkit/Firefox button styling */
+	/**
+	 * @workaround Override default button styling
+	 * @affected Webkit/Firefox
+	 */
 	background-image: none;
 	-webkit-appearance: none;
 }
