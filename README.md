@@ -19,6 +19,8 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
     * Converted to CSSDoc inline documentation.
     * Added nested media queries for better readability.
     * Added `:focus` and `:visited` styles for links and buttons.
+* v3.6.1 - June 24, 2014
+    * Removed italics from h4, h5, and h6 elements.
 * v3.6.0 - June 23, 2014
     * Converted to gulp.js workflow.
     * Added unit testing.
