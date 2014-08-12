@@ -14,7 +14,7 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 ## Changelog
 
-* v4.0.0 - August 12, 2014
+* v3.8.0 - August 12, 2014
     * Added `@each` loop for icons and the grid for easier maintenance.
     * Switched from sasslib to Ruby Sass for compiling (more compatible with Sass 3.x features).
     * Added variable for container width property.
