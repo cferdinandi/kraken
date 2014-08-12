@@ -13,6 +13,12 @@ body {
 	@media (min-width: $bp-medium) {
 		line-height: 1.5625;
 	}
+
+	@if $font-base != $font-xlarge-screens {
+		@media (min-width: $bp-xlarge) {
+			font-size: $font-xlarge-screens;
+		}
+	}
 }
 
 p {

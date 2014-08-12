@@ -4,160 +4,69 @@
  */
 
 /**
- * Mobile-first, single-column layout by default.
- * Container sets the maximum page width.
- * Adjust as needed.
+ * Base grid styles: single column
  */
 .container {
 	max-width: $container-max;
-	width: 88%;
+	width: $container-width;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+.row {
+	margin-left: $grid-margins * -1;
+	margin-right: $grid-margins * -1;
+}
 
-/**
- * Still mostly single-column.
- * Option to activate grid on small screens.
- * Two-column layout for .grid-img.
- */
-@media (min-width: $bp-xsmall) {
+%grid-base {
+	float: left;
+	width: 100%;
+	padding-left: $grid-margins;
+	padding-right: $grid-margins;
+}
 
-	.row {
-		margin-left: $grid-margins * -1;
-		margin-right: $grid-margins * -1;
+@each $grid, $width in ($grid-sizes) {
+	.grid-#{$grid} {
+		@extend %grid-base;
 	}
-
-	.grid-fourth,
-	.grid-third,
-	.grid-half,
-	.grid-two-thirds,
-	.grid-three-fourths,
-	.grid-full,
-	.grid-img {
-		float: left;
-		width: 100%;
-		padding-left: $grid-margins;
-		padding-right: $grid-margins;
-	}
-
-	/* Reverses order of grid for content choreography */
-	.grid-flip {
-		float: right;
-	}
-
-	/* Optionally show grid for small screens */
-	.row-start-xsmall {
-		.grid-fourth {
-			width: 25%;
-		}
-
-		.grid-third {
-			width: 33.33333333333%;
-		}
-
-		.grid-half,
-		.grid-img {
-			width: 50%;
-		}
-
-		.grid-two-thirds {
-			width: 66.666666666667%;
-		}
-
-		.grid-three-fourths {
-			width: 75%;
-		}
-	}
-
 }
 
 
 /**
- * Still mostly single-column.
- * Option to activate grid on medium screens.
- * Three-column layout for .grid-img.
+ * Reverses order of grid for content choreography
  */
-@media (min-width: $bp-small) {
-
-	/* Show grid for small screens */
-	.row-start-small {
-		.grid-fourth {
-			width: 25%;
-		}
-
-		.grid-third,
-		.grid-img {
-			width: 33.33333333333%;
-		}
-
-		.grid-half {
-			width: 50%;
-		}
-
-		.grid-two-thirds {
-			width: 66.666666666667%;
-		}
-
-		.grid-three-fourths {
-			width: 75%;
-		}
-	}
-
+.grid-flip {
+	float: right;
 }
 
 
 /**
- * Full 6-column grid.
- * Four-column layout for .grid-img.
+ * Add columns to grid on bigger screens
  */
-@media (min-width: $bp-medium) {
-
-	.grid-fourth,
-	.grid-img {
-		width: 25%;
+@each $breakpoint, $prefix, $offset in ($grid-breakpoints){
+	@media (min-width: $breakpoint) {
+		@each $grid, $width in ($grid-sizes) {
+			#{$prefix} .grid-#{$grid} {
+				width: $width;
+			}
+		}
+		@if $offset {
+			@each $grid, $width in ($grid-sizes) {
+				#{$prefix} .offset-#{$grid} {
+					margin-left: $width;
+				}
+			}
+		}
 	}
+}
 
-	.grid-third {
-		width: 33.33333333333%;
-	}
-
-	.grid-half {
-		width: 50%;
-	}
-
-	.grid-two-thirds {
-		width: 66.666666666667%;
-	}
-
-	.grid-three-fourths {
-		width: 75%;
-	}
-
-
-	/**
-	 * Offets let you shift grid elements to the right but stay aligned to the grid.
-	 */
-	.offset-fourth {
-		margin-left: 25%;
-	}
-
-	.offset-third {
-		margin-left: 33.33333333333%;
-	}
-
-	.offset-half {
-		margin-left: 50%;
-	}
-
-	.offset-two-thirds {
-		margin-left: 66.666666666667%;
-	}
-
-	.offset-three-fourths {
-		margin-left: 75%;
-	}
-
+/**
+ * Image gallery
+ */
+.grid-img {
+	@media (min-width: $bp-xsmall)  { width: 50%; }
+	@media (min-width: $bp-small) { width: 33.33333333333%; }
+	@media (min-width: $bp-medium)  { width: 25%; }
 }
 
 /* Add clearfix */

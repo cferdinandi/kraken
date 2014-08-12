@@ -1,25 +1,5 @@
-//
-// CONFIGURATION SETTINGS
+// @section Configuration Settings
 // Adjust colors, font stacks, breakpoints and sizing.
-//
-//
-// Colors
-// Primary (Blue): #0088cc
-// Black: #272727
-// White: #ffffff
-// Success (Green): #377f31;
-// Danger (Red): #880e14;
-// Warning (Yellow): #dba909;
-// Code (Fuscia): #dd1144;
-// Gray (Dark): #808080
-// Gray (Light): #e5e5e5
-//
-//
-// Font Stack
-// Sans-Serif (default): "Helvetica Neue", Arial, sans-serif
-// Serif (suggested): Georgia, Times, serif
-// Monospace: Menlo, Monaco, "Courier New", monospace
-//
 //
 // Typographic Scale
 // (For math purposes. Actual font sizes in ems.)
@@ -57,6 +37,30 @@ $bp-xlarge: 80em;
 
 // Sizing
 $font-base: 100%;
+$font-xlarge-screens: 125%;
 $spacing: 1.5625em;
 $container-max: 80em;
+$container-width: 88%;
+
+
+// Grid
 $grid-margins: 1.4%;
+$grid-sizes: ( // name: width
+	fourth: 25%,
+	third: 33.33333333333%,
+	half: 50%,
+	two-thirds: 66.666666666667%,
+	three-fourths: 75%,
+	full: 100%
+);
+$grid-breakpoints: ( // breakpoint, prefix, include offsets (boolean)
+	($bp-xsmall, ".row-start-xsmall", false),
+	($bp-small, ".row-start-small", false),
+	($bp-medium, null, true)
+);
+
+
+// Icons
+$icons: ( // name, character, color
+	("logo", "e600", null),
+);
