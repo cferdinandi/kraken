@@ -1,5 +1,5 @@
 /**
- * Kraken v3.8.0
+ * Kraken v3.8.1
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
@@ -7,6 +7,4 @@
  * http://gomakethings.com/mit/
  */
 
-/* =============================================================
-    Add your scripts here.
- * ============================================================= */
+// Add your scripts here...

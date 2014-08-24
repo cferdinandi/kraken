@@ -16,6 +16,9 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v3.8.1 - August 24, 2014
+    * Fixed unit tests path.
+    * Added feature testing and main JS files to their own subfolders for concatenation.
 * v3.8.0 - August 12, 2014
     * Added `@each` loop for icons and the grid for easier maintenance.
     * Switched from sasslib to Ruby Sass for compiling (more compatible with Sass 3.x features).
