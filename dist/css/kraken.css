@@ -1,5 +1,5 @@
 /**
- * Kraken v3.8.1
+ * Kraken v3.8.2
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
@@ -324,7 +324,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #272727;
-  background: white;
+  background: #ffffff;
 }
 @media (min-width: 40em) {
   body {
@@ -362,7 +362,7 @@ p {
  * Alternate text colors
  */
 .text-muted {
-  color: gray;
+  color: #808080;
 }
 
 /**
@@ -491,7 +491,7 @@ hr {
   margin: 2em auto;
   border: 0;
   border-top: 0.0725em solid #e5e5e5;
-  border-bottom: 0 solid white;
+  border-bottom: 0 solid #ffffff;
 }
 
 strong {
@@ -524,16 +524,16 @@ sub {
  * Highlighting colors
  */
 ::-moz-selection {
-  color: white;
+  color: #ffffff;
   background: #0088cc;
 }
 ::selection {
-  color: white;
+  color: #ffffff;
   background: #0088cc;
 }
 
 ::-moz-selection {
-  color: white;
+  color: #ffffff;
   background: #0088cc;
 }
 
@@ -623,7 +623,7 @@ a .btn:focus,
 .btn:active,
 a .btn:active,
 .btn.active {
-  color: white;
+  color: #ffffff;
 }
 
 .btn:hover,
@@ -639,8 +639,8 @@ a .btn:active,
 }
 
 .btn-secondary {
-  background-color: gray;
-  border-color: gray;
+  background-color: #808080;
+  border-color: #808080;
 }
 
 .btn-secondary:hover,
