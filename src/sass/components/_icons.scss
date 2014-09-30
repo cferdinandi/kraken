@@ -6,35 +6,79 @@
  */
 
 /**
- * @font-face mixin
+ * Include the icon font family
  */
+
 @include font-face('icomoon', '../fonts/icomoon', normal, normal);
 
+
 /**
- * Assign icon font to icons
+ * Base class
  */
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
+
+.icon {
 	font-family: 'icomoon';
 	font-style: normal;
 	speak: none;
 	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
 }
 
+
 /**
- * Define specific characters for each icon
- * `.font-face` class added by `feature-test.js`
+ * Icon content
  */
-.font-face .icon-NAMESPACE:before { content: ""; }
+
+@each $icon, $character, $color in ($icons) {
+	.font-face .icon-#{$icon}:before { content: $character };
+}
+
+
+/**
+ * Icon colors
+ */
+
+@each $icon, $character, $color in ($icons) {
+	@if $color {
+		.icon-#{$icon} { color: $color };
+	}
+}
+
+
+/**
+ * Icons in links
+ */
+
+a.icon-link-wrap:hover {
+	text-decoration: none;
+}
+
+a:hover .icon-link {
+	color: darken( $color-primary, 15% );
+}
+
+a:hover .icon-link-text {
+	text-decoration: underline;
+}
+
+
+/**
+ * Override color-styled icons
+ */
+
+.icon-inherit-color {
+	color: inherit;
+}
+
 
 /**
  * Text that displays when @font-face is unsupported.
  * Also provides assistance for screen readers.
  */
+
 .font-face .icon-fallback-text {
 	position: absolute;
 	top: -9999em;
-	left:-9999em;
+	left: -9999em;
 }
