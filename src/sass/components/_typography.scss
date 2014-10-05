@@ -34,13 +34,13 @@ p {
 	font-size: calc-em(15px);
 }
 
-.text-tall {
+.text-large {
 	font-size: calc-em(19px);
 	line-height: 1.4;
 }
 
 @media (min-width: $bp-medium) {
-	.text-tall {
+	.text-large {
 		font-size: calc-em(21px);
 	}
 }

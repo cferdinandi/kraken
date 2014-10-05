@@ -33,6 +33,12 @@ var paths = {
 		spec : [ 'test/spec/**/*.js' ],
 		coverage: 'test/coverage/',
 		results: 'test/results/'
+	},
+	docs : {
+		input: 'docs/_templates/**',
+		output: 'docs/docs/',
+		scripts: 'docs/docs/js/',
+		styles: 'docs/docs/css/'
 	}
 };
 
@@ -64,7 +70,8 @@ gulp.task('scripts', ['clean'], function() {
 		.pipe(rename, { suffix: '.min' })
 		.pipe(uglify)
 		.pipe(header, banner.min, { package : package })
-		.pipe(gulp.dest, paths.scripts.output);
+		.pipe(gulp.dest, paths.scripts.output)
+		.pipe(gulp.dest, paths.docs.scripts);
 
 	return gulp.src(paths.scripts.input)
 		.pipe(plumber())
@@ -92,7 +99,8 @@ gulp.task('styles', ['clean'], function() {
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minify())
 		.pipe(header(banner.min, { package : package }))
-		.pipe(gulp.dest(paths.styles.output));
+		.pipe(gulp.dest(paths.styles.output))
+		.pipe(gulp.dest(paths.docs.styles));
 });
 
 // Copy static files into output folder
@@ -115,7 +123,8 @@ gulp.task('clean', function () {
 	return gulp.src([
 			paths.output,
 			paths.test.coverage,
-			paths.test.results
+			paths.test.results,
+			paths.docs.output
 		], { read: false })
 		.pipe(plumber())
 		.pipe(clean());

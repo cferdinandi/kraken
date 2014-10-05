@@ -179,7 +179,7 @@ a:active {
   margin-right: -1.4%;
 }
 
-.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full {
+.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full, .grid-img {
   float: left;
   width: 100%;
   padding-left: 1.4%;
@@ -348,13 +348,13 @@ p {
   font-size: 0.9375em;
 }
 
-.text-tall {
+.text-large {
   font-size: 1.1875em;
   line-height: 1.4;
 }
 
 @media (min-width: 40em) {
-  .text-tall {
+  .text-large {
     font-size: 1.3125em;
   }
 }

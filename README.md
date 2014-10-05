@@ -19,6 +19,7 @@ Kraken uses [semantic versioning](http://semver.org/).
 * v4.0.0 - September 30, 2014
     * Updated `icons.scss` to use `@each` loops.
     * Changed name of CSS output from `kraken.css` to `main.css`.
+    * Changed `.text-tall` to `.text-large` for semantic consistency.
 * v3.8.2 - September 28, 2014
     * Fixed JS concatenation bug.
 * v3.8.1 - August 24, 2014

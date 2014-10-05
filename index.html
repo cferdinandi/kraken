@@ -14,7 +14,78 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- stylesheet -->
-		<link rel="stylesheet" href="dist/css/main.css" type="text/css">
+		<link rel="stylesheet" href="dist/css/main.min.css" type="text/css">
+		<style type="text/css">
+			/**
+			 * Astro v5.4.3
+			 * A collection of mobile-first navigation patterns., by Chris Ferdinandi.
+			 * http://github.com/cferdinandi/astro
+			 *
+			 * Free to use under the MIT License.
+			 * http://gomakethings.com/mit/
+			 */
+
+			/*  Center all navigation elements */
+			.nav-wrap {
+				text-align: center;
+			}
+
+			/*  For text-based logo, override default link styling.
+			 *  If .logo and .nav don't align properly,
+			 *  adjust the .logo line-height. */
+			.logo {
+				display: inline-block;
+				font-size: 1.8em;
+				line-height: 1.2;
+				color: #272727;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+				text-decoration: none;
+			}
+
+			/*  For text-based logo, override default link hover styling */
+			.logo:hover {
+				color: #272727;
+				text-decoration: none;
+			}
+
+			/*  Remove default list styling for navigation list */
+			.nav {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			/*  Display navigation items as inline-block elements.
+			 *  Add slight margin between each navigation item. */
+			.nav > li {
+				display: inline-block;
+				float: none;
+				margin-left: 0.5em;
+				margin-right: 0.5em;
+			}
+
+			/*  Remove margin-left on first navigation item */
+			.nav > li:first-child {
+				margin-left: 0;
+			}
+
+			/*  Remove margin-right on last navigation item */
+			.nav > li:last-child {
+				margin-right: 0;
+			}
+
+
+			/**
+			 * Grid Highlights
+			 */
+			.grid-bg {
+				background-color: #f7f7f7;
+				border: 1px solid #e5e5e5;
+				margin-bottom: 1em;
+				padding: 0.9375em;
+			}
+		</style>
 
 		<!-- HTML5 Shim for IE 6-8 -->
 		<!--[if lt IE 9]>
@@ -33,83 +104,148 @@
 			</section>
 		<![endif]-->
 
+		<nav class="nav-wrap container">
+			<a class="logo" href="#">Kraken</a>
+			<p class="text-muted space-bottom-small">A lightweight, mobile-first boilerplate for front-end web developers.</p>
+			<ul class="nav">
+				<li><a href="https://github.com/cferdinandi/kraken/README.md#getting-started">Docs</a></li>
+				<li><a href="https://github.com/cferdinandi/kraken">GitHub</a></li>
+				<li><a href="https://github.com/cferdinandi/kraken/archive/master.zip">Download</a></li>
+			</ul>
+			<hr>
+		</nav>
+
+
+		<section class="container">
+			<h1 class="space-bottom-small">Just the Essentials</h1>
+			<p>Designed to be lightweight and style agnostic, Kraken includes just the essentials.</p>
+			<ul>
+				<li>A CSS reset.</li>
+				<li>A responsive, mobile-first grid.</li>
+				<li>A well designed, fluid typographic scale.</li>
+				<li>CSS buttons.</li>
+				<li>Common form elements.</li>
+				<li>Powered by <a href="http://sass-lang.com/">Sass</a> and <a href="http://gulpjs.com/">Gulp.js</a> for faster development.</li>
+			</ul>
+			<hr>
+		</section>
+
 
 		<section class="container">
 
-			<h1>The Grid</h1>
+			<h1 class="space-bottom-small">The Grid</h1>
+			<p>A simple, intuitive, fraction-based grid.</p>
 
 			<div class="row">
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
 			</div>
 
 			<div class="row">
-				<div class="grid-third"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-third</div></div>
-				<div class="grid-third"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-third</div></div>
-				<div class="grid-third"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-third</div></div>
+				<div class="grid-third"><div class="grid-bg">.grid-third</div></div>
+				<div class="grid-third"><div class="grid-bg">.grid-third</div></div>
+				<div class="grid-third"><div class="grid-bg">.grid-third</div></div>
 			</div>
 
 			<div class="row">
-				<div class="grid-third"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-third</div></div>
-				<div class="grid-two-thirds"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-two-thirds</div></div>
+				<div class="grid-third"><div class="grid-bg">.grid-third</div></div>
+				<div class="grid-two-thirds"><div class="grid-bg">.grid-two-thirds</div></div>
 			</div>
 
 			<div class="row">
-				<div class="grid-half"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-half</div></div>
-				<div class="grid-half"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-half</div></div>
+				<div class="grid-half"><div class="grid-bg">.grid-half</div></div>
+				<div class="grid-half"><div class="grid-bg">.grid-half</div></div>
 			</div>
 
 			<div class="row">
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-three-fourths"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-three-fourths</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-three-fourths"><div class="grid-bg">.grid-three-fourths</div></div>
 			</div>
 
 			<div class="row">
-				<div class="grid-full"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-full</div></div>
+				<div class="grid-full"><div class="grid-bg">.grid-full</div></div>
 			</div>
 
 
-			<h2>Offsets</h2>
+			<h2 class="space-bottom-small">Offsets</h2>
+			<p>Shift grids for more flexible layouts.</p>
 
 			<div class="row">
-				<div class="grid-three-fourths offset-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.offset-fourth</div></div>
-			</div>
-
-			<div class="row">
-				<div class="grid-two-thirds offset-third"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.offset-third</div></div>
+				<div class="grid-three-fourths offset-fourth"><div class="grid-bg">.offset-fourth</div></div>
 			</div>
 
 			<div class="row">
-				<div class="grid-half offset-half"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.offset-half</div></div>
+				<div class="grid-two-thirds offset-third"><div class="grid-bg">.offset-third</div></div>
 			</div>
 
 			<div class="row">
-				<div class="grid-third offset-two-thirds"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.offset-two-thirds</div></div>
+				<div class="grid-half offset-half"><div class="grid-bg">.offset-half</div></div>
 			</div>
 
 			<div class="row">
-				<div class="grid-fourth offset-three-fourths"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.offset-three-fourths</div></div>
+				<div class="grid-third offset-two-thirds"><div class="grid-bg">.offset-two-thirds</div></div>
+			</div>
+
+			<div class="row">
+				<div class="grid-fourth offset-three-fourths"><div class="grid-bg">.offset-three-fourths</div></div>
 			</div>
 
 
-			<h2>Early Gridding</h2>
+			<h2 class="space-bottom-small">Early Gridding</h2>
+			<p>Choose when the grid kicks in.</p>
 
-			<strong>Extra Small Screens</strong>
+			<strong>Start on Extra Small Screens</strong>
 			<div class="row row-start-xsmall">
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
 			</div>
 
-			<strong>Small Screens</strong>
+			<strong>Start on Small Screens</strong>
 			<div class="row row-start-small">
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
-				<div class="grid-fourth"><div style="background-color: #e5e5e5; margin-bottom: 1em;">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+			</div>
+
+			<strong>Standard Grid</strong>
+			<div class="row row-start-small">
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+				<div class="grid-fourth"><div class="grid-bg">.grid-fourth</div></div>
+			</div>
+
+
+			<h2 class="space-bottom-small">Content Choreography</h2>
+			<p>Flip the order of a grid on bigger screens.</p>
+
+			<div class="row">
+				<div class="grid-third grid-flip"><div class="grid-bg">First in HTML</div></div>
+				<div class="grid-two-thirds"><div class="grid-bg">Second in HTML</div></div>
+			</div>
+
+
+			<h2 class="space-bottom-small">Image Gallery</h2>
+			<p>A responsive, grid-based image gallery.</p>
+
+			<div class="row">
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
+				<div class="grid-img"><p><img src="docs/img/demo/emu.jpg"></p></div>
 			</div>
 
 			<hr>
@@ -125,7 +261,7 @@
 				Default text.<br>
 				<span class="text-muted">Muted text.</span><br>
 				<span class="text-small">Small text.</span><br>
-				<span class="text-tall">Tall text.</span><br>
+				<span class="text-large">Large text.</span><br>
 				<a href="#">Hyperlinks.</a><br>
 				<strong>Bold</strong> and <em>italics</em>.
 			</p>
@@ -138,23 +274,24 @@
 
 		<section class="container">
 
-			<h1>Lists</h1>
+			<h1 class="space-bottom-small">Lists</h1>
+			<p>Keep things organized.</p>
 
-			Ordered
+			<strong>Ordered</strong>
 			<ol>
 				<li>Item 1</li>
 				<li>Item 2</li>
 				<li>Item 3</li>
 			</ol>
 
-			Unordered
+			<strong>Unordered</strong>
 			<ul>
 				<li>Item 1</li>
 				<li>Item 2</li>
 				<li>Item 3</li>
 			</ul>
 
-			Unstyled
+			<strong>Unstyled</strong>
 			<ul class="list-unstyled">
 				<li>Item 1</li>
 				<li>Item 2</li>
@@ -173,7 +310,8 @@
 
 		<section class="container">
 
-			<h1>Headings</h1>
+			<h1 class="space-bottom-small">Headings</h1>
+			<p>h1 through h6, plus heading classes to give you more control over styling but let you maintain semantics.</p>
 
 			<h1>h1. Heading 1</h1>
 			<h2>h2. Heading 2</h2>
@@ -181,6 +319,7 @@
 			<h4>h4. Heading 4</h4>
 			<h5>h5. Heading 5</h5>
 			<h6>h6. Heading 6</h6>
+			<h1 class="h4">h1. styled with an .h4 class</h1>
 
 			<hr>
 
@@ -202,7 +341,8 @@
 
 		<section class="container">
 
-			<h1>Buttons</h1>
+			<h1 class="space-bottom-small">Buttons</h1>
+			<p>Add style to links, buttons, and inputs.</p>
 
 			<p>
 				<button class="btn">Button</button>
@@ -286,11 +426,10 @@
 
 			<h1>Code</h1>
 
-			<p>Here's some code that's within a sentence: the <code>.js</code> file is very important.</p>
+			<p>Inline code: <code>.awesomesauce</code></p>
 
-			<p>Here's some preformatted text:</p>
-
-			<pre><code>.js {
+			<pre><code>Preformatted text:
+.js {
 	color: #272727;
 	background: #ffffff;
 }</code></pre>

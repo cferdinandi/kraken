@@ -8,3 +8,9 @@ test/coverage
 ._*
 .Spotlight-V100
 .Trashes
+
+## Documentation
+docs
+docs/_includes
+docs/_templates
+docs/archive
