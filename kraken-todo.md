@@ -6,6 +6,7 @@
 [x] Add SVG processing
 [ ] Create new documentation
 [ ] Update "What's Included?" section
+[x] Add SVG feature detection
 
 
 ## Updated "What's Included?" section

@@ -21,9 +21,11 @@ Kraken uses [semantic versioning](http://semver.org/).
     * Changed name of CSS output from `kraken.css` to `main.css`.
     * Changed `.text-tall` to `.text-large` for semantic consistency.
     * Added support for `.sass` file type to Sass processing.
-    * Added SVG sprite generator to build process.
+    * Added SVG sprite generation to build process.
+    * Added SVG styling and feature detection.
     * Added documentation generator to build process.
-    * Removed HTML5 shim.
+    * Removed HTML5 shim (time to drop IE8 and lower optimization).
+    * Wrapped JS detects in IIFEs for better variable scoping.
 * v3.8.2 - September 28, 2014
     * Fixed JS concatenation bug.
 * v3.8.1 - August 24, 2014
