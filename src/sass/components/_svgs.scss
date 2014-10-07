@@ -2,11 +2,18 @@
  * @section SVGs
  * A placeholder for SVG icon sprite styling.
  * @link http://css-tricks.com/svg-sprites-use-better-icon-fonts/
+ * @link http://css-tricks.com/svg-use-external-source/
  */
 
-.icon {
+.svg .icon {
 	display: inline-block;
 	width: 1em;
 	height: 1em;
 	fill: currentColor;
+}
+
+.svg .icon-fallback-text {
+	position: absolute;
+	top: -9999em;
+	left: -9999em;
 }
