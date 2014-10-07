@@ -33,7 +33,7 @@ var package = require('./package.json');
 var paths = {
 	output : 'dist/',
 	scripts : {
-		input : [ 'src/js/*' ],
+		input : 'src/js/*',
 		output : 'dist/js/'
 	},
 	styles : {
