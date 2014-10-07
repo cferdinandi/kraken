@@ -5,7 +5,7 @@
 [x] Add documentation generator
 [x] Add SVG processing
 [ ] Create new documentation
-[ ] Update "What's Included?" section
+[x] Update "What's Included?" section
 [x] Add SVG feature detection
 
 
