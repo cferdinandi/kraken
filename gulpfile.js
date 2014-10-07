@@ -1,4 +1,7 @@
-// Gulp Packages
+/**
+ * Gulp Packages
+ */
+
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var clean = require('gulp-clean');
@@ -15,9 +18,18 @@ var sass = require('gulp-ruby-sass');
 var prefix = require('gulp-autoprefixer');
 var minify = require('gulp-minify-css');
 var karma = require('gulp-karma');
+var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore');
+var markdown = require('gulp-markdown');
+var fileinclude = require('gulp-file-include');
+var headerfooter = require('gulp-headerfooter');
 var package = require('./package.json');
 
-// Paths to project folders
+
+/**
+ * Paths to project folders
+ */
+
 var paths = {
 	output : 'dist/',
 	scripts : {
@@ -25,8 +37,12 @@ var paths = {
 		output : 'dist/js/'
 	},
 	styles : {
-		input : 'src/sass/**/*.scss',
+		input : 'src/sass/**/*.{scss,sass}',
 		output : 'dist/css/'
+	},
+	svgs: {
+		input: 'src/svg/**/*.svg',
+		output: 'dist/svg/'
 	},
 	static : 'src/static/**',
 	test : {
@@ -35,14 +51,18 @@ var paths = {
 		results: 'test/results/'
 	},
 	docs : {
-		input: 'docs/_templates/**',
-		output: 'docs/docs/',
-		scripts: 'docs/docs/js/',
-		styles: 'docs/docs/css/'
+		input: 'src/docs/*.{html,md,markdown}',
+		output: 'docs/',
+		templates: 'src/docs/_templates/',
+		assets: 'src/docs/assets/**'
 	}
 };
 
-// Template for banner to add to file headers
+
+/**
+ * Template for banner to add to file headers
+ */
+
 var banner = {
 	full :
 		'/**\n' +
@@ -61,6 +81,11 @@ var banner = {
 		' */\n'
 };
 
+
+/**
+ * Gulp Taks
+ */
+
 // Lint, minify, and concatenate scripts
 gulp.task('scripts', ['clean'], function() {
 
@@ -70,8 +95,7 @@ gulp.task('scripts', ['clean'], function() {
 		.pipe(rename, { suffix: '.min' })
 		.pipe(uglify)
 		.pipe(header, banner.min, { package : package })
-		.pipe(gulp.dest, paths.scripts.output)
-		.pipe(gulp.dest, paths.docs.scripts);
+		.pipe(gulp.dest, paths.scripts.output);
 
 	return gulp.src(paths.scripts.input)
 		.pipe(plumber())
@@ -99,8 +123,19 @@ gulp.task('styles', ['clean'], function() {
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minify())
 		.pipe(header(banner.min, { package : package }))
-		.pipe(gulp.dest(paths.styles.output))
-		.pipe(gulp.dest(paths.docs.styles));
+		.pipe(gulp.dest(paths.styles.output));
+});
+
+// Generate SVG sprites
+gulp.task('svgs', ['clean'], function () {
+	return gulp.src(paths.svgs.input)
+		.pipe(svgmin())
+		.pipe(svgstore({
+			fileName: 'icons.svg',
+			prefix: 'icon-',
+			inlineSvg: false
+		}))
+		.pipe(gulp.dest(paths.svgs.output));
 });
 
 // Copy static files into output folder
@@ -123,8 +158,7 @@ gulp.task('clean', function () {
 	return gulp.src([
 			paths.output,
 			paths.test.coverage,
-			paths.test.results,
-			paths.docs.output
+			paths.test.results
 		], { read: false })
 		.pipe(plumber())
 		.pipe(clean());
@@ -138,12 +172,67 @@ gulp.task('test', function() {
 		.on('error', function(err) { throw err; });
 });
 
-// Combine tasks into runner
+// Generate documentation
+gulp.task('generatedocs', ['default', 'cleandocs'], function() {
+	return gulp.src(paths.docs.input)
+		.pipe(plumber())
+		.pipe(fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe(tap(function (file, t) {
+			if ( /\.md|\.markdown/.test(file.path) ) {
+				var name = file.relative + '.js';
+				return t.through(markdown);
+			}
+		}))
+		.pipe(headerfooter.header(paths.docs.templates + '/_header.html'))
+		.pipe(headerfooter.footer(paths.docs.templates + '/_footer.html'))
+		.pipe(gulp.dest(paths.docs.output));
+});
+
+// Copy distribution files to docs
+gulp.task('copydist', ['default', 'cleandocs'], function() {
+	return gulp.src(paths.output + '/**')
+		.pipe(plumber())
+		.pipe(gulp.dest(paths.docs.output + '/dist'));
+});
+
+// Copy documentation assets to docs
+gulp.task('copyassets', ['cleandocs'], function() {
+	return gulp.src(paths.docs.assets)
+		.pipe(plumber())
+		.pipe(gulp.dest(paths.docs.output + '/assets'));
+});
+
+// Remove prexisting content from docs folder
+gulp.task('cleandocs', function () {
+	return gulp.src(paths.docs.output, { read: false })
+		.pipe(plumber())
+		.pipe(clean());
+});
+
+
+/**
+ * Task Runners
+ */
+
+// Compile files (default)
 gulp.task('default', [
 	'lint',
 	'clean',
 	'static',
 	'scripts',
+	'svgs',
 	'styles',
 	'test'
+]);
+
+// Compile files and generate documentation
+gulp.task('docs', [
+	'default',
+	'cleandocs',
+	'generatedocs',
+	'copydist',
+	'copyassets'
 ]);
