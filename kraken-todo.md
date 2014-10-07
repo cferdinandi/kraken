@@ -1,7 +1,7 @@
 ## Kraken Todo
 
 [x] Update logo via noun project
-[ ] Remove HTML5 Shim
+[x] Remove HTML5 Shim
 [x] Add documentation generator
 [x] Add SVG processing
 [ ] Create new documentation

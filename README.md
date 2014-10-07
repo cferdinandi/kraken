@@ -23,6 +23,7 @@ Kraken uses [semantic versioning](http://semver.org/).
     * Added support for `.sass` file type to Sass processing.
     * Added SVG sprite generator to build process.
     * Added documentation generator to build process.
+    * Removed HTML5 shim.
 * v3.8.2 - September 28, 2014
     * Fixed JS concatenation bug.
 * v3.8.1 - August 24, 2014
