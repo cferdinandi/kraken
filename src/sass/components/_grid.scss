@@ -31,6 +31,10 @@
 	}
 }
 
+.grid-img {
+	@extend %grid-base;
+}
+
 
 /**
  * Reverses order of grid for content choreography

@@ -1,0 +1,104 @@
+/* =============================================================
+	CSS RESET
+	Meyer's CSS Reset, Normalized.css, and custom code.
+ * ============================================================= */
+
+/*  Mobile Screen Resizing */
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+   @-moz-viewport { width: device-width; zoom: 1.0; }
+	@-ms-viewport { width: device-width; zoom: 1.0; }
+	 @-o-viewport { width: device-width; zoom: 1.0; }
+		@viewport { width: device-width; zoom: 1.0; }
+
+/*  Remove browser defaults */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+button, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: $font-primary;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*  Set display type for HTML5 semantic elements */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/*  Force scrollbar display to prevent jumping on pages.
+ *  Fix text resize bug on mobile devices. */
+html {
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+}
+
+/*  Display audio, canvas, and video elements as inline block elements. */
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+
+/*  Prevent modern browsers from displaying audio without controls. */
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/*  Prevent img and video elements from spilling
+ *  outside of the page on smaller screens. */
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+/*  Prevent iframe, object, and embed elements from
+ *  spilling outside of the page on smaller screens. */
+iframe,
+object,
+embed {
+	max-width: 100%;
+}
+
+/* Address [hidden] styling not present in IE 8/9.
+ * Hide the template element in IE, Safari, and Firefox < 22. */
+[hidden],
+template {
+	display: none;
+	visibility: hidden;
+}
+
+/*  Prevents IE from making scaled images look like crap */
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+/*  Address outline inconsistency between Chrome and other browsers. */
+a:focus,
+button:focus {
+	outline: thin dotted;
+	outline: calc-em(5px) auto -webkit-focus-ring-color;
+	outline-offset: calc-em(-2.5px);
+}
+
+/*  Improve readability when focused and also mouse hovered in all browsers. */
+a:hover,
+a:active {
+	outline: 0;
+}

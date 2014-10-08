@@ -16,6 +16,18 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v4.0.0 - October 7, 2014
+    * Updated `icons.scss` to use `@each` loops.
+    * Changed name of CSS output from `kraken.css` to `main.css`.
+    * Changed `.text-tall` to `.text-large` for semantic consistency.
+    * Added support for `.sass` file type to Sass processing.
+    * Added SVG sprite generation to build process.
+    * Added SVG styling and feature detection.
+    * Added documentation generator to build process.
+    * Removed HTML5 shim (time to drop IE8 and lower optimization).
+    * Wrapped JS detects in IIFEs for better variable scoping.
+    * Added documentation on working with Travis CI.
+    * Added Tarpit to add-ons.
 * v3.8.2 - September 28, 2014
     * Fixed JS concatenation bug.
 * v3.8.1 - August 24, 2014

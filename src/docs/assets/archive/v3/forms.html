@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Forms | Kraken</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+
+		<!-- Apple Touch Icons -->
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png">
+
+		<!-- MS Homescreen Icons -->
+		<meta name="msapplication-TileColor" content="#0088cc">
+		<meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
+
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="css/kraken.css" type="text/css">
+
+		<!-- HTML5 Shim for IE 6-8 -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+<body>
+
+	<section class="space-bottom bg">
+	<article class="container">
+
+		<h1 class="text-taller no-space"><i class="icon-logo"></i> Kraken</h1>
+		<p class="text-center space-bottom-small"><a href="index.html">Home</a></p>
+
+	</article>
+</section>
+
+	<section class="space-bottom">
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+					<h1 class="text-center">Forms</h1>
+
+					<p>Labels, legends and inputs are styled as full width block elements (with the exception of checkboxes and radio buttons).</p>
+
+					<form>
+						<label>Label</label>
+						<input type="text">
+						<label>
+							<input type="checkbox">
+							Option 1
+						</label>
+						<label>
+							<input type="checkbox">
+							Option 2
+						</label>
+						<label>
+							<input type="radio" name="radioset">
+							Option 1
+						</label>
+						<label>
+							<input type="radio" name="radioset">
+							Option 2
+						</label>
+						<select>
+							<option>Select 1</option>
+							<option>Select 2</option>
+							<option>Select 3</option>
+						</select>
+						<textarea></textarea>
+					</form>
+
+				   <pre><code class="language-markup">&lt;form&gt;
+	&lt;label&gt;Label&lt;/label&gt;
+	&lt;input type="text"&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox"&gt;
+		Option 1
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="checkbox"&gt;
+		Option 2
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="radioset"&gt;
+		Option 1
+	&lt;/label&gt;
+	&lt;label&gt;
+		&lt;input type="radio" name="radioset"&gt;
+		Option 2
+	&lt;/label&gt;
+	&lt;select&gt;
+		&lt;option&gt;Select 1&lt;/option&gt;
+		&lt;option&gt;Select 2&lt;/option&gt;
+		&lt;option&gt;Select 3&lt;/option&gt;
+	&lt;/select&gt;
+	&lt;textarea&gt;&lt;/textarea&gt;
+&lt;/form&gt;</code></pre>
+
+					<p><span class="label">Pro Tip</span> Wrap checkboxes and radio buttons inside a <code>&lt;label&gt;&lt;/label&gt;</code> to make them easier to click.</p>
+
+
+					<h2 class="text-center">Form Layouts</h2>
+
+					<p>Use the grid system to add structure to your forms.</p>
+
+					<form>
+						<div class="row">
+							<div class="grid-fourth">
+									<label>Name</label>
+							</div>
+							<div class="grid-three-fourths">
+									<input type="text">
+							</div>
+						</div>
+						<div class="row">
+							<div class="grid-fourth">
+									<label>Message</label>
+							</div>
+							<div class="grid-three-fourths">
+									<textarea></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="grid-three-fourths offset-fourth">
+								<button class="btn btn-blue">Submit</button>
+							</div>
+						</div>
+					</form>
+
+					<pre><code class="language-markup">&lt;form&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="grid-fourth"&gt;
+			&lt;label&gt;Name&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class="grid-three-fourths"&gt;
+			&lt;input type="text"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="grid-fourth"&gt;
+			&lt;label&gt;Message&lt;/label&gt;
+		&lt;/div&gt;
+		&lt;div class="grid-three-fourths"&gt;
+			&lt;textarea&gt;&lt;/textarea&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="grid-three-fourths offset-fourth"&gt;
+			&lt;button class="btn btn-blue"&gt;Submit&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+
+					<h2 class="text-center">New: Condensed &amp; Inline Inputs</h2>
+
+					<p>For smaller forms, add the <code>.input-condensed</code> class to your input fields. For inline form elements, add the <code>.input-inline</code> class.</p>
+
+					<form>
+						<input type="text" class="input-inline" placeholder=".input-inline">
+						<input type="text" class="input-condensed input-inline" placeholder=".input-condensed">
+					</form>
+
+					<pre><code class="language-markup">&lt;form&gt;
+	&lt;input type="text" class="input-inline" placeholder=".input-inline"&gt;
+	&lt;input type="text" class="input-condensed input-inline" placeholder=".input-condensed" &gt;
+&lt;/form&gt;</code></pre>
+
+				</div>
+			</div>
+
+			<hr>
+
+
+			<h1 class="text-center no-space-bottom" id="get-started">Getting Started</h1>
+<p class="text-muted text-center"><span class="text-tall">Learn how to use Kraken</span></p>
+
+<div class="row">
+	<div class="grid-third">
+		<ol class="no-space-bottom">
+			<li><a href="kraken-way.html">The Kraken Way</a></li>
+			<li><a href="setup.html">Setup</a></li>
+			<li><a href="grid.html">The Grid</a></li>
+			<li><a href="typography.html">Typography</a></li>
+			<li><a href="lists.html">Lists</a></li>
+		</ol>
+	</div>
+	<div class="grid-third">
+		<ol class="no-space-bottom" start="6">
+			<li><a href="headings.html">Headings</a></li>
+			<li><a href="quotes.html">Quotes &amp; Citations</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li><a href="forms.html">Forms</a></li>
+			<li><a href="code.html">Code</a></li>
+		</ol>
+	</div>
+	<div class="grid-third">
+		<ol start="11">
+			<li><a href="icons.html">Icons</a></li>
+			<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
+			<li><a href="addons.html">Add-Ons</a></li>
+			<li><a href="browsers.html">Browser Compatibility</a></li>
+			<li><a href="support.html">Support</a></li>
+		</ol>
+	</div>
+</div>
+
+<p class="text-small space-top text-center"><a href="archive/v2/">Looking for Kraken 2 documentation?</a></p>
+
+
+		</article>
+	</section>
+
+	<footer class="bg">
+		<article class="container">
+
+			<p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+
+		</article>
+	</footer>
+
+
+	<!-- Javascript -->
+	<script src="js/smooth-scroll.js"></script>
+	<script src="js/prism.js"></script>
+	<script>
+		smoothScroll.init({updateURL: true});
+	</script>
+
+</body>
+</html>

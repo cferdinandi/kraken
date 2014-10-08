@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Alignment, Spacing &amp; Visibility | Kraken</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+
+		<!-- Apple Touch Icons -->
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png">
+
+		<!-- MS Homescreen Icons -->
+		<meta name="msapplication-TileColor" content="#0088cc">
+		<meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
+
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="css/kraken.css" type="text/css">
+
+		<!-- HTML5 Shim for IE 6-8 -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+<body>
+
+	<section class="space-bottom bg">
+	<article class="container">
+
+		<h1 class="text-taller no-space"><i class="icon-logo"></i> Kraken</h1>
+		<p class="text-center space-bottom-small"><a href="index.html">Home</a></p>
+
+	</article>
+</section>
+
+	<section class="space-bottom">
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+					<h1 class="text-center">Alignment, Spacing &amp; Visibility</h1>
+
+					<p>You can adjust text alignment and spacing using a few simple CSS classes.</p>
+
+
+					<h2 class="text-center">Text Alignment</h2>
+
+					<table class="table-striped">
+						<thead>
+							<tr>
+								<th>Alignment</th>
+								<th>Class</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Left</td>
+								<td><code>.text-left</code></td>
+							</tr>
+							<tr>
+								<td>Centered</td>
+								<td><code>.text-center</code></td>
+							</tr>
+							<tr>
+								<td>Right</td>
+								<td><code>.text-right</code></td>
+							</tr>
+						</tbody>
+					</table>
+
+
+					<h2 class="text-center">Floats</h2>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Float</th>
+								<th>Class</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Left</td>
+								<td><code>.float-left</code></td>
+							</tr>
+							<tr>
+								<td>Centered</td>
+								<td><code>.float-center</code></td>
+							</tr>
+							<tr>
+								<td>Right</td>
+								<td><code>.float-right</code></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p><span class="label">Pro Tip</span> Clear floats by wrapping floated content in a <code>&lt;div&gt;</code> with the <code>.group</code> class.</p>
+
+					<pre><code class="language-markup">&lt;div class="group"&gt;
+	&lt;button class="float-right"&gt;Floated to the Right&lt;/button&gt;
+	&lt;button&gt;Not floated&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+
+					<h2 class="text-center">Spacing</h2>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Top</th>
+								<th>Bottom</th>
+								<th>Class</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>0</td>
+								<td>0</td>
+								<td><code>.no-space</code></td>
+							</tr>
+							<tr>
+								<td>Default</td>
+								<td>0</td>
+								<td><code>.no-space-bottom</code></td>
+							</tr>
+							<tr>
+								<td>0</td>
+								<td>Default</td>
+								<td><code>.no-space-top</code></td>
+							</tr>
+							<tr>
+								<td>Default</td>
+								<td>2em</td>
+								<td><code>.space-bottom</code></td>
+							</tr>
+							<tr>
+								<td>Default</td>
+								<td>.5em</td>
+								<td><code>.space-bottom-small</code></td>
+							</tr>
+							<tr>
+								<td>.8125em</td>
+								<td>Default</td>
+								<td><code>.space-top</code></td>
+							</tr>
+						</tbody>
+					</table>
+
+
+					<h2 class="text-center">Visibility</h2>
+
+					<p>Hide content using the <code>[hidden]</code> attribute:</p>
+
+<pre><code class="language-markup">&lt;div hidden&gt;This is removed from the markup.&lt;/div&gt;</code></pre>
+
+					<p>If you have text that you don't want displayed on screen, but that should still be in the markup for screen readers (for example, a search form label), simply apply the <code>.screen-reader</code> class. This will shift content off-screen, but screen readers can still read it.</p>
+
+<pre><code class="language-markup">&lt;form&gt;
+	&lt;label class="screen-reader"&gt;Search this site&lt;/label&gt;
+	&lt;input type="text" placeholder="Search this site..."&gt;
+	&lt;input type="submit"&gt;
+&lt;/form&gt;</code></pre>
+
+				</div>
+			</div>
+
+			<hr>
+
+
+			<h1 class="text-center no-space-bottom" id="get-started">Getting Started</h1>
+<p class="text-muted text-center"><span class="text-tall">Learn how to use Kraken</span></p>
+
+<div class="row">
+	<div class="grid-third">
+		<ol class="no-space-bottom">
+			<li><a href="kraken-way.html">The Kraken Way</a></li>
+			<li><a href="setup.html">Setup</a></li>
+			<li><a href="grid.html">The Grid</a></li>
+			<li><a href="typography.html">Typography</a></li>
+			<li><a href="lists.html">Lists</a></li>
+		</ol>
+	</div>
+	<div class="grid-third">
+		<ol class="no-space-bottom" start="6">
+			<li><a href="headings.html">Headings</a></li>
+			<li><a href="quotes.html">Quotes &amp; Citations</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li><a href="forms.html">Forms</a></li>
+			<li><a href="code.html">Code</a></li>
+		</ol>
+	</div>
+	<div class="grid-third">
+		<ol start="11">
+			<li><a href="icons.html">Icons</a></li>
+			<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
+			<li><a href="addons.html">Add-Ons</a></li>
+			<li><a href="browsers.html">Browser Compatibility</a></li>
+			<li><a href="support.html">Support</a></li>
+		</ol>
+	</div>
+</div>
+
+<p class="text-small space-top text-center"><a href="archive/v2/">Looking for Kraken 2 documentation?</a></p>
+
+
+		</article>
+	</section>
+
+	<footer class="bg">
+		<article class="container">
+
+			<p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+
+		</article>
+	</footer>
+
+
+	<!-- Javascript -->
+	<script src="js/smooth-scroll.js"></script>
+	<script src="js/prism.js"></script>
+	<script>
+		smoothScroll.init({updateURL: true});
+	</script>
+
+</body>
+</html>

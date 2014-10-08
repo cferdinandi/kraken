@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>The Kraken Code Guide | Kraken</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+
+		<!-- Apple Touch Icons -->
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png">
+
+		<!-- MS Homescreen Icons -->
+		<meta name="msapplication-TileColor" content="#0088cc">
+		<meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
+
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="css/kraken.css" type="text/css">
+
+		<!-- HTML5 Shim for IE 6-8 -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+<body>
+
+	<section class="space-bottom bg">
+	<article class="container">
+
+		<h1 class="text-taller no-space"><i class="icon-logo"></i> Kraken</h1>
+		<p class="text-center space-bottom-small"><a href="index.html">Home</a></p>
+
+	</article>
+</section>
+
+	<section class="space-bottom">
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+
+				<h1 class="text-center">The Kraken Code Guide</h1>
+
+				<p>Some basic standards to ensure that Kraken add-ons and forks share a common language and approach.</p>
+
+				<div class="hero hero-condensed"><span class="label">Soo...</span> This section is a bit outdated follow some changes in version 3. It's in the process of being updated.</div>
+
+
+				<h2 class="text-center" id="toc">Table of Contents</h2>
+
+				<ul>
+					<li><a class="scroll" href="#golden-rule">The Golden Rule</a></li>
+					<li>
+						<a class="scroll" href="#html">HTML</a>
+						<ul>
+							<li><a class="scroll" href="#html-syntax">HTML Syntax</a></li>
+							<li><a class="scroll" href="#html-attribute-order">Attribute Order</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="scroll" href="#css">CSS</a>
+						<ul>
+							<li><a class="scroll" href="#css-syntax">CSS Syntax</a></li>
+							<li><a class="scroll" href="#css-declaration-order">Declaration Order</a></li>
+							<li><a class="scroll" href="#css-formatting-exceptions">Formatting Exceptions</a></li>
+							<li><a class="scroll" href="#css-class-names">Class Names</a></li>
+							<li><a class="scroll" href="#css-selectors">Selectors</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="scroll" href="#js">JavaScript</a>
+						<ul>
+							<li><a class="scroll" href="#js-vanilla-syntax">Vanilla JS Syntax</a></li>
+							<li><a class="scroll" href="#js-jquery-syntax">jQuery Syntax</a></li>
+							<li><a class="scroll" href="#js-progressive-enhancement">Progressive Enhancement</a></li>
+						</ul>
+					</li>
+					<li><a class="scroll" href="#organize-document">Organization &amp; Documentation</a></li>
+						<ul>
+							<li><a class="scroll" href="od-guidelines">Guidelines</a></li>
+							<li><a class="scroll" href="#od-section-headings">Section Headings</a></li>
+							<li><a class="scroll" href="#od-inline-documentation">Inline Documentation</a></li>
+						</ul>
+					<li><a class="scroll" href="#thanks">Thanks</a></li>
+				</ul>
+
+				<hr>
+
+
+				<h1 class="text-center" id="golden-rule">The Golden Rule</h1>
+
+				<p>Write code for humans. That means clear section headers, ample white space, and lots of inline documentation.</p>
+
+				<hr>
+
+				<h1 class="text-center" id="html">HTML</h1>
+
+
+				<h2 class="text-center" id="html-syntax">HTML Syntax</h2>
+
+				<ul>
+					<li>Use hard-tabs.</li>
+					<li>Nested elements should be indented once (a tab).</li>
+					<li>Always use double quotes, never single quotes.</li>
+					<li>Don't include a trailing slash in self-closing elements.</li>
+					<li>Always use the HTML5 doctype.</li>
+				</ul>
+
+				<p class="space-bottom-small"><strong>Incorrect example:</strong></p>
+
+<pre><code class="language-markup">&lt;HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;img src='img/company-logo.png' alt='Company' /&gt;
+&lt;h1 class='text-muted'&gt;Hello, world!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+					<p class="space-bottom-small"><strong>Correct example:</strong></p>
+
+<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Page title&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;img src="img/company-logo.png" alt="Company"&gt;
+		&lt;h1 class="text-muted"&gt;Hello, world!&lt;/h1&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+					<h2 class="text-center" id="html-attribute-order">Attribute Order</h2>
+
+					<p class="space-bottom-small">HTML attributes should be written in this order for easier reading of code:</p>
+					<ul>
+						<li>class</li>
+						<li>id</li>
+						<li>data-*</li>
+						<li>for/type/href</li>
+					</ul>
+
+					<p class="space-bottom-small"><strong>Example:</strong></p>
+					<pre><code class="language-markup">&lt;a class="" id="" data-target="" href=""&gt;Example link&lt;/a&gt;</code></pre>
+
+					<hr>
+
+					<h1 class="text-center" id="css">CSS</h1>
+
+
+					<h2 class="text-center" id="css-syntax">CSS Syntax</h2>
+
+					<ul>
+						<li>Use hard-tabs.</li>
+						<li>When grouping selectors, keep individual selectors to a single line.</li>
+						<li>Include one space before the opening brace of declaration blocks.</li>
+						<li>Place closing braces of declaration blocks on a new line.</li>
+						<li>Include one space after <code>:</code> in each property.</li>
+						<li>Each declaration should appear on its own line.</li>
+						<li>End all declarations with a semi-colon.</li>
+						<li>Comma-separated values should include a space after each comma.</li>
+						<li>Lowercase all hex values (ex. <code>#ffffff</code> instead of <code>#FFFFFF</code>).</li>
+						<li>Use full hex values instead of shorthand (ex. <code>#ffffff</code> instead of <code>#fff</code>).</li>
+						<li>Quote attribute values in selectors (ex. <code>input[type="text"</code>]).</li>
+						<li>Avoid specifying units for zero values (ex. <code>margin: 0;</code> instead of <code>margin: 0em;</code>).</li>
+						<li>Avoid shorthand for margins and padding unless they're all the same value (ex. <code>margin-left: auto;</code> and <code>margin-right: auto;</code> instead of <code>margin: 0 auto;</code>).</li>
+						<li>Omit units on the <code>line-height</code> property (ex. <code>line-height: 1.2;</code> instead of <code>line-height: 1.2em;</code>).</li>
+						<li>Always use <a href="http://gomakethings.com/working-with-relative-sizing/">relative sizing</a> - ems and percentages, not pixels.</li>
+					</ul>
+
+					<p class="space-bottom-small"><strong>Incorrect example:</strong></p>
+
+<pre><code class="language-css">.selector, .selector-secondary, .selector[type=text] {
+font-size:15px;
+line-height:1.2em;
+color:#FFFFFF;
+margin:0px auto;
+padding:17px}</code></pre>
+
+					<p class="space-bottom-small"><strong>Correct example:</strong></p>
+
+<pre><code class="language-css">.selector,
+.selector-secondary,
+.selector[type="text"] {
+	font-size: .882352941em
+	line-height: 1.2;
+	color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+}</code></pre>
+
+
+					<h2 class="text-center" id="css-declaration-order">Declaration Order</h2>
+
+					<p>Related declarations should be grouped together, placing box-model and positioning properties closest to the top, followed by typographic properties, margin and padding, and visual properties.</p>
+
+<pre><code class="language-css">.declaration-order {
+	/* Box-model */
+	display: block;
+	width: 100%;
+	max-height: 20em;
+	float: right;
+
+	/* Positioning */
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	/* Typography */
+	font-size: .875em;
+	line-height: 1.5;
+	color: #272727;
+	text-align: center;
+
+	/* Margin & Padding */
+	margin-bottom: 1em;
+	padding: 2em;
+
+	/* Visual */
+	background-color: #e5e5e5;
+	border: 1px solid #808080;
+	border-radius: .25em;
+
+	/* Misc */
+	opacity: .7;
+}</code></pre>
+
+
+					<h2 class="text-center" id="css-formatting-exceptions">Formatting Exceptions</h2>
+
+					<ul>
+						<li>When using vendor prefixed properties, indent each property such that the value lines up vertically for easy multi-line editing.</li>
+						<li>In instances where several rules are present with only one declaration each, consider removing new line breaks for readability and faster editing.</li>
+						<li>In instances where selectors are so short that breaking them up across multiple lines makes them harder to read, consider including them on one line.</li>
+					</ul>
+
+<pre><code class="language-css">.selector {
+	-webkit-transition: opacity 0.35s ease;
+	   -moz-transition: opacity 0.35s ease;
+		-ms-transition: opacity 0.35s ease;
+		 -o-transition: opacity 0.35s ease;
+			transition: opacity 0.35s ease;
+}
+
+.icon-logo:before   { content: "\e000"; }
+.icon-github:before { content: "\e001"; }
+.icon-docs:before   { content: "\e002"; }
+
+h1, h2, h2, h4, h5, h6 {
+	line-height: 1.2;
+	font-weight: normal;
+}</code></pre>
+
+					<h2 class="text-center" id="css-class-names">Class Names</h2>
+
+					<ul>
+						<li>Keep classes lowercase and use dashes (not underscores or camelCase).</li>
+						<li>Avoid arbitrary shorthand notation.</li>
+						<li>Keep classes as short and succinct as possible.</li>
+						<li>Use obvious, meaningful names.</li>
+						<li>Prefix classes based on the closest parent component's base class.</li>
+					</ul>
+
+					<p class="space-bottom-small"><strong>Bad example:</strong></p>
+
+<pre><code class="language-css">.b { ... }
+.btnWarning { ... }
+.btn_Large { ... }</code></pre>
+
+					<p class="space-bottom-small"><strong>Good example:</strong></p>
+
+<pre><code class="language-css">.btn { ... }
+.btn-red { ... }
+.btn-large { ... }</code></pre>
+
+
+					<h2 class="text-center" id="css-selectors">Selectors</h2>
+
+					<ul>
+						<li>Use classes, not IDs or generic element tags.</li>
+						<li>Keep them short and limit the number of elements in each selector to three.</li>
+					</ul>
+
+					<p class="space-bottom-small"><strong>Bad example:</strong></p>
+
+<pre><code class="language-css">header { ... }
+.container #main #nav .icon { ... }</code></pre>
+
+					<p class="space-bottom-small"><strong>Good example:</strong></p>
+
+<pre><code class="language-css">.text-large { ... }
+.nav .icon { ... }
+.icon-bar { ... }</code></pre>
+
+					<hr>
+
+					<h1 class="text-center" id="js">JavaScript</h1>
+
+					<p>Always use vanilla JS or jQuery for add-ons (unless, of course, you're forking Kraken to another framework).</p>
+
+
+					<h2 class="text-center" id="js-vanilla-syntax">Vanilla JS Syntax</h2>
+
+					<ul>
+						<li>Wrap all functions in an <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/">IIFE</a> (immediately invoked function expression).</li>
+						<li>Use camelCase for all variables.</li>
+						<li>If you're using modern API's, include a feature test.</li>
+						<li><em class="text-muted">[Optional]</em> The <a href="http://cferdinandi.github.io/buoy/">Buoy micro-library</a> can help with some common tasks and functions.</li>
+					</ul>
+
+					<p class="space-bottom-small"><strong>Incorrect example:</strong></p>
+
+<pre><code class="language-javascript">var collapse_toggle = document.querySelectorAll('.collapse-toggle');
+[].forEach.call(collapse_toggle, function (toggle) {
+	toggle.addEventListener('click', function(e) {
+		e.preventDefault();
+	}, false);
+});</code></pre>
+
+					<p class="space-bottom-small"><strong>Correct example:</strong></p>
+
+<pre><code class="language-javascript">(function() {
+	if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
+		var collapseToggle = document.querySelectorAll('.collapse-toggle');
+		[].forEach.call(collapseToggle, function (toggle) {
+			toggle.addEventListener('click', function(e) {
+				e.preventDefault();
+			}, false);
+		});
+	}
+})();</code></pre>
+
+
+					<h2 class="text-center" id="js-jquery-syntax">jQuery Syntax</h2>
+
+					<ul>
+						<li>Wrap all functions in a <code>.noConflict()</code> ready function.</li>
+						<li>Use camelCase for all variables.</li>
+						<li>Omit the unneeded <code>$</code> before variables.</li>
+					</ul>
+
+					<p class="space-bottom-small"><strong>Incorrect example:</strong></p>
+
+<pre><code class="language-javascript">$('.collapse-toggle').click(function(e) {
+	e.preventDefault();
+	var $data_id = $(this).attr('data-target');
+	$($data_id).toggleClass('active');
+});</code></pre>
+
+					<p class="space-bottom-small"><strong>Correct example:</strong></p>
+
+<pre><code class="language-javascript">(function($) {
+	$('.collapse-toggle').click(function(e) {
+		e.preventDefault();
+		var dataID = $(this).attr('data-target');
+		$(dataID).toggleClass('active');
+	});
+});</code></pre>
+
+					<h2 class="text-center" id="js-progressive-enhancement">Progressive Enhancement</h2>
+
+					<p>JavaScript should always be a progressive enhancement. Check for JS support before hiding or altering content.</p>
+
+					<p class="space-bottom-small"><strong>Vanilla JS:</strong></p>
+<pre><code class="language-javascript">if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
+	document.documentElement.className += 'js';
+}</code></pre>
+
+					<p class="space-bottom-small"><strong>jQuery:</strong></p>
+<pre><code class="language-javascript">(function($) {
+	$(function () {
+		$('body').addClass('js'); // On page load, add the .js class to the <body> element.
+	});
+})(jQuery);</code></pre>
+
+					<p class="space-bottom-small"><strong>CSS:</strong></p>
+<pre><code class="language-css">.selector { /* Default styles */ }
+.js .selector { /* Progressively-enhanced styles */ }</code></pre>
+
+					<hr>
+
+
+					<h1 class="text-center" id="organize-document">Organization &amp; Documentation</h1>
+
+					<h2 class="text-center" id="od-guidelines">Guidelines</h2>
+
+					<ul>
+						<li>Combine like file-types into a single file (ex. all CSS in one file, all JS in another).</li>
+						<li>Break content up into meaningful sections.</li>
+						<li>Add inline documentation to everything.</li>
+					</ul>
+
+					<h2 class="text-center" id="od-section-headings">Headings &amp; Sections</h2>
+
+					<p>File headings and section titles should be clear and distinct. Include five line breaks of white space between sections. Use the following format for files headings and section titles.</p>
+
+					<p class="space-bottom-small"><strong>File Headings:</strong></p>
+<pre><code class="language-css">/* =============================================================
+
+	Name v1.0
+	Description of file by your name
+	http://your-url.com
+
+	Free to use under the MIT License.
+	http://opensource.org/licenses/MIT
+
+ * ============================================================= */</code></pre>
+
+					<p class="space-bottom-small"><strong>Section Titles:</strong></p>
+<pre><code class="language-css">/* =============================================================
+	SECTION TITLE
+	Section description
+ * ============================================================= */</code></pre>
+
+
+					<h2 class="text-center" id="od-inline-documentation">Inline Documentation</h2>
+
+					<p>Inline documentation should describe both what a snippet of <em>is</em> and what it <em>does</em>.</p>
+
+<pre><code class="language-css">/*  Removes list styling.
+ *  For semantic reasons, should only
+ *  be used on unordered lists. */
+.list-unstyled {
+	margin-left: 0;
+	list-style: none;
+}</code></pre>
+
+					<hr>
+
+
+					<h1 class="text-center" id="thanks">Thanks</h1>
+
+					<p>Thanks for helping make Kraken better. This code guide was inspired by <a href="https://github.com/mdo/code-guide">Mark Otto</a>.</p>
+
+				</div>
+			</div>
+
+
+		</article>
+	</section>
+
+	<footer class="bg">
+		<article class="container">
+
+			<p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+
+		</article>
+	</footer>
+
+
+	<!-- Javascript -->
+	<script src="js/smooth-scroll.js"></script>
+	<script src="js/prism.js"></script>
+	<script>
+		smoothScroll.init({updateURL: true});
+	</script>
+
+</body>
+</html>

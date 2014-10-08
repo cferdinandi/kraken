@@ -1,0 +1,67 @@
+/* =============================================================
+	PRINT STYLES
+	Styling for printed content. Adapted from HTML5BP.
+	http://html5boilerplate.com
+ * ============================================================= */
+
+@media print {
+
+	/*  Universal selector.
+	 *  Reset all content to transparent background,
+	 *  black color, and remove box and text shadows. */
+	* {
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	/*  Specifies page margin */
+	@page {
+		margin: 0.5cm;
+	}
+
+	/*  Underline all links */
+	a, a:visited {
+		text-decoration: underline;
+	}
+
+	/*  Show URL after links */
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	/*  Don't show URL for internal links */
+	a[href^="#"]:after {
+		content: "";
+	}
+
+	/*  Specifies the minimum number of lines to print at the top and bottom of a page. */
+	p, h1, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	/*  Avoid inserting a page break after headers */
+	h1, h2, h3 {
+		page-break-after: avoid;
+	}
+
+	/*  Change border color on blockquotes and preformatted text.
+	 *  Avoid page breaks inside the content */
+	pre, blockquote {
+		border-color: #999;
+		page-break-inside: avoid;
+	}
+
+	/*  Displayed as a table header row group */
+	thead {
+		display: table-header-group;
+	}
+
+	/*  Avoid inserting a page break inside table rows and images */
+	tr, img {
+		page-break-inside: avoid;
+	}
+
+}
