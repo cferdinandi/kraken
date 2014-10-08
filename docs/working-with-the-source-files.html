@@ -8,9 +8,9 @@
 
 		<!-- Icons -->
 		<link rel="shortcut icon" type="image/ico" href="assets/img/icons/favicon.ico">
-		<link rel="apple-touch-icon" sizes="144x144" href="assets/img/icons/apple-touch-icon-144.png">
-		<meta name="msapplication-TileColor" content="#0088cc">
-		<meta name="msapplication-TileImage" content="assets/img/icons/ms-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/img/icons/favicon-152.png">
+		<meta name="msapplication-TileColor" content="#f7f7f7">
+		<meta name="msapplication-TileImage" content="assets/img/icons/favicon-ms-144.png">
 
 		<!-- Feature dection -->
 		<script src="dist/js/detects.js"></script>
@@ -36,8 +36,19 @@
 
 		<p>Working with the development code in the <code>src</code> directory allows you to take advantage of the powerful features included in Kraken's <a href="http://gulpjs.com">Gulp.js</a> build system.</p>
 
+		<strong>In this section:</strong>
+		<ul>
+			<li><a data-scroll href="#dependencies">Dependencies</a></li>
+			<li><a data-scroll href="#quick-start">Quick Start</a></li>
+			<li><a data-scroll href="#working-with-sass">Working with Sass</a></li>
+			<li><a data-scroll href="#working-with-svg">Working with SVG</a></li>
+			<li><a data-scroll href="#working-with-icon-fonts">Working with Icon Fonts</a></li>
+			<li><a data-scroll href="#working-with-javascript">Working with JavaScript</a></li>
+			<li><a data-scroll href="#gui-source-compilers">GUI Source Compilers</a></li>
+		</ul>
 
-		<h2>Dependencies</h2>
+
+		<h2 id="dependencies">Dependencies</h2>
 
 		<p>Make sure these are installed first.</p>
 
@@ -48,7 +59,7 @@
 		</ul>
 
 
-		<h2>Quick Start</h2>
+		<h2 id="quick-start">Quick Start</h2>
 
 		<ol>
 			<li>In bash/terminal/command line, <code>cd</code> into the <code>kraken</code> directory.</li>
@@ -59,7 +70,7 @@
 		<p>Every time you make changes, run <code>gulp</code> to process them.</p>
 
 
-		<h2>Working with Sass</h2>
+		<h2 id="working-with-sass">Working with Sass</h2>
 
 		<p>Kraken's Sass files are located in <code>src</code> > <code>sass</code>. Kraken's build system generates minified and unminified CSS files. It also includes <a href="https://github.com/postcss/autoprefixer">autoprefixer</a>, which adds vendor prefixes for you. </p>
 
@@ -143,19 +154,19 @@ $icons: ( // name, character, color
 		<p>The <code>components</code> folder contains all of the Kraken components: the grid, button and form styling, and so on. The <code>main.scss</code> file imports <code>_config.scss</code>, <code>_mixins.scss</code>, and the components for processing into a CSS file.</p>
 
 
-		<h2>Working with SVG</h2>
+		<h2 id="working-with-svg">Working with SVG</h2>
 
 		<p>SVG files placed in the <code>src</code> > <code>svg</code> directory will be compiled into a single SVG sprite called <code>icons.svg</code> in the <code>dist</code> > <code>svg</code> directory.</p>
 
 
-		<h2>Working with Icon Fonts</h2>
+		<h2 id="working-with-icon-fonts">Working with Icon Fonts</h2>
 
 		<p>The <code>_iconfonts.scss</code> component is commented out of <code>main.scss</code> by default. Uncomment it to use icon fonts with Kraken.</p>
 
 		<p>The <code>font-face</code> mixin generates the required <code>@font-face</code> code for embedding fonts. You can assign names, unicode characters, and color values to your icons in the <code>_config.scss</code> file.</p>
 
 
-		<h2>Working with JavaScript</h2>
+		<h2 id="working-with-javascript">Working with JavaScript</h2>
 
 		<p>Kraken's JavaScript files are located in the <code>src</code> > <code>js</code> directory.</p>
 
@@ -170,7 +181,7 @@ $icons: ( // name, character, color
 		<p>Results are displayed in both the terminal window and <code>test</code> > <code>results</code>. You can see how much coverage each unit test provides in the <code>test</code> > <code>coverage</code> directory.</p>
 
 
-		<h2>GUI Source Compilers</h2>
+		<h2 id="gui-source-compilers">GUI Source Compilers</h2>
 
 		<p>If you would like the benefits of working with the source files, but aren't comfortable using terminal and command line code, there are a few GUIs that can help.</p>
 

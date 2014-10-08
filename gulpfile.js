@@ -182,7 +182,6 @@ gulp.task('generatedocs', ['default', 'cleandocs'], function() {
 		}))
 		.pipe(tap(function (file, t) {
 			if ( /\.md|\.markdown/.test(file.path) ) {
-				var name = file.relative + '.js';
 				return t.through(markdown);
 			}
 		}))
