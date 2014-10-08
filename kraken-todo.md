@@ -4,9 +4,11 @@
 [x] Remove HTML5 Shim
 [x] Add documentation generator
 [x] Add SVG processing
-[ ] Create new documentation
+[x] Create new documentation
 [x] Update "What's Included?" section
 [x] Add SVG feature detection
+[ ] Update favicon/icons
+[ ] Add "In this section" scrolling links to each page
 
 
 ## Updated "What's Included?" section

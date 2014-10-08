@@ -1,0 +1,1167 @@
+/* =============================================================
+
+	Kraken v3.0
+	A lightweight front-end boilerplate by Chris Ferdinandi.
+	http://gomakethings.com
+
+	Free to use under the MIT License.
+	http://gomakethings.com/mit/
+
+
+	# Colors
+	Primary (Blue): #0088cc
+	Black: #272727
+	White: #ffffff
+	Success (Green): #377f31;
+	Danger (Red): #880e14;
+	Warning (Yellow): #dba909;
+	Code (Fuscia): #dd1144;
+	Gray (Dark): #808080
+	Gray (Light): #e5e5e5
+
+	# Font Stack
+	Sans-Serif (default): "Helvetica Neue", Arial, sans-serif
+	Serif (suggested): Georgia, Times, serif
+	Monospace: Menlo, Monaco, "Courier New", monospace
+
+	# Typographic Scale
+	(For math purposes. Actual font sizes in ems.)
+	1px, 4px, 5px, 8px, 9px, 11px, 12px, 13px, 15px, 16px, 19px, 21px, 24px, 28px, 32px, 48px, 64px, 80px, 96px
+	line height: 1.5em on small screens, 1.5625em on big screens
+
+ * ============================================================= */
+/* =============================================================
+	CSS RESET
+	Meyer's CSS Reset, Normalized.css, and custom code.
+ * ============================================================= */
+/*  Mobile Screen Resizing */
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+@-ms-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+@-o-viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+/*  Remove browser defaults */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+button, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*  Set display type for HTML5 semantic elements */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/*  Force scrollbar display to prevent jumping on pages.
+ *  Fix text resize bug on mobile devices. */
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*  Display audio, canvas, and video elements as inline block elements. */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*  Prevent modern browsers from displaying audio without controls. */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*  Prevent img and video elements from spilling
+ *  outside of the page on smaller screens. */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*  Prevent iframe, object, and embed elements from
+ *  spilling outside of the page on smaller screens. */
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+
+/* Address [hidden] styling not present in IE 8/9.
+ * Hide the template element in IE, Safari, and Firefox < 22. */
+[hidden],
+template {
+  display: none;
+  visibility: hidden;
+}
+
+/*  Prevents IE from making scaled images look like crap */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/*  Address outline inconsistency between Chrome and other browsers. */
+a:focus,
+button:focus {
+  outline: thin dotted;
+  outline: 0.3125em auto -webkit-focus-ring-color;
+  outline-offset: -0.15625em;
+}
+
+/*  Improve readability when focused and also mouse hovered in all browsers. */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================
+	THE GRID
+	Structure and layout.
+ * ============================================================= */
+/*  Mobile-first. Single-column layout by default
+ *  Container sets the maximum page width. Adjust as needed. */
+.container {
+  max-width: 60em;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*  Still mostly single-column.
+ *  Option to activate grid on small screens.
+ *  Two-column layout for .grid-img. */
+@media (min-width: 20em) {
+  .row {
+    margin-left: -1.515151515152%;
+    margin-right: -1.515151515152%;
+  }
+
+  .grid-fourth,
+  .grid-third,
+  .grid-half,
+  .grid-two-thirds,
+  .grid-three-fourths,
+  .grid-full,
+  .grid-img {
+    float: left;
+    width: 96.969696969697%;
+    margin-left: 1.515151515152%;
+    margin-right: 1.515151515152%;
+  }
+
+  /*  Reverses order of grid for content choreography */
+  .grid-flip {
+    float: right;
+  }
+
+  /*  Optionally show grid for small screens */
+  .row-start-xsmall .grid-fourth {
+    width: 21.96969696969%;
+  }
+
+  .row-start-xsmall .grid-third {
+    width: 30.30303030303%;
+  }
+
+  .row-start-xsmall .grid-half,
+  .grid-img {
+    width: 46.969696969697%;
+  }
+
+  .row-start-xsmall .grid-two-thirds {
+    width: 63.636363636364%;
+  }
+
+  .row-start-xsmall .grid-three-fourths {
+    width: 71.969696969697%;
+  }
+
+  .row-start-xsmall .grid-full {
+    width: 96.969696969697%;
+  }
+}
+/*  Still mostly single-column.
+ *  Option to activate grid on medium screens.
+ *  Three-column layout for .grid-img. */
+@media (min-width: 30em) {
+  /*  Show grid for small screens */
+  .row-start-small .grid-fourth {
+    width: 21.96969696969%;
+  }
+
+  .row-start-small .grid-third,
+  .grid-img {
+    width: 30.30303030303%;
+  }
+
+  .row-start-small .grid-half {
+    width: 46.969696969697%;
+  }
+
+  .row-start-small .grid-two-thirds {
+    width: 63.636363636364%;
+  }
+
+  .row-start-small .grid-three-fourths {
+    width: 71.969696969697%;
+  }
+
+  .row-start-small .grid-full {
+    width: 96.969696969697%;
+  }
+}
+/*  Full 6-column grid.
+ *  Four-column layout for .grid-img. */
+@media (min-width: 40em) {
+  .grid-fourth,
+  .grid-img {
+    width: 21.96969696969%;
+  }
+
+  .grid-third {
+    width: 30.30303030303%;
+  }
+
+  .grid-half {
+    width: 46.969696969697%;
+  }
+
+  .grid-two-thirds {
+    width: 63.636363636364%;
+  }
+
+  .grid-three-fourths {
+    width: 71.969696969697%;
+  }
+
+  .grid-full {
+    width: 96.969696969697%;
+  }
+
+  /*  Offets let you shift grid elements to the right
+   *  but stay aligned to the grid. */
+  .offset-fourth {
+    margin-left: 26.484848484848%;
+  }
+
+  .offset-third {
+    margin-left: 34.848484848485%;
+  }
+
+  .offset-half {
+    margin-left: 51.515151515152%;
+  }
+
+  .offset-two-thirds {
+    margin-left: 68.181818181818%;
+  }
+
+  .offset-three-fourths {
+    margin-left: 76.484848484848%;
+  }
+
+  .offset-5 {
+    margin-left: 84.848484848485%;
+  }
+}
+/* Add clearfix */
+/* =============================================================
+	TYPOGRAPHY
+	Sets font styles for entire site.
+ * ============================================================= */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #272727;
+  background: white;
+}
+
+p {
+  margin-bottom: 1.5625em;
+}
+
+@media (min-width: 40em) {
+  body {
+    line-height: 1.5625;
+  }
+}
+/*  Sizes
+ *  For smaller and larger text */
+.text-small {
+  font-size: 0.9375em;
+}
+
+.text-tall {
+  font-size: 1.1875em;
+  line-height: 1.4;
+}
+
+.text-taller {
+  font-size: 2em;
+  line-height: 1.4;
+}
+
+@media (min-width: 40em) {
+  .text-tall {
+    font-size: 1.3125em;
+  }
+
+  .text-taller {
+    font-size: 3em;
+  }
+}
+/*  Colors
+ *  For alternate text colors */
+.text-muted {
+  color: gray;
+}
+
+/*  Links
+ *  Hyperlink styling */
+a {
+  color: #0088cc;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+a.current,
+a.current:hover {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: gray;
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+  background: none;
+}
+
+/*  Prevents border/background on linked image hover.
+ *  Adds slight opacity. */
+a:hover img {
+  border: none;
+  background: none;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+/*  Lists
+ *  Styling for lists */
+ul,
+ol,
+dl {
+  margin-bottom: 1.5625em;
+  margin-left: 2em;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+dl {
+  margin-left: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+/*  Removes list styling.
+ *  For semantic reasons, should only
+ *  be used on unordered lists. */
+.list-unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+/*  Headings
+ *  h1 through h6 styling
+ *  Heading class lets you use one heading type for semantics
+ *  but style it as another heading type. */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  text-align: center;
+}
+
+h1,
+.h1 {
+  font-size: 1.5em;
+  padding-top: .5em;
+}
+
+h2,
+.h2 {
+  font-size: 1.3125em;
+}
+
+h3,
+.h3 {
+  font-size: 1.1875em;
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+  font-size: 0.9375em;
+}
+
+h4,
+.h4 {
+  text-transform: uppercase;
+}
+
+@media (min-width: 40em) {
+  h1,
+  .h1 {
+    font-size: 1.75em;
+  }
+}
+/*  Lines, Quotes and Emphasis */
+/*  Lines */
+hr {
+  margin: 2em auto;
+  border: 0;
+  border-top: 0.0725em solid #e5e5e5;
+  border-bottom: 0 solid white;
+}
+
+/*  Bold */
+strong {
+  font-weight: bold;
+}
+
+/*  Italics */
+em {
+  font-style: italic;
+}
+
+/*  Subscript & Superscript */
+sub,
+sup {
+  position: relative;
+  font-size: 85%;
+  font-weight: bold;
+  line-height: 0;
+  vertical-align: baseline;
+  margin-left: 0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/*  Highlighting colors */
+::-moz-selection {
+  color: white;
+  background: #0088cc;
+}
+::selection {
+  color: white;
+  background: #0088cc;
+}
+
+::-moz-selection {
+  color: white;
+  background: #0088cc;
+}
+
+/*  Blockquotes */
+blockquote {
+  border-left: 0.25em solid #e5e5e5;
+  margin-bottom: 1.5625em;
+  padding-left: 1.5625em;
+  padding-right: 1.5625em;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* =============================================================
+	CODE
+	Styling for code and preformatted text.
+ * ============================================================= */
+/* @todo Add variables for code elements */
+code,
+pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 0.875em;
+  border-radius: 0.0725em;
+}
+
+code {
+  color: #dd1144;
+  background-color: #f7f7f7;
+  padding: 0.25em;
+}
+
+pre {
+  display: block;
+  margin-bottom: 1.5625em;
+  line-height: 1.5;
+  background-color: #f4f4f4;
+  padding: 0.8125em;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+pre code {
+  font-size: 1em;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
+/* =============================================================
+	PRISM.JS
+	Code syntax highlighting by Lea Verou.
+	http://prismjs.com/
+ * ============================================================= */
+@media screen {
+  pre .token.comment,
+  pre .token.prolog,
+  pre .token.doctype,
+  pre .token.cdata {
+    color: slategray;
+  }
+
+  pre .token.punctuation {
+    color: #999;
+  }
+
+  pre .token.property,
+  pre .token.tag,
+  pre .token.boolean,
+  pre .token.number,
+  pre .token.constant,
+  pre .token.symbol {
+    color: #905;
+  }
+
+  pre .token.selector,
+  pre .token.attr-name,
+  pre .token.string,
+  pre .token.builtin {
+    color: #690;
+  }
+
+  pre .token.operator,
+  pre .token.entity,
+  pre .token.url,
+  pre .language-css .token.string,
+  pre .style .token.string,
+  pre .token.variable {
+    color: #a67f59;
+  }
+
+  pre .token.atrule,
+  pre .token.attr-value,
+  pre .token.keyword {
+    color: #07a;
+  }
+
+  pre .token.regex,
+  pre .token.important {
+    color: #e90;
+  }
+
+  pre .token.important {
+    font-weight: bold;
+  }
+
+  pre .token.entity {
+    cursor: help;
+  }
+}
+/* =============================================================
+	BUTTONS
+	Styling for CSS buttons.
+ * ============================================================= */
+.btn {
+  display: inline-block;
+  font-size: 0.9375em;
+  padding: 0.5em 0.6875em;
+  line-height: 1.2;
+  font-weight: normal;
+  background-color: #0088cc;
+  border: 0.0725em solid #0088cc;
+  border-radius: 0.0725em;
+  margin-right: 0.3125em;
+  margin-bottom: 0.3125em;
+}
+
+.btn,
+.btn:hover,
+a .btn:hover,
+.btn.active {
+  color: white;
+}
+
+.btn:hover,
+a .btn:hover,
+.btn.active {
+  background-color: #005580;
+  border-color: #005580;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: gray;
+  border-color: gray;
+}
+
+.btn-secondary:hover,
+a .btn-secondary:hover,
+.btn-secondary.active {
+  background-color: #5a5a5a;
+  border-color: #5a5a5a;
+}
+
+.btn:active,
+.btn.active {
+  -webkit-box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
+  outline: 0;
+}
+
+.btn.disabled,
+.btn[disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-large {
+  padding: 0.6875em 0.9375em;
+  font-size: 1em;
+  line-height: normal;
+}
+
+.btn-xlarge {
+  padding: 0.8125em 1.1875em;
+  font-size: 1.1875em;
+  line-height: normal;
+}
+
+.btn-block,
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  display: block;
+  width: 100%;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button,
+.btn {
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+.btn:last-child,
+input.btn {
+  margin-right: 0;
+}
+
+/* =============================================================
+	FORMS
+	Styling for form elements.
+ * ============================================================= */
+/* @todo Integrate form styling with _config options */
+form,
+fieldset {
+  margin-bottom: 1.5625em;
+}
+
+legend,
+label {
+  display: block;
+  font-weight: normal;
+  padding: 0;
+  margin-bottom: 0.3125em;
+}
+
+/* @todo Adjust form colors based on Sass variables */
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  font: inherit;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 1.1875em;
+  padding: 0.3125em;
+  border: 0.0725em solid #b8b8b8;
+  border-radius: 0.0725em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+form button,
+form .button {
+  margin-bottom: 1.1875em;
+}
+
+textarea {
+  height: 12em;
+}
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin-bottom: 0.3125em;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 0.0725em 0.0725em rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 0.0725em 0.0725em rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+}
+
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  outline: thin dotted;
+  outline: 0.3125em auto -webkit-focus-ring-color;
+  outline-offset: -0.125em;
+}
+
+/*  Inline Inputs */
+.input-inline {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+/*  Condensed Inputs */
+.input-condensed {
+  padding: 0.0725em 0.3125em;
+  font-size: 0.9375em;
+}
+
+@media (min-width: 40em) {
+  input, textarea, select {
+    line-height: 1.5625;
+  }
+}
+/* =============================================================
+	ICONS
+	A placeholder for icon fonts.
+	Learn more at http://gomakethings.com/icon-fonts/
+ * ============================================================= */
+/*  Change font names and URLs as need. */
+@font-face {
+  font-family: "icomoon";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'icomoon';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.icon-logo:before {
+  content: "\e000";
+}
+
+.icon-github:before {
+  content: "\e001";
+}
+
+.icon-docs:before {
+  content: "\e002";
+}
+
+.icon-reset:before {
+  content: "\e003";
+}
+
+.icon-grid:before {
+  content: "\e004";
+}
+
+.icon-typography:before {
+  content: "\e005";
+}
+
+.icon-buttons:before {
+  content: "\e006";
+}
+
+.icon-forms:before {
+  content: "\e007";
+}
+
+.icon-addons:before {
+  content: "\e008";
+}
+
+/* =============================================================
+
+	Tables v2.0
+	Simple table styling by Chris Ferdinandi.
+	http://gomakethings.com
+
+	Free to use under the MIT License.
+	http://gomakethings.com/mit/
+
+ * ============================================================= */
+/*  Removes default browser settings
+ *  and evens out inconsistencies. */
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.5625em;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5em;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  border-top: 0.0725em solid #ededed;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.table-condensed th,
+.table-condensed td {
+  padding: 0.25em;
+}
+
+/* =============================================================
+
+	Backgrounds v2.0
+	Simple section dividers by Chris Ferdinandi.
+	http://gomakethings.com
+
+	Free to use under the MIT License.
+	http://gomakethings.com/mit/
+
+ * ============================================================= */
+.bg {
+  background-color: #f7f7f7;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.bg-secondary {
+  color: white;
+  background-color: #0088cc;
+}
+
+.bg-condensed {
+  padding-top: 0.9375em;
+  padding-bottom: 0.9375em;
+}
+
+/* =============================================================
+
+	Hero v3.0
+	Simple callout boxes and background colors by Chris Ferdinandi.
+	http://gomakethings.com
+
+	Free to use under the MIT License.
+	http://gomakethings.com/mit/
+
+ * ============================================================= */
+.hero {
+  background-color: #f7f7f7;
+  margin-bottom: 1.5625em;
+  padding: 1.5em;
+  border: 0.0725em solid #e5e5e5;
+  border-radius: 0.0725em;
+}
+
+.hero-condensed {
+  padding: 0.9375em;
+}
+
+/* =============================================================
+
+	Labels v1.0
+	Lightweight CSS labels by Chris Ferdinandi.
+	http://gomakethings.com
+
+	Free to use under the MIT License.
+	http://gomakethings.com/mit/
+
+ * ============================================================= */
+.label {
+  font-size: 0.8125em;
+  color: white;
+  background-color: #0088cc;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  border-radius: 0.0725em;
+}
+
+.label-success {
+  background-color: #377f31;
+}
+
+.label-danger {
+  background-color: #880e14;
+}
+
+.label-warning {
+  background-color: #dba909;
+}
+
+/* =============================================================
+	ALIGNMENT, SPACING & VISIBILITY
+	Override default alignment, spacing and visibilty.
+ * ============================================================= */
+/*  Text alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/*  Floats */
+.float-left {
+  float: left;
+}
+
+.float-center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.float-right {
+  float: right;
+}
+
+/*  Spacing */
+.no-space {
+  margin: 0;
+  padding: 0;
+}
+
+.no-space-bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.no-space-top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.space-bottom {
+  margin-bottom: 2em;
+}
+
+.space-bottom-small {
+  margin-bottom: 0.5em;
+  padding-bottom: 0;
+}
+
+.space-top {
+  padding-top: 0.8125em;
+}
+
+/*  Screen Reader Text */
+.screen-reader {
+  position: absolute;
+  top: -9999em;
+  left: -9999em;
+}
+
+/*  Clearfix */
+.group:before, .container:before,
+.row:before,
+.group:after,
+.container:after,
+.row:after {
+  display: table;
+  content: "";
+}
+
+.group:after, .container:after,
+.row:after {
+  clear: both;
+}
+
+/* =============================================================
+	PRINT STYLES
+	Styling for printed content. Adapted from HTML5BP.
+	http://html5boilerplate.com
+ * ============================================================= */
+@media print {
+  /*  Universal selector.
+   *  Reset all content to transparent background,
+   *  black color, and remove box and text shadows. */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /*  Specifies page margin */
+  @page {
+    margin: 0.5cm;
+  }
+  /*  Underline all links */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  /*  Show URL after links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /*  Don't show URL for internal links */
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /*  Specifies the minimum number of lines to print at the top and bottom of a page. */
+  p, h1, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /*  Avoid inserting a page break after headers */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  /*  Change border color on blockquotes and preformatted text.
+   *  Avoid page breaks inside the content */
+  pre, blockquote {
+    border-color: #999;
+    page-break-inside: avoid;
+  }
+
+  /*  Displayed as a table header row group */
+  thead {
+    display: table-header-group;
+  }
+
+  /*  Avoid inserting a page break inside table rows and images */
+  tr, img {
+    page-break-inside: avoid;
+  }
+}

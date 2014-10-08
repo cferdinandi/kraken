@@ -1,0 +1,46 @@
+/* =============================================================
+
+	Tables v2.0
+	Simple table styling by Chris Ferdinandi.
+	http://gomakethings.com
+
+	Free to use under the MIT License.
+	http://gomakethings.com/mit/
+
+ * ============================================================= */
+
+/*  Removes default browser settings
+ *  and evens out inconsistencies. */
+table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: $spacing;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th,
+td {
+	text-align: left;
+	padding: calc-em(8px);
+}
+
+th {
+	background-color: lighten( $color-gray-light, 5% );
+	font-weight: bold;
+	vertical-align: bottom;
+}
+
+td {
+	border-top: calc-em(1px) solid lighten( $color-gray-light, 3% );
+	vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+	background-color: lighten( $color-gray-light, 7% );
+}
+
+.table-condensed th,
+.table-condensed td, {
+	padding: calc-em(4px);
+}

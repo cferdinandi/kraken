@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Typography | Kraken</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+
+		<!-- Apple Touch Icons -->
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png">
+
+		<!-- MS Homescreen Icons -->
+		<meta name="msapplication-TileColor" content="#0088cc">
+		<meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
+
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="css/kraken.css" type="text/css">
+
+		<!-- HTML5 Shim for IE 6-8 -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+<body>
+
+	<section class="space-bottom bg">
+	<article class="container">
+
+		<h1 class="text-taller no-space"><i class="icon-logo"></i> Kraken</h1>
+		<p class="text-center space-bottom-small"><a href="index.html">Home</a></p>
+
+	</article>
+</section>
+
+	<section class="space-bottom">
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+					<h1 class="text-center">Typography</h1>
+
+					<p>Kraken uses relative sizing (ems and %, not pixels) for everything.</p>
+
+					<p>The <code>body</code> has a base <code>font-size</code> of 100%, which is 16px on browsers with default font settings. All other sizes are in ems. Changing the <code>font-size</code> on the <code>body</code> element will adjust the typographical scale for the entire site.</p>
+
+					<div class="hero hero-condensed"><span class="label">Psstt...</span> New to relative sizing? <a href="http://gomakethings.com/working-with-relative-sizing/">Learn more.</a></div>
+
+					<p>The <code>font-family</code> on the <code>body</code> is <code>"Helvetica Neue", Arial, sans-serif</code>. This sets the typeface for the entire site. Adjust as needed.</p>
+
+
+					<h2 class="text-center">Text Basics</h2>
+
+					<p>
+						Default text.<br>
+						<span class="text-muted">Muted text.</span><br>
+						<span class="text-small">Small text.</span><br>
+						<span class="text-tall">Tall text.</span><br>
+						<a href="#">Hyperlinks.</a><br>
+						<strong>Bold</strong> and <em>italics</em>.
+					</p>
+
+					<pre><code class="language-markup">Default text.
+&lt;span class="text-muted"&gt;Muted text.&lt;/span&gt;
+&lt;span class="text-small"&gt;Small text.&lt;/span&gt;
+&lt;span class="text-tall"&gt;Tall text.&lt;/span&gt;
+&lt;a href="#"&gt;Hyperlinks.&lt;/a&gt;
+&lt;strong&gt;Bold&lt;/strong&gt; and &lt;em&gt;italics&lt;/em&gt;.</code></pre>
+
+					<p><span class="label">Heads up...</span> Because Kraken uses relative sizing, you should always apply <code>.text-tall</code> and <code>.text-small</code> classes to a <code>&lt;span&gt;</code> element and not directly to a <code>&lt;p&gt;</code>. Otherwise, your spacing will get all messed up.</p>
+
+<strong>This</strong>
+<pre><code class="language-markup">&lt;p&gt;
+	&lt;span class="text-small"&gt;
+		Small text.
+	&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+
+<strong>Not This</strong>
+<pre><code class="language-markup">&lt;p class="text-small"&gt;
+	Small text.
+&lt;/p&gt;</code></pre>
+
+				</div>
+			</div>
+
+			<hr>
+
+
+			<h1 class="text-center no-space-bottom" id="get-started">Getting Started</h1>
+<p class="text-muted text-center"><span class="text-tall">Learn how to use Kraken</span></p>
+
+<div class="row">
+	<div class="grid-third">
+		<ol class="no-space-bottom">
+			<li><a href="kraken-way.html">The Kraken Way</a></li>
+			<li><a href="setup.html">Setup</a></li>
+			<li><a href="grid.html">The Grid</a></li>
+			<li><a href="typography.html">Typography</a></li>
+			<li><a href="lists.html">Lists</a></li>
+		</ol>
+	</div>
+	<div class="grid-third">
+		<ol class="no-space-bottom" start="6">
+			<li><a href="headings.html">Headings</a></li>
+			<li><a href="quotes.html">Quotes &amp; Citations</a></li>
+			<li><a href="buttons.html">Buttons</a></li>
+			<li><a href="forms.html">Forms</a></li>
+			<li><a href="code.html">Code</a></li>
+		</ol>
+	</div>
+	<div class="grid-third">
+		<ol start="11">
+			<li><a href="icons.html">Icons</a></li>
+			<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
+			<li><a href="addons.html">Add-Ons</a></li>
+			<li><a href="browsers.html">Browser Compatibility</a></li>
+			<li><a href="support.html">Support</a></li>
+		</ol>
+	</div>
+</div>
+
+<p class="text-small space-top text-center"><a href="archive/v2/">Looking for Kraken 2 documentation?</a></p>
+
+
+		</article>
+	</section>
+
+	<footer class="bg">
+		<article class="container">
+
+			<p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+
+		</article>
+	</footer>
+
+
+	<!-- Javascript -->
+	<script src="js/smooth-scroll.js"></script>
+	<script src="js/prism.js"></script>
+	<script>
+		smoothScroll.init({updateURL: true});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* =============================================================
+	CODE
+	Styling for code and preformatted text.
+ * ============================================================= */
+ /* @todo Add variables for code elements */
+code,
+pre {
+	font-family: $font-monospace;
+	font-size: calc-em(14px);
+	border-radius: calc-em(1px);
+}
+
+code {
+	color: $color-code;
+	// background-color: #f7f7f9;
+	background-color: lighten( $color-gray-light, 7% );
+	padding: calc-em(4px);
+}
+
+pre {
+	display: block;
+	margin-bottom: $spacing;
+	line-height: 1.5;
+	// background-color: #f5f5f5;
+	background-color: lighten( $color-gray-light, 6% );
+	padding: calc-em(13px);
+	-moz-tab-size: 4;
+	  -o-tab-size: 4;
+		 tab-size: 4;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+pre code {
+	font-size: 1em;
+	padding: 0;
+	color: inherit;
+	background-color: transparent;
+	border: 0;
+}

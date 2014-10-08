@@ -1,0 +1,217 @@
+/**
+ * Typography
+ */
+
+.text-xxlarge {
+	font-size: 2em;
+	line-height: 1.4;
+}
+
+.text-xlarge {
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+@media (min-width: 40em) {
+	.text-xxlarge {
+		font-size: 3em;
+	}
+}
+
+
+
+/**
+ * Icons
+ */
+
+.svg .icon-xlarge {
+	height: 4em;
+	width: 4em;
+}
+
+.svg .icon-xxlarge {
+	height: 6em;
+	width: 6em;
+}
+
+@media (min-width: 40em) {
+	.svg .icon-xxlarge {
+		height: 8em;
+		width: 8em;
+	}
+}
+
+@media (min-width: 30em) and (max-width: 40em), (min-width: 60em) {
+	.svg .icon-xlarge {
+		height: 5em;
+		width: 5em;
+	}
+}
+
+
+/**
+ * Jumbotron
+ */
+
+.jumbotron {
+	background-color: #f7f7f7;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+
+/**
+ * Navigation
+ */
+
+.nav-docs {
+	background-color: #f0f0f0;
+}
+
+/*  Remove default list styling for navigation list */
+.nav {
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+/*  Display navigation items as inline-block elements.
+ *  Add slight margin between each navigation item. */
+.nav > li {
+  display: inline-block;
+  float: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+/*  Remove margin-left on first navigation item */
+.nav > li:first-child {
+  margin-left: 0;
+}
+
+/*  Remove margin-right on last navigation item */
+.nav > li:last-child {
+  margin-right: 0;
+}
+
+
+/**
+ * Tables
+ */
+
+/*  Removes default browser settings
+ *  and evens out inconsistencies. */
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.5625em;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5em;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  border-top: 0.0725em solid #ededed;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.table-condensed th,
+.table-condensed td {
+  padding: 0.25em;
+}
+
+
+/**
+ * Grid Highlighting
+ */
+
+.grid-highlight {
+	background-color: #f7f7f7;
+	border: 1px solid #e5e5e5;
+	border-radius: 0.0725em;
+	margin-bottom: 1.5625em;
+	padding: 0.9375em;
+}
+
+
+/**
+ * Prism
+ * Code syntax highlighting by Lea Verou.
+ * http://prismjs.com/
+ */
+
+@media screen {
+
+	.token.comment,
+	.token.prolog,
+	.token.doctype,
+	.token.cdata {
+		color: slategray;
+	}
+
+	.token.punctuation {
+		color: #999;
+	}
+
+	.token.property,
+	.token.tag,
+	.token.boolean,
+	.token.number,
+	.token.constant,
+	.token.symbol {
+		color: #905;
+	}
+
+	.token.selector,
+	.token.attr-name,
+	.token.string,
+	.token.builtin {
+		color: #690;
+	}
+
+	.token.operator,
+	.token.entity,
+	.token.url,
+	.language-css .token.string,
+	.style .token.string,
+	.token.variable {
+		color: #a67f59;
+	}
+
+	.token.atrule,
+	.token.attr-value,
+	.token.keyword {
+		color: #07a;
+	}
+
+
+	.token.regex,
+	.token.important {
+		color: #e90;
+	}
+
+	.token.important {
+		font-weight: bold;
+	}
+
+	.token.entity {
+		cursor: help;
+	}
+
+}
