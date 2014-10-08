@@ -26,6 +26,8 @@ Kraken uses [semantic versioning](http://semver.org/).
     * Added documentation generator to build process.
     * Removed HTML5 shim (time to drop IE8 and lower optimization).
     * Wrapped JS detects in IIFEs for better variable scoping.
+    * Added documentation on working with Travis CI.
+    * Added Tarpit to add-ons.
 * v3.8.2 - September 28, 2014
     * Fixed JS concatenation bug.
 * v3.8.1 - August 24, 2014

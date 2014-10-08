@@ -44,6 +44,7 @@
 			<li><a data-scroll href="#working-with-svg">Working with SVG</a></li>
 			<li><a data-scroll href="#working-with-icon-fonts">Working with Icon Fonts</a></li>
 			<li><a data-scroll href="#working-with-javascript">Working with JavaScript</a></li>
+			<li><a data-scroll href="#continuous-integration">Continuous Integration</a></li>
 			<li><a data-scroll href="#gui-source-compilers">GUI Source Compilers</a></li>
 		</ul>
 
@@ -179,6 +180,15 @@ $icons: ( // name, character, color
 		<p>If you've written <a href="http://jasmine.github.io/">Jasmine unit tests</a> for any of your scripts, place them in the <code>test</code> > <code>spec</code> directory and they will automatically run on compile.</p>
 
 		<p>Results are displayed in both the terminal window and <code>test</code> > <code>results</code>. You can see how much coverage each unit test provides in the <code>test</code> > <code>coverage</code> directory.</p>
+
+
+		<h2 id="continuous-integration">Continous Integration</h2>
+
+		<p>Kraken includes a configuration file for <a href="http://docs.travis-ci.com/user/getting-started/">Travis CI, a continuous integration service for GitHub.</p>
+
+		<p>If you sign-up and activate it for your repository, Travis CI will run your build and execute any processes to make sure everything is working as expected. This is particularly useful when working with a team or managing open source projects with multiple contributors.</p>
+
+		<p>The <code>.travis.yml</code> file is pre-configured for Kraken's build system. Even if you add files or update the Gulp tasks, you shouldn't need to change anything for it to work.</p>
 
 
 		<h2 id="gui-source-compilers">GUI Source Compilers</h2>
