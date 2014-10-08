@@ -2,6 +2,7 @@
 	"name": "Kraken",
 	"version": "4.0.0",
 	"description": "A lightweight front-end boilerplate",
+	"main": "./",
 	"author": {
 		"name": "Chris Ferdinandi",
 		"url": "http://gomakethings.com"
