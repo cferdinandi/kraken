@@ -96,7 +96,7 @@
 }
 
 /* Disable current page nav */
-.nav-docs-active {
+a.nav-docs-active {
 	color: #808080;
 	pointer-events: none;
 	cursor: not-allowed;
