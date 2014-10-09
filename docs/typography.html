@@ -277,7 +277,7 @@ You can also include superscripts&lt;sup&gt;1&lt;/sup&gt; and subscripts&lt;sub&
 			stickyFooter.init();
 			;(function (window, document, undefined) {
 				'use strict';
-				var activeNav = document.querySelector('.docs-nav a[href^="/' + location.pathname.split("kraken/")[1] + '"]');
+				var activeNav = document.querySelector('.docs-nav a[href^="' + location.pathname.split("kraken/")[1] + '"]');
 				if ( activeNav ) {
 					activeNav.classList.add('nav-docs-active');
 				}
