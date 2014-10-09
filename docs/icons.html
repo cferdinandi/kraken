@@ -22,7 +22,7 @@
 
 	<body>
 
-		<section class="nav-docs">
+		<section class="navbar-docs">
 			<nav class="container">
 				<strong><a href="index.html">Kraken</a></strong>
 			</nav>
@@ -95,7 +95,7 @@
 
 <hr>
 
-<article class="space-bottom">
+<nav class="nav-docs space-bottom">
 	<h1 class="text-center no-space-bottom" id="getting-started">Getting Started</h1>
 	<p class="text-muted text-center"><span class="text-tall">Learn how to use Kraken</span></p>
 	<div class="row">
@@ -133,7 +133,7 @@
 	</div>
 	<h3 class="space-top space-bottom-small text-center">Older Docs</h3>
 	<p class="text-center"><a href="assets/archive/v2/index.html">Kraken 2</a> | <a href="assets/archive/v3/index.html">Kraken 3</a></p>
-</article>
+</nav>
 		</section>
 
 		<footer class="jumbotron">
@@ -153,6 +153,13 @@
 		<script>
 			smoothScroll.init();
 			stickyFooter.init();
+			;(function (window, document, undefined) {
+				'use strict';
+				var activeNav = document.querySelector('.docs-nav a[href^="/' + location.pathname.split("kraken/")[1] + '"]');
+				if ( activeNav ) {
+					activeNav.classList.add('nav-docs-active');
+				}
+			})(window, document);
 		</script>
 
 	</body>

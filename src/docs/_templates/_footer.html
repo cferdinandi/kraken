@@ -18,6 +18,13 @@
 		<script>
 			smoothScroll.init();
 			stickyFooter.init();
+			;(function (window, document, undefined) {
+				'use strict';
+				var activeNav = document.querySelector('.docs-nav a[href^="/' + location.pathname.split("kraken/")[1] + '"]');
+				if ( activeNav ) {
+					activeNav.classList.add('nav-docs-active');
+				}
+			})(window, document);
 		</script>
 
 	</body>

@@ -64,12 +64,12 @@
  * Navigation
  */
 
-.nav-docs {
+.navbar-docs {
 	background-color: #f0f0f0;
 }
 
 /*  Remove default list styling for navigation list */
-.nav {
+.nav-actions {
   list-style: none;
   margin-left: 0;
   margin-right: 0;
@@ -78,7 +78,7 @@
 
 /*  Display navigation items as inline-block elements.
  *  Add slight margin between each navigation item. */
-.nav > li {
+.nav-actions > li {
   display: inline-block;
   float: none;
   margin-left: 0.5em;
@@ -86,13 +86,20 @@
 }
 
 /*  Remove margin-left on first navigation item */
-.nav > li:first-child {
+.nav-actions > li:first-child {
   margin-left: 0;
 }
 
 /*  Remove margin-right on last navigation item */
-.nav > li:last-child {
+.nav-actions > li:last-child {
   margin-right: 0;
+}
+
+/* Disable current page nav */
+.nav-docs-active {
+	color: #808080;
+	pointer-events: none;
+	cursor: not-allowed;
 }
 
 
