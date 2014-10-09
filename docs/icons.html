@@ -159,8 +159,8 @@
 			;(function (window, document, undefined) {
 				'use strict';
 				var activeNav = document.querySelector('.nav-docs a[href^="' + location.pathname.split("kraken/")[1] + '"]');
-				if ( activeNav & !!document.querySelector && ( 'classList' in document.createElement('_') ) ) {
-					activeNav.classList.add('nav-docs-active');
+				if ( activeNav & !!document.querySelector ) {
+					activeNav.className += ' nav-docs-active';
 				}
 			})(window, document);
 		</script>
