@@ -1,7 +1,8 @@
 
-		</section>
+			</section>
+		</main>
 
-		<footer class="jumbotron">
+		<footer data-sticky-footer class="jumbotron">
 			<article class="container">
 
 				<p class="text-small text-muted">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
@@ -18,6 +19,13 @@
 		<script>
 			smoothScroll.init();
 			stickyFooter.init();
+			;(function (window, document, undefined) {
+				'use strict';
+				var activeNav = document.querySelector('.docs-nav a[href^="/' + location.pathname.split("kraken/")[1] + '"]');
+				if ( activeNav ) {
+					activeNav.classList.add('nav-docs-active');
+				}
+			})(window, document);
 		</script>
 
 	</body>
