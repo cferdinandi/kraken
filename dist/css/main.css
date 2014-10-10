@@ -1,5 +1,5 @@
 /**
- * Kraken v4.0.0
+ * Kraken v4.0.1
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
@@ -75,8 +75,19 @@ time, mark, audio, video {
 /**
  * Set display type for HTML5 semantic elements
  */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block;
 }
 
@@ -118,6 +129,7 @@ video {
 
 /**
  * Prevent iframe, object, and embed elements from spilling outside of the page on smaller screens.
+ * height: auto causes iframes to smush, so it's omitted here.
  */
 iframe,
 object,
@@ -312,7 +324,6 @@ a:active {
   }
 }
 
-/* Add clearfix */
 /**
  * @section Typography
  * Sets font styles for entire site
@@ -455,6 +466,12 @@ h1,
   font-size: 1.5em;
   padding-top: .5em;
 }
+@media (min-width: 40em) {
+  h1,
+  .h1 {
+    font-size: 1.75em;
+  }
+}
 
 h2,
 .h2 {
@@ -476,12 +493,6 @@ h4,
   text-transform: uppercase;
 }
 
-@media (min-width: 40em) {
-  h1,
-  .h1 {
-    font-size: 1.75em;
-  }
-}
 /**
  * Lines, Quotes and Emphasis
  */
@@ -526,11 +537,6 @@ sub {
   background: #0088cc;
 }
 ::selection {
-  color: #ffffff;
-  background: #0088cc;
-}
-
-::-moz-selection {
   color: #ffffff;
   background: #0088cc;
 }
@@ -795,7 +801,7 @@ select:focus {
 
 /**
  * @section SVGs
- * A placeholder for SVG icon sprite styling.
+ * SVG icon sprite styling.
  * @link http://css-tricks.com/svg-sprites-use-better-icon-fonts/
  * @link http://css-tricks.com/svg-use-external-source/
  */

@@ -53,8 +53,19 @@ time, mark, audio, video {
 /**
  * Set display type for HTML5 semantic elements
  */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ main,
+ menu,
+ nav,
+ section,
+ summary {
 	display: block;
 }
 
@@ -96,6 +107,7 @@ video {
 
 /**
  * Prevent iframe, object, and embed elements from spilling outside of the page on smaller screens.
+ * height: auto causes iframes to smush, so it's omitted here.
  */
 iframe,
 object,

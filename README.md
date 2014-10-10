@@ -16,6 +16,9 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v4.0.1 - October 10, 2014
+    * Removed placeholder language from SVG section.
+    * Fixed moz-specific styling being duplicated by auto-prefixer.
 * v4.0.0 - October 7, 2014
     * Updated `icons.scss` to use `@each` loops.
     * Changed name of CSS output from `kraken.css` to `main.css`.
