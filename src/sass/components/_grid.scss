@@ -73,7 +73,7 @@
 	@media (min-width: $bp-medium)  { width: 25%; }
 }
 
-/* Add clearfix */
+// Add clearfix
 .container,
 .row {
 	@extend .group;

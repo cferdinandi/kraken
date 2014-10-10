@@ -151,6 +151,10 @@ h1,
 .h1 {
 	font-size: calc-em(24px);
 	padding-top: .5em;
+
+	@media (min-width: $bp-medium) {
+		font-size: calc-em(28px);
+	}
 }
 
 h2,
@@ -171,13 +175,6 @@ h4, h5, h6,
 h4,
 .h4 {
 	text-transform: uppercase;
-}
-
-@media (min-width: $bp-medium) {
-	h1,
-	.h1 {
-		font-size: calc-em(28px);
-	}
 }
 
 
@@ -222,11 +219,6 @@ sub {
  * Highlighting colors
  */
 ::selection {
-	color: $color-white;
-	background: $color-primary;
-}
-
-::-moz-selection {
 	color: $color-white;
 	background: $color-primary;
 }
