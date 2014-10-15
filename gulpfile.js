@@ -46,7 +46,9 @@ var paths = {
 	},
 	static : 'src/static/**',
 	test : {
-		spec : [ 'test/spec/**/*.js' ],
+		input : 'src/js/**/*.js',
+		karma : 'test/karma.conf.js',
+		spec : 'test/spec/**/*.js',
 		coverage: 'test/coverage/',
 		results: 'test/results/'
 	},
@@ -131,7 +133,7 @@ gulp.task('svgs', ['clean'], function () {
 		.pipe(svgstore({
 			fileName: 'icons.svg',
 			prefix: 'icon-',
-			inlineSvg: false
+			inlineSvg: true
 		}))
 		.pipe(gulp.dest(paths.svgs.output));
 });
@@ -164,9 +166,9 @@ gulp.task('clean', function () {
 
 // Run unit tests
 gulp.task('test', function() {
-	return gulp.src([paths.scripts.input + '/../**/*.js'].concat(paths.test.spec))
+	return gulp.src([paths.test.input].concat([paths.test.spec]))
 		.pipe(plumber())
-		.pipe(karma({ configFile: 'test/karma.conf.js' }))
+		.pipe(karma({ configFile: paths.test.karma }))
 		.on('error', function(err) { throw err; });
 });
 
