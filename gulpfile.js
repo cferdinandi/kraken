@@ -116,7 +116,7 @@ gulp.task('scripts', ['clean'], function() {
 gulp.task('styles', ['clean'], function() {
 	return gulp.src(paths.styles.input)
 		.pipe(plumber())
-		.pipe(sass({style: 'expanded', noCache: true}))
+		.pipe(sass({style: 'expanded', noCache: true, 'sourcemap=none': true}))
 		.pipe(flatten())
 		.pipe(prefix('last 2 version', '> 1%'))
 		.pipe(header(banner.full, { package : package }))
@@ -188,8 +188,6 @@ gulp.task('generatedocs', ['default', 'cleandocs'], function() {
 		}))
 		.pipe(header(fs.readFileSync(paths.docs.templates + '/_header.html', 'utf8')))
 		.pipe(footer(fs.readFileSync(paths.docs.templates + '/_footer.html', 'utf8')))
-		// .pipe(headerfooter.header(paths.docs.templates + '/_header.html'))
-		// .pipe(headerfooter.footer(paths.docs.templates + '/_footer.html'))
 		.pipe(gulp.dest(paths.docs.output));
 });
 

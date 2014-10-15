@@ -16,6 +16,8 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v4.1.1 - October 15, 2014
+    * Issued temporary fix for forced sourcemap generation in Sass 3.4.
 * v4.1.0 - October 15, 2014
     * Replaced `gulp-headerfooter` with `gulp-header` and `gulp-footer` respectively.
 * v4.0.3 - October 15, 2014
