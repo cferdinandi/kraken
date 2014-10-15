@@ -16,6 +16,9 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v4.0.3 - October 15, 2014
+    * Switched to inline SVG.
+    * Updated `paths` variables in  `gulpfile.js`.
 * v4.0.2 - October 15, 2014
     * Fixed Gulp script task bug.
 * v4.0.1 - October 10, 2014
