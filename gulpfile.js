@@ -3,6 +3,7 @@
  */
 
 var gulp = require('gulp');
+var fs = require('fs');
 var plumber = require('gulp-plumber');
 var clean = require('gulp-clean');
 var lazypipe = require('lazypipe');
@@ -10,6 +11,7 @@ var rename = require('gulp-rename');
 var flatten = require('gulp-flatten');
 var tap = require('gulp-tap');
 var header = require('gulp-header');
+var footer = require('gulp-footer');
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var concat = require('gulp-concat');
@@ -22,7 +24,6 @@ var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
 var markdown = require('gulp-markdown');
 var fileinclude = require('gulp-file-include');
-var headerfooter = require('gulp-headerfooter');
 var package = require('./package.json');
 
 
@@ -185,8 +186,10 @@ gulp.task('generatedocs', ['default', 'cleandocs'], function() {
 				return t.through(markdown);
 			}
 		}))
-		.pipe(headerfooter.header(paths.docs.templates + '/_header.html'))
-		.pipe(headerfooter.footer(paths.docs.templates + '/_footer.html'))
+		.pipe(header(fs.readFileSync(paths.docs.templates + '/_header.html', 'utf8')))
+		.pipe(footer(fs.readFileSync(paths.docs.templates + '/_footer.html', 'utf8')))
+		// .pipe(headerfooter.header(paths.docs.templates + '/_header.html'))
+		// .pipe(headerfooter.footer(paths.docs.templates + '/_footer.html'))
 		.pipe(gulp.dest(paths.docs.output));
 });
 
