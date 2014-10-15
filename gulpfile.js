@@ -88,7 +88,6 @@ var banner = {
 
 // Lint, minify, and concatenate scripts
 gulp.task('scripts', ['clean'], function() {
-
 	var jsTasks = lazypipe()
 		.pipe(header, banner.full, { package : package })
 		.pipe(gulp.dest, paths.scripts.output)
@@ -99,9 +98,8 @@ gulp.task('scripts', ['clean'], function() {
 
 	return gulp.src(paths.scripts.input)
 		.pipe(plumber())
-		.pipe(flatten())
 		.pipe(tap(function (file, t) {
-			if ( file.stat.isDirectory() ) {
+			if ( file.isDirectory() ) {
 				var name = file.relative + '.js';
 				return gulp.src(file.path + '/*.js')
 					.pipe(concat(name))
