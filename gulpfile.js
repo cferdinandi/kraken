@@ -2,29 +2,40 @@
  * Gulp Packages
  */
 
+// General
 var gulp = require('gulp');
 var fs = require('fs');
-var plumber = require('gulp-plumber');
 var del = require('del');
 var lazypipe = require('lazypipe');
-var rename = require('gulp-rename');
+var plumber = require('gulp-plumber');
 var flatten = require('gulp-flatten');
 var tap = require('gulp-tap');
+var rename = require('gulp-rename');
 var header = require('gulp-header');
 var footer = require('gulp-footer');
+var watch = require('gulp-watch');
+var livereload = require('gulp-livereload');
+var package = require('./package.json');
+
+// Scripts and tests
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var karma = require('gulp-karma');
+
+// Styles
 var sass = require('gulp-ruby-sass');
 var prefix = require('gulp-autoprefixer');
 var minify = require('gulp-minify-css');
-var karma = require('gulp-karma');
+
+// SVGs
 var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
+
+// Docs
 var markdown = require('gulp-markdown');
 var fileinclude = require('gulp-file-include');
-var package = require('./package.json');
 
 
 /**
@@ -32,6 +43,7 @@ var package = require('./package.json');
  */
 
 var paths = {
+	input: 'src/**/*',
 	output: 'dist/',
 	scripts: {
 		input: 'src/js/*',
@@ -156,7 +168,7 @@ gulp.task('lint:scripts', function () {
 
 // Remove prexisting content from output and test folders
 gulp.task('clean:dist', function () {
-	return del.sync([
+	del.sync([
 		paths.output,
 		paths.test.coverage,
 		paths.test.results
@@ -208,6 +220,48 @@ gulp.task('clean:docs', function () {
 	return del.sync(paths.docs.output);
 });
 
+// Watch for changes to files
+gulp.task('listen', function () {
+	watch(paths.input, function (files) {
+		gulp.start('default');
+	});
+});
+
+// Watch for changes to files and docs
+gulp.task('listen:docs', function () {
+	watch(paths.input, function (files) {
+		gulp.start('docs');
+	});
+});
+
+// Spin up livereload server and listen for file changes
+gulp.task('server', function () {
+	livereload.listen();
+	watch(paths.input, function (files) {
+		gulp.start('default');
+		gulp.start('refresh');
+	});
+});
+
+// Spin up livereload server and listen for file and documentation changes
+gulp.task('server:docs', function () {
+	livereload.listen();
+	watch(paths.input, function (files) {
+		gulp.start('docs');
+		gulp.start('refresh:docs');
+	});
+});
+
+// Run livereload after file change
+gulp.task('refresh', ['default'], function () {
+	livereload.changed();
+});
+
+// Run livereload after file or documentation change
+gulp.task('refresh:docs', ['docs'], function () {
+	livereload.changed();
+});
+
 
 /**
  * Task Runners
@@ -231,4 +285,28 @@ gulp.task('docs', [
 	'build:docs',
 	'copy:dist',
 	'copy:assets'
+]);
+
+// Compile files when something changes
+gulp.task('watch', [
+	'listen',
+	'default'
+]);
+
+// Compile files and generate docs when something changes
+gulp.task('watch:docs', [
+	'listen:docs',
+	'docs'
+]);
+
+// Compile files and livereload pages when something changes
+gulp.task('reload', [
+	'server',
+	'default'
+]);
+
+// Compile files, generate docs, and livereload pages when something changes
+gulp.task('reload:docs', [
+	'server:docs',
+	'docs'
 ]);

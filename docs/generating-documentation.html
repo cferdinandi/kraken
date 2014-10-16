@@ -36,7 +36,7 @@
 
 		<h1>Generating Documentation</h1>
 
-		<p>Kraken ships with a simple documentation generator powered by <a href="http://gulpjs.com">Gulp.js</a>. Unfortunately, if you're uncomfortable using terminal, you won't be able to take advantage of this feature.</p>
+		<p>Kraken ships with a simple documentation generator powered by <a href="http://gulpjs.com">Gulp.js</a>. This feature requires you to <a href="working-with-the-source-files.html">work with the source files</a>.</p>
 
 		<p>Documentation files can be found under <code>src</code> > <code>docs</code>, and compile to <code>docs</code>.</p>
 
@@ -54,7 +54,12 @@
 
 		<p>Files placed in the <code>assets</code> directory will be moved over as-is to the <code>docs</code> directory. Kraken will also add a copy of your <code>dist</code> files so you can use them in your documentation.</p>
 
-		<p>When you're ready, run <code>gulp docs</code> in terminal.</p>
+		<p class="space-bottom-small">When you're ready, run one of the task runners to get going:</p>
+		<ul>
+			<li><code>gulp docs</code> manually compiles files and generates docs.</li>
+			<li><code>gulp watch:docs</code> automatically compiles files and generates docs when changes are made.</li>
+			<li><code>gulp reload:docs</code> automatically compiles files, generates docs, and applies changes using <a href="http://livereload.com/">LiveReload</a>.</li>
+		</ul>
 
 
 		<h2 id="why-not-use-an-existing-documentation-tool">Why not use an existing documentation tool?</h2>
