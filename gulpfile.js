@@ -5,7 +5,6 @@
 var gulp = require('gulp');
 var fs = require('fs');
 var plumber = require('gulp-plumber');
-var clean = require('gulp-clean');
 var del = require('del');
 var lazypipe = require('lazypipe');
 var rename = require('gulp-rename');
