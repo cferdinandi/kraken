@@ -6,6 +6,7 @@ var gulp = require('gulp');
 var fs = require('fs');
 var plumber = require('gulp-plumber');
 var clean = require('gulp-clean');
+var del = require('del');
 var lazypipe = require('lazypipe');
 var rename = require('gulp-rename');
 var flatten = require('gulp-flatten');
@@ -32,28 +33,28 @@ var package = require('./package.json');
  */
 
 var paths = {
-	output : 'dist/',
-	scripts : {
-		input : 'src/js/*',
-		output : 'dist/js/'
+	output: 'dist/',
+	scripts: {
+		input: 'src/js/*',
+		output: 'dist/js/'
 	},
-	styles : {
-		input : 'src/sass/**/*.{scss,sass}',
-		output : 'dist/css/'
+	styles: {
+		input: 'src/sass/**/*.{scss,sass}',
+		output: 'dist/css/'
 	},
 	svgs: {
 		input: 'src/svg/**/*.svg',
 		output: 'dist/svg/'
 	},
-	static : 'src/static/**',
-	test : {
-		input : 'src/js/**/*.js',
-		karma : 'test/karma.conf.js',
-		spec : 'test/spec/**/*.js',
+	static: 'src/static/**',
+	test: {
+		input: 'src/js/**/*.js',
+		karma: 'test/karma.conf.js',
+		spec: 'test/spec/**/*.js',
 		coverage: 'test/coverage/',
 		results: 'test/results/'
 	},
-	docs : {
+	docs: {
 		input: 'src/docs/*.{html,md,markdown}',
 		output: 'docs/',
 		templates: 'src/docs/_templates/',
@@ -156,13 +157,11 @@ gulp.task('lint', function () {
 
 // Remove prexisting content from output and test folders
 gulp.task('clean', function () {
-	return gulp.src([
-			paths.output,
-			paths.test.coverage,
-			paths.test.results
-		], { read: false })
-		.pipe(plumber())
-		.pipe(clean());
+	return del.sync([
+		paths.output,
+		paths.test.coverage,
+		paths.test.results
+	]);
 });
 
 // Run unit tests
