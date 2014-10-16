@@ -67,10 +67,17 @@
 		<ol>
 			<li>In bash/terminal/command line, <code>cd</code> into the <code>kraken</code> directory.</li>
 			<li>Run <code>npm install</code> to install the required files.</li>
-			<li>When it's done installing, run <code>gulp</code> to get going.</li>
+			<li>
+				When it's done installing, run one of the task runners to get going:
+				<ul>
+					<li><code>gulp</code> manually compiles files.</li>
+					<li><code>gulp watch</code> automatically compiles files when changes are made.</li>
+					<li><code>gulp reload</code> automatically compiles files and applies changes using <a href="http://livereload.com/">LiveReload</a>.</li>
+				</ul>
+			</li>
 		</ol>
 
-		<p>Every time you make changes, run <code>gulp</code> to process them.</p>
+		<!-- <strong>Gulp Task Runners</strong> -->
 
 
 		<h2 id="working-with-sass">Working with Sass</h2>
