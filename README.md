@@ -16,6 +16,8 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v4.2.0 - October 15, 2014
+    * Updated Gulp task naming convention for better readability (action:object).
 * v4.1.2 - October 15, 2014
     * Updated `gulp-svgstore` to version `2.x`.
     * Replaced `gulp-clean` with native Node `del` method.

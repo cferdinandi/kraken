@@ -90,7 +90,7 @@ var banner = {
  */
 
 // Lint, minify, and concatenate scripts
-gulp.task('scripts', ['clean'], function() {
+gulp.task('build:scripts', ['clean:dist'], function() {
 	var jsTasks = lazypipe()
 		.pipe(header, banner.full, { package : package })
 		.pipe(gulp.dest, paths.scripts.output)
@@ -113,7 +113,7 @@ gulp.task('scripts', ['clean'], function() {
 });
 
 // Process, lint, and minify Sass files
-gulp.task('styles', ['clean'], function() {
+gulp.task('build:styles', ['clean:dist'], function() {
 	return gulp.src(paths.styles.input)
 		.pipe(plumber())
 		.pipe(sass({style: 'expanded', noCache: true, 'sourcemap=none': true}))
@@ -128,7 +128,7 @@ gulp.task('styles', ['clean'], function() {
 });
 
 // Generate SVG sprites
-gulp.task('svgs', ['clean'], function () {
+gulp.task('build:svgs', ['clean:dist'], function () {
 	return gulp.src(paths.svgs.input)
 		.pipe(svgmin())
 		.pipe(svgstore({
@@ -140,14 +140,14 @@ gulp.task('svgs', ['clean'], function () {
 });
 
 // Copy static files into output folder
-gulp.task('static', ['clean'], function() {
+gulp.task('copy:static', ['clean:dist'], function() {
 	return gulp.src(paths.static)
 		.pipe(plumber())
 		.pipe(gulp.dest(paths.output));
 });
 
 // Lint scripts
-gulp.task('lint', function () {
+gulp.task('lint:scripts', function () {
 	return gulp.src(paths.scripts.input)
 		.pipe(plumber())
 		.pipe(jshint())
@@ -155,7 +155,7 @@ gulp.task('lint', function () {
 });
 
 // Remove prexisting content from output and test folders
-gulp.task('clean', function () {
+gulp.task('clean:dist', function () {
 	return del.sync([
 		paths.output,
 		paths.test.coverage,
@@ -164,7 +164,7 @@ gulp.task('clean', function () {
 });
 
 // Run unit tests
-gulp.task('test', function() {
+gulp.task('test:scripts', function() {
 	return gulp.src([paths.test.input].concat([paths.test.spec]))
 		.pipe(plumber())
 		.pipe(karma({ configFile: paths.test.karma }))
@@ -172,7 +172,7 @@ gulp.task('test', function() {
 });
 
 // Generate documentation
-gulp.task('generatedocs', ['default', 'cleandocs'], function() {
+gulp.task('build:docs', ['default', 'clean:docs'], function() {
 	return gulp.src(paths.docs.input)
 		.pipe(plumber())
 		.pipe(fileinclude({
@@ -190,21 +190,21 @@ gulp.task('generatedocs', ['default', 'cleandocs'], function() {
 });
 
 // Copy distribution files to docs
-gulp.task('copydist', ['default', 'cleandocs'], function() {
+gulp.task('copy:dist', ['default', 'clean:docs'], function() {
 	return gulp.src(paths.output + '/**')
 		.pipe(plumber())
 		.pipe(gulp.dest(paths.docs.output + '/dist'));
 });
 
 // Copy documentation assets to docs
-gulp.task('copyassets', ['cleandocs'], function() {
+gulp.task('copy:assets', ['clean:docs'], function() {
 	return gulp.src(paths.docs.assets)
 		.pipe(plumber())
 		.pipe(gulp.dest(paths.docs.output + '/assets'));
 });
 
 // Remove prexisting content from docs folder
-gulp.task('cleandocs', function () {
+gulp.task('clean:docs', function () {
 	return del.sync(paths.docs.output);
 });
 
@@ -215,20 +215,20 @@ gulp.task('cleandocs', function () {
 
 // Compile files (default)
 gulp.task('default', [
-	'lint',
-	'clean',
-	'static',
-	'scripts',
-	'svgs',
-	'styles',
-	'test'
+	'lint:scripts',
+	'clean:dist',
+	'copy:static',
+	'build:scripts',
+	'build:svgs',
+	'build:styles',
+	'test:scripts'
 ]);
 
 // Compile files and generate documentation
 gulp.task('docs', [
 	'default',
-	'cleandocs',
-	'generatedocs',
-	'copydist',
-	'copyassets'
+	'clean:docs',
+	'build:docs',
+	'copy:dist',
+	'copy:assets'
 ]);
