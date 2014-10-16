@@ -1,5 +1,5 @@
 /**
- * Kraken v4.1.0
+ * Kraken v4.1.2
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 

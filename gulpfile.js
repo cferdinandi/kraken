@@ -206,9 +206,7 @@ gulp.task('copyassets', ['cleandocs'], function() {
 
 // Remove prexisting content from docs folder
 gulp.task('cleandocs', function () {
-	return gulp.src(paths.docs.output, { read: false })
-		.pipe(plumber())
-		.pipe(clean());
+	return del.sync(paths.docs.output);
 });
 
 

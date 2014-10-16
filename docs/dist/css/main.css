@@ -1,5 +1,5 @@
 /**
- * Kraken v4.1.0
+ * Kraken v4.1.2
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
@@ -69,6 +69,8 @@ time, mark, audio, video {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -587,7 +589,7 @@ pre {
   background-color: #f4f4f4;
   padding: 0.8125em;
   -moz-tab-size: 4;
-       tab-size: 4;
+  tab-size: 4;
   white-space: pre-wrap;
   word-break: break-all;
 }
@@ -660,6 +662,7 @@ a .btn-secondary:active,
 
 .btn:active,
 .btn.active {
+  -webkit-box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
   outline: 0;
 }
@@ -670,6 +673,7 @@ a .btn-secondary:active,
   cursor: not-allowed;
   opacity: 0.5;
   filter: alpha(opacity=50);
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -769,6 +773,7 @@ input[type="radio"] {
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 0.0725em 0.0725em rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 0.0725em 0.0725em rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
   outline: 0;
   outline: thin dotted \9;
@@ -933,6 +938,7 @@ select:focus {
   * {
     background: transparent !important;
     color: #000 !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
