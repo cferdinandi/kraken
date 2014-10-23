@@ -24,6 +24,7 @@ Kraken uses [semantic versioning](http://semver.org/).
 	* Added new `.bg-*` helper class.
 	* Removed general `*-space-*` classes in favor of `*-margin-*` and `*-padding-*` specific ones.
 	* Added `.list-inline` class.
+	* Removed `list-style` attributes from `ul` and `ol`. Let's browser defaults do their thing.
 * v4.2.0 - October 16, 2014
 	* Updated Gulp task naming convention for better readability (action:object).
 	* Added `gulp watch` and `gulp reload` task runners (regular and docs flavored).
