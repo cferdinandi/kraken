@@ -191,7 +191,7 @@ a:active {
   margin-right: -1.4%;
 }
 
-.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full, .grid-dynamic {
+.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full, .grid-img {
   float: left;
   width: 100%;
   padding-left: 1.4%;
@@ -308,23 +308,24 @@ a:active {
   }
 }
 /**
- * Dynamic grid
+ * Image gallery
  */
 @media (min-width: 20em) {
-  .grid-dynamic {
+  .grid-img {
     width: 50%;
   }
 }
 @media (min-width: 30em) {
-  .grid-dynamic {
-    width: 33.33333%;
+  .grid-img {
+    width: 33.33333333333%;
   }
 }
 @media (min-width: 40em) {
-  .grid-dynamic {
+  .grid-img {
     width: 25%;
   }
 }
+
 /**
  * @section Typography
  * Sets font styles for entire site

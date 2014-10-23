@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Kraken</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Icons -->
+		<link rel="shortcut icon" type="image/ico" href="assets/img/icons/favicon.ico">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/img/icons/favicon-152.png">
+		<meta name="msapplication-TileColor" content="#f7f7f7">
+		<meta name="msapplication-TileImage" content="assets/img/icons/favicon-ms-144.png">
+
+		<!-- Feature dection -->
+		<script src="dist/js/detects.js"></script>
+
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="dist/css/main.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/custom.css" type="text/css">
+	</head>
+
+	<body>
+
+		<main data-sticky-wrap>
+
+			<section class="navbar-docs">
+				<nav class="container">
+					<strong><a href="index.html">Kraken</a></strong>
+				</nav>
+			</section>
+
+			<section class="container">
+<div class="row">
+	<div class="grid-two-thirds float-center">
+
+		<h1>Generating Documentation</h1>
+
+		<p>Kraken ships with a simple documentation generator powered by <a href="http://gulpjs.com">Gulp.js</a>. This feature requires you to <a href="working-with-the-source-files.html">work with the source files</a>.</p>
+
+		<p>Documentation files can be found under <code>src</code> > <code>docs</code>, and compile to <code>docs</code>.</p>
+
+		<strong>In this section:</strong>
+		<ul>
+			<li><a data-scroll href="#how-to-create-docs">How to Create Docs</a></li>
+			<li><a data-scroll href="#why-not-use-an-existing-documentation-tool">Why not use an existing documentation tool?</a></li>
+		</ul>
+
+		<h2 id="how-to-create-docs">How to Create Docs</h2>
+
+		<p>Create HTML or markdown (<code>.md</code> or <code>.markdown</code>) files to your <code>docs</code> folder in <code>src</code>.</p>
+
+		<p>The <code>_templates</code> directory in <code>src</code> contains the <code>_header.html</code> and <code>_footer.html</code> templates. These are automatically added to the beginning and end of each documentation page. You can also add your own templates to the <code>_templates</code> directory. Include template files in your docs by writing <code>&commat;&commat;include('path-to-file')</code> on its own line in your markup (or markdown).</p>
+
+		<p>Files placed in the <code>assets</code> directory will be moved over as-is to the <code>docs</code> directory. Kraken will also add a copy of your <code>dist</code> files so you can use them in your documentation.</p>
+
+		<p class="space-bottom-small">When you're ready, run one of the task runners to get going:</p>
+		<ul>
+			<li><code>gulp docs</code> manually compiles files and generates docs.</li>
+			<li><code>gulp watch:docs</code> automatically compiles files and generates docs when changes are made.</li>
+			<li><code>gulp reload:docs</code> automatically compiles files, generates docs, and applies changes using <a href="http://livereload.com/">LiveReload</a>.</li>
+		</ul>
+
+
+		<h2 id="why-not-use-an-existing-documentation-tool">Why not use an existing documentation tool?</h2>
+
+		<p>There are a ton of create CSS and JS documentation tools available. I explored using <a href="http://warpspire.com/kss/">KSS</a>, <a href="http://trulia.github.io/hologram/">Hologram</a>, and a few others.</p>
+
+		<p>I found myself frustrated by the lack of control over the layout, the clutter added to the stylesheet, and the complexity in getting setup.</p>
+
+		<p>I decided creating my own documentation tool was a better fit for my needs. Obviously, feel free to use the documentation tool that best fits your needs.</p>
+
+	</div>
+</div>
+
+<hr>
+
+<nav class="nav-docs space-bottom">
+	<h1 class="text-center no-space-bottom" id="getting-started">Getting Started</h1>
+	<p class="text-muted text-center"><span class="text-tall">Learn how to use Kraken</span></p>
+	<div class="row">
+		<div class="grid-third">
+			<strong>Setup</strong>
+			<ul>
+				<li><a href="download.html">Download</a></li>
+				<li><a href="the-kraken-approach.html">The Kraken Approach</a></li>
+				<li><a href="file-structure.html">File Structure</a></li>
+				<li><a href="working-with-the-source-files.html">Working with the Source Files</a></li>
+				<li><a href="working-with-css.html">Working with CSS</a></li>
+				<li><a href="html-template.html">HTML Template</a></li>
+			</ul>
+		</div>
+		<div class="grid-third">
+			<strong>Components</strong>
+			<ul>
+				<li><a href="grid.html">The Grid</a></li>
+				<li><a href="typography.html">Typography</a></li>
+				<li><a href="buttons.html">Buttons</a></li>
+				<li><a href="forms.html">Forms</a></li>
+				<li><a href="icons.html">SVG &amp; Icon Fonts</a></li>
+				<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
+			</ul>
+		</div>
+		<div class="grid-third">
+			<strong>Miscellaneous</strong>
+			<ul>
+				<li><a href="generating-documentation.html">Generating Documentation</a></li>
+				<li><a href="add-ons.html">Add-Ons</a></li>
+				<li><a href="browsers.html">Browser Compatibility</a></li>
+				<li><a href="support.html">Support</a></li>
+			</ul>
+		</div>
+	</div>
+	<h3 class="space-top space-bottom-small text-center">Older Docs</h3>
+	<p class="text-center"><a href="assets/archive/v2/index.html">Kraken 2</a> | <a href="assets/archive/v3/index.html">Kraken 3</a></p>
+</nav>
+			</section>
+		</main>
+
+		<footer data-sticky-footer class="jumbotron">
+			<article class="container">
+
+				<p class="text-small text-muted">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+
+				<p class="text-small text-muted">Kraken logo by <a href="http://thenounproject.com/term/squid/30310/">Joe Shelton from the Noun Project</a>. Additional icons from <a href="http://thenounproject.com/term/rocket/8923/">Cris Dobbins</a>, <a href="http://thenounproject.com/term/atom/36112/">Mister Pixel</a>, and <a href="http://thenounproject.com/term/blocks/27779/">Lukasz&nbsp;M.&nbsp;Pogoda</a>.</p>
+
+			</article>
+		</footer>
+
+		<!-- Javascript -->
+		<script src="assets/js/smooth-scroll.js"></script>
+		<script src="assets/js/prism.js"></script>
+		<script src="assets/js/sticky-footer.js"></script>
+		<script>
+			smoothScroll.init();
+			stickyFooter.init();
+			;(function (window, document, undefined) {
+				'use strict';
+				var activeNav = document.querySelector('.nav-docs a[href^="' + location.pathname.split("kraken/")[1] + '"]');
+				if ( !!activeNav & !!document.querySelector ) {
+					activeNav.className += ' nav-docs-active';
+				}
+			})(window, document);
+		</script>
+
+	</body>
+</html>

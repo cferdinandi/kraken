@@ -16,6 +16,9 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v5.0.0 - TBD
+    * Updated grid pattern that adds dynamic grids for more design flexibility.
+    * Renamed several Sass variables for better semantics.
 * v4.2.0 - October 16, 2014
     * Updated Gulp task naming convention for better readability (action:object).
     * Added `gulp watch` and `gulp reload` task runners (regular and docs flavored).

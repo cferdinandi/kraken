@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Kraken</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Icons -->
+		<link rel="shortcut icon" type="image/ico" href="assets/img/icons/favicon.ico">
+		<link rel="apple-touch-icon" sizes="144x144" href="assets/img/icons/favicon-152.png">
+		<meta name="msapplication-TileColor" content="#f7f7f7">
+		<meta name="msapplication-TileImage" content="assets/img/icons/favicon-ms-144.png">
+
+		<!-- Feature dection -->
+		<script src="dist/js/detects.js"></script>
+
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="dist/css/main.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/custom.css" type="text/css">
+	</head>
+
+	<body>
+
+		<main data-sticky-wrap>
+
+			<section class="navbar-docs">
+				<nav class="container">
+					<strong><a href="index.html">Kraken</a></strong>
+				</nav>
+			</section>
+
+			<section class="container">
+<div class="row">
+	<div class="grid-two-thirds float-center">
+
+		<h1>File Structure</h1>
+
+		<p>Compiled and production-ready code can be found in the <code>dist</code> directory. The <code>src</code> directory contains development code. Compiled documentation is in the <code>docs</code> directory. Unit tests are located in the <code>test</code> directory.</p>
+
+<pre><code>kraken
+|—— dist/
+|   |—— css/
+|   |   |—— main.css
+|   |   |—— main.min.css
+|   |—— fonts/
+|   |   |—— # Your icon font files
+|   |—— img/
+|   |   |—— # Your image files
+|   |—— js/
+|   |   |—— detects.js
+|   |   |—— detects.min.js
+|   |   |—— main.js
+|   |   |—— main.min.js
+|   |—— svg/
+|   |   |—— icons.svg
+|—— docs/
+|   |—— assets/
+|   |   |—— # Your documentation assets
+|   |—— dist/
+|   |   |—— # Your distribution files
+|   |—— img/
+|   |   |—— # Your image files
+|   |—— index.html
+|   |—— # Your documentation files
+|—— src/
+|   |—— docs/
+|   |   |—— _templates
+|   |   |   |—— _header.html
+|   |   |   |—— _footer.html
+|   |   |   |—— # Your template files
+|   |   |—— assets
+|   |   |   |—— # Your documentation assets
+|   |   |—— index.html
+|   |   |—— # Your documentation files
+|   |—— js/
+|   |   |—— detects
+|   |   |   |—— font-face.js
+|   |   |   |—— svg.js
+|   |   |   |—— # Your feature detection scripts
+|   |   |—— main
+|   |   |   |—— kraken.js
+|   |   |   |—— # Your JavaScript plugins
+|   |—— sass/
+|   |   |—— components/
+|   |   |   |—— _buttons.scss
+|   |   |   |—— _code.scss
+|   |   |   |—— _forms.scss
+|   |   |   |—— _grid.scss
+|   |   |   |—— _iconfonts.scss
+|   |   |   |—— _overrides.scss
+|   |   |   |—— _print.scss
+|   |   |   |—— _reset.scss
+|   |   |   |—— _svg.scss
+|   |   |   |—— _typography.scss
+|   |   |—— _config.scss
+|   |   |—— _mixins.scss
+|   |   |—— main.scss
+|   |—— static/
+|   |   |—— fonts/
+|   |   |   |—— # Your font files
+|   |   |—— img/
+|   |   |   |—— # Your images
+|   |   |—— # Your non-compiling files
+|—— test/
+|   |—— coverage/
+|   |   |—— various files
+|   |—— results/
+|   |   |—— unit-tests.html
+|   |—— spec/
+|   |   |—— spec-myplugin.js
+|   |   |—— # Your Jasmine JS unit tests
+|—— .travis.yml
+|—— README.md
+|—— gulpfile.js
+|—— package.json</code></pre>
+
+	</div>
+</div>
+
+<hr>
+
+<nav class="nav-docs space-bottom">
+	<h1 class="text-center no-space-bottom" id="getting-started">Getting Started</h1>
+	<p class="text-muted text-center"><span class="text-tall">Learn how to use Kraken</span></p>
+	<div class="row">
+		<div class="grid-third">
+			<strong>Setup</strong>
+			<ul>
+				<li><a href="download.html">Download</a></li>
+				<li><a href="the-kraken-approach.html">The Kraken Approach</a></li>
+				<li><a href="file-structure.html">File Structure</a></li>
+				<li><a href="working-with-the-source-files.html">Working with the Source Files</a></li>
+				<li><a href="working-with-css.html">Working with CSS</a></li>
+				<li><a href="html-template.html">HTML Template</a></li>
+			</ul>
+		</div>
+		<div class="grid-third">
+			<strong>Components</strong>
+			<ul>
+				<li><a href="grid.html">The Grid</a></li>
+				<li><a href="typography.html">Typography</a></li>
+				<li><a href="buttons.html">Buttons</a></li>
+				<li><a href="forms.html">Forms</a></li>
+				<li><a href="icons.html">SVG &amp; Icon Fonts</a></li>
+				<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
+			</ul>
+		</div>
+		<div class="grid-third">
+			<strong>Miscellaneous</strong>
+			<ul>
+				<li><a href="generating-documentation.html">Generating Documentation</a></li>
+				<li><a href="add-ons.html">Add-Ons</a></li>
+				<li><a href="browsers.html">Browser Compatibility</a></li>
+				<li><a href="support.html">Support</a></li>
+			</ul>
+		</div>
+	</div>
+	<h3 class="space-top space-bottom-small text-center">Older Docs</h3>
+	<p class="text-center"><a href="assets/archive/v2/index.html">Kraken 2</a> | <a href="assets/archive/v3/index.html">Kraken 3</a></p>
+</nav>
+			</section>
+		</main>
+
+		<footer data-sticky-footer class="jumbotron">
+			<article class="container">
+
+				<p class="text-small text-muted">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+
+				<p class="text-small text-muted">Kraken logo by <a href="http://thenounproject.com/term/squid/30310/">Joe Shelton from the Noun Project</a>. Additional icons from <a href="http://thenounproject.com/term/rocket/8923/">Cris Dobbins</a>, <a href="http://thenounproject.com/term/atom/36112/">Mister Pixel</a>, and <a href="http://thenounproject.com/term/blocks/27779/">Lukasz&nbsp;M.&nbsp;Pogoda</a>.</p>
+
+			</article>
+		</footer>
+
+		<!-- Javascript -->
+		<script src="assets/js/smooth-scroll.js"></script>
+		<script src="assets/js/prism.js"></script>
+		<script src="assets/js/sticky-footer.js"></script>
+		<script>
+			smoothScroll.init();
+			stickyFooter.init();
+			;(function (window, document, undefined) {
+				'use strict';
+				var activeNav = document.querySelector('.nav-docs a[href^="' + location.pathname.split("kraken/")[1] + '"]');
+				if ( !!activeNav & !!document.querySelector ) {
+					activeNav.className += ' nav-docs-active';
+				}
+			})(window, document);
+		</script>
+
+	</body>
+</html>
