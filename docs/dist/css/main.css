@@ -892,15 +892,26 @@ select:focus {
 /**
  * Visibility
  */
+/**
+ * Visually hide an element, but leave it available for screen readers
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
 .screen-reader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  top: -9999em;
-  left: -9999em;
+  width: 1px;
 }
 
 /**
  * @workaround
  * @affected IE 8/9/10
+ * @link http://juicystudio.com/article/screen-readers-display-none.php
  */
 [hidden] {
   display: none;

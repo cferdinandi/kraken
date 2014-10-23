@@ -20,6 +20,7 @@ Kraken uses [semantic versioning](http://semver.org/).
     * Updated grid pattern that adds dynamic grids for more design flexibility.
     * Renamed several Sass variables for better semantics.
     * Deprecated Slider and removed from add-ons. Linked directly to HTML5 Boilerplate version of `.htaccess` file.
+    * Updated `.screen-reader` class with more accessible HTML5 Boilerplate implementation.
 * v4.2.0 - October 16, 2014
     * Updated Gulp task naming convention for better readability (action:object).
     * Added `gulp watch` and `gulp reload` task runners (regular and docs flavored).
