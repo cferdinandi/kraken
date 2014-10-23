@@ -104,6 +104,23 @@ dt {
 	list-style: none;
 }
 
+/**
+ * Display lists on a single line.
+ */
+
+.list-inline {
+  list-style: none;
+  margin-left: calc-em(-8px);
+  margin-right: calc-em(-8px);
+  padding: 0;
+}
+
+.list-inline > li {
+  display: inline-block;
+  margin-left: calc-em(8px);
+  margin-right: calc-em(8px);
+}
+
 
 /**
  * Heading styling for h1 through h6 elements.

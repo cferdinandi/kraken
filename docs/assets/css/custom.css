@@ -80,7 +80,7 @@
  *  Add slight margin between each navigation item. */
 .nav-actions > li {
   display: inline-block;
-  float: none;
+  /*float: none;*/
   margin-left: 0.5em;
   margin-right: 0.5em;
 }

@@ -352,30 +352,6 @@ p {
 }
 
 /**
- * Sizes for smaller and larger text
- */
-.text-small {
-  font-size: 0.9375em;
-}
-
-.text-large {
-  font-size: 1.1875em;
-  line-height: 1.4;
-}
-
-@media (min-width: 40em) {
-  .text-large {
-    font-size: 1.3125em;
-  }
-}
-/**
- * Alternate text colors
- */
-.text-muted {
-  color: #808080;
-}
-
-/**
  * Hyperlink styling
  */
 a,
@@ -448,6 +424,22 @@ dt {
 .list-unstyled {
   margin-left: 0;
   list-style: none;
+}
+
+/**
+ * Display lists on a single line.
+ */
+.list-inline {
+  list-style: none;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  padding: 0;
+}
+
+.list-inline > li {
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 /**
@@ -823,9 +815,40 @@ select:focus {
 }
 
 /**
- * @section Alignment, Spacing, & Visibility
- * Override defaults.
+ * @section Helper classes
+ * Nudge and tweak colors, spacing and more.
  */
+/**
+ * Sizes for smaller and larger text
+ */
+.text-small {
+  font-size: 0.9375em;
+}
+
+.text-large {
+  font-size: 1.1875em;
+  line-height: 1.4;
+}
+
+@media (min-width: 40em) {
+  .text-large {
+    font-size: 1.3125em;
+  }
+}
+/**
+ * Text colors
+ */
+.text-muted {
+  color: #808080;
+}
+
+/**
+ * Background colors
+ */
+.bg-muted {
+  background-color: #f7f7f7;
+}
+
 /**
  * Text alignment
  */
@@ -859,34 +882,73 @@ select:focus {
 }
 
 /**
- * Spacing
+ * Margins
  */
-.no-space {
+.no-margin {
   margin: 0;
-  padding: 0;
 }
 
-.no-space-bottom {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.no-space-top {
+.no-margin-top {
   margin-top: 0;
-  padding-top: 0;
 }
 
-.space-bottom {
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.margin-top {
+  margin-top: 1.5625em;
+}
+
+.margin-bottom {
+  margin-bottom: 1.5625em;
+}
+
+.margin-bottom-small {
+  margin-bottom: 0.5em;
+}
+
+.margin-bottom-large {
   margin-bottom: 2em;
 }
 
-.space-bottom-small {
-  margin-bottom: 0.5em;
+/**
+ * Padding
+ */
+.no-padding {
+  padding: 0;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
   padding-bottom: 0;
 }
 
-.space-top {
-  padding-top: 0.8125em;
+.padding-top {
+  padding-top: 1.5625em;
+}
+
+.padding-top-small {
+  padding-top: 0.5em;
+}
+
+.padding-top-large {
+  padding-top: 2em;
+}
+
+.padding-bottom {
+  padding-bottom: 1.5625em;
+}
+
+.padding-bottom-small {
+  padding-bottom: 0.5em;
+}
+
+.padding-bottom-large {
+  padding-bottom: 2em;
 }
 
 /**
