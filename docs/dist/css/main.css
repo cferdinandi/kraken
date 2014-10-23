@@ -1,5 +1,5 @@
 /**
- * Kraken v4.2.0
+ * Kraken v5.0.0
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
@@ -191,7 +191,7 @@ a:active {
   margin-right: -1.4%;
 }
 
-.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full, .grid-img {
+.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full, .grid-dynamic {
   float: left;
   width: 100%;
   padding-left: 1.4%;
@@ -308,24 +308,23 @@ a:active {
   }
 }
 /**
- * Image gallery
+ * Dynamic grid
  */
 @media (min-width: 20em) {
-  .grid-img {
+  .grid-dynamic {
     width: 50%;
   }
 }
 @media (min-width: 30em) {
-  .grid-img {
-    width: 33.33333333333%;
+  .grid-dynamic {
+    width: 33.33333%;
   }
 }
 @media (min-width: 40em) {
-  .grid-img {
+  .grid-dynamic {
     width: 25%;
   }
 }
-
 /**
  * @section Typography
  * Sets font styles for entire site
