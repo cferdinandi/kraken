@@ -1,7 +1,45 @@
 /**
- * @section Alignment, Spacing, & Visibility
- * Override defaults.
+ * @section Helper classes
+ * Nudge and tweak colors, spacing and more.
  */
+
+/**
+ * Sizes for smaller and larger text
+ */
+
+.text-small {
+	font-size: calc-em(15px);
+}
+
+.text-large {
+	font-size: calc-em(19px);
+	line-height: 1.4;
+}
+
+@media (min-width: $bp-medium) {
+	.text-large {
+		font-size: calc-em(21px);
+	}
+}
+
+
+/**
+ * Text colors
+ */
+
+.text-muted {
+	color: $color-gray-dark;
+}
+
+
+/**
+ * Background colors
+ */
+
+.bg-muted {
+	background-color: lighten( $color-gray-light, 7% );
+}
+
 
 /**
  * Text alignment
@@ -40,35 +78,76 @@
 
 
 /**
- * Spacing
+ * Margins
  */
 
-.no-space {
+.no-margin {
 	margin: 0;
-	padding: 0;
 }
 
-.no-space-bottom {
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-
-.no-space-top {
+.no-margin-top {
 	margin-top: 0;
-	padding-top: 0;
 }
 
-.space-bottom {
+.no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.margin-top {
+	margin-top: $spacing;
+}
+
+.margin-bottom {
+	margin-bottom: $spacing;
+}
+
+.margin-bottom-small {
+	margin-bottom: calc-em(8px);
+}
+
+.margin-bottom-large {
 	margin-bottom: calc-em(32px);
 }
 
-.space-bottom-small {
-	margin-bottom: calc-em(8px);
+
+/**
+ * Padding
+ */
+
+.no-padding {
+	padding: 0;
+}
+
+.no-padding-top {
+	padding-top: 0;
+}
+
+.no-padding-bottom {
 	padding-bottom: 0;
 }
 
-.space-top {
-	padding-top: calc-em(13px);
+.padding-top {
+	padding-top: $spacing;
+}
+
+.padding-top-small {
+	padding-top: calc-em(8px);
+}
+
+.padding-top-large {
+	padding-top: calc-em(32px);
+}
+
+.padding-bottom {
+	padding-bottom: $spacing;
+}
+
+.padding-bottom-small {
+	padding-bottom: calc-em(8px);
+}
+
+.padding-bottom-large {
+	padding-bottom: calc-em(32px);
 }
 
 
