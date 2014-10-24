@@ -16,7 +16,9 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
-* v5.0.0 - TBD
+* v5.0.1 - October 24, 2014
+	* Fixed bug with SVG feature detection and conditional displaying.
+* v5.0.0 - October 23, 2014
 	* Updated grid pattern that adds dynamic grids for more design flexibility.
 	* Renamed `.grid-img` to `.grid-dynamic`.
 	* Renamed several Sass variables for better semantics.

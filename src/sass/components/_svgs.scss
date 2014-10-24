@@ -9,7 +9,8 @@
  * Hide icons by default to prevent blank spaces in unsupported browsers
  */
 .icon {
-	display: none;
+	height: 0;
+	width: 0;
 }
 
 /**
