@@ -5,6 +5,17 @@
  * @link http://css-tricks.com/svg-use-external-source/
  */
 
+/**
+ * Hide icons by default to prevent blank spaces in unsupported browsers
+ */
+.icon {
+	display: none;
+}
+
+/**
+ * Display icons when browser supports SVG.
+ * Inherit height, width, and color.
+ */
 .svg .icon {
 	display: inline-block;
 	width: 1em;
@@ -12,8 +23,9 @@
 	fill: currentColor;
 }
 
+/**
+ * Hide fallback text if browser supports SVG
+ */
 .svg .icon-fallback-text {
-	position: absolute;
-	top: -9999em;
-	left: -9999em;
+	@extend .screen-reader;
 }

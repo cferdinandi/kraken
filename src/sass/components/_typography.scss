@@ -27,6 +27,35 @@ p {
 
 
 /**
+ * Text sizes
+ */
+
+.text-small {
+	font-size: calc-em(15px);
+}
+
+.text-large {
+	font-size: calc-em(19px);
+	line-height: 1.4;
+}
+
+@media (min-width: $bp-medium) {
+	.text-large {
+		font-size: calc-em(21px);
+	}
+}
+
+
+/**
+ * Text colors
+ */
+
+.text-muted {
+	color: $color-gray-dark;
+}
+
+
+/**
  * Hyperlink styling
  */
 

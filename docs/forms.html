@@ -24,7 +24,7 @@
 
 		<main data-sticky-wrap>
 
-			<section class="navbar-docs">
+			<section class="bg-muted-dark">
 				<nav class="container">
 					<strong><a href="index.html">Kraken</a></strong>
 				</nav>
@@ -33,142 +33,139 @@
 			<section class="container">
 				<div class="row">
 					<div class="grid-two-thirds float-center">
-		<h1>Forms</h1>
+<h1 id="forms">Forms</h1>
+<p>Labels, legends and inputs are styled as full width block elements (with the exception of checkboxes and radio buttons).</p>
+<nav>
+    <strong>In this section:</strong>
+    <ul>
+        <li><a data-scroll href="#basic-forms">Basic Forms</a></li>
+        <li><a data-scroll href="#form-layouts">Form Layouts</a></li>
+        <li><a data-scroll href="#condensed-and-inline-inputs">Condensed &amp; Inline Inputs</a></li>
+    </ul>
+</nav>
 
-		<p>Labels, legends and inputs are styled as full width block elements (with the exception of checkboxes and radio buttons).</p>
+<h2 id="basic-forms">Basic Forms</h2>
 
-		<strong>In this section:</strong>
-		<ul>
-			<li><a data-scroll href="#basic-forms">Basic Forms</a></li>
-			<li><a data-scroll href="#form-layouts">Form Layouts</a></li>
-			<li><a data-scroll href="#condensed-and-inline-inputs">Condensed &amp; Inline Inputs</a></li>
-		</ul>
+<form>
+    <label>Label</label>
+    <input type="text">
+    <label>
+        <input type="checkbox">
+        Option 1
+    </label>
+    <label>
+        <input type="checkbox">
+        Option 2
+    </label>
+    <label>
+        <input type="radio" name="radioset">
+        Option 1
+    </label>
+    <label>
+        <input type="radio" name="radioset">
+        Option 2
+    </label>
+    <select>
+        <option>Select 1</option>
+        <option>Select 2</option>
+        <option>Select 3</option>
+    </select>
+    <textarea></textarea>
+</form>
 
-		<h2 id="basic-forms">Basic Forms</h2>
+<pre><code class="lang-markup">&lt;form&gt;
+    &lt;label&gt;Label&lt;/label&gt;
+    &lt;input type=&quot;text&quot;&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        Option 1
+    &lt;/label&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        Option 2
+    &lt;/label&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;radioset&quot;&gt;
+        Option 1
+    &lt;/label&gt;
+    &lt;label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;radioset&quot;&gt;
+        Option 2
+    &lt;/label&gt;
+    &lt;select&gt;
+        &lt;option&gt;Select 1&lt;/option&gt;
+        &lt;option&gt;Select 2&lt;/option&gt;
+        &lt;option&gt;Select 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+</code></pre>
+<p><em>Wrap checkboxes and radio buttons inside a <code>&lt;label&gt;</code> to make them easier to click.</em></p>
+<h2 id="form-layouts">Form Layouts</h2>
 
-		<form>
-			<label>Label</label>
-			<input type="text">
-			<label>
-				<input type="checkbox">
-				Option 1
-			</label>
-			<label>
-				<input type="checkbox">
-				Option 2
-			</label>
-			<label>
-				<input type="radio" name="radioset">
-				Option 1
-			</label>
-			<label>
-				<input type="radio" name="radioset">
-				Option 2
-			</label>
-			<select>
-				<option>Select 1</option>
-				<option>Select 2</option>
-				<option>Select 3</option>
-			</select>
-			<textarea></textarea>
-		</form>
+<p>Use the grid system to add structure to your forms.</p>
+<form>
+    <div class="row">
+        <div class="grid-fourth">
+                <label>Name</label>
+        </div>
+        <div class="grid-three-fourths">
+                <input type="text">
+        </div>
+    </div>
+    <div class="row">
+        <div class="grid-fourth">
+                <label>Message</label>
+        </div>
+        <div class="grid-three-fourths">
+                <textarea></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="grid-three-fourths offset-fourth">
+            <button class="btn btn-blue">Submit</button>
+        </div>
+    </div>
+</form>
 
-<pre><code class="language-markup">&lt;form&gt;
-	&lt;label&gt;Label&lt;/label&gt;
-	&lt;input type="text"&gt;
-	&lt;label&gt;
-		&lt;input type="checkbox"&gt;
-		Option 1
-	&lt;/label&gt;
-	&lt;label&gt;
-		&lt;input type="checkbox"&gt;
-		Option 2
-	&lt;/label&gt;
-	&lt;label&gt;
-		&lt;input type="radio" name="radioset"&gt;
-		Option 1
-	&lt;/label&gt;
-	&lt;label&gt;
-		&lt;input type="radio" name="radioset"&gt;
-		Option 2
-	&lt;/label&gt;
-	&lt;select&gt;
-		&lt;option&gt;Select 1&lt;/option&gt;
-		&lt;option&gt;Select 2&lt;/option&gt;
-		&lt;option&gt;Select 3&lt;/option&gt;
-	&lt;/select&gt;
-	&lt;textarea&gt;&lt;/textarea&gt;
-&lt;/form&gt;</code></pre>
+<pre><code class="lang-markup">&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;grid-fourth&quot;&gt;
+                &lt;label&gt;Name&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;grid-three-fourths&quot;&gt;
+                &lt;input type=&quot;text&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;grid-fourth&quot;&gt;
+                &lt;label&gt;Message&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;grid-three-fourths&quot;&gt;
+                &lt;textarea&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;grid-three-fourths offset-fourth&quot;&gt;
+            &lt;button class=&quot;btn btn-blue&quot;&gt;Submit&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<h2 id="condensed-and-inline-inputs">Condensed &amp; Inline Inputs</h2>
 
-		<p><em>Wrap checkboxes and radio buttons inside a <code>&lt;label&gt;&lt;/label&gt;</code> to make them easier to click.</em></p>
+<p>For smaller forms, add the <code>.input-condensed</code> class to your input fields. For inline form elements, add the <code>.input-inline</code> class.</p>
+<form>
+    <input type="text" class="input-inline" placeholder=".input-inline">
+    <input type="text" class="input-condensed input-inline" placeholder=".input-condensed">
+</form>
 
-
-		<h2 id="form-layouts">Form Layouts</h2>
-
-		<p>Use the grid system to add structure to your forms.</p>
-
-		<form>
-			<div class="row">
-				<div class="grid-fourth">
-						<label>Name</label>
-				</div>
-				<div class="grid-three-fourths">
-						<input type="text">
-				</div>
-			</div>
-			<div class="row">
-				<div class="grid-fourth">
-						<label>Message</label>
-				</div>
-				<div class="grid-three-fourths">
-						<textarea></textarea>
-				</div>
-			</div>
-			<div class="row">
-				<div class="grid-three-fourths offset-fourth">
-					<button class="btn btn-blue">Submit</button>
-				</div>
-			</div>
-		</form>
-
-<pre><code class="language-markup">&lt;form&gt;
-	&lt;div class="row"&gt;
-		&lt;div class="grid-fourth"&gt;
-			&lt;label&gt;Name&lt;/label&gt;
-		&lt;/div&gt;
-		&lt;div class="grid-three-fourths"&gt;
-			&lt;input type="text"&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="row"&gt;
-		&lt;div class="grid-fourth"&gt;
-			&lt;label&gt;Message&lt;/label&gt;
-		&lt;/div&gt;
-		&lt;div class="grid-three-fourths"&gt;
-			&lt;textarea&gt;&lt;/textarea&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="row"&gt;
-		&lt;div class="grid-three-fourths offset-fourth"&gt;
-			&lt;button class="btn btn-blue"&gt;Submit&lt;/button&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/form&gt;</code></pre>
-
-
-		<h2 id="condensed-and-inline-inputs">Condensed &amp; Inline Inputs</h2>
-
-		<p>For smaller forms, add the <code>.input-condensed</code> class to your input fields. For inline form elements, add the <code>.input-inline</code> class.</p>
-
-		<form>
-			<input type="text" class="input-inline" placeholder=".input-inline">
-			<input type="text" class="input-condensed input-inline" placeholder=".input-condensed">
-		</form>
-
-<pre><code class="language-markup">&lt;form&gt;
-	&lt;input type="text" class="input-inline" placeholder=".input-inline"&gt;
-	&lt;input type="text" class="input-condensed input-inline" placeholder=".input-condensed" &gt;
-&lt;/form&gt;</code></pre>					</div><!-- /.grid-two-thirds.float-center -->
+<pre><code class="lang-markup">&lt;form&gt;
+    &lt;input type=&quot;text&quot; class=&quot;input-inline&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;input-condensed input-inline&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+					</div><!-- /.grid-two-thirds.float-center -->
 				</div><!-- /.row -->
 
 				<hr>
@@ -195,7 +192,7 @@
 								<li><a href="typography.html">Typography</a></li>
 								<li><a href="buttons.html">Buttons</a></li>
 								<li><a href="forms.html">Forms</a></li>
-								<li><a href="icons.html">SVG &amp; Icon Fonts</a></li>
+								<li><a href="icons.html">SVG Sprites &amp; Icon Fonts</a></li>
 								<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
 							</ul>
 						</div>
@@ -204,6 +201,7 @@
 							<ul>
 								<li><a href="generating-documentation.html">Generating Documentation</a></li>
 								<li><a href="add-ons.html">Add-Ons</a></li>
+								<li><a href="built-with-kraken.html">Built with Kraken</a></li>
 								<li><a href="browsers.html">Browser Compatibility</a></li>
 								<li><a href="support.html">Support</a></li>
 							</ul>
@@ -216,10 +214,10 @@
 			</section><!-- /.container -->
 		</main>
 
-		<footer data-sticky-footer class="jumbotron">
+		<footer data-sticky-footer class="bg-muted padding-top padding-bottom">
 			<article class="container">
 
-				<p class="text-small text-muted">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+				<p class="text-small text-muted margin-bottom-small">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
 
 				<p class="text-small text-muted">Kraken logo by <a href="http://thenounproject.com/term/squid/30310/">Joe Shelton from the Noun Project</a>. Additional icons from <a href="http://thenounproject.com/term/rocket/8923/">Cris Dobbins</a>, <a href="http://thenounproject.com/term/atom/36112/">Mister Pixel</a>, and <a href="http://thenounproject.com/term/blocks/27779/">Lukasz&nbsp;M.&nbsp;Pogoda</a>.</p>
 

@@ -1,44 +1,7 @@
 /**
- * @section Helper classes
- * Nudge and tweak colors, spacing and more.
+ * @section Overrides
+ * Nudge and tweak alignment, spacing, and visibility.
  */
-
-/**
- * Sizes for smaller and larger text
- */
-
-.text-small {
-	font-size: calc-em(15px);
-}
-
-.text-large {
-	font-size: calc-em(19px);
-	line-height: 1.4;
-}
-
-@media (min-width: $bp-medium) {
-	.text-large {
-		font-size: calc-em(21px);
-	}
-}
-
-
-/**
- * Text colors
- */
-
-.text-muted {
-	color: $color-gray-dark;
-}
-
-
-/**
- * Background colors
- */
-
-.bg-muted {
-	background-color: lighten( $color-gray-light, 7% );
-}
 
 
 /**
@@ -172,6 +135,21 @@
 }
 
 /**
+ * Extends the .screen-reader class to allow the element to be focusable when navigated to via the keyboard
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * @link https://www.drupal.org/node/897638
+ */
+.screen-reader-focusable:active,
+.screen-reader-focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/**
  * @workaround
  * @affected IE 8/9/10
  * @link http://juicystudio.com/article/screen-readers-display-none.php
@@ -183,15 +161,17 @@
 
 
 /**
- * Clearfix
+ * Contain floats
+ * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  */
 
-.group:before,
-.group:after {
+.clearfix:before,
+.clearfix:after {
 	display: table;
-	content: "";
+	content: " ";
 }
 
-.group:after {
+.clearfix:after {
 	clear: both;
 }

@@ -1,8 +1,9 @@
-		<h1>File Structure</h1>
+# File Structure
 
-		<p>Compiled and production-ready code can be found in the <code>dist</code> directory. The <code>src</code> directory contains development code. Compiled documentation is in the <code>docs</code> directory. Unit tests are located in the <code>test</code> directory.</p>
+Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code. Compiled documentation is in the `docs` directory. Unit tests are located in the `test` directory.
 
-<pre><code>kraken
+```
+kraken
 |—— dist/
 |   |—— css/
 |   |   |—— main.css
@@ -68,7 +69,7 @@
 |   |   |—— # Your non-compiling files
 |—— test/
 |   |—— coverage/
-|   |   |—— various files
+|   |   |—— # various files
 |   |—— results/
 |   |   |—— unit-tests.html
 |   |—— spec/
@@ -77,4 +78,5 @@
 |—— .travis.yml
 |—— README.md
 |—— gulpfile.js
-|—— package.json</code></pre>
+|—— package.json
+```

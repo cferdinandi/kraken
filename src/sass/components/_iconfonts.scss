@@ -78,7 +78,5 @@ a:hover .icon-link-text {
  */
 
 .font-face .icon-fallback-text {
-	position: absolute;
-	top: -9999em;
-	left: -9999em;
+	@extend .screen-reader;
 }

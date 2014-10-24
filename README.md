@@ -18,13 +18,15 @@ Kraken uses [semantic versioning](http://semver.org/).
 
 * v5.0.0 - TBD
 	* Updated grid pattern that adds dynamic grids for more design flexibility.
+	* Renamed `.grid-img` to `.grid-dynamic`.
 	* Renamed several Sass variables for better semantics.
 	* Deprecated Slider and removed from add-ons. Linked directly to HTML5 Boilerplate version of `.htaccess` file.
-	* Updated `.screen-reader` class with more accessible HTML5 Boilerplate implementation.
-	* Added new `.bg-*` helper class.
+	* Updated `.screen-reader` class with more accessible HTML5 Boilerplate implementation. Added `.screen-reader-focusable` class.
 	* Removed general `*-space-*` classes in favor of `*-margin-*` and `*-padding-*` specific ones.
 	* Added `.list-inline` class.
-	* Removed `list-style` attributes from `ul` and `ol`. Let's browser defaults do their thing.
+	* Removed `list-style` attribute from `ul` and `ol`. Let's browser defaults do their thing.
+	* Renamed `.group` to `.clearfix`.
+	* Added default `display: none` state to SVGs to prevent blank space from showing in unsupported browsers.
 * v4.2.0 - October 16, 2014
 	* Updated Gulp task naming convention for better readability (action:object).
 	* Added `gulp watch` and `gulp reload` task runners (regular and docs flavored).

@@ -24,7 +24,7 @@
 
 		<main data-sticky-wrap>
 
-			<section class="navbar-docs">
+			<section class="bg-muted-dark">
 				<nav class="container">
 					<strong><a href="index.html">Kraken</a></strong>
 				</nav>
@@ -33,136 +33,178 @@
 			<section class="container">
 				<div class="row">
 					<div class="grid-two-thirds float-center">
-		<h1>Alignment, Spacing &amp; Visibility</h1>
-
-		<p>You can adjust text alignment and spacing using a few simple CSS classes.</p>
-
-		<strong>In this section:</strong>
-		<ul>
-			<li><a data-scroll href="#text-alignment">Text Alignment</a></li>
-			<li><a data-scroll href="#floats">Floats</a></li>
-			<li><a data-scroll href="#spacing">Spacing</a></li>
-			<li><a data-scroll href="#visibility">Visibility</a></li>
-		</ul>
-
-
-		<h2 id="text-alignment">Text Alignment</h2>
-
-		<table class="table-striped">
-			<thead>
-				<tr>
-					<th>Alignment</th>
-					<th>Class</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Left</td>
-					<td><code>.text-left</code></td>
-				</tr>
-				<tr>
-					<td>Centered</td>
-					<td><code>.text-center</code></td>
-				</tr>
-				<tr>
-					<td>Right</td>
-					<td><code>.text-right</code></td>
-				</tr>
-			</tbody>
-		</table>
+<h1 id="alignment-spacing-visibility">Alignment, Spacing &amp; Visibility</h1>
+<p>You can adjust text alignment, spacing, and visibility using a few simple CSS classes.</p>
+<nav>
+    <strong>In this section:</strong>
+    <ul>
+        <li><a data-scroll href="#text-alignment">Text Alignment</a></li>
+        <li><a data-scroll href="#floats">Floats</a></li>
+        <li><a data-scroll href="#margins">Margins</a></li>
+        <li><a data-scroll href="#padding">Padding</a></li>
+        <li><a data-scroll href="#visibility">Visibility</a></li>
+    </ul>
+</nav>
 
 
-		<h2 id="floats">Floats</h2>
+<h2 id="text-alignment">Text Alignment</h2>
 
-		<table>
-			<thead>
-				<tr>
-					<th>Float</th>
-					<th>Class</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Left</td>
-					<td><code>.float-left</code></td>
-				</tr>
-				<tr>
-					<td>Centered</td>
-					<td><code>.float-center</code></td>
-				</tr>
-				<tr>
-					<td>Right</td>
-					<td><code>.float-right</code></td>
-				</tr>
-			</tbody>
-		</table>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Alignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.text-left</code></td>
+<td>Left</td>
+</tr>
+<tr>
+<td><code>.text-center</code></td>
+<td>Centered</td>
+</tr>
+<tr>
+<td><code>.text-right</code></td>
+<td>Right</td>
+</tr>
+</tbody>
+</table>
+<h2 id="floats">Floats</h2>
 
-		<p><em>Clear floats by wrapping floated content in a <code>&lt;div&gt;</code> with the <code>.group</code> class.</em></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Float</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.float-left</code></td>
+<td>Left</td>
+</tr>
+<tr>
+<td><code>.float-center</code></td>
+<td>Centered</td>
+</tr>
+<tr>
+<td><code>.float-right</code></td>
+<td>Right</td>
+</tr>
+</tbody>
+</table>
+<p><em>Clear floats by wrapping floated content in a <code>&lt;div&gt;</code> with the <code>.clearfix</code> class.</em></p>
+<pre><code class="lang-markup">&lt;div class=&quot;clearfix&quot;&gt;
+    &lt;button class=&quot;float-right&quot;&gt;Floated to the Right&lt;/button&gt;
+    &lt;button&gt;Not floated&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="margins">Margins</h2>
 
-<pre><code class="language-markup">&lt;div class="group"&gt;
-	&lt;button class="float-right"&gt;Floated to the Right&lt;/button&gt;
-	&lt;button&gt;Not floated&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.no-margin</code></td>
+<td>all: <code>0</code></td>
+</tr>
+<tr>
+<td><code>.no-margin-top</code></td>
+<td>top: <code>0</code></td>
+</tr>
+<tr>
+<td><code>.no-margin-bottom</code></td>
+<td>bottom: <code>0</code></td>
+</tr>
+<tr>
+<td><code>.margin-top</code></td>
+<td>top: <code>1.5625em</code></td>
+</tr>
+<tr>
+<td><code>.margin-bottom</code></td>
+<td>bottom: <code>1.5625em</code></td>
+</tr>
+<tr>
+<td><code>.margin-bottom-small</code></td>
+<td>bottom: <code>0.5em</code></td>
+</tr>
+<tr>
+<td><code>.margin-bottom-large</code></td>
+<td>bottom: <code>2em</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="padding">Padding</h2>
 
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>padding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.no-padding</code></td>
+<td>all: <code>0</code></td>
+</tr>
+<tr>
+<td><code>.no-padding-top</code></td>
+<td>top: <code>0</code></td>
+</tr>
+<tr>
+<td><code>.no-padding-bottom</code></td>
+<td>bottom: <code>0</code></td>
+</tr>
+<tr>
+<td><code>.padding-top</code></td>
+<td>top: <code>1.5625em</code></td>
+</tr>
+<tr>
+<td><code>.padding-top-small</code></td>
+<td>top: <code>0.5em</code></td>
+</tr>
+<tr>
+<td><code>.padding-top-large</code></td>
+<td>top: <code>2em</code></td>
+</tr>
+<tr>
+<td><code>.padding-bottom</code></td>
+<td>bottom: <code>1.5625em</code></td>
+</tr>
+<tr>
+<td><code>.padding-bottom-small</code></td>
+<td>bottom: <code>0.5em</code></td>
+</tr>
+<tr>
+<td><code>.padding-bottom-large</code></td>
+<td>bottom: <code>2em</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="visibility">Visibility</h2>
 
-		<h2 id="spacing">Spacing</h2>
-
-		<table>
-			<thead>
-				<tr>
-					<th>Top</th>
-					<th>Bottom</th>
-					<th>Class</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>0</td>
-					<td>0</td>
-					<td><code>.no-space</code></td>
-				</tr>
-				<tr>
-					<td>Default</td>
-					<td>0</td>
-					<td><code>.no-space-bottom</code></td>
-				</tr>
-				<tr>
-					<td>0</td>
-					<td>Default</td>
-					<td><code>.no-space-top</code></td>
-				</tr>
-				<tr>
-					<td>Default</td>
-					<td>2em</td>
-					<td><code>.space-bottom</code></td>
-				</tr>
-				<tr>
-					<td>Default</td>
-					<td>.5em</td>
-					<td><code>.space-bottom-small</code></td>
-				</tr>
-				<tr>
-					<td>.8125em</td>
-					<td>Default</td>
-					<td><code>.space-top</code></td>
-				</tr>
-			</tbody>
-		</table>
-
-
-		<h2 id="visibility">Visibility</h2>
-
-		<p>Hide content using the <code>[hidden]</code> attribute:</p>
-
-<pre><code class="language-markup">&lt;div hidden&gt;This is removed from the markup.&lt;/div&gt;</code></pre>
-
-		<p>If you have text that you don't want displayed on screen, but that should still be in the markup for screen readers (for example, a search form label), simply apply the <code>.screen-reader</code> class. This will shift content off-screen, but screen readers can still read it.</p>
-
-<pre><code class="language-markup">&lt;form&gt;
-	&lt;label class="screen-reader"&gt;Search this site&lt;/label&gt;
-	&lt;input type="text" placeholder="Search this site..."&gt;
-	&lt;input type="submit"&gt;
-&lt;/form&gt;</code></pre>					</div><!-- /.grid-two-thirds.float-center -->
+<p>Hide content using the <code>[hidden]</code> attribute.</p>
+<pre><code class="lang-markup">&lt;div hidden&gt;This is removed from the markup.&lt;/div&gt;
+</code></pre>
+<p>If you have text that you don&#39;t want displayed on screen, but that should still be in the markup for screen readers (for example, a search form label), simply apply the <code>.screen-reader</code> class.</p></p>
+<pre><code class="lang-markup">&lt;form&gt;
+    &lt;label class=&quot;screen-reader&quot;&gt;Search this site&lt;/label&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Search this site...&quot;&gt;
+    &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<p>For visually hidden content that should become visible on focus (such as a <a href="http://webaim.org/techniques/skipnav/">skip nav link</a> for sighted users navigating by keyboard), add the <code>.screen-reader-focusable</code> class.</p>
+<pre><code class="lang-markup">&lt;a class=&quot;screen-reader screen-reader-focusable&quot; href=&quot;#main&quot;&gt;Skip to content&lt;/a&gt;
+</code></pre>
+					</div><!-- /.grid-two-thirds.float-center -->
 				</div><!-- /.row -->
 
 				<hr>
@@ -189,7 +231,7 @@
 								<li><a href="typography.html">Typography</a></li>
 								<li><a href="buttons.html">Buttons</a></li>
 								<li><a href="forms.html">Forms</a></li>
-								<li><a href="icons.html">SVG &amp; Icon Fonts</a></li>
+								<li><a href="icons.html">SVG Sprites &amp; Icon Fonts</a></li>
 								<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
 							</ul>
 						</div>
@@ -198,6 +240,7 @@
 							<ul>
 								<li><a href="generating-documentation.html">Generating Documentation</a></li>
 								<li><a href="add-ons.html">Add-Ons</a></li>
+								<li><a href="built-with-kraken.html">Built with Kraken</a></li>
 								<li><a href="browsers.html">Browser Compatibility</a></li>
 								<li><a href="support.html">Support</a></li>
 							</ul>
@@ -210,10 +253,10 @@
 			</section><!-- /.container -->
 		</main>
 
-		<footer data-sticky-footer class="jumbotron">
+		<footer data-sticky-footer class="bg-muted padding-top padding-bottom">
 			<article class="container">
 
-				<p class="text-small text-muted">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+				<p class="text-small text-muted margin-bottom-small">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
 
 				<p class="text-small text-muted">Kraken logo by <a href="http://thenounproject.com/term/squid/30310/">Joe Shelton from the Noun Project</a>. Additional icons from <a href="http://thenounproject.com/term/rocket/8923/">Cris Dobbins</a>, <a href="http://thenounproject.com/term/atom/36112/">Mister Pixel</a>, and <a href="http://thenounproject.com/term/blocks/27779/">Lukasz&nbsp;M.&nbsp;Pogoda</a>.</p>
 

@@ -352,6 +352,30 @@ p {
 }
 
 /**
+ * Text sizes
+ */
+.text-small {
+  font-size: 0.9375em;
+}
+
+.text-large {
+  font-size: 1.1875em;
+  line-height: 1.4;
+}
+
+@media (min-width: 40em) {
+  .text-large {
+    font-size: 1.3125em;
+  }
+}
+/**
+ * Text colors
+ */
+.text-muted {
+  color: #808080;
+}
+
+/**
  * Hyperlink styling
  */
 a,
@@ -793,6 +817,17 @@ select:focus {
  * @link http://css-tricks.com/svg-sprites-use-better-icon-fonts/
  * @link http://css-tricks.com/svg-use-external-source/
  */
+/**
+ * Hide icons by default to prevent blank spaces in unsupported browsers
+ */
+.icon {
+  display: none;
+}
+
+/**
+ * Display icons when browser supports SVG.
+ * Inherit height, width, and color.
+ */
 .svg .icon {
   display: inline-block;
   width: 1em;
@@ -800,47 +835,13 @@ select:focus {
   fill: currentColor;
 }
 
-.svg .icon-fallback-text {
-  position: absolute;
-  top: -9999em;
-  left: -9999em;
-}
-
 /**
- * @section Helper classes
- * Nudge and tweak colors, spacing and more.
+ * Hide fallback text if browser supports SVG
  */
 /**
- * Sizes for smaller and larger text
+ * @section Overrides
+ * Nudge and tweak alignment, spacing, and visibility.
  */
-.text-small {
-  font-size: 0.9375em;
-}
-
-.text-large {
-  font-size: 1.1875em;
-  line-height: 1.4;
-}
-
-@media (min-width: 40em) {
-  .text-large {
-    font-size: 1.3125em;
-  }
-}
-/**
- * Text colors
- */
-.text-muted {
-  color: #808080;
-}
-
-/**
- * Background colors
- */
-.bg-muted {
-  background-color: #f7f7f7;
-}
-
 /**
  * Text alignment
  */
@@ -951,7 +952,7 @@ select:focus {
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
-.screen-reader {
+.screen-reader, .svg .icon-fallback-text {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -960,6 +961,21 @@ select:focus {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+/**
+ * Extends the .screen-reader class to allow the element to be focusable when navigated to via the keyboard
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * @link https://www.drupal.org/node/897638
+ */
+.screen-reader-focusable:active,
+.screen-reader-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 /**
@@ -973,18 +989,20 @@ select:focus {
 }
 
 /**
- * Clearfix
+ * Contain floats
+ * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  */
-.group:before, .container:before,
+.clearfix:before, .container:before,
 .row:before,
-.group:after,
+.clearfix:after,
 .container:after,
 .row:after {
   display: table;
-  content: "";
+  content: " ";
 }
 
-.group:after, .container:after,
+.clearfix:after, .container:after,
 .row:after {
   clear: both;
 }

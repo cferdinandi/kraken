@@ -24,7 +24,7 @@
 
 		<main data-sticky-wrap>
 
-			<section class="navbar-docs">
+			<section class="bg-muted-dark">
 				<nav class="container">
 					<strong><a href="index.html">Kraken</a></strong>
 				</nav>
@@ -33,45 +33,37 @@
 			<section class="container">
 				<div class="row">
 					<div class="grid-two-thirds float-center">
-		<h1>The Kraken Approach</h1>
-
-		<p>Kraken is a lightweight boilerplate for front-end web developers. It's built to be flexible and modular, with performance and accessibility in mind.</p>
-
-		<strong>In this section:</strong>
-		<ul>
-			<li><a data-scroll href="#ugly-on-purpose">Ugly on Purpose</a></li>
-			<li><a data-scroll href="#mobile-first">Mobile First</a></li>
-			<li><a data-scroll href="#oocss">Object-Oriented CSS</a></li>
-		</ul>
-
-
-		<h2 id="ugly-on-purpose">Ugly on purpose</h2>
-
-		<p>Out-of-the-box, Kraken is a bit ugly. That's intentional.</p>
-
-		<p>Kraken isn't supposed to be a finished product. It's a starting point that you can adapt to any project you're working on. Add components. Remove components. Tweak the colors and font stack. Make Kraken your own.</p>
+<h1 id="the-kraken-approach">The Kraken Approach</h1>
+<p>Kraken is a lightweight boilerplate for front-end web developers. It&#39;s built to be flexible and modular, with performance and accessibility in mind.</p>
+<nav>
+    <strong>In this section:</strong>
+    <ul>
+        <li><a data-scroll href="#ugly-on-purpose">Ugly on Purpose</a></li>
+        <li><a data-scroll href="#mobile-first">Mobile First</a></li>
+        <li><a data-scroll href="#oocss">Object-Oriented CSS</a></li>
+    </ul>
+</nav>
 
 
-		<h2 id="mobile-first">Mobile-First</h2>
+<h2 id="ugly-on-purpose">Ugly on purpose</h2>
 
-		<p>Kraken is built mobile-first. The base structure is a fully-fluid, single-column layout. It uses <code>@media (min-width: whatever)</code> to add a grid-based layout to bigger screens.</p>
+<p>Out-of-the-box, Kraken is a bit ugly. That&#39;s intentional.</p>
+<p>Kraken isn&#39;t supposed to be a finished product. It&#39;s a starting point that you can adapt to any project you&#39;re working on. Add components. Remove components. Tweak the colors and font stack. Make Kraken your own.</p>
+<h2 id="mobile-first">Mobile-First</h2>
 
-		<p>Think of it as progressive enhancement for the layout.</p>
+<p>Kraken is built mobile-first. The base structure is a fully-fluid, single-column layout. It uses <code>@media (min-width: whatever)</code> to add a grid-based layout to bigger screens.</p>
+<p>Think of it as progressive enhancement for the layout.</p>
+<p>Kraken also includes feature detection for things like icon fonts and SVG. Just like the layout, those are served to browsers that support them, while fallback text is supplied to older and less capable browsers.</p>
+<h2 id="oocss">Object Oriented CSS</h2>
 
-		<p>Kraken also includes feature detection for things like icon fonts and SVG. Just like the layout, those are served to browsers that support them, while fallback text is supplied to older and less capable browsers.</p>
+<p>Kraken takes an <a href="http://www.slideshare.net/stubbornella/object-oriented-css">OOCSS approach</a> to web development.</p>
+<p>Throughout the stylesheet, you&#39;ll see base styles and modifying styles. For example, <code>.btn</code> sets the default button styles and behavior, while <code>.btn-secondary</code> changes the color and <code>.btn-large</code> changes the size. A big button with secondary colors would look like this:</p>
+<button class="btn btn-secondary btn-large">A Big Button</button>
 
-
-		<h2 id="oocss">Object Oriented CSS</h2>
-
-		<p>Kraken takes an <a href="http://www.slideshare.net/stubbornella/object-oriented-css">OOCSS approach</a> to web development.</p>
-
-		<p>Throughout the stylesheet, you'll see base styles and modifying styles. For example, <code>.btn</code> sets the default button styles and behavior, while <code>.btn-secondary</code> changes the color and <code>.btn-large</code> changes the size. A big button with secondary colors would look like this:</p>
-
-		<p><button class="btn btn-secondary btn-large">A Big Button</button></p>
-
-		<pre><code class="language-markup">&lt;button class="btn btn-secondary btn-large"&gt;A Big Button&lt;/button&gt;</code></pre>
-
-		<p>Classes can be mixed, matched and reused throughout a project.</p>					</div><!-- /.grid-two-thirds.float-center -->
+<pre><code class="lang-markup">&lt;button class=&quot;btn btn-secondary btn-large&quot;&gt;A Big Button&lt;/button&gt;
+</code></pre>
+<p>Classes can be mixed, matched and reused throughout a project.</p>
+					</div><!-- /.grid-two-thirds.float-center -->
 				</div><!-- /.row -->
 
 				<hr>
@@ -98,7 +90,7 @@
 								<li><a href="typography.html">Typography</a></li>
 								<li><a href="buttons.html">Buttons</a></li>
 								<li><a href="forms.html">Forms</a></li>
-								<li><a href="icons.html">SVG &amp; Icon Fonts</a></li>
+								<li><a href="icons.html">SVG Sprites &amp; Icon Fonts</a></li>
 								<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
 							</ul>
 						</div>
@@ -107,6 +99,7 @@
 							<ul>
 								<li><a href="generating-documentation.html">Generating Documentation</a></li>
 								<li><a href="add-ons.html">Add-Ons</a></li>
+								<li><a href="built-with-kraken.html">Built with Kraken</a></li>
 								<li><a href="browsers.html">Browser Compatibility</a></li>
 								<li><a href="support.html">Support</a></li>
 							</ul>
@@ -119,10 +112,10 @@
 			</section><!-- /.container -->
 		</main>
 
-		<footer data-sticky-footer class="jumbotron">
+		<footer data-sticky-footer class="bg-muted padding-top padding-bottom">
 			<article class="container">
 
-				<p class="text-small text-muted">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+				<p class="text-small text-muted margin-bottom-small">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
 
 				<p class="text-small text-muted">Kraken logo by <a href="http://thenounproject.com/term/squid/30310/">Joe Shelton from the Noun Project</a>. Additional icons from <a href="http://thenounproject.com/term/rocket/8923/">Cris Dobbins</a>, <a href="http://thenounproject.com/term/atom/36112/">Mister Pixel</a>, and <a href="http://thenounproject.com/term/blocks/27779/">Lukasz&nbsp;M.&nbsp;Pogoda</a>.</p>
 

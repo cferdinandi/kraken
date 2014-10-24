@@ -1,23 +1,17 @@
 /**
- * Typography
+ * Text sizes
  */
 
-.text-xxlarge {
+.text-xlarge {
 	font-size: 2em;
 	line-height: 1.4;
 }
 
-.text-xlarge {
-	font-size: 1em;
-	line-height: 1.4;
-}
-
 @media (min-width: 40em) {
-	.text-xxlarge {
+	.text-xlarge {
 		font-size: 3em;
 	}
 }
-
 
 
 /**
@@ -50,13 +44,15 @@
 
 
 /**
- * Jumbotron
+ * Background colors
  */
 
-.jumbotron {
+.bg-muted {
 	background-color: #f7f7f7;
-	padding-top: 2em;
-	padding-bottom: 2em;
+}
+
+.bg-muted-dark {
+	background-color: #f0f0f0;
 }
 
 
@@ -64,42 +60,24 @@
  * Navigation
  */
 
-.navbar-docs {
-	background-color: #f0f0f0;
-}
-
-/*  Remove default list styling for navigation list */
-.nav-actions {
-  list-style: none;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
-}
-
-/*  Display navigation items as inline-block elements.
- *  Add slight margin between each navigation item. */
-.nav-actions > li {
-  display: inline-block;
-  /*float: none;*/
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-
-/*  Remove margin-left on first navigation item */
-.nav-actions > li:first-child {
-  margin-left: 0;
-}
-
-/*  Remove margin-right on last navigation item */
-.nav-actions > li:last-child {
-  margin-right: 0;
-}
-
 /* Disable current page nav */
 a.nav-docs-active {
 	color: #808080;
 	pointer-events: none;
 	cursor: not-allowed;
+}
+
+
+/**
+ * Grid Highlighting
+ */
+
+.grid-highlight {
+	background-color: #f7f7f7;
+	border: 1px solid #e5e5e5;
+	border-radius: 0.0725em;
+	margin-bottom: 1.5625em;
+	padding: 0.9375em;
 }
 
 
@@ -141,19 +119,6 @@ tbody tr:nth-child(even) {
 .table-condensed th,
 .table-condensed td {
   padding: 0.25em;
-}
-
-
-/**
- * Grid Highlighting
- */
-
-.grid-highlight {
-	background-color: #f7f7f7;
-	border: 1px solid #e5e5e5;
-	border-radius: 0.0725em;
-	margin-bottom: 1.5625em;
-	padding: 0.9375em;
 }
 
 

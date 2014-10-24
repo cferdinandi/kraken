@@ -24,7 +24,7 @@
 
 		<main data-sticky-wrap>
 
-			<section class="navbar-docs">
+			<section class="bg-muted-dark">
 				<nav class="container">
 					<strong><a href="index.html">Kraken</a></strong>
 				</nav>
@@ -33,209 +33,203 @@
 			<section class="container">
 				<div class="row">
 					<div class="grid-two-thirds float-center">
-		<h1>The Grid</h1>
+<h1 id="the-grid">The Grid</h1>
+<p>Kraken uses a fluid, mobile-first grid system based on simple fractions&mdash;halves, thirds, and fourths. It supports nesting, and includes special classes for offsets, content choreography, and dynamic grids.</p>
+<nav>
+    <strong>In this section:</strong>
+    <ul>
+        <li><a data-scroll href="#the-base-grid">The Base Grid</a></li>
+        <li><a data-scroll href="#offsets">Offsets</a></li>
+        <li><a data-scroll href="#grids-on-small-screens">Grids on Small Screens</a></li>
+        <li><a data-scroll href="#content-choreography">Content Choreography</a></li>
+        <li><a data-scroll href="#dynamic-grids">Dynamic Grids</a></li>
+    </ul>
+</nav>
 
-		<p>Kraken uses a fluid, mobile-first grid system based on simple fractions&mdash;halves, thirds, and fourths. It includes offsets, grid nesting, and special classes for content choreography and image galleries.</p>
+<h2 id="the-base-grid">The Base Grid</h2>
 
-		<strong>In this section:</strong>
-		<ul>
-			<li><a data-scroll href="#the-base-grid">The Base Grid</a></li>
-			<li><a data-scroll href="#offsets">Offsets</a></li>
-			<li><a data-scroll href="#grids-on-small-screens">Grids on Small Screens</a></li>
-			<li><a data-scroll href="#content-choreography">Content Choreography</a></li>
-			<li><a data-scroll href="#image-gallery">Image Gallery</a></li>
-		</ul>
+<p>The <code>.container</code> class centers content on the page and restricts it to a maximum width. To create a grid, add a <code>&lt;div&gt;</code> with a <code>.row</code> class. You can create grids within a row by creating <code>&lt;div&gt;</code> elements with the <code>.grid-$size</code> class.</p>
+<p></div></div><!-- /.row /.grid-two-thirds: go full width --></p>
+<div class="row">
+    <div class="grid-third"><div class="grid-highlight">.grid-third</div></div>
+    <div class="grid-two-thirds"><div class="grid-highlight">.grid-two-thirds</div></div>
+</div>
 
-		<h2 id="the-base-grid">The Base Grid</h2>
+<div class="row">
+    <div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+    <div class="grid-three-fourths"><div class="grid-highlight">.grid-three-fourths</div></div>
+</div>
 
-</div></div><!-- /.row /.grid-two-thirds: go full width -->
+<div class="row">
+    <div class="grid-half"><div class="grid-highlight">.grid-half</div></div>
+    <div class="grid-half"><div class="grid-highlight">.grid-half</div></div>
+</div>
 
-		<div class="row">
-			<div class="grid-third"><div class="grid-highlight">.grid-third</div></div>
-			<div class="grid-two-thirds"><div class="grid-highlight">.grid-two-thirds</div></div>
-		</div>
+<div class="row">
+    <div class="grid-full"><div class="grid-highlight">.grid-full</div></div>
+</div>
 
-		<div class="row">
-			<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-			<div class="grid-three-fourths"><div class="grid-highlight">.grid-three-fourths</div></div>
-		</div>
+<pre><code class="lang-markup">&lt;div class=&quot;container&quot;&gt;
 
-		<div class="row">
-			<div class="grid-half"><div class="grid-highlight">.grid-half</div></div>
-			<div class="grid-half"><div class="grid-highlight">.grid-half</div></div>
-		</div>
+    &lt;p&gt;Kraken uses a fluid, mobile-first grid system...&lt;/p&gt;
 
-		<div class="row">
-			<div class="grid-full"><div class="grid-highlight">.grid-full</div></div>
-		</div>
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;grid-third&quot;&gt;.grid-third&lt;/div&gt;
+        &lt;div class=&quot;grid-two-thirds&quot;&gt;.grid-two-thirds&lt;/div&gt;
+    &lt;/div&gt;
 
-<pre><code class="language-markup">&lt;div class="container"&gt;
-&lt;p&gt;Kraken uses a fluid, mobile-first 6-column grid system...&lt;/p&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
+        &lt;div class=&quot;grid-three-fourths&quot;&gt;.grid-three-fourths&lt;/div&gt;
+    &lt;/div&gt;
 
-&lt;div class="row"&gt;
-	&lt;div class="grid-third"&gt;.grid-third&lt;/div&gt;
-	&lt;div class="grid-two-thirds"&gt;.grid-two-thirds&lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;grid-half&quot;&gt;.grid-half&lt;/div&gt;
+        &lt;div class=&quot;grid-half&quot;&gt;.grid-half&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;grid-full&quot;&gt;.grid-full&lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+<div class="row">
+    <div class="grid-two-thirds float-center">
+        <h2 id="offsets">Offsets</h2>
+
+        <p>Push grids to the right by adding an <code>.offset-$size</code> class. Center grids with the <code>.float-center</code> class.</p>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="grid-three-fourths offset-fourth"><div class="grid-highlight">.grid-three-fourths .offset-fourth</div></div>
+</div>
+
+<div class="row">
+    <div class="grid-third"><div class="grid-highlight">.grid-third</div></div>
+    <div class="grid-third offset-third"><div class="grid-highlight">.grid-third .offset-third</div></div>
+</div>
+
+<div class="row">
+    <div class="grid-two-thirds float-center"><div class="grid-highlight">.grid-two-thirds .float-center</div></div>
+</div>
+
+<pre><code class="lang-markup">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;grid-three-fourths offset-fourth&quot;&gt;.grid-three-fourths .offset-fourth&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="row"&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
-	&lt;div class="grid-half"&gt;.grid-half&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;grid-third&quot;&gt;.grid-third&lt;/div&gt;
+    &lt;div class=&quot;grid-third offset-third&quot;&gt;.grid-third .offset-third&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class="row"&gt;
-	&lt;div class="grid-half"&gt;.grid-half&lt;/div&gt;
-	&lt;div class="grid-half"&gt;.grid-half&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;grid-two-thirds float-center&quot;&gt;.grid-two-thirds .float-center&lt;/div&gt;
 &lt;/div&gt;
+</code></pre>
+<div class="row">
+    <div class="grid-two-thirds float-center">
+        <h2 id="grids-on-small-screens">Grids on Small Screens</h2>
 
-&lt;div class="row"&gt;
-	&lt;div class="grid-full"&gt;.grid-full&lt;/div&gt;
-&lt;/div&gt;
+        <p>The grid activates on medium-sized screens by default. You can toggle the grid on smaller screens by adding a simple class&mdash;<code>.row-start-xsmall</code> or <code>.row-start-small</code>&mdash;to the desired <code>.row</code> element.</p>
 
-&lt;div class="row"&gt;
-	&lt;div class="grid-half"&gt;.grid-half&lt;/div&gt;
-	&lt;div class="grid-half"&gt;.grid-half&lt;/div&gt;
-&lt;/div&gt;
+        <p>If you&#39;re <a href="working-with-the-source-files.html">working with the source files</a>, you can also easily customize when the grid activates by default and adjust or add additional <code>.row-start-$size</code> classes.</p>
+    </div>
+</div>
 
-&lt;div class="row"&gt;
-	&lt;div class="grid-full"&gt;.grid-full&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+<p><strong>Extra Small Screens</strong></p>
+<div class="row row-start-xsmall">
+    <div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+    <div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+    <div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+    <div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+</div>
 
+<p><strong>Small Screens</strong></p>
+<div class="row row-start-small">
+    <div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+    <div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+    <div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+    <div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+</div>
 
-		<div class="row">
-			<div class="grid-two-thirds float-center">
-				<h2 id="offsets">Offsets</h2>
-
-				<p>Push grids to the right by adding an <code>.offset-*</code> class. Center grids with the <code>.float-center</code> class. Obviously, the grids and offsets cannot add up more than a whole or they'll spill outside of the container.</p>
-
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="grid-three-fourths offset-fourth"><div class="grid-highlight">.grid-three-fourths .offset-fourth</div></div>
-		</div>
-
-		<div class="row">
-			<div class="grid-third"><div class="grid-highlight">.grid-third</div></div>
-			<div class="grid-third offset-third"><div class="grid-highlight">.grid-third .offset-third</div></div>
-		</div>
-
-		<div class="row">
-			<div class="grid-two-thirds float-center"><div class="grid-highlight">.grid-two-thirds .float-center</div></div>
-		</div>
-
-<pre><code class="language-markup">&lt;div class="row"&gt;
-	&lt;div class="grid-three-fourths offset-fourth"&gt;.grid-three-fourths .offset-fourth&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-	&lt;div class="grid-third"&gt;.grid-third&lt;/div&gt;
-	&lt;div class="grid-third offset-third"&gt;.grid-third .offset-third&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="row"&gt;
-	&lt;div class="grid-two-thirds float-center"&gt;.grid-two-thirds .float-center&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-
-		<div class="row">
-			<div class="grid-two-thirds float-center">
-				<h2 class="text-center" id="grids-on-small-screens">Grids on Small Screens</h2>
-
-				<p>The grid activates on medium-sized screens by default. You can toggle the grid on smaller screens by adding a simple class&mdash;<code>.row-start-xsmall</code> or <code>.row-start-small</code>&mdash;to the desired <code>.row</code> element.</p>
-			</div>
-		</div>
-
-		<p class="space-bottom-small"><strong>Extra Small Screens</strong></p>
-		<div class="row row-start-xsmall">
-			<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-			<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-			<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-			<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-		</div>
-
-		<p class="space-bottom-small"><strong>Small Screens</strong></p>
-		<div class="row row-start-small">
-			<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-			<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-			<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-			<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-		</div>
-
-<pre><code class="language-markup">Extra Small Screens
-&lt;div class="row row-start-xsmall"&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
+<pre><code class="lang-markup">Extra Small Screens
+&lt;div class=&quot;row row-start-xsmall&quot;&gt;
+    &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
+    &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
+    &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
+    &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
 &lt;/div&gt;
 
 Small Screens
-&lt;div class="row row-start-small"&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
-	&lt;div class="grid-fourth"&gt;.grid-fourth&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;div class=&quot;row row-start-small&quot;&gt;
+    &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
+    &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
+    &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
+    &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row">
+    <div class="grid-two-thirds float-center">
+        <h2 id="content-choreography">Content Choreography</h2>
 
+        <p>Flip the order of a grid on bigger screens by adding the <code>.grid-flip</code> class.</p>
+    </div>
+</div>
 
-		<div class="row">
-			<div class="grid-two-thirds float-center">
-				<h2 class="text-center" id="content-choreography">Content Choreography</h2>
+<div class="row">
+    <div class="grid-third grid-flip"><div class="grid-highlight">First in HTML</div></div>
+    <div class="grid-two-thirds"><div class="grid-highlight">Second in HTML</div></div>
+</div>
 
-				<p>Flip the order of a grid on bigger screens by adding the <code>.grid-flip</code> class.</p>
-			</div>
-		</div>
+<pre><code class="lang-markup">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;grid-third grid-flip&quot;&gt;First in HTML&lt;/div&gt;
+    &lt;div class=&quot;grid-two-thirds&quot;&gt;Second in HTML&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="row">
+    <div class="grid-two-thirds float-center">
+        <h2 id="dynamic-grids">Dynamic Grids</h2>
 
-		<div class="row">
-			<div class="grid-third grid-flip"><div class="grid-highlight">First in HTML</div></div>
-			<div class="grid-two-thirds"><div class="grid-highlight">Second in HTML</div></div>
-		</div>
+        <p>Create grids that vary in size based on screen width using the <code>.grid-dynamic</code> class&mdash;great for creating images galleries! For content that may vary in height, you may want to use the <a href="https://github.com/cferdinandi/right-height/">Right Height add-on</a>.</p>
 
-		<pre><code class="language-markup">&lt;div class="row"&gt;
-	&lt;div class="grid-third grid-flip"&gt;First in HTML&lt;/div&gt;
-	&lt;div class="grid-two-thirds"&gt;Second in HTML&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <p>If you&#39;re <a href="working-with-the-source-files.html">working with the source files</a>, you easily adjust the grid breakpoints and even create additional grids with different layout patterns.</p>
+    </div>
+</div>
 
+<div class="row">
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+    <div class="grid-dynamic"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
+</div>
 
-		<div class="row">
-			<div class="grid-two-thirds float-center">
-				<h2 class="text-center" id="image-gallery">Image Gallery</h2>
-
-				<p>Display images in a responsive gallery by using the <code>.grid-img</code> class. You can add any number of image grids to a <code>.row</code>. They'll automatically adjust themselves.</p>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-			<div class="grid-img"><p><img src="assets/img/emu.jpg" title="Picture an emu"></p></div>
-		</div>
-
-<pre><code class="language-markup">&lt;div class="row"&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-	&lt;div class="grid-img"&gt;&lt;p&gt;&lt;img src="img/emu.jpg"&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>					</div><!-- /.grid-two-thirds.float-center -->
+<pre><code class="lang-markup">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-dynamic&quot;&gt;&lt;img src=&quot;emu.jpg&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+					</div><!-- /.grid-two-thirds.float-center -->
 				</div><!-- /.row -->
 
 				<hr>
@@ -262,7 +256,7 @@ Small Screens
 								<li><a href="typography.html">Typography</a></li>
 								<li><a href="buttons.html">Buttons</a></li>
 								<li><a href="forms.html">Forms</a></li>
-								<li><a href="icons.html">SVG &amp; Icon Fonts</a></li>
+								<li><a href="icons.html">SVG Sprites &amp; Icon Fonts</a></li>
 								<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
 							</ul>
 						</div>
@@ -271,6 +265,7 @@ Small Screens
 							<ul>
 								<li><a href="generating-documentation.html">Generating Documentation</a></li>
 								<li><a href="add-ons.html">Add-Ons</a></li>
+								<li><a href="built-with-kraken.html">Built with Kraken</a></li>
 								<li><a href="browsers.html">Browser Compatibility</a></li>
 								<li><a href="support.html">Support</a></li>
 							</ul>
@@ -283,10 +278,10 @@ Small Screens
 			</section><!-- /.container -->
 		</main>
 
-		<footer data-sticky-footer class="jumbotron">
+		<footer data-sticky-footer class="bg-muted padding-top padding-bottom">
 			<article class="container">
 
-				<p class="text-small text-muted">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+				<p class="text-small text-muted margin-bottom-small">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
 
 				<p class="text-small text-muted">Kraken logo by <a href="http://thenounproject.com/term/squid/30310/">Joe Shelton from the Noun Project</a>. Additional icons from <a href="http://thenounproject.com/term/rocket/8923/">Cris Dobbins</a>, <a href="http://thenounproject.com/term/atom/36112/">Mister Pixel</a>, and <a href="http://thenounproject.com/term/blocks/27779/">Lukasz&nbsp;M.&nbsp;Pogoda</a>.</p>
 
