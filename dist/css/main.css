@@ -1,5 +1,5 @@
 /**
- * Kraken v4.2.0
+ * Kraken v5.0.0
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
@@ -191,7 +191,7 @@ a:active {
   margin-right: -1.4%;
 }
 
-.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full, .grid-img {
+.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full, .grid-dynamic {
   float: left;
   width: 100%;
   padding-left: 1.4%;
@@ -308,24 +308,23 @@ a:active {
   }
 }
 /**
- * Image gallery
+ * Dynamic grid
  */
 @media (min-width: 20em) {
-  .grid-img {
+  .grid-dynamic {
     width: 50%;
   }
 }
 @media (min-width: 30em) {
-  .grid-img {
-    width: 33.33333333333%;
+  .grid-dynamic {
+    width: 33.33333%;
   }
 }
 @media (min-width: 40em) {
-  .grid-img {
+  .grid-dynamic {
     width: 25%;
   }
 }
-
 /**
  * @section Typography
  * Sets font styles for entire site
@@ -353,7 +352,7 @@ p {
 }
 
 /**
- * Sizes for smaller and larger text
+ * Text sizes
  */
 .text-small {
   font-size: 0.9375em;
@@ -370,7 +369,7 @@ p {
   }
 }
 /**
- * Alternate text colors
+ * Text colors
  */
 .text-muted {
   color: #808080;
@@ -426,14 +425,6 @@ ol ul {
   margin-bottom: 0;
 }
 
-ul {
-  list-style: disc;
-}
-
-ol {
-  list-style: decimal;
-}
-
 dl {
   margin-left: 0;
 }
@@ -449,6 +440,22 @@ dt {
 .list-unstyled {
   margin-left: 0;
   list-style: none;
+}
+
+/**
+ * Display lists on a single line.
+ */
+.list-inline {
+  list-style: none;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  padding: 0;
+}
+
+.list-inline > li {
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 /**
@@ -810,6 +817,17 @@ select:focus {
  * @link http://css-tricks.com/svg-sprites-use-better-icon-fonts/
  * @link http://css-tricks.com/svg-use-external-source/
  */
+/**
+ * Hide icons by default to prevent blank spaces in unsupported browsers
+ */
+.icon {
+  display: none;
+}
+
+/**
+ * Display icons when browser supports SVG.
+ * Inherit height, width, and color.
+ */
 .svg .icon {
   display: inline-block;
   width: 1em;
@@ -817,15 +835,12 @@ select:focus {
   fill: currentColor;
 }
 
-.svg .icon-fallback-text {
-  position: absolute;
-  top: -9999em;
-  left: -9999em;
-}
-
 /**
- * @section Alignment, Spacing, & Visibility
- * Override defaults.
+ * Hide fallback text if browser supports SVG
+ */
+/**
+ * @section Overrides
+ * Nudge and tweak alignment, spacing, and visibility.
  */
 /**
  * Text alignment
@@ -860,48 +875,113 @@ select:focus {
 }
 
 /**
- * Spacing
+ * Margins
  */
-.no-space {
+.no-margin {
   margin: 0;
-  padding: 0;
 }
 
-.no-space-bottom {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.no-space-top {
+.no-margin-top {
   margin-top: 0;
-  padding-top: 0;
 }
 
-.space-bottom {
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.margin-top {
+  margin-top: 1.5625em;
+}
+
+.margin-bottom {
+  margin-bottom: 1.5625em;
+}
+
+.margin-bottom-small {
+  margin-bottom: 0.5em;
+}
+
+.margin-bottom-large {
   margin-bottom: 2em;
 }
 
-.space-bottom-small {
-  margin-bottom: 0.5em;
+/**
+ * Padding
+ */
+.no-padding {
+  padding: 0;
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
   padding-bottom: 0;
 }
 
-.space-top {
-  padding-top: 0.8125em;
+.padding-top {
+  padding-top: 1.5625em;
+}
+
+.padding-top-small {
+  padding-top: 0.5em;
+}
+
+.padding-top-large {
+  padding-top: 2em;
+}
+
+.padding-bottom {
+  padding-bottom: 1.5625em;
+}
+
+.padding-bottom-small {
+  padding-bottom: 0.5em;
+}
+
+.padding-bottom-large {
+  padding-bottom: 2em;
 }
 
 /**
  * Visibility
  */
-.screen-reader {
+/**
+ * Visually hide an element, but leave it available for screen readers
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.screen-reader, .svg .icon-fallback-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  top: -9999em;
-  left: -9999em;
+  width: 1px;
+}
+
+/**
+ * Extends the .screen-reader class to allow the element to be focusable when navigated to via the keyboard
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * @link https://www.drupal.org/node/897638
+ */
+.screen-reader-focusable:active,
+.screen-reader-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 /**
  * @workaround
  * @affected IE 8/9/10
+ * @link http://juicystudio.com/article/screen-readers-display-none.php
  */
 [hidden] {
   display: none;
@@ -909,18 +989,20 @@ select:focus {
 }
 
 /**
- * Clearfix
+ * Contain floats
+ * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  */
-.group:before, .container:before,
+.clearfix:before, .container:before,
 .row:before,
-.group:after,
+.clearfix:after,
 .container:after,
 .row:after {
   display: table;
-  content: "";
+  content: " ";
 }
 
-.group:after, .container:after,
+.clearfix:after, .container:after,
 .row:after {
   clear: both;
 }

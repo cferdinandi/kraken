@@ -5,7 +5,7 @@
 
 body {
 	font-family: $font-primary;
-	font-size: $font-base;
+	font-size: $font-size-base;
 	line-height: 1.5;
 	color: $color-black;
 	background: $color-white;
@@ -14,9 +14,9 @@ body {
 		line-height: 1.5625;
 	}
 
-	@if $font-base != $font-xlarge-screens {
+	@if $font-size-base != $font-size-xlarge-screens {
 		@media (min-width: $bp-xlarge) {
-			font-size: $font-xlarge-screens;
+			font-size: $font-size-xlarge-screens;
 		}
 	}
 }
@@ -27,7 +27,7 @@ p {
 
 
 /**
- * Sizes for smaller and larger text
+ * Text sizes
  */
 
 .text-small {
@@ -47,7 +47,7 @@ p {
 
 
 /**
- * Alternate text colors
+ * Text colors
  */
 
 .text-muted {
@@ -108,13 +108,13 @@ ol ul {
 	margin-bottom: 0;
 }
 
-ul {
-	list-style: disc;
-}
+// ul {
+// 	list-style: disc;
+// }
 
-ol {
-	list-style: decimal;
-}
+// ol {
+// 	list-style: decimal;
+// }
 
 dl {
 	margin-left: 0;
@@ -131,6 +131,23 @@ dt {
 .list-unstyled {
 	margin-left: 0;
 	list-style: none;
+}
+
+/**
+ * Display lists on a single line.
+ */
+
+.list-inline {
+  list-style: none;
+  margin-left: calc-em(-8px);
+  margin-right: calc-em(-8px);
+  padding: 0;
+}
+
+.list-inline > li {
+  display: inline-block;
+  margin-left: calc-em(8px);
+  margin-right: calc-em(8px);
 }
 
 

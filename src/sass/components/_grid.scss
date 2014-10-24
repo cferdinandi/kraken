@@ -7,7 +7,7 @@
  * Base grid styles: single column
  */
 .container {
-	max-width: $container-max;
+	max-width: $container-max-width;
 	width: $container-width;
 	margin-left: auto;
 	margin-right: auto;
@@ -29,10 +29,6 @@
 	.grid-#{$grid} {
 		@extend %grid-base;
 	}
-}
-
-.grid-img {
-	@extend %grid-base;
 }
 
 
@@ -65,16 +61,21 @@
 }
 
 /**
- * Image gallery
+ * Dynamic grid
  */
-.grid-img {
-	@media (min-width: $bp-xsmall)  { width: 50%; }
-	@media (min-width: $bp-small) { width: 33.33333333333%; }
-	@media (min-width: $bp-medium)  { width: 25%; }
-}
+ @each $namespace, $breakpoint, $width in ($grid-dynamic){
+ 	#{$namespace} {
+ 		@extend %grid-base;
+ 	}
+ 	@media (min-width: $breakpoint) {
+ 		#{$namespace} {
+ 			width: $width;
+ 		}
+ 	}
+ }
 
 // Add clearfix
 .container,
 .row {
-	@extend .group;
+	@extend .clearfix;
 }
