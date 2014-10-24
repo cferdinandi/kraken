@@ -1,5 +1,5 @@
 /**
- * Kraken v5.0.0
+ * Kraken v5.0.1
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
