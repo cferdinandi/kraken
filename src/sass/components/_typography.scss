@@ -27,35 +27,6 @@ p {
 
 
 /**
- * Text sizes
- */
-
-.text-small {
-	font-size: calc-em(15px);
-}
-
-.text-large {
-	font-size: calc-em(19px);
-	line-height: 1.4;
-}
-
-@media (min-width: $bp-medium) {
-	.text-large {
-		font-size: calc-em(21px);
-	}
-}
-
-
-/**
- * Text colors
- */
-
-.text-muted {
-	color: $color-gray-dark;
-}
-
-
-/**
  * Hyperlink styling
  */
 
@@ -107,14 +78,6 @@ ol ol,
 ol ul {
 	margin-bottom: 0;
 }
-
-// ul {
-// 	list-style: disc;
-// }
-
-// ol {
-// 	list-style: decimal;
-// }
 
 dl {
 	margin-left: 0;
@@ -186,7 +149,7 @@ h3,
 
 h4, h5, h6,
 .h4, .h5, .h6 {
-	font-size: calc-em(15px);
+	font-size: calc-em(16px);
 }
 
 h4,

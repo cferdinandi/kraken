@@ -352,30 +352,6 @@ p {
 }
 
 /**
- * Text sizes
- */
-.text-small {
-  font-size: 0.9375em;
-}
-
-.text-large {
-  font-size: 1.1875em;
-  line-height: 1.4;
-}
-
-@media (min-width: 40em) {
-  .text-large {
-    font-size: 1.3125em;
-  }
-}
-/**
- * Text colors
- */
-.text-muted {
-  color: #808080;
-}
-
-/**
  * Hyperlink styling
  */
 a,
@@ -494,7 +470,7 @@ h3,
 
 h4, h5, h6,
 .h4, .h5, .h6 {
-  font-size: 0.9375em;
+  font-size: 1em;
 }
 
 h4,
@@ -821,6 +797,8 @@ select:focus {
  * Hide icons by default to prevent blank spaces in unsupported browsers
  */
 .icon {
+  display: inline-block;
+  fill: currentColor;
   height: 0;
   width: 0;
 }
@@ -830,10 +808,8 @@ select:focus {
  * Inherit height, width, and color.
  */
 .svg .icon {
-  display: inline-block;
-  width: 1em;
   height: 1em;
-  fill: currentColor;
+  width: 1em;
 }
 
 /**
@@ -843,6 +819,30 @@ select:focus {
  * @section Overrides
  * Nudge and tweak alignment, spacing, and visibility.
  */
+/**
+ * Text sizes
+ */
+.text-small {
+  font-size: 0.9375em;
+}
+
+.text-large {
+  font-size: 1.1875em;
+  line-height: 1.4;
+}
+@media (min-width: 40em) {
+  .text-large {
+    font-size: 1.3125em;
+  }
+}
+
+/**
+ * Text colors
+ */
+.text-muted {
+  color: #808080;
+}
+
 /**
  * Text alignment
  */

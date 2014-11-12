@@ -150,7 +150,9 @@ The `components` folder contains all of the Kraken components: the grid, button 
 
 <h2 id="working-with-svg">Working with SVG</h2>
 
-SVG files placed in the `src` > `svg` directory will be compiled into a single SVG sprite called `icons.svg` in the `dist` > `svg` directory.
+SVG files placed in the `src` > `svg` directory will be compiled into a single SVG sprite called `icons.svg` in the `dist` > `svg` directory. SVG files placed in a subdirectory of `src` > `svg` will be compiled into a single SVG sprite named after the subdirectory.
+
+For example, `svg` > `portfolio` with compile into `portfolio.svg` in the `dist` > `svg` directory.
 
 
 <h2 id="working-with-icon-fonts">Working with Icon Fonts</h2>

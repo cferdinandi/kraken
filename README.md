@@ -16,6 +16,13 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v5.1.0 - November 12, 2014
+	* Removed commented out list styles.
+	* Moved `.text-small`, `.text-large`, and `.text-muted` to `_overrides.scss` for better cascade inheritance.
+	* Updated SVG process to allow for multiple SVG files.
+	* Increased `h4`, `h5`, and `h6` font size to `1em`.
+	* Adjusted styling of `.icon` class in `_svg.scss` for less specificity and easier overriding.
+	* Renamed `_svgs.scss` to `_svg.scss`.
 * v5.0.1 - October 24, 2014
 	* Fixed bug with SVG feature detection and conditional displaying.
 * v5.0.0 - October 23, 2014

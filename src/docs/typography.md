@@ -37,7 +37,7 @@ Default text
 <strong>Bold</strong> and <em>italics</em>
 ```
 
-*Because Kraken uses relative sizing, you should always apply `.text-tall` and `.text-small` classes to a `<span>` element and not directly to a `<p>`. Otherwise, your spacing will get all messed up.*
+*Because Kraken uses relative sizing, you should always apply `.text-tall` and `.text-small` classes to a `<span>` element and not directly to a `<p>`. Otherwise, your spacing will get all messed up. The `.text-*` classes can be found in `_overrides.scss` for better cascade inheritance.*
 
 
 <h2 id="lists">Lists</h2>
