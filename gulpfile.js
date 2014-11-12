@@ -54,7 +54,7 @@ var paths = {
 		output: 'dist/css/'
 	},
 	svgs: {
-		input: 'src/svg/**/*.svg',
+		input: 'src/svg/*',
 		output: 'dist/svg/'
 	},
 	static: 'src/static/**',
@@ -142,6 +142,20 @@ gulp.task('build:styles', ['clean:dist'], function() {
 // Generate SVG sprites
 gulp.task('build:svgs', ['clean:dist'], function () {
 	return gulp.src(paths.svgs.input)
+		.pipe(plumber())
+		.pipe(tap(function (file, t) {
+			if ( file.isDirectory() ) {
+				var name = file.relative + '.svg';
+				return gulp.src(file.path + '/*.svg')
+					.pipe(svgmin())
+					.pipe(svgstore({
+						fileName: name,
+						prefix: 'icon-',
+						inlineSvg: true
+					}))
+					.pipe(gulp.dest(paths.svgs.output));
+			}
+		}))
 		.pipe(svgmin())
 		.pipe(svgstore({
 			fileName: 'icons.svg',

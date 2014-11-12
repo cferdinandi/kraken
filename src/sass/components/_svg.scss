@@ -9,8 +9,10 @@
  * Hide icons by default to prevent blank spaces in unsupported browsers
  */
 .icon {
-	height: 0;
-	width: 0;
+    display: inline-block;
+    fill: currentColor;
+    height: 0;
+    width: 0;
 }
 
 /**
@@ -18,10 +20,8 @@
  * Inherit height, width, and color.
  */
 .svg .icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	fill: currentColor;
+    height: 1em;
+    width: 1em;
 }
 
 /**

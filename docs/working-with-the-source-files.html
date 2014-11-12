@@ -173,7 +173,8 @@ $icons: (
 <p>The <code>components</code> folder contains all of the Kraken components: the grid, button and form styling, and so on. The <code>main.scss</code> file imports <code>_config.scss</code>, <code>_mixins.scss</code>, and the components for processing into a CSS file.</p>
 <h2 id="working-with-svg">Working with SVG</h2>
 
-<p>SVG files placed in the <code>src</code> &gt; <code>svg</code> directory will be compiled into a single SVG sprite called <code>icons.svg</code> in the <code>dist</code> &gt; <code>svg</code> directory.</p>
+<p>SVG files placed in the <code>src</code> &gt; <code>svg</code> directory will be compiled into a single SVG sprite called <code>icons.svg</code> in the <code>dist</code> &gt; <code>svg</code> directory. SVG files placed in a subdirectory of <code>src</code> &gt; <code>svg</code> will be compiled into a single SVG sprite named after the subdirectory.</p>
+<p>For example, <code>svg</code> &gt; <code>portfolio</code> with compile into <code>portfolio.svg</code> in the <code>dist</code> &gt; <code>svg</code> directory.</p>
 <h2 id="working-with-icon-fonts">Working with Icon Fonts</h2>
 
 <p>The <code>_iconfonts.scss</code> component is commented out of <code>main.scss</code> by default. Uncomment it to use icon fonts with Kraken.</p>
