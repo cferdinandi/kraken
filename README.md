@@ -16,6 +16,8 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v5.1.1 - November 20, 2014
+	* Fixed watch task.
 * v5.1.0 - November 12, 2014
 	* Removed commented out list styles.
 	* Moved `.text-small`, `.text-large`, and `.text-muted` to `_overrides.scss` for better cascade inheritance.

@@ -49,12 +49,7 @@
 <p>Add HTML or markdown (<code>.md</code> or <code>.markdown</code>) files to your <code>docs</code> folder in <code>src</code>.</p>
 <p>The <code>_templates</code> directory in <code>src</code> contains the <code>_header.html</code> and <code>_footer.html</code> templates. These are automatically added to the beginning and end of each documentation page. You can also add your own templates to the <code>_templates</code> directory. Include template files in your docs by writing <code>&commat;&commat;include(&#39;path-to-file&#39;)</code> on its own line in your markup (or markdown).</p>
 <p>Files placed in the <code>assets</code> directory will be moved over as-is to the <code>docs</code> directory. Kraken will also add a copy of your <code>dist</code> files so you can use them in your documentation.</p>
-<p>When you&#39;re ready, run one of the task runners to get going:</p>
-<ul>
-<li><code>gulp docs</code> manually compiles files and generates docs.</li>
-<li><code>gulp watch:docs</code> automatically compiles files and generates docs when changes are made.</li>
-<li><code>gulp reload:docs</code> automatically compiles files, generates docs, and applies changes using <a href="http://livereload.com/">LiveReload</a>.</li>
-</ul>
+<p>Documentation is automatically created when you <a href="working-with-the-source-files.html">run of the Gulp tasks</a>.</p>
 <h2 id="why-not-use-an-existing-documentation-tool">Why not use an existing documentation tool?</h2>
 
 <p>There are a ton of great CSS and JS documentation tools available. I explored using <a href="http://warpspire.com/kss/">KSS</a>, <a href="http://trulia.github.io/hologram/">Hologram</a>, and a few others.</p>
