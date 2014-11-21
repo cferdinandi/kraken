@@ -20,11 +20,7 @@ The `_templates` directory in `src` contains the `_header.html` and `_footer.htm
 
 Files placed in the `assets` directory will be moved over as-is to the `docs` directory. Kraken will also add a copy of your `dist` files so you can use them in your documentation.
 
-When you're ready, run one of the task runners to get going:
-
-* `gulp docs` manually compiles files and generates docs.
-* `gulp watch:docs` automatically compiles files and generates docs when changes are made.
-* `gulp reload:docs` automatically compiles files, generates docs, and applies changes using [LiveReload](http://livereload.com/).
+Documentation is automatically created when you [run of the Gulp tasks](working-with-the-source-files.html).
 
 
 <h2 id="why-not-use-an-existing-documentation-tool">Why not use an existing documentation tool?</h2>

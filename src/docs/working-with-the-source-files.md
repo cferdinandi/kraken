@@ -31,9 +31,8 @@ Make sure these are installed first.
 * In bash/terminal/command line, `cd` into the `kraken` directory.
 * Run `npm install` to install the required files.
 * When it's done installing, run one of the task runners to get going:
-	* `gulp` manually compiles files.
-	* `gulp watch` automatically compiles files when changes are made.
-	* `gulp reload` automatically compiles files and applies changes using <a href="">[LiveReload](http://livereload.com/)
+	* `gulp` manually compiles files and runs unit tests.
+	* `gulp watch` automatically compiles files, runs unit tests, and applies changes using <a href="">[LiveReload](http://livereload.com/).
 
 
 <h2 id="working-with-sass">Working with Sass</h2>
