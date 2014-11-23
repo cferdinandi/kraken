@@ -68,7 +68,6 @@ Extend Kraken with add-ons designed to get dropped right in.
 
 <h2 class="h3" id="wordpress-speciality">WordPress Specialty</h2>
 
-* [Google-Hosted jQuery](https://github.com/cferdinandi/google-hosted-jquery/), use Google's CDN for better performance.
 * [Image Compress & Sharpen](https://github.com/cferdinandi/image-compress-and-sharpen/), reduce image file size.
 * [Exclude From Search](https://github.com/cferdinandi/exclude-from-search/), exclude pages and posts from search results.
 * [Add IDs to Header Tags Plus](https://github.com/cferdinandi/add-ids-to-header-tags-plus), adds IDs to post headings.
