@@ -33,6 +33,7 @@ Extend Kraken with add-ons designed to get dropped right in.
 * [X-Ray](https://github.com/cferdinandi/x-ray/), let's users toggle password visibility in forms.
 * [Form Saver](https://github.com/cferdinandi/form-saver/), a lightweight script for saving form data.
 * [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll/), a simple script to animate scrolling to anchor links.
+* [Gumshoe](https://github.com/cferdinandi/gumshoe), a framework-agnostic scrollspy script.
 * [Right Height](https://github.com/cferdinandi/right-height/), variable content with equal heights.
 * [Sticky Footer](https://github.com/cferdinandi/sticky-footer/), dynamic, responsive sticky footers.
 
