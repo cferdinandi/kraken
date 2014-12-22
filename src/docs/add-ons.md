@@ -74,4 +74,3 @@ Extend Kraken with add-ons designed to get dropped right in.
 * [Add IDs to Header Tags Plus](https://github.com/cferdinandi/add-ids-to-header-tags-plus), adds IDs to post headings.
 * [WordPress for Web Apps](https://github.com/cferdinandi/web-app-starter-kit/), transform WordPress into a web app engine.
 * [WordPress Theme Options](https://github.com/cferdinandi/wp-theme-options/), adjust theme settings from the admin dashboard.
-* [Petfinder for WordPress](https://github.com/cferdinandi/petfinder-api-for-wordpress/), functions for working with the Petfinder API.
