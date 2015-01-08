@@ -30,16 +30,14 @@ p {
  * Hyperlink styling
  */
 
-a,
-a:visited {
+a {
 	color: $color-primary;
 	text-decoration: none;
 	word-wrap: break-word;
 }
 
 a:hover,
-a:focus,
-a:active {
+a:focus {
 	color: darken( $color-primary, 15% );
 	text-decoration: underline;
 }
