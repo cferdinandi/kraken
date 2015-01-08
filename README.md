@@ -16,6 +16,8 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v5.3.0 - January 7, 2014
+	* Added Sass line numbers.
 * v5.2.0 - December 16, 2014
 	* Added styling for the `abbr` tag.
 * v5.1.1 - November 20, 2014
