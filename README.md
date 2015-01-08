@@ -16,6 +16,8 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v5.5.0 - January 7, 2014
+	* Removed `:visited` and `:active` link styling to prevent specificity issues.
 * v5.4.0 - January 7, 2014
 	* Added `$color-info` variable.
 * v5.3.0 - January 7, 2014
