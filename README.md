@@ -16,6 +16,9 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v5.6.0 - January 31, 2014
+	* Remove opacity `filter` from `a:hover img` property. IE9+ support `opacity` so it's been deprecated.
+	* Changed the `display` property on `.list-inline > li` from `inline-block` to `inline`.
 * v5.5.0 - January 7, 2014
 	* Removed `:visited` and `:active` link styling to prevent specificity issues.
 * v5.4.0 - January 7, 2014
