@@ -1,5 +1,5 @@
 /**
- * Kraken v5.4.0
+ * Kraken v5.6.0
  * A lightweight front-end boilerplate, by Chris Ferdinandi.
  * http://github.com/cferdinandi/kraken
  * 
@@ -411,22 +411,20 @@ p {
  * Hyperlink styling
  */
 /* line 33, ../components/_typography.scss */
-a,
-a:visited {
+a {
   color: #0088cc;
   text-decoration: none;
   word-wrap: break-word;
 }
 
-/* line 40, ../components/_typography.scss */
+/* line 39, ../components/_typography.scss */
 a:hover,
-a:focus,
-a:active {
+a:focus {
   color: #005580;
   text-decoration: underline;
 }
 
-/* line 47, ../components/_typography.scss */
+/* line 45, ../components/_typography.scss */
 a img {
   border: none;
   background: none;
@@ -436,18 +434,17 @@ a img {
  * Prevents border/background on linked image hover.
  * Adds slight opacity.
  */
-/* line 56, ../components/_typography.scss */
+/* line 54, ../components/_typography.scss */
 a:hover img {
   border: none;
   background: none;
   opacity: 0.8;
-  filter: alpha(opacity=80);
 }
 
 /**
  * List styling
  */
-/* line 68, ../components/_typography.scss */
+/* line 65, ../components/_typography.scss */
 ul,
 ol,
 dl {
@@ -455,7 +452,7 @@ dl {
   margin-left: 2em;
 }
 
-/* line 75, ../components/_typography.scss */
+/* line 72, ../components/_typography.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -463,12 +460,12 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 82, ../components/_typography.scss */
+/* line 79, ../components/_typography.scss */
 dl {
   margin-left: 0;
 }
 
-/* line 86, ../components/_typography.scss */
+/* line 83, ../components/_typography.scss */
 dt {
   font-weight: bold;
 }
@@ -477,7 +474,7 @@ dt {
  * Removes list styling.
  * For semantic reasons, should only be used on unordered lists.
  */
-/* line 94, ../components/_typography.scss */
+/* line 91, ../components/_typography.scss */
 .list-unstyled {
   margin-left: 0;
   list-style: none;
@@ -486,7 +483,7 @@ dt {
 /**
  * Display lists on a single line.
  */
-/* line 103, ../components/_typography.scss */
+/* line 100, ../components/_typography.scss */
 .list-inline {
   list-style: none;
   margin-left: -0.5em;
@@ -494,9 +491,9 @@ dt {
   padding: 0;
 }
 
-/* line 110, ../components/_typography.scss */
+/* line 107, ../components/_typography.scss */
 .list-inline > li {
-  display: inline-block;
+  display: inline;
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
@@ -505,7 +502,7 @@ dt {
  * Heading styling for h1 through h6 elements.
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
  */
-/* line 122, ../components/_typography.scss */
+/* line 119, ../components/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: normal;
@@ -514,39 +511,39 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
-/* line 130, ../components/_typography.scss */
+/* line 127, ../components/_typography.scss */
 h1,
 .h1 {
   font-size: 1.5em;
   padding-top: .5em;
 }
 @media (min-width: 40em) {
-  /* line 130, ../components/_typography.scss */
+  /* line 127, ../components/_typography.scss */
   h1,
   .h1 {
     font-size: 1.75em;
   }
 }
 
-/* line 140, ../components/_typography.scss */
+/* line 137, ../components/_typography.scss */
 h2,
 .h2 {
   font-size: 1.3125em;
 }
 
-/* line 145, ../components/_typography.scss */
+/* line 142, ../components/_typography.scss */
 h3,
 .h3 {
   font-size: 1.1875em;
 }
 
-/* line 150, ../components/_typography.scss */
+/* line 147, ../components/_typography.scss */
 h4, h5, h6,
 .h4, .h5, .h6 {
   font-size: 1em;
 }
 
-/* line 155, ../components/_typography.scss */
+/* line 152, ../components/_typography.scss */
 h4,
 .h4 {
   text-transform: uppercase;
@@ -555,7 +552,7 @@ h4,
 /**
  * Lines, Quotes and Emphasis
  */
-/* line 165, ../components/_typography.scss */
+/* line 162, ../components/_typography.scss */
 hr {
   margin: 2em auto;
   border: 0;
@@ -563,17 +560,17 @@ hr {
   border-bottom: 0 solid #ffffff;
 }
 
-/* line 172, ../components/_typography.scss */
+/* line 169, ../components/_typography.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 176, ../components/_typography.scss */
+/* line 173, ../components/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 180, ../components/_typography.scss */
+/* line 177, ../components/_typography.scss */
 sub,
 sup {
   position: relative;
@@ -584,12 +581,12 @@ sup {
   margin-left: 0.25em;
 }
 
-/* line 190, ../components/_typography.scss */
+/* line 187, ../components/_typography.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 194, ../components/_typography.scss */
+/* line 191, ../components/_typography.scss */
 sub {
   bottom: -0.25em;
 }
@@ -597,7 +594,7 @@ sub {
 /**
  * Highlighting colors
  */
-/* line 201, ../components/_typography.scss */
+/* line 198, ../components/_typography.scss */
 ::-moz-selection {
   color: #ffffff;
   background: #0088cc;
@@ -610,7 +607,7 @@ sub {
 /**
  * Blockquotes
  */
-/* line 210, ../components/_typography.scss */
+/* line 207, ../components/_typography.scss */
 blockquote {
   border-left: 0.25em solid #e5e5e5;
   margin-bottom: 1.5625em;
@@ -618,12 +615,12 @@ blockquote {
   padding-right: 1.5625em;
 }
 
-/* line 217, ../components/_typography.scss */
+/* line 214, ../components/_typography.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 221, ../components/_typography.scss */
+/* line 218, ../components/_typography.scss */
 blockquote:before,
 blockquote:after,
 q:before,

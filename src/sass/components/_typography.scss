@@ -55,7 +55,6 @@ a:hover img {
 	border: none;
 	background: none;
 	opacity: 0.8;
-	filter: alpha(opacity=80);
 }
 
 
@@ -106,7 +105,7 @@ dt {
 }
 
 .list-inline > li {
-  display: inline-block;
+  display: inline;
   margin-left: calc-em(8px);
   margin-right: calc-em(8px);
 }
