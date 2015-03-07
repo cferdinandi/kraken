@@ -40,7 +40,6 @@ kraken
 |   |   |—— # Your documentation files
 |   |—— js/
 |   |   |—— detects
-|   |   |   |—— font-face.js
 |   |   |   |—— svg.js
 |   |   |   |—— # Your feature detection scripts
 |   |   |—— main
@@ -52,7 +51,6 @@ kraken
 |   |   |   |—— _code.scss
 |   |   |   |—— _forms.scss
 |   |   |   |—— _grid.scss
-|   |   |   |—— _iconfonts.scss
 |   |   |   |—— _overrides.scss
 |   |   |   |—— _print.scss
 |   |   |   |—— _reset.scss

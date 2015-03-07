@@ -16,6 +16,8 @@ Kraken is free to use under the [MIT License](http://gomakethings.com/mit/).
 
 Kraken uses [semantic versioning](http://semver.org/).
 
+* v6.0.0 - March 6, 2015
+	* Removed icon font support.
 * v5.6.1 - March 6, 2015
 	* Fixed false positive from Opera Mini in SVG detection.
 * v5.6.0 - January 31, 2014

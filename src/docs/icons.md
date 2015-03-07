@@ -1,21 +1,6 @@
 # Icons
 
-Kraken includes support for both SVG icons and icon fonts. As an [emerging best practice](http://css-tricks.com/svg-sprites-use-better-icon-fonts/), it's strongly recommended that you use SVG.
-
-***Note:*** *Because of namespacing conflicts, you cannot use SVG and icon fonts together by default. If you plan on using both, change the class names for at least one of them to avoid conflicts.*
-
-<nav>
-	<strong>In this section:</strong>
-	<ul>
-		<li><a data-scroll href="#svg">SVG</a></li>
-		<li><a data-scroll href="#icon-fonts">Icon Fonts</a></li>
-	</ul>
-</nav>
-
-
-<h2 id="svg">SVG Sprites</h2>
-
-Kraken's build system will generate an SVG sprite from individual SVG files. Alternatively, you can use [IcoMoon](https://icomoon.io/) to generate an SVG sprite for you.
+Kraken's build system will generate SVG sprites from individual SVG files.
 
 Include the contents of your SVG sprite as a hidden element directly after the opening `<body>` tag.
 
@@ -47,24 +32,4 @@ Kraken comes with SVG support detection that adds an `.svg` class to the `<html>
 <span class="icon-fallback-text">Tweet This</span>
 ```
 
-
-<h2 id="icon-fonts">Icon Fonts</h2>
-
-[IcoMoon](https://icomoon.io/) is an incredible app for building custom icon fonts.
-
-Add icons to your markup by applying the `.icon` class to an empty `<span>` tag, as well as the name of the icon prefixed with `.icon-`.
-
-```markup
-<span class="icon icon-logo"></span>
-```
-
-While icon fonts are well supported, some browsers&mdash;most notably Opera Mini&mdash;have issues with them. Kraken comes with icon font support detection that adds a `.font-face` class to the `<html>` element if supported.
-
-If an icon is more than decorative, always include supporting text in a `<span>` with the `.icon-fallback-text` class. This text will display when icon fonts are not supported by the browser, and is accessible screen readers.
-
-```markup
-<span class="icon icon-twitter"></span>
-<span class="icon-fallback-text">Tweet This</span>
-```
-
-Learn more about icon fonts in this [guide for beginners](http://gomakethings.com/icon-fonts).
+[Learn more about using SVG sprites.](https://css-tricks.com/svg-sprites-use-better-icon-fonts/)

@@ -34,20 +34,7 @@
 				<div class="row">
 					<div class="grid-two-thirds float-center">
 <h1 id="icons">Icons</h1>
-<p>Kraken includes support for both SVG icons and icon fonts. As an <a href="http://css-tricks.com/svg-sprites-use-better-icon-fonts/">emerging best practice</a>, it&#39;s strongly recommended that you use SVG.</p>
-<p><strong><em>Note:</em></strong> <em>Because of namespacing conflicts, you cannot use SVG and icon fonts together by default. If you plan on using both, change the class names for at least one of them to avoid conflicts.</em></p>
-<nav>
-    <strong>In this section:</strong>
-    <ul>
-        <li><a data-scroll href="#svg">SVG</a></li>
-        <li><a data-scroll href="#icon-fonts">Icon Fonts</a></li>
-    </ul>
-</nav>
-
-
-<h2 id="svg">SVG Sprites</h2>
-
-<p>Kraken&#39;s build system will generate an SVG sprite from individual SVG files. Alternatively, you can use <a href="https://icomoon.io/">IcoMoon</a> to generate an SVG sprite for you.</p>
+<p>Kraken&#39;s build system will generate SVG sprites from individual SVG files.</p>
 <p>Include the contents of your SVG sprite as a hidden element directly after the opening <code>&lt;body&gt;</code> tag.</p>
 <pre><code class="lang-markup">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; hidden&gt;
     &lt;symbol id=&quot;icon-logo&quot; viewBox=&quot;0 0 100 100&quot;&gt;
@@ -69,18 +56,7 @@
 &lt;/svg&gt;
 &lt;span class=&quot;icon-fallback-text&quot;&gt;Tweet This&lt;/span&gt;
 </code></pre>
-<h2 id="icon-fonts">Icon Fonts</h2>
-
-<p><a href="https://icomoon.io/">IcoMoon</a> is an incredible app for building custom icon fonts.</p>
-<p>Add icons to your markup by applying the <code>.icon</code> class to an empty <code>&lt;span&gt;</code> tag, as well as the name of the icon prefixed with <code>.icon-</code>.</p>
-<pre><code class="lang-markup">&lt;span class=&quot;icon icon-logo&quot;&gt;&lt;/span&gt;
-</code></pre>
-<p>While icon fonts are well supported, some browsers&mdash;most notably Opera Mini&mdash;have issues with them. Kraken comes with icon font support detection that adds a <code>.font-face</code> class to the <code>&lt;html&gt;</code> element if supported.</p>
-<p>If an icon is more than decorative, always include supporting text in a <code>&lt;span&gt;</code> with the <code>.icon-fallback-text</code> class. This text will display when icon fonts are not supported by the browser, and is accessible screen readers.</p>
-<pre><code class="lang-markup">&lt;span class=&quot;icon icon-twitter&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;icon-fallback-text&quot;&gt;Tweet This&lt;/span&gt;
-</code></pre>
-<p>Learn more about icon fonts in this <a href="http://gomakethings.com/icon-fonts">guide for beginners</a>.</p>
+<p><a href="https://css-tricks.com/svg-sprites-use-better-icon-fonts/">Learn more about using SVG sprites.</a></p>
 					</div><!-- /.grid-two-thirds.float-center -->
 				</div><!-- /.row -->
 
@@ -108,7 +84,7 @@
 								<li><a href="typography.html">Typography</a></li>
 								<li><a href="buttons.html">Buttons</a></li>
 								<li><a href="forms.html">Forms</a></li>
-								<li><a href="icons.html">SVG Sprites &amp; Icon Fonts</a></li>
+								<li><a href="icons.html">SVG Sprites</a></li>
 								<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
 							</ul>
 						</div>

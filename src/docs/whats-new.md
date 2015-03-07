@@ -1,4 +1,9 @@
-# What's new in version 5?
+# What's new in version 6?
+
+Kraken 6 brings only one major change: dropped icon font support. SVG is the way forward.
+
+
+## More awesome features (added in version 5)
 
 Most of the changes from Kraken 4 to Kraken 5 were class name changes and updates to the build process that break backwards compatibility but provide a more flexible foundation for front-end web developers.
 
@@ -18,7 +23,7 @@ Most of the changes from Kraken 4 to Kraken 5 were class name changes and update
 </dl>
 
 
-## More awesome features (added in version 4)
+## Even more awesome features (added in version 4)
 
 <dl>
 	<dt>SVG Support</dt>
