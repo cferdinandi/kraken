@@ -4,25 +4,19 @@
  */
 
 body {
-	font-family: $font-primary;
-	font-size: $font-size-base;
-	line-height: 1.5;
-	color: $color-black;
 	background: $color-white;
+	color: $color-black;
+	font-family: $font-primary;
+	font-size: $font-size;
+	line-height: 1.5;
 
 	@media (min-width: $bp-medium) {
 		line-height: 1.5625;
 	}
-
-	@if $font-size-base != $font-size-xlarge-screens {
-		@media (min-width: $bp-xlarge) {
-			font-size: $font-size-xlarge-screens;
-		}
-	}
 }
 
 p {
-	margin-bottom: $spacing;
+	margin: 0 0 $spacing;
 }
 
 
@@ -31,13 +25,23 @@ p {
  */
 
 a {
+	background-color: transparent;
 	color: $color-primary;
 	text-decoration: none;
 	word-wrap: break-word;
 }
 
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+	outline: 0;
+}
+
 a:hover,
-a:focus {
+a:focus,
+a:active {
 	color: darken( $color-primary, 15% );
 	text-decoration: underline;
 }
@@ -47,14 +51,23 @@ a img {
 	background: none;
 }
 
+
 /**
- * Prevents border/background on linked image hover.
- * Adds slight opacity.
+ * Creates block-level links
  */
-a:hover img {
-	border: none;
-	background: none;
-	opacity: 0.8;
+
+a.link-block {
+	color: $color-black;
+	display: block;
+	text-decoration: none;
+}
+
+.link-block-styled {
+	@extend a;
+
+	.link-block:hover & {
+		@extend a:hover;
+	}
 }
 
 
@@ -63,10 +76,9 @@ a:hover img {
  */
 
 ul,
-ol,
-dl {
-	margin-bottom: $spacing;
-	margin-left: calc-em(32px);
+ol {
+	margin: 0 0 $spacing calc-em(32px);
+	padding: 0;
 }
 
 ul ul,
@@ -76,8 +88,14 @@ ol ul {
 	margin-bottom: 0;
 }
 
-dl {
-	margin-left: 0;
+dl,
+dd {
+	margin: 0;
+	padding: 0;
+}
+
+dd {
+	margin-bottom: $spacing;
 }
 
 dt {
@@ -117,10 +135,10 @@ dt {
  */
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.2;
 	font-weight: normal;
-	margin-bottom: 1em;
-	padding-top: 1em;
+	line-height: 1.2;
+	margin: 0 0 1em;
+	padding: 1em 0 0;
 	word-wrap: break-word;
 }
 
@@ -166,52 +184,84 @@ hr {
 	border-bottom: 0 solid $color-white;
 }
 
+b,
 strong {
 	font-weight: bold;
 }
 
+i,
 em {
 	font-style: italic;
 }
 
-sub,
-sup {
-	position: relative;
-	font-size: 85%;
-	font-weight: bold;
-	line-height: 0;
-	vertical-align: baseline;
-	margin-left: calc-em(4px);
-}
-
-sup {
-	top: calc-em(-8px);
-}
-
-sub {
-	bottom: calc-em(-4px);
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+	border-bottom: calc-em(1px) dotted;
 }
 
 /**
- * Highlighting colors
+ * Address styling not present in Safari and Chrome.
  */
-::selection {
-	color: $color-white;
-	background: $color-primary;
+dfn {
+	font-style: italic;
 }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+	background: #ff0;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
 
 /**
  * Blockquotes
  */
 
 blockquote {
-	border-left: calc-em(4px) solid $color-gray-light;
-	margin-bottom: $spacing;
-	padding-left: $spacing;
-	padding-right: $spacing;
+	font-size: calc-em(19px);
+	font-style: italic;
+	margin: 0 0 $spacing;
+	padding-left: calc-em(16px, 19px);
+	padding-right: calc-em(16px, 19px);
+
+	cite {
+		color: $color-gray-dark;
+		font-size: calc-em(16px, 19px);
+		padding-top: calc-em(16px);
+	}
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
 
@@ -220,5 +270,4 @@ blockquote:after,
 q:before,
 q:after {
 	content: '';
-	content: none;
 }

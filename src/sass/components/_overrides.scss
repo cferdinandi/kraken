@@ -47,6 +47,12 @@
 	text-align: left;
 }
 
+@media (min-width: $bp-medium) {
+	.text-right-medium {
+		text-align: right;
+	}
+}
+
 
 /**
  * Floats
@@ -70,10 +76,6 @@
 /**
  * Margins
  */
-
-.no-margin {
-	margin: 0;
-}
 
 .no-margin-top {
 	margin-top: 0;
@@ -103,10 +105,6 @@
 /**
  * Padding
  */
-
-.no-padding {
-	padding: 0;
-}
 
 .no-padding-top {
 	padding-top: 0;

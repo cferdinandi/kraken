@@ -1,0 +1,139 @@
+/**
+ * @section Normalize.css
+ * Normalize.css base with custom code.
+ * Additional normalize styles incorporated throughout components.
+ * @link http://necolas.github.io/normalize.css/
+ */
+
+ /**
+  * Mobile screen resizing
+  * @link http://dev.w3.org/csswg/css-device-adapt/
+  */
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+   @-moz-viewport { width: device-width; zoom: 1.0; }
+	@-ms-viewport { width: device-width; zoom: 1.0; }
+	 @-o-viewport { width: device-width; zoom: 1.0; }
+		@viewport { width: device-width; zoom: 1.0; }
+
+/**
+ * Add box sizing to everything
+ * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+
+/**
+ * 1. Set default font family to default.
+ * 2. Force scrollbar display to prevent jumping on pages.
+ * 3. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+	font-family: $font-primary; /* 1 */
+	overflow-y: scroll; /* 2 */
+	text-size-adjust: 100%; /* 3 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+	margin: 0;
+}
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+cite,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+	display: inline-block; /* 1 */
+	vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/**
+ * Prevent img and video elements from spilling outside of the page on smaller screens.
+ */
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+/**
+ * Prevent iframe, object, and embed elements from spilling outside of the page on smaller screens.
+ * height: auto causes iframes to smush, so it's omitted here.
+ */
+iframe,
+object,
+embed {
+	max-width: 100%;
+}
+
+/**
+ * Hide the template element in IE, Safari, and Firefox < 22.
+ */
+template {
+	@extend [hidden];
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 8/9/10.
+ * 2. Prevents IE from making scaled images look like crap
+ */
+img {
+	border: 0; /* 1 */
+	-ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/**
+ * Address inconsistent margin.
+ */
+figure {
+	margin: 0;
+}

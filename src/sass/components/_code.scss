@@ -3,34 +3,37 @@
  * Styling for code and preformatted text.
  */
 
-code,
-pre {
+ code,
+ kbd,
+ pre,
+ samp {
+ 	border-radius: calc-em(1px);
 	font-family: $font-monospace;
 	font-size: calc-em(14px);
-	border-radius: calc-em(1px);
 }
 
 code {
-	color: $color-code;
 	background-color: lighten( $color-gray-light, 7% );
+	color: $color-code;
 	padding: calc-em(4px);
 }
 
 pre {
-	display: block;
-	margin-bottom: $spacing;
-	line-height: 1.5;
 	background-color: lighten( $color-gray-light, 6% );
+	display: block;
+	line-height: 1.5;
+	margin-bottom: $spacing;
+	overflow: auto;
 	padding: calc-em(13px);
 	tab-size: 4;
 	white-space: pre-wrap;
 	word-break: break-all;
-}
 
-pre code {
-	font-size: 1em;
-	padding: 0;
-	color: inherit;
-	background-color: transparent;
-	border: 0;
+	code {
+		background-color: transparent;
+		border: 0;
+		color: inherit;
+		font-size: 1em;
+		padding: 0;
+	}
 }

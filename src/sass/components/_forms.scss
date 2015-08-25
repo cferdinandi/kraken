@@ -8,30 +8,75 @@ fieldset {
 	margin-bottom: $spacing;
 }
 
+fieldset {
+	border: 0;
+	padding: 0;
+}
+
 legend,
 label {
 	display: block;
 	font-weight: normal;
+	margin: 0 0 calc-em(5px);
 	padding: 0;
-	margin-bottom: calc-em(5px);
+}
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: lighten( $color-black, 18% ); /* 1 */
+	font: inherit; /* 2 */
+	margin: 0; /* 3 */
+	padding: calc-em(5px);
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+	overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+	text-transform: none;
 }
 
 input,
 textarea,
 select {
-	display: block;
-	width: 100%;
-	font: inherit;
-	line-height: 1.5;
-	color: lighten( $color-black, 18% );
-	margin-bottom: calc-em(19px);
-	padding: calc-em(5px);
 	border: calc-em(1px) solid lighten( $color-gray-dark, 22% );
 	border-radius: calc-em(1px);
+	display: block;
+	line-height: 1.5;
+	margin-bottom: calc-em(19px);
+	width: 100%;
 
 	@media (min-width: $bp-medium) {
 		line-height: 1.5625;
 	}
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+	font-weight: bold;
 }
 
 form button,
@@ -41,17 +86,28 @@ form .button {
 
 textarea {
 	height: 12em;
+	overflow: auto;
 }
 
 input[type="image"],
 input[type="checkbox"],
 input[type="radio"] {
-	display: inline-block;
-	width: auto;
-	height: auto;
-	padding: 0;
-	margin-bottom: calc-em(5px);
 	cursor: pointer;
+	display: inline-block;
+	height: auto;
+	margin-bottom: calc-em(5px);
+	padding: 0;
+	width: auto;
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
 }
 
 input:focus,
@@ -76,8 +132,8 @@ select:focus {
  */
 .input-inline {
 	display: inline-block;
-	width: auto;
 	vertical-align: middle;
+	width: auto;
 }
 
 
@@ -87,4 +143,60 @@ select:focus {
 .input-condensed {
 	padding: calc-em(1px) calc-em(5px);
 	font-size: calc-em(15px);
+}
+
+
+/**
+ * Search
+ */
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+
+/**
+ * Create rounded search bar
+ */
+.input-search {
+	width: 85%;
+	padding-left: calc-em(15px);
+	padding-right: calc-em(40px);
+	border-radius: calc-em(21px);
+	transition: width 300ms ease-in;
+
+	@media (min-width: $bp-medium) {
+		width: 65%;
+	}
+}
+
+
+/**
+ * Special styling for search icon as button
+ */
+.btn-search {
+	display: inline;
+	color: $color-gray-dark;
+	border: none;
+	background: none;
+	margin-left: calc-em(-40px);
+	margin-bottom: 0;
+
+	.icon {
+		fill: $color-gray-dark;
+	}
+
+	&:hover {
+		color: darken( $color-gray-dark, 15% );
+
+		.icon {
+			fill: darken( $color-gray-dark, 15% );
+		}
+	}
 }
