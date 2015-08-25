@@ -114,7 +114,6 @@
 		// Get the container
 		var href = settings.urlPrefix ? location.pathname.split( settings.urlPrefix )[1] : location.pathname;
 		var nav = document.querySelector( settings.selector + ' a[href^="' + href + '"]' );
-		console.log(location.pathname);
 		if ( !nav ) return;
 
 		// Add class to active nav
