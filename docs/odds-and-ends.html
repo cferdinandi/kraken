@@ -60,77 +60,128 @@
 						</nav>
 					</header>
 
-				<main class="grid-three-fourths padding-top sticky-body" data-toc-content><h1 id="kraken">Kraken</h1>
-<p>Kraken is a lightweight, mobile-first boilerplate for front-end web developers.</p>
-<h2 id="what-s-included-">What&#39;s included?</h2>
-<p>Designed to be lightweight and style agnostic, Kraken includes just the essentials.</p>
-<h3 id="essential-components">Essential Components</h3>
-<p>Lightweight, style-agnostic components to kick-start your next project.</p>
+				<main class="grid-three-fourths padding-top sticky-body" data-toc-content><h1 id="odds-ends">Odds &amp; Ends</h1>
+<h2 id="add-ons">Add-Ons</h2>
+<p>Extend Kraken with add-ons built to be dropped right in. Kind of like Legos for frontend developers.</p>
+<h3 id="boilerplates">Boilerplates</h3>
 <ul>
-<li>Normalize.css</li>
-<li>A responsive, mobile-first grid</li>
-<li>A well-designed, fluid typographic scale</li>
-<li>CSS buttons</li>
-<li>Simple table styling, with pure CSS responsive tables</li>
-<li>Common form components</li>
+<li><a href="https://github.com/cferdinandi/keel">Keel.</a> A barebones starter theme for WordPress developers.</li>
+<li><a href="https://github.com/cferdinandi/buoy">Buoy.</a> A lightweight collection of helper methods for getting stuff done in native JavaScript.</li>
 </ul>
-<h3 id="developer-tools">Developer Tools</h3>
-<p>Kraken is powered by <a href="http://gulpjs.com/">Gulp.js</a>, a build system that minifies and concatenates your <a href="http://sass-lang.com/">Sass</a> and JavaScript, auto-prefixes your CSS, runs <a href="http://jasmine.github.io/">unit tests</a> on your scripts, optimizes your SVGs, and creates SVG sprites.</p>
-<p>It also includes a style guide generator to help you quickly bring your team or clients up-to-speed.</p>
-<h3 id="add-ons">Add-Ons</h3>
-<p>While the base boilerplate is deliberately lightweight, <a href="odds-and-ends.html#add-ons">a growing collection of add-ons</a> lets you make Kraken as robust—or simple—as you want it to be. Create custom-built sites and applications faster.</p>
+<h3 id="interactive-content">Interactive Content</h3>
+<ul>
+<li><a href="https://github.com/cferdinandi/smooth-scroll/">Smooth Scroll.</a> Animate scrolling to anchor links.</li>
+<li><a href="https://github.com/cferdinandi/gumshoe">Gumshoe.</a> A framework-agnostic scrollspy script.</li>
+<li><a href="https://github.com/cferdinandi/astro/">Astro.</a> A collection of responsive, mobile-first navigation patterns.</li>
+<li><a href="https://github.com/cferdinandi/drop/">Drop.</a> Mobile-friendly dropdown menus.</li>
+<li><a href="https://github.com/cferdinandi/houdini/">Houdini.</a> A progressively enhanced expand-and-collapse widget and accordion.</li>
+<li><a href="https://github.com/cferdinandi/tabby/">Tabby.</a> Lightweight toggle-tabs.</li>
+<li><a href="https://github.com/cferdinandi/modals/">Modals.</a> Simple, mobile-friendly modal dialogue windows.</li>
+<li><a href="https://github.com/cferdinandi/form-saver/">Form Saver.</a> Let users save, reuse, and delete form data.</li>
+<li><a href="https://github.com/cferdinandi/x-ray/">X-Ray.</a> Let users toggle password visibility.</li>
+<li><a href="https://github.com/cferdinandi/right-height/">Right Height</a> Set variable content containers to equal height.</li>
+<li><a href="https://github.com/cferdinandi/sticky-footer/">Sticky Footer</a> Dynamic, responsive sticky footers.</li>
+</ul>
+<h3 id="css-components">CSS Components</h3>
+<ul>
+<li><a href="https://github.com/cferdinandi/social-sharing/">Social Sharing.</a> Links and buttons without the bloat.</li>
+<li><a href="https://github.com/cferdinandi/snapshot/">Snapshot.</a> Basic image styling.</li>
+<li><a href="https://github.com/cferdinandi/progress-bars/">Progress Bars.</a> Lightweight CSS progress bars.</li>
+<li><a href="https://github.com/cferdinandi/alerts/">Alerts.</a> Simple alert messages.</li>
+<li><a href="https://github.com/cferdinandi/labels/">Labels.</a> Lightweight CSS labels.</li>
+</ul>
+<h3 id="other-people-s-stuff">Other People&#39;s Stuff</h3>
+<ul>
+<li><a href="https://github.com/toddmotto/fluidvids">FluidVids.js.</a> A lightweight javascript snippet for fluid iframes.</li>
+<li><a href="http://prismjs.com/">Prism.</a> A lightweight syntax highlighter by Lea Verou.</li>
+<li><a href="https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess">.htaccess.</a> Best practice server rules for making web pages fast and secure.</li>
+</ul>
 <hr>
 
 
-<h2 id="the-kraken-approach">The Kraken Approach</h2>
-<p>Kraken is a lightweight boilerplate for front-end web developers. It&#39;s built to be flexible and modular, with performance and accessibility in mind.</p>
-<h3 id="ugly-on-purpose">Ugly on purpose</h3>
-<p>Out-of-the-box, Kraken is a bit ugly. That&#39;s intentional.</p>
-<p>Kraken isn&#39;t supposed to be a finished product. It&#39;s a starting point that you can adapt to any project you&#39;re working on. Add components. Remove components. Tweak the colors and font stack. Make Kraken your own.</p>
-<h3 id="mobile-first">Mobile-First</h3>
-<p>Kraken is built mobile-first. The base structure is a fully-fluid, single-column layout. It uses <code>@media (min-width: whatever)</code> to add a grid-based layout to bigger screens.</p>
-<p>Think of it as progressive enhancement for the layout.</p>
-<p>Kraken also includes feature detection for things like icon fonts and SVG. Just like the layout, those are served to browsers that support them, while fallback text is supplied to older and less capable browsers.</p>
-<h3 id="object-oriented-css">Object Oriented CSS</h3>
-<p>Kraken takes an <a href="http://www.slideshare.net/stubbornella/object-oriented-css">OOCSS approach</a> to web development.</p>
-<p>Throughout the stylesheet, you&#39;ll see base styles and modifying styles. For example, <code>.btn</code> sets the default button styles and behavior, while <code>.btn-secondary</code> changes the color and <code>.btn-large</code> changes the size. A big button with secondary colors would look like this:</p>
-<button class="btn btn-secondary btn-large">A Big Button</button>
-
-<pre><code class="lang-markup">&lt;button class=&quot;btn btn-secondary btn-large&quot;&gt;A Big Button&lt;/button&gt;
+<h2 id="generating-documentation">Generating Documentation</h2>
+<p>Kraken ships with a simple documentation generator powered by <a href="http://gulpjs.com">Gulp.js</a>. This feature requires you to <a href="working-with-the-source-files.html">work with the source files</a>.</p>
+<p>Documentation files can be found under <code>src</code> &gt; <code>docs</code>, and compile to <code>docs</code>.</p>
+<h3 id="how-to-create-docs">How to Create Docs</h3>
+<p>Add HTML or markdown (<code>.md</code> or <code>.markdown</code>) files to your <code>docs</code> folder in <code>src</code>.</p>
+<p>The <code>_templates</code> directory in <code>src</code> contains the <code>_header.html</code> and <code>_footer.html</code> templates. These are automatically added to the beginning and end of each documentation page. You can also add your own templates to the <code>_templates</code> directory. Include template files in your docs by writing <code>&commat;&commat;include(&#39;path-to-file&#39;)</code> on its own line in your markup (or markdown).</p>
+<p>Files placed in the <code>assets</code> directory will be moved over as-is to the <code>docs</code> directory. Kraken will also add a copy of your <code>dist</code> files so you can use them in your documentation.</p>
+<p>Documentation is automatically created when you <a href="setup.html#working-with-the-source-files">run of the Gulp tasks</a>.</p>
+<h3 id="creating-a-table-of-contents">Creating a table of contents</h3>
+<p>The build system includes <code>toc.js</code>, a custom script for dynamically generating tables of contents based on page headers. It&#39;s already configured for use in the <code>_footer.html</code> template.</p>
+<ol>
+<li>Add an empty <code>div</code> with the <code>.js-toc</code> class wherever you want your table of contents to get generated.</li>
+<li>Add the <code>.js-toc-content</code> class to the section you want to generate a table of contents from. By default, the script grabs any <code>h2</code> with an <code>id</code> and creates a link to it.</li>
+<li>Initialize the script to create your table of contents, and to pass in your own options.</li>
+</ol>
+<p><strong>Markup</strong></p>
+<pre><code class="lang-markup">&lt;div data-toc&gt;&lt;/div&gt;
+&lt;div data-toc-content&gt;
+    &lt;h1&gt;Page Title&lt;/h1&gt;
+    &lt;h2&gt;Section&lt;/h2&gt;
+    ...
+    &lt;h2&gt;Another Section&lt;/h2&gt;
+    ...
+&lt;/div&gt;
 </code></pre>
-<p>Classes can be mixed, matched and reused throughout a project.</p>
+<p><strong>JavaScript</strong></p>
+<pre><code class="lang-javascript">tableOfContents.init({
+    container: &#39;[data-toc]&#39;, // The selector for the table of contents (uses document.querySelector)
+    selectors: &#39;[data-toc-content] h2&#39;,  // The selector for the section headers (uses document.querySelectorAll)
+    heading: &#39;Contents&#39;, // The heading for the table of contents
+    headingType: &#39;h2&#39;, // The heading type for the table of contents
+    headingClass: &#39;&#39;, // The class(es) to add to the table of contents heading
+    navClass: &#39;&#39;, // The class(es) to add to the navigation &lt;ul&gt; element
+    linkClass: &#39;&#39;, // The class(es) to add to the navigation &lt;a&gt; elements
+    initClass: &#39;js-table-of-contents&#39;, // The class(es) to add to the &lt;html&gt; element on init
+    callback: function () {} // A callback to run after the table of contents is rendered
+});
+</code></pre>
+<h3 id="automatically-highlighting-the-active-navigation-link">Automatically highlighting the active navigation link</h3>
+<p>The build system includes <code>highlight-active-nav.js</code>, a custom script for dynamically highlighting the active link in the navigation. It&#39;s already configured for use in the <code>_footer.html</code> template.</p>
+<p>Simply add the <code>.js-nav-highlight</code> class to the navigation list, and initialize the script. You can pass in your own options and settings.</p>
+<p><strong>Markup</strong></p>
+<pre><code class="lang-markup">&lt;ul data-nav-highlight&gt;
+    &lt;li&gt;&lt;a href=&quot;link1.html&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;link2.html&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;link3.html&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p><strong>JavaScript</strong></p>
+<pre><code class="lang-javascript">highlightActiveNav.init({
+    selector: &#39;[data-nav-highlight]&#39;, // The selector for the nav (uses document.querySelector)
+    activeClass: &#39;nav-active&#39;, // Class(es) to add to the active navigation link
+    urlPrefix: null, // If the base domain isn&#39;t root, add the prefix
+    callback: function () {} // Callback to run after the nav is highlighted
+});
+</code></pre>
+<h3 id="why-not-use-an-existing-documentation-tool-">Why not use an existing documentation tool?</h3>
+<p>There are a ton of great CSS and JS documentation tools available. I explored using <a href="http://warpspire.com/kss/">KSS</a>, <a href="http://trulia.github.io/hologram/">Hologram</a>, and a few others.</p>
+<p>I found myself frustrated by the lack of control over the layout, the clutter added to the stylesheet, and the complexity in getting setup.</p>
+<p>I decided creating my own documentation tool was a better fit for my needs. Obviously, feel free to use the documentation tool that best fits your needs.</p>
 <hr>
 
 
-<h2 id="what-s-new-in-kraken-7-">What&#39;s new in Kraken 7?</h2>
-<dl>
-    <dt>Switched to Normalize.css</dt>
-    <dd><a href="http://meyerweb.com/eric/tools/css/reset/">Meyer&#39;s CSS reset</a> is great, but it can create styling issues when doing things like <a href="http://gomakethings.com/inlining-critical-css-for-better-web-performance/">inlining critical path CSS</a>. <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> is a lightweight alternative that nudges and tweaks browser styles instead of resetting everything to zero.</dd>
-
-    <dt>Table Styles</dt>
-    <dd>In previous versions of Kraken, table styling was an optional add-on. Now, they&#39;re baked right in, and include CSS-only responsive tables for smaller viewports.</dd>
-
-    <dt>Search Form Styling</dt>
-    <dd>Kraken now includes <a href="components.html#search-forms">classes for custom search form styles</a>.</dd>
-
-    <dt>Switched to LibSass</dt>
-    <dd>Now that <a href="http://sass-lang.com/libsass">LibSass</a> supports most Sass 3 APIs, it&#39;s time to make the switch. This gets you faster builds, and no Ruby dependency.</dd>
-
-    <dt>Removed directionless space nudge-and-tweak classes</dt>
-    <dd>The <code>.no-margin</code> and <code>.no-padding</code> classes are gone. You should use <code>.no-margin-padding</code>, <code>.no-margin-bottom</code>, <a href="components.html#alignment-spacing-visibility">and so on</a> to suite your needs.</dd>
-</dl>
-
+<h2 id="built-with-kraken">Built with Kraken</h2>
+<p>Build a site with Kraken? <a href="mailto:&#104;&#101;llo&#64;&#103;om&#97;ke&#116;h&#105;&#110;&#103;s.&#99;o&#109;">Let me know!</a></p>
+<ul>
+<li><a href="https://digital.hbs.edu/">Harvard Business School Digital Initiative</a></li>
+<li><a href="http://gomakethings.com/">Go Make Things</a></li>
+<li><a href="http://www.pawsnewengland.com/">PAWS New England</a></li>
+<li><a href="http://nicksimson.com/">Nick Simson</a></li>
+<li><a href="http://www.shiftit.com.br/">Shift it</a></li>
+<li><a href="http://www.benjaminobdyke.com/">Benjamin Obdyke</a></li>
+<li><a href="http://osasu.com/">Osasu</a></li>
+<li><a href="http://nicoleburley.com/">Nicole Burley Coaching</a></li>
+<li><a href="http://poetreatapp.com/">Poetreat</a></li>
+<li><a href="http://barryzimmerman.co.uk/">Barry Zimmerman</a></li>
+<li><a href="http://exisweb.net/">Exis</a></li>
+</ul>
 <hr>
 
 
-<h2 id="browser-compatibility">Browser Compatibility</h2>
-<p>The web is for everyone, but <a href="http://bradfrostweb.com/blog/mobile/support-vs-optimization/">support is not the same as optimization</a>.</p>
-<p>Rather than trying to provide the same level of functionality for older browsers, Kraken uses progressive enhancement to serve a basic experience to all browsers (even Netscape and IE 5). Newer browsers that support modern APIs and techniques get a better layout, more visually attractive elements, and an enhanced experience.</p>
-<p>Kraken works in all browsers, but it&#39;s optimized for modern browsers and IE 9+.</p>
-<h3 id="vendor-prefixing">Vendor Prefixing</h3>
-<p>Kraken uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, and is configured to only add prefixes if required by the last two versions of a browser.</p>
-<p>If a feature isn&#39;t working (for example, the grid does not work in Firefox 28 and lower), it may simply need a vendor prefix. You can add these manually, or adjust the Autoprefixer settings in <code>gulpfile.js</code> if you&#39;re working with the source code.</p>
-<p>For more details on when support for specific features were added to different browsers, consult <a href="http://caniuse.com/">Can I Use</a>.</p>
+<h2 id="support">Support</h2>
+<p>If you have a question, find a bug, or just want to say hi, please open an <a href="https://github.com/cferdinandi/kraken/issues">issue on GitHub</a>.</p>
 					</section><!-- /.container -->
 
 					<footer class="bg-muted padding-top padding-bottom">

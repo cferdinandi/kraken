@@ -1,0 +1,81 @@
+/**
+ * @section Tables
+ * Styling for tables
+ */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: $spacing;
+	max-width: 100%;
+	width: 100%;
+}
+
+th,
+td {
+	text-align: left;
+	padding: calc-em(8px);
+}
+
+th {
+	// background-color: lighten( $color-gray-light, 5% );
+	border-bottom: calc-em(2px) solid $color-gray-light;
+	font-weight: bold;
+	vertical-align: bottom;
+}
+
+td {
+	border-top: calc-em(1px) solid $color-gray-light;
+	vertical-align: top;
+}
+
+/**
+ * Adds zebra striping
+ */
+.table-striped tbody tr:nth-child(odd) {
+	background-color: lighten( $color-gray-light, 7% );
+}
+
+
+/**
+ * Reduces padding on condensed tables
+ */
+.table-condensed th,
+.table-condensed td, {
+	padding: calc-em(4px);
+}
+
+
+/**
+ * Pure CSS responsive tables
+ * Adds label to each cell using the [data-label] attribute
+ * @link https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/
+ */
+@media (max-width: $bp-medium) {
+	.table-responsive {
+
+		thead {
+			display: none;
+			visibility: hidden;
+		}
+
+		tr {
+			border-top: calc-em(1px) solid lighten( $color-gray-light, 3% );
+			display: block;
+			padding: calc-em(8px);
+		}
+
+		td {
+			border: 0;
+			display: block;
+			padding: calc-em(4px);
+
+			&:before {
+				content: attr(data-label);
+				display: block;
+				font-weight: bold;
+			}
+		}
+
+	}
+}

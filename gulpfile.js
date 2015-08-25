@@ -25,7 +25,7 @@ var uglify = require('gulp-uglify');
 var karma = require('gulp-karma');
 
 // Styles
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var minify = require('gulp-minify-css');
 
@@ -57,7 +57,10 @@ var paths = {
 		input: 'src/svg/*',
 		output: 'dist/svg/'
 	},
-	static: 'src/static/**',
+	images: {
+		input: 'src/img/*',
+		output: 'dist/img/'
+	},
 	test: {
 		input: 'src/js/**/*.js',
 		karma: 'test/karma.conf.js',
@@ -129,10 +132,8 @@ gulp.task('build:styles', ['clean:dist'], function() {
 	return gulp.src(paths.styles.input)
 		.pipe(plumber())
 		.pipe(sass({
-			style: 'expanded',
-			lineNumbers: true,
-			noCache: true,
-			'sourcemap=none': true
+			outputStyle: 'expanded',
+			sourceComments: true
 		}))
 		.pipe(flatten())
 		.pipe(prefix({
@@ -166,19 +167,14 @@ gulp.task('build:svgs', ['clean:dist'], function () {
 			}
 		}))
 		.pipe(svgmin())
-		.pipe(svgstore({
-			fileName: 'icons.svg',
-			prefix: 'icon-',
-			inlineSvg: true
-		}))
 		.pipe(gulp.dest(paths.svgs.output));
 });
 
-// Copy static files into output folder
-gulp.task('copy:static', ['clean:dist'], function() {
-	return gulp.src(paths.static)
+// Copy image files into output folder
+gulp.task('build:images', ['clean:dist'], function() {
+	return gulp.src(paths.images.input)
 		.pipe(plumber())
-		.pipe(gulp.dest(paths.output));
+		.pipe(gulp.dest(paths.images.output));
 });
 
 // Lint scripts
@@ -266,7 +262,7 @@ gulp.task('refresh', ['compile', 'docs'], function () {
 gulp.task('compile', [
 	'lint:scripts',
 	'clean:dist',
-	'copy:static',
+	'build:images',
 	'build:scripts',
 	'build:svgs',
 	'build:styles'

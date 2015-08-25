@@ -6,23 +6,21 @@
  */
 
 /**
- * Hide icons by default to prevent blank spaces in unsupported browsers
+ * Basic styles
+ * Only displayed when SVGs are supported to avoid large empty spaces
  */
 .icon {
-    display: inline-block;
-    fill: currentColor;
-    height: 0;
-    width: 0;
+	display: inline-block;
+	fill: currentColor;
+	height: 0;
+	width: 0;
+
+	.svg & {
+		height: 1em;
+		width: 1em;
+	}
 }
 
-/**
- * Display icons when browser supports SVG.
- * Inherit height, width, and color.
- */
-.svg .icon {
-    height: 1em;
-    width: 1em;
-}
 
 /**
  * Hide fallback text if browser supports SVG

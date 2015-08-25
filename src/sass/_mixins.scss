@@ -30,7 +30,7 @@
 	$px: strip-unit($px);
 	$base: strip-unit($base);
 	@if $px == 1 {
-		@return 0.0725em;
+		@return 1px;
 	}
 	@return ($px / $base) * 1em;
 }
