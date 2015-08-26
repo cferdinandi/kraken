@@ -47,7 +47,7 @@ Kraken is built mobile-first. The base structure is a fully-fluid, single-column
 
 Think of it as progressive enhancement for the layout.
 
-Kraken also includes feature detection for things like icon fonts and SVG. Just like the layout, those are served to browsers that support them, while fallback text is supplied to older and less capable browsers.
+Kraken also includes feature detection for things like SVG support. Just like the layout, those are served to browsers that support them, while fallback text is supplied to older and less capable browsers.
 
 
 ### Object Oriented CSS
