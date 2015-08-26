@@ -82,6 +82,12 @@ a.nav-active {
 	}
 }
 
+@media (min-width: 80em) {
+	.sticky-header {
+		width: 17.75em;
+	}
+}
+
 
 /**
  * Grid Highlighting
