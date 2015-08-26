@@ -568,7 +568,7 @@ Add the `.table-condensed` class for more compact tables.
 
 ### Zebra Striping
 
-Add zebra striping for easier readability with the `.table-striped` class
+Add zebra striping for easier readability with the `.table-striped` class.
 
 <table class="table-striped">
 	<thead>

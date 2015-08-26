@@ -25,8 +25,6 @@ kraken
 |   |—— css/
 |   |   |—— main.css
 |   |   |—— main.min.css
-|   |—— fonts/
-|   |   |—— # Your icon font files
 |   |—— img/
 |   |   |—— # Your image files
 |   |—— js/
@@ -124,7 +122,7 @@ Kraken's Sass files are located in `src` > `sass`. Kraken's build system generat
 
 #### `_config.scss`
 
-The `_config.scss` file contains variables for all of the colors, font stacks, breakpoints, and sizing used in Kraken. It also contains settings for the grid, and if you're using an icon font, the unicode character values and colors.
+The `_config.scss` file contains variables for all of the colors, font stacks, breakpoints, and sizing used in Kraken. It also contains settings for the grid.
 
 ```scss
 // Colors
@@ -219,16 +217,14 @@ The `components` folder contains all of the Kraken components: the grid, button 
 
 ### Working with SVG
 
-SVG files placed in the `src` > `svg` directory will be compiled into a single SVG sprite called `icons.svg` in the `dist` > `svg` directory. SVG files placed in a subdirectory of `src` > `svg` will be compiled into a single SVG sprite named after the subdirectory.
+SVG files placed in the `src` > `svg` directory will be optimized and compiled into the `dist` > `svg` directory. SVG files placed in a subdirectory of `src` > `svg` will be compiled into a single SVG sprite named after the subdirectory.
 
-For example, `svg` > `portfolio` with compile into `portfolio.svg` in the `dist` > `svg` directory.
+For example, SVGs placed in `svg` > `portfolio` would compile into `portfolio.svg` in the `dist` > `svg` directory.
 
 
-### Working with Icon Fonts
+### Working with Images
 
-The `_iconfonts.scss` component is commented out of `main.scss` by default. Uncomment it to use icon fonts with Kraken.
-
-The `font-face` mixin generates the required `@font-face` code for embedding fonts. You can assign names, unicode characters, and color values to your icons in the `_config.scss` file.
+Image files placed in the `src` > `img` directory will be copied as-is into the `dist` > `img` directory. While you can add image optimization processes to Gulp, I find that tools like [ImageOptim](https://imageoptim.com/) and [b64.io](http://b64.io/) do a better job.
 
 
 ### Working with JavaScript
@@ -237,7 +233,7 @@ Kraken's JavaScript files are located in the `src` > `js` directory.
 
 Files placed directly in the `js` folder will compile directly to `dist` > `js` as both minified and unminified files. Files placed in subdirectories will also be concatenated into a single file.
 
-For example, `detects` > `icon-fonts.js` and `detects` > `svg.js` compile into `detects.js` in the `dist` > `js` directory.
+For example, `detects` > `flexbox.js` and `detects` > `svg.js` would compile into `detects.js` in the `dist` > `js` directory.
 
 #### Unit Testing
 
