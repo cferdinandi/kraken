@@ -83,19 +83,18 @@ var paths = {
 
 var banner = {
 	full :
-		'/**\n' +
-		' * <%= package.name %> v<%= package.version %>\n' +
-		' * <%= package.description %>, by <%= package.author.name %>.\n' +
+		'/*!\n' +
+		' * <%= package.name %> v<%= package.version %>: <%= package.description %>\n' +
+		' * (c) ' + new Date().getFullYear() + ' <%= package.author.name %>\n' +
+		' * MIT License\n' +
 		' * <%= package.repository.url %>\n' +
-		' * \n' +
-		' * Free to use under the MIT License.\n' +
-		' * http://gomakethings.com/mit/\n' +
 		' */\n\n',
 	min :
-		'/**' +
-		' <%= package.name %> v<%= package.version %>, by Chris Ferdinandi' +
+		'/*!' +
+		' <%= package.name %> v<%= package.version %>' +
+		' | (c) ' + new Date().getFullYear() + ' <%= package.author.name %>' +
+		' | MIT License' +
 		' | <%= package.repository.url %>' +
-		' | Licensed under MIT: http://gomakethings.com/mit/' +
 		' */\n'
 };
 
@@ -185,10 +184,16 @@ gulp.task('lint:scripts', function () {
 		.pipe(jshint.reporter('jshint-stylish'));
 });
 
-// Remove prexisting content from output and test folders
+// Remove pre-existing content from output and test folders
 gulp.task('clean:dist', function () {
 	del.sync([
-		paths.output,
+		paths.output
+	]);
+});
+
+// Remove pre-existing content from text folders
+gulp.task('clean:test', function () {
+	del.sync([
 		paths.test.coverage,
 		paths.test.results
 	]);
@@ -262,10 +267,10 @@ gulp.task('refresh', ['compile', 'docs'], function () {
 gulp.task('compile', [
 	'lint:scripts',
 	'clean:dist',
-	'build:images',
 	'build:scripts',
-	'build:svgs',
-	'build:styles'
+	'build:styles',
+	'build:images',
+	'build:svgs'
 ]);
 
 // Generate documentation
@@ -276,20 +281,20 @@ gulp.task('docs', [
 	'copy:assets'
 ]);
 
-// Generate documentation
-gulp.task('tests', [
-	'test:scripts'
-]);
-
-// Compile files, generate docs, and run unit tests (default)
+// Compile files and generate docs (default)
 gulp.task('default', [
 	'compile',
-	'docs',
-	'tests'
+	'docs'
 ]);
 
-// Compile files, generate docs, and run unit tests when something changes
+// Compile files and generate docs when something changes
 gulp.task('watch', [
 	'listen',
 	'default'
+]);
+
+// Run unit tests
+gulp.task('test', [
+	'default',
+	'test:scripts'
 ]);
