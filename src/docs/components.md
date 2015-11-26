@@ -247,8 +247,10 @@ Default text
 
 *Because Kraken uses relative sizing, you should always apply `.text-tall` and `.text-small` classes to a `<span>` element and not directly to a `<p>`. Otherwise, your spacing will get all messed up. The `.text-*` classes can be found in `_overrides.scss` for better cascade inheritance.*
 
+<hr>
 
-### Lists
+
+## Lists
 
 Kraken includes styling for ordered, unordered, unstyled, and definition lists.
 
@@ -336,8 +338,10 @@ Inline
 
 *For semantic reasons, `.list-unstyled` and `.list-inline` should only be applied to unordered lists.*
 
+<hr>
 
-### Headings
+
+## Headings
 
 Kraken includes styling for `h1` through `h6` headings.
 
@@ -373,8 +377,10 @@ All heading values can also be applied as classes. For example, if a heading sho
 <h1 class="h4 text-left">This is an h1 heading that's styled as an h4 heading</h1>
 ```
 
+<hr>
 
-### Quotes and Citations
+
+## Quotes and Citations
 
 > Someone once said something so important, it was deemed worthy of repeating here in the form of a blockquote. This is that blockquote.
 > <cite>- Someone Important</cite>
@@ -390,8 +396,10 @@ You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
 You can also include superscripts<sup>1</sup> and subscripts<sub>xyz</sub>.
 ```
 
+<hr>
 
-### Code
+
+## Code
 
 Inline code: `.js-example`.
 
@@ -419,8 +427,10 @@ Inline code: `.js-example`.
 
 You'll need to escape brackets contained in code by typing `&lt;` for `<` and `&gt;` for `>`. The syntax highlighting used in this documentation is provided by [Prism](http://prismjs.com/) by Lea Verou.
 
+<hr>
 
-### Lines
+
+## Lines
 
 Add lines to your markup using the `<hr>` element.
 
