@@ -1,5 +1,5 @@
 /*!
- * Kraken v7.0.0: A lightweight front-end boilerplate
+ * Kraken v7.1.0: A lightweight front-end boilerplate
  * (c) 2015 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/kraken
@@ -44,7 +44,7 @@
  * Add box sizing to everything
  * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  */
-/* line 24, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 22, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 *,
 *:before,
 *:after {
@@ -83,7 +83,7 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 67, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 54, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 article,
 aside,
 cite,
@@ -105,7 +105,7 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 78, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 75, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -129,7 +129,7 @@ audio:not([controls]) {
 /**
  * Prevent img and video elements from spilling outside of the page on smaller screens.
  */
-/* line 96, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 95, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 img,
 video {
   max-width: 100%;
@@ -140,7 +140,7 @@ video {
  * Prevent iframe, object, and embed elements from spilling outside of the page on smaller screens.
  * height: auto causes iframes to smush, so it's omitted here.
  */
-/* line 107, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 105, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 iframe,
 object,
 embed {
@@ -219,105 +219,105 @@ figure {
  * Add columns to grid on bigger screens
  */
 @media (min-width: 20em) {
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-xsmall .grid-fourth {
     width: 25%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-xsmall .grid-third {
     width: 33.33333%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-xsmall .grid-half {
     width: 50%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-xsmall .grid-two-thirds {
     width: 66.66667%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-xsmall .grid-three-fourths {
     width: 75%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-xsmall .grid-full {
     width: 100%;
   }
 }
 
 @media (min-width: 30em) {
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-small .grid-fourth {
     width: 25%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-small .grid-third {
     width: 33.33333%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-small .grid-half {
     width: 50%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-small .grid-two-thirds {
     width: 66.66667%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-small .grid-three-fourths {
     width: 75%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .row-start-small .grid-full {
     width: 100%;
   }
 }
 
 @media (min-width: 40em) {
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .grid-fourth {
     width: 25%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .grid-third {
     width: 33.33333%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .grid-half {
     width: 50%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .grid-two-thirds {
     width: 66.66667%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .grid-three-fourths {
     width: 75%;
   }
-  /* line 48, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .grid-full {
     width: 100%;
   }
-  /* line 54, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 55, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .offset-fourth {
     margin-left: 25%;
   }
-  /* line 54, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 55, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .offset-third {
     margin-left: 33.33333%;
   }
-  /* line 54, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 55, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .offset-half {
     margin-left: 50%;
   }
-  /* line 54, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 55, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .offset-two-thirds {
     margin-left: 66.66667%;
   }
-  /* line 54, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 55, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .offset-three-fourths {
     margin-left: 75%;
   }
-  /* line 54, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 55, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .offset-full {
     margin-left: 100%;
   }
@@ -327,21 +327,21 @@ figure {
  * Dynamic grid
  */
 @media (min-width: 20em) {
-  /* line 70, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 71, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .grid-dynamic {
     width: 50%;
   }
 }
 
 @media (min-width: 30em) {
-  /* line 70, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 71, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .grid-dynamic {
     width: 33.33333%;
   }
 }
 
 @media (min-width: 40em) {
-  /* line 70, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
+  /* line 71, /Users/cferdinandi/Sites/kraken/src/sass/components/_grid.scss */
   .grid-dynamic {
     width: 25%;
   }
@@ -386,20 +386,20 @@ a, .link-block-styled {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 38, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
-a:active,
-.link-block-styled:active,
-a:hover, .link-block-styled:hover, .link-block:hover .link-block-styled {
+/* line 37, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+a:active, .link-block-styled:active,
+a:hover,
+.link-block-styled:hover,
+.link-block:hover .link-block-styled {
   outline: 0;
 }
 
-/* line 44, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
-a:hover,
-.link-block-styled:hover,
-.link-block:hover .link-block-styled,
+/* line 42, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+a:hover, .link-block-styled:hover, .link-block:hover .link-block-styled,
 a:focus,
 .link-block-styled:focus,
-a:active, .link-block-styled:active {
+a:active,
+.link-block-styled:active {
   color: #005580;
   text-decoration: underline;
 }
@@ -423,14 +423,14 @@ a.link-block, .link-block.link-block-styled {
 /**
  * List styling
  */
-/* line 79, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 78, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 ul,
 ol {
   margin: 0 0 1.5625em 2em;
   padding: 0;
 }
 
-/* line 87, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 84, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -438,7 +438,7 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 92, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 91, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 dl,
 dd {
   margin: 0;
@@ -496,7 +496,7 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
-/* line 146, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 145, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h1,
 .h1 {
   font-size: 1.5em;
@@ -504,32 +504,32 @@ h1,
 }
 
 @media (min-width: 40em) {
-  /* line 146, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+  /* line 145, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
   h1,
   .h1 {
     font-size: 1.75em;
   }
 }
 
-/* line 156, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 155, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h2,
 .h2 {
   font-size: 1.3125em;
 }
 
-/* line 161, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 160, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h3,
 .h3 {
   font-size: 1.1875em;
 }
 
-/* line 166, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 165, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h4, h5, h6,
 .h4, .h5, .h6 {
   font-size: 1em;
 }
 
-/* line 171, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 170, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h4,
 .h4 {
   text-transform: uppercase;
@@ -546,13 +546,13 @@ hr {
   border-bottom: 0 solid #ffffff;
 }
 
-/* line 188, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 187, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 193, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 192, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 i,
 em {
   font-style: italic;
@@ -593,7 +593,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 229, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 228, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 sub,
 sup {
   font-size: 75%;
@@ -631,13 +631,13 @@ blockquote cite {
   padding-top: 1em;
 }
 
-/* line 264, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 263, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote,
 q {
   quotes: none;
 }
 
-/* line 271, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 268, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -649,7 +649,7 @@ q:after {
  * @section Code
  * Styling for code and preformatted text.
  */
-/* line 9, /Users/cferdinandi/Sites/kraken/src/sass/components/_code.scss */
+/* line 6, /Users/cferdinandi/Sites/kraken/src/sass/components/_code.scss */
 code,
 kbd,
 pre,
@@ -712,17 +712,11 @@ pre code {
   padding: 0.5em 0.6875em;
 }
 
-/* line 29, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
+/* line 23, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
 .btn:hover,
-a .btn:hover,
-.link-block-styled .btn:hover,
-.btn:focus,
-a .btn:focus,
-.link-block-styled .btn:focus,
-.btn:active,
-a .btn:active,
-.link-block-styled .btn:active,
-.btn.active {
+a .btn:hover, .link-block-styled .btn:hover, .btn:focus,
+a .btn:focus, .link-block-styled .btn:focus, .btn:active,
+a .btn:active, .link-block-styled .btn:active, .btn.active {
   background-color: #005580;
   border-color: #005580;
   color: #ffffff;
@@ -738,17 +732,11 @@ a .btn:active,
   border-color: #808080;
 }
 
-/* line 51, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
+/* line 45, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
 .btn-secondary:hover,
-a .btn-secondary:hover,
-.link-block-styled .btn-secondary:hover,
-.btn-secondary:focus,
-a .btn-secondary:focus,
-.link-block-styled .btn-secondary:focus,
-.btn-secondary:active,
-a .btn-secondary:active,
-.link-block-styled .btn-secondary:active,
-.btn-secondary.active {
+a .btn-secondary:hover, .link-block-styled .btn-secondary:hover, .btn-secondary:focus,
+a .btn-secondary:focus, .link-block-styled .btn-secondary:focus, .btn-secondary:active,
+a .btn-secondary:active, .link-block-styled .btn-secondary:active, .btn-secondary.active {
   background-color: #5a5a5a;
   border-color: #5a5a5a;
 }
@@ -756,7 +744,7 @@ a .btn-secondary:active,
 /**
  * Active state
  */
-/* line 62, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
+/* line 61, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
 .btn:active,
 .btn.active {
   box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
@@ -766,7 +754,7 @@ a .btn-secondary:active,
 /**
  * Disabled state
  */
-/* line 72, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
+/* line 71, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
 .btn.disabled,
 .btn[disabled] {
   box-shadow: none;
@@ -788,7 +776,7 @@ a .btn-secondary:active,
 /**
  * Block-level buttons
  */
-/* line 96, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
+/* line 93, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
 .btn-block,
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
@@ -803,7 +791,7 @@ input[type="button"].btn-block {
 /**
  * General styles
  */
-/* line 112, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
+/* line 108, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
 .btn,
 button,
 html input[type="button"],
@@ -822,7 +810,7 @@ input[type="submit"] {
 /**
  * Remove right margin on last element and inputs
  */
-/* line 130, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
+/* line 129, /Users/cferdinandi/Sites/kraken/src/sass/components/_buttons.scss */
 .btn:last-child,
 input.btn {
   margin-right: 0;
@@ -832,7 +820,7 @@ input.btn {
  * @section Forms
  * Styling for form elements.
  */
-/* line 7, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 6, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 form,
 fieldset {
   margin-bottom: 1.5625em;
@@ -844,7 +832,7 @@ fieldset {
   padding: 0;
 }
 
-/* line 17, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 16, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 legend,
 label {
   display: block;
@@ -859,7 +847,7 @@ label {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 34, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 30, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 button,
 input,
 optgroup,
@@ -888,13 +876,13 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 55, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 54, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 61, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 59, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 input,
 textarea,
 select {
@@ -907,7 +895,7 @@ select {
 }
 
 @media (min-width: 40em) {
-  /* line 61, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+  /* line 59, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
   input,
   textarea,
   select {
@@ -924,7 +912,7 @@ optgroup {
   font-weight: bold;
 }
 
-/* line 83, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 82, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 form button,
 form .button {
   margin-bottom: 1.1875em;
@@ -936,7 +924,7 @@ textarea {
   overflow: auto;
 }
 
-/* line 94, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 92, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 input[type="image"],
 input[type="checkbox"],
 input[type="radio"] {
@@ -953,13 +941,13 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 109, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 108, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 114, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 113, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
@@ -968,7 +956,7 @@ textarea:focus {
   outline: thin dotted \9;
 }
 
-/* line 123, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 121, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 input[type="file"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
@@ -1004,7 +992,7 @@ select:focus {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 159, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 158, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -1098,7 +1086,7 @@ table {
   width: 100%;
 }
 
-/* line 15, /Users/cferdinandi/Sites/kraken/src/sass/components/_tables.scss */
+/* line 14, /Users/cferdinandi/Sites/kraken/src/sass/components/_tables.scss */
 th,
 td {
   text-align: left;
@@ -1129,7 +1117,7 @@ td {
 /**
  * Reduces padding on condensed tables
  */
-/* line 44, /Users/cferdinandi/Sites/kraken/src/sass/components/_tables.scss */
+/* line 43, /Users/cferdinandi/Sites/kraken/src/sass/components/_tables.scss */
 .table-condensed th,
 .table-condensed td {
   padding: 0.25em;
@@ -1345,7 +1333,7 @@ td {
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  * @link https://www.drupal.org/node/897638
  */
-/* line 168, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
+/* line 167, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
 .screen-reader-focusable:active,
 .screen-reader-focusable:focus {
   clip: auto;
@@ -1372,11 +1360,11 @@ td {
  * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  */
-/* line 195, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
-.clearfix:before,
-.container:before,
+/* line 194, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
+.clearfix:before, .container:before,
 .row:before,
-.clearfix:after, .container:after,
+.clearfix:after,
+.container:after,
 .row:after {
   display: table;
   content: " ";
@@ -1414,10 +1402,10 @@ td {
   /**
 	 * Underline all links
 	 */
-  /* line 31, /Users/cferdinandi/Sites/kraken/src/sass/components/_print.scss */
-  a,
-  .link-block-styled,
-  a:visited, .link-block-styled:visited {
+  /* line 30, /Users/cferdinandi/Sites/kraken/src/sass/components/_print.scss */
+  a, .link-block-styled,
+  a:visited,
+  .link-block-styled:visited {
     text-decoration: underline;
   }
   /**
@@ -1437,7 +1425,7 @@ td {
   /**
 	 * Specifies the minimum number of lines to print at the top and bottom of a page.
 	 */
-  /* line 53, /Users/cferdinandi/Sites/kraken/src/sass/components/_print.scss */
+  /* line 52, /Users/cferdinandi/Sites/kraken/src/sass/components/_print.scss */
   p,
   h1, h2, h3 {
     orphans: 3;
@@ -1454,7 +1442,7 @@ td {
 	 * Change border color on blockquotes and preformatted text.
 	 * Avoid page breaks inside the content
 	 */
-  /* line 70, /Users/cferdinandi/Sites/kraken/src/sass/components/_print.scss */
+  /* line 69, /Users/cferdinandi/Sites/kraken/src/sass/components/_print.scss */
   pre,
   blockquote {
     border-color: #999;
@@ -1470,7 +1458,7 @@ td {
   /**
 	 * Avoid inserting a page break inside table rows and images
 	 */
-  /* line 86, /Users/cferdinandi/Sites/kraken/src/sass/components/_print.scss */
+  /* line 85, /Users/cferdinandi/Sites/kraken/src/sass/components/_print.scss */
   tr,
   img {
     page-break-inside: avoid;

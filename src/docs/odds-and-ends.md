@@ -143,6 +143,7 @@ Build a site with Kraken? <a href="mailto:&#104;&#101;llo&#64;&#103;om&#97;ke&#1
 * [Go Make Things](http://gomakethings.com/)
 * [PAWS New England](http://www.pawsnewengland.com/)
 * [Nick Simson](http://nicksimson.com/)
+* [Christian von Schack](http://schackmatt.no/)
 * [Shift it](http://www.shiftit.com.br/)
 * [Benjamin Obdyke](http://www.benjaminobdyke.com/)
 * [Osasu](http://osasu.com/)
