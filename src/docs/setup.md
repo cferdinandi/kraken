@@ -77,6 +77,8 @@ kraken
 |   |   |—— _config.scss
 |   |   |—— _mixins.scss
 |   |   |—— main.scss
+|   |—— static/
+|   |   |—— # Static files and folders
 |—— test/
 |   |—— coverage/
 |   |   |—— # various files
@@ -235,6 +237,10 @@ Kraken's JavaScript files are located in the `src` > `js` directory.
 Files placed directly in the `js` folder will compile directly to `dist` > `js` as both minified and unminified files. Files placed in subdirectories will also be concatenated into a single file.
 
 For example, `detects` > `flexbox.js` and `detects` > `svg.js` would compile into `detects.js` in the `dist` > `js` directory.
+
+### Working with Static Files
+
+Files and folders placed in the `src` > `static` directory will be copied as-is into the `dist` directory.
 
 #### Unit Testing
 

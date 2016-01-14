@@ -136,6 +136,8 @@
 |   |   |—— _config.scss
 |   |   |—— _mixins.scss
 |   |   |—— main.scss
+|   |—— static/
+|   |   |—— # Static files and folders
 |—— test/
 |   |—— coverage/
 |   |   |—— # various files
@@ -266,6 +268,8 @@ $grid-dynamic: (
 <p>Kraken&#39;s JavaScript files are located in the <code>src</code> &gt; <code>js</code> directory.</p>
 <p>Files placed directly in the <code>js</code> folder will compile directly to <code>dist</code> &gt; <code>js</code> as both minified and unminified files. Files placed in subdirectories will also be concatenated into a single file.</p>
 <p>For example, <code>detects</code> &gt; <code>flexbox.js</code> and <code>detects</code> &gt; <code>svg.js</code> would compile into <code>detects.js</code> in the <code>dist</code> &gt; <code>js</code> directory.</p>
+<h3 id="working-with-static-files">Working with Static Files</h3>
+<p>Files and folders placed in the <code>src</code> &gt; <code>static</code> directory will be copied as-is into the <code>dist</code> directory.</p>
 <h4 id="unit-testing">Unit Testing</h4>
 <p>If you&#39;ve written <a href="http://jasmine.github.io/">Jasmine unit tests</a> for any of your scripts, place them in the <code>test</code> &gt; <code>spec</code> directory and they will automatically run on compile.</p>
 <p>Results are displayed in both the terminal window and <code>test</code> &gt; <code>results</code>. You can see how much coverage each unit test provides in the <code>test</code> &gt; <code>coverage</code> directory.</p>
