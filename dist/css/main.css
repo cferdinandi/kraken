@@ -1,5 +1,5 @@
 /*!
- * Kraken v7.1.1: A lightweight front-end boilerplate
+ * Kraken v7.2.0: A lightweight front-end boilerplate
  * (c) 2016 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/kraken
@@ -664,9 +664,10 @@ code {
   background-color: #f7f7f7;
   color: #dd1144;
   padding: 0.25em;
+  word-wrap: break-word;
 }
 
-/* line 21, /Users/cferdinandi/Sites/kraken/src/sass/components/_code.scss */
+/* line 22, /Users/cferdinandi/Sites/kraken/src/sass/components/_code.scss */
 pre {
   background-color: #f4f4f4;
   display: block;
@@ -681,7 +682,7 @@ pre {
   word-break: break-all;
 }
 
-/* line 32, /Users/cferdinandi/Sites/kraken/src/sass/components/_code.scss */
+/* line 33, /Users/cferdinandi/Sites/kraken/src/sass/components/_code.scss */
 pre code {
   background-color: transparent;
   border: 0;

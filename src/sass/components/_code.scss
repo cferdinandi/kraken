@@ -16,6 +16,7 @@ code {
 	background-color: lighten( $color-gray-light, 7% );
 	color: $color-code;
 	padding: calc-em(4px);
+	word-wrap: break-word;
 }
 
 pre {
