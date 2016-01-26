@@ -15,6 +15,22 @@
 	 @-o-viewport { width: device-width; zoom: 1.0; }
 		@viewport { width: device-width; zoom: 1.0; }
 
+
+/**
+ * Remove the tap delay in webkit
+ * @link https://medium.com/@adactio/delay-a9df9edceef3#.7dmbl3xow
+ */
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary {
+	touch-action: manipulation;
+}
+
+
 /**
  * Add box sizing to everything
  * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/

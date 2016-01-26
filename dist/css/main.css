@@ -1,5 +1,5 @@
 /*!
- * Kraken v7.2.0: A lightweight front-end boilerplate
+ * Kraken v7.3.0: A lightweight front-end boilerplate
  * (c) 2016 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/kraken
@@ -41,10 +41,26 @@
 }
 
 /**
+ * Remove the tap delay in webkit
+ * @link https://medium.com/@adactio/delay-a9df9edceef3#.7dmbl3xow
+ */
+/* line 23, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+a, .link-block-styled,
+button,
+input,
+select,
+textarea,
+label,
+summary {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+/**
  * Add box sizing to everything
  * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  */
-/* line 22, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 38, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 *,
 *:before,
 *:after {
@@ -57,7 +73,7 @@
  * 3. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 35, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 51, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 html {
   font-family: "Helvetica Neue", Arial, sans-serif;
   /* 1 */
@@ -72,7 +88,7 @@ html {
 /**
  * Remove default margin.
  */
-/* line 44, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 60, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 body {
   margin: 0;
 }
@@ -83,7 +99,7 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 54, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 70, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 article,
 aside,
 cite,
@@ -105,7 +121,7 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 75, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 91, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -120,7 +136,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 87, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 103, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -129,7 +145,7 @@ audio:not([controls]) {
 /**
  * Prevent img and video elements from spilling outside of the page on smaller screens.
  */
-/* line 95, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 111, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 img,
 video {
   max-width: 100%;
@@ -140,7 +156,7 @@ video {
  * Prevent iframe, object, and embed elements from spilling outside of the page on smaller screens.
  * height: auto causes iframes to smush, so it's omitted here.
  */
-/* line 105, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 121, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 iframe,
 object,
 embed {
@@ -154,7 +170,7 @@ embed {
  * 1. Remove border when inside `a` element in IE 8/9/10.
  * 2. Prevents IE from making scaled images look like crap
  */
-/* line 122, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 138, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -165,7 +181,7 @@ img {
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 130, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 146, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -173,7 +189,7 @@ svg:not(:root) {
 /**
  * Address inconsistent margin.
  */
-/* line 137, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 153, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 figure {
   margin: 0;
 }
