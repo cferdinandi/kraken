@@ -4,7 +4,7 @@ Kraken is a lightweight, mobile-first boilerplate for front-end web developers. 
 
 ## How to Contribute
 
-In lieu of a formal style guide, take care to maintain the existing coding style. Please apply fixes to both the development and production code. Don't forget to update the version number, and when applicable, the documentation.
+Please review the [contributing guidelines](CONTRIBUTING.md).
 
 
 ## License
