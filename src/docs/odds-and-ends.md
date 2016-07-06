@@ -139,18 +139,20 @@ I decided creating my own documentation tool was a better fit for my needs. Obvi
 
 Build a site with Kraken? <a href="mailto:&#104;&#101;llo&#64;&#103;om&#97;ke&#116;h&#105;&#110;&#103;s.&#99;o&#109;">Let me know!</a>
 
-* [Harvard Business School Digital Initiative](https://digital.hbs.edu/)
-* [Go Make Things](http://gomakethings.com/)
-* [PAWS New England](http://www.pawsnewengland.com/)
-* [Nick Simson](http://nicksimson.com/)
-* [Christian von Schack](http://schackmatt.no/)
-* [Shift it](http://www.shiftit.com.br/)
-* [Benjamin Obdyke](http://www.benjaminobdyke.com/)
-* [Osasu](http://osasu.com/)
-* [Nicole Burley Coaching](http://nicoleburley.com/)
-* [Poetreat](http://poetreatapp.com/)
-* [Barry Zimmerman](http://barryzimmerman.co.uk/)
-* [Exis](http://exisweb.net/)
+- [Harvard Business School Digital Initiative](https://digital.hbs.edu/)
+- [Go Make Things](http://gomakethings.com/)
+- [PAWS New England](http://www.pawsnewengland.com/)
+- [Nick Simson](http://nicksimson.com/)
+- [Christian von Schack](http://schackmatt.no/)
+- [Shift it](http://www.shiftit.com.br/)
+- [Benjamin Obdyke](http://www.benjaminobdyke.com/)
+- [Osasu](http://osasu.com/)
+- [Nicole Burley Coaching](http://nicoleburley.com/)
+- [Poetreat](http://poetreatapp.com/)
+- [Barry Zimmerman](http://barryzimmerman.co.uk/)
+- [Exis](http://exisweb.net/)
+- [Wetlands Mitigation](http://wetmit.org/)
+- [CISA](http://cisa.sc.edu/)
 
 <hr>
 
