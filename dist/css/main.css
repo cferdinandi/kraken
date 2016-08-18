@@ -1,5 +1,5 @@
 /*!
- * Kraken v7.3.0: A lightweight front-end boilerplate
+ * Kraken v7.4.0: A lightweight front-end boilerplate
  * (c) 2016 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/kraken
@@ -95,7 +95,7 @@ body {
 
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * Correct `block` display not defined for `details` in IE 10/11
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
@@ -112,31 +112,43 @@ hgroup,
 main,
 menu,
 nav,
-section,
-summary {
+section {
   display: block;
 }
 
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+/*
+ * Add the correct display in all browsers.
  */
-/* line 91, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 89, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+summary {
+  display: list-item;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 96, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 audio,
 canvas,
 progress,
 video {
   display: inline-block;
   /* 1 */
+}
+
+/**
+ * Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 106, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+progress {
   vertical-align: baseline;
-  /* 2 */
 }
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 103, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 114, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -145,7 +157,7 @@ audio:not([controls]) {
 /**
  * Prevent img and video elements from spilling outside of the page on smaller screens.
  */
-/* line 111, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 122, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 img,
 video {
   max-width: 100%;
@@ -156,7 +168,7 @@ video {
  * Prevent iframe, object, and embed elements from spilling outside of the page on smaller screens.
  * height: auto causes iframes to smush, so it's omitted here.
  */
-/* line 121, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 132, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 iframe,
 object,
 embed {
@@ -170,7 +182,7 @@ embed {
  * 1. Remove border when inside `a` element in IE 8/9/10.
  * 2. Prevents IE from making scaled images look like crap
  */
-/* line 138, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 149, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -181,7 +193,7 @@ img {
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 146, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 157, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -189,7 +201,7 @@ svg:not(:root) {
 /**
  * Address inconsistent margin.
  */
-/* line 153, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
+/* line 164, /Users/cferdinandi/Sites/kraken/src/sass/components/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -390,37 +402,35 @@ p {
 
 /**
  * Hyperlink styling
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
-/* line 27, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 29, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 a, .link-block-styled {
   background-color: transparent;
+  /* 1 */
   color: #0088cc;
   text-decoration: none;
   word-wrap: break-word;
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+  /**
+	 * Improve readability when focused and also mouse hovered in all browsers.
+	 */
 }
 
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-/* line 37, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
-a:active, .link-block-styled:active,
-a:hover,
-.link-block-styled:hover,
-.link-block:hover .link-block-styled {
+/* line 39, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+a:active, .link-block-styled:active, a:hover, .link-block-styled:hover, .link-block:hover .link-block-styled {
   outline: 0;
 }
 
-/* line 42, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
-a:hover, .link-block-styled:hover, .link-block:hover .link-block-styled,
-a:focus,
-.link-block-styled:focus,
-a:active,
-.link-block-styled:active {
+/* line 44, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+a:active, .link-block-styled:active, a:focus, .link-block-styled:focus, a:hover, .link-block-styled:hover, .link-block:hover .link-block-styled {
   color: #005580;
   text-decoration: underline;
 }
 
-/* line 49, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 51, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 a img, .link-block-styled img {
   border: none;
   background: none;
@@ -429,7 +439,7 @@ a img, .link-block-styled img {
 /**
  * Creates block-level links
  */
-/* line 59, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 62, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 a.link-block, .link-block.link-block-styled {
   color: #272727;
   display: block;
@@ -439,14 +449,14 @@ a.link-block, .link-block.link-block-styled {
 /**
  * List styling
  */
-/* line 78, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 81, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 ul,
 ol {
   margin: 0 0 1.5625em 2em;
   padding: 0;
 }
 
-/* line 84, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 87, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -454,19 +464,19 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 91, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 94, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 dl,
 dd {
   margin: 0;
   padding: 0;
 }
 
-/* line 97, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 100, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 dd {
   margin-bottom: 1.5625em;
 }
 
-/* line 101, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 104, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 dt {
   font-weight: bold;
 }
@@ -475,7 +485,7 @@ dt {
  * Removes list styling.
  * For semantic reasons, should only be used on unordered lists.
  */
-/* line 109, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 112, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 .list-unstyled {
   margin-left: 0;
   list-style: none;
@@ -484,7 +494,7 @@ dt {
 /**
  * Display lists on a single line.
  */
-/* line 118, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 121, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 .list-inline {
   list-style: none;
   margin-left: -0.5em;
@@ -492,7 +502,7 @@ dt {
   padding: 0;
 }
 
-/* line 125, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 128, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 .list-inline > li {
   display: inline;
   margin-left: 0.5em;
@@ -503,7 +513,7 @@ dt {
  * Heading styling for h1 through h6 elements.
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
  */
-/* line 137, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 140, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: 1.2;
@@ -512,7 +522,7 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
-/* line 145, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 148, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h1,
 .h1 {
   font-size: 1.5em;
@@ -520,32 +530,32 @@ h1,
 }
 
 @media (min-width: 40em) {
-  /* line 145, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+  /* line 148, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
   h1,
   .h1 {
     font-size: 1.75em;
   }
 }
 
-/* line 155, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 158, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h2,
 .h2 {
   font-size: 1.3125em;
 }
 
-/* line 160, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 163, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h3,
 .h3 {
   font-size: 1.1875em;
 }
 
-/* line 165, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 168, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h4, h5, h6,
 .h4, .h5, .h6 {
   font-size: 1em;
 }
 
-/* line 170, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 173, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h4,
 .h4 {
   text-transform: uppercase;
@@ -554,38 +564,58 @@ h4,
 /**
  * Lines, Quotes and Emphasis
  */
-/* line 180, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 183, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 hr {
-  margin: 2em auto;
   border: 0;
   border-top: 1px solid #e5e5e5;
   border-bottom: 0 solid #ffffff;
+  box-sizing: content-box;
+  margin: 2em auto;
+  overflow: visible;
 }
 
-/* line 187, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 195, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 b,
 strong {
-  font-weight: bold;
+  font-weight: inherit;
 }
 
-/* line 192, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 203, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* line 208, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 i,
 em {
   font-style: italic;
 }
 
 /**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-/* line 200, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 217, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 abbr[title] {
-  border-bottom: 1px dotted;
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 207, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 226, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 dfn {
   font-style: italic;
 }
@@ -593,15 +623,16 @@ dfn {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 214, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 233, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 mark {
   background: #ff0;
+  color: #000000;
 }
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 221, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 241, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 small {
   font-size: 80%;
 }
@@ -609,7 +640,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 228, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 248, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 sub,
 sup {
   font-size: 75%;
@@ -618,12 +649,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 236, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 256, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 240, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 260, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 sub {
   bottom: -0.25em;
 }
@@ -631,7 +662,7 @@ sub {
 /**
  * Blockquotes
  */
-/* line 249, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 269, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote {
   font-size: 1.1875em;
   font-style: italic;
@@ -640,20 +671,20 @@ blockquote {
   padding-right: 0.84211em;
 }
 
-/* line 256, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 276, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote cite {
   color: #808080;
   font-size: 0.84211em;
   padding-top: 1em;
 }
 
-/* line 263, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 283, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote,
 q {
   quotes: none;
 }
 
-/* line 268, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 288, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -983,9 +1014,44 @@ select:focus {
 }
 
 /**
- * Inline inputs
+ * Remove the inner border and padding in Firefox.
  */
 /* line 133, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 145, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 157, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/**
+ * Inline inputs
+ */
+/* line 166, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 .input-inline {
   display: inline-block;
   vertical-align: middle;
@@ -995,7 +1061,7 @@ select:focus {
 /**
  * Condensed inputs
  */
-/* line 143, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 176, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 .input-condensed {
   padding: 1px 0.3125em;
   font-size: 0.9375em;
@@ -1005,11 +1071,23 @@ select:focus {
  * Search
  */
 /**
+  * 1. Correct the odd appearance in Chrome and Safari.
+  * 2. Correct the outline style in Safari.
+  */
+/* line 191, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 158, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 201, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -1018,7 +1096,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Create rounded search bar
  */
-/* line 167, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 210, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 .input-search {
   width: 85%;
   padding-left: 0.9375em;
@@ -1029,7 +1107,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 @media (min-width: 40em) {
-  /* line 167, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+  /* line 210, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
   .input-search {
     width: 65%;
   }
@@ -1038,7 +1116,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Special styling for search icon as button
  */
-/* line 183, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 226, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 .btn-search {
   display: inline;
   color: #808080;
@@ -1048,17 +1126,17 @@ input[type="search"]::-webkit-search-decoration {
   margin-bottom: 0;
 }
 
-/* line 191, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 234, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 .btn-search .icon {
   fill: #808080;
 }
 
-/* line 195, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 238, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 .btn-search:hover {
   color: #5a5a5a;
 }
 
-/* line 198, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
+/* line 241, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
 .btn-search:hover .icon {
   fill: #5a5a5a;
 }
