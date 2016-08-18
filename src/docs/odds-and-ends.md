@@ -6,38 +6,39 @@ Extend Kraken with add-ons built to be dropped right in. Kind of like Legos for 
 
 ### Boilerplates
 
-* [Keel.](https://github.com/cferdinandi/keel) A barebones starter theme for WordPress developers.
-* [Buoy.](https://github.com/cferdinandi/buoy) A lightweight collection of helper methods for getting stuff done in native JavaScript.
+- [Keel.](https://github.com/cferdinandi/keel) A barebones starter theme for WordPress developers.
+- [Buoy.](https://github.com/cferdinandi/buoy) A lightweight collection of helper methods for getting stuff done in native JavaScript.
 
 ### Interactive Content
 
-* [Smooth Scroll.](https://github.com/cferdinandi/smooth-scroll/) Animate scrolling to anchor links.
-* [Gumshoe.](https://github.com/cferdinandi/gumshoe) A framework-agnostic scrollspy script.
-* [Astro.](https://github.com/cferdinandi/astro/) A collection of responsive, mobile-first navigation patterns.
-* [Drop.](https://github.com/cferdinandi/drop/) Mobile-friendly dropdown menus.
-* [Houdini.](https://github.com/cferdinandi/houdini/) A progressively enhanced expand-and-collapse widget and accordion.
-* [Tabby.](https://github.com/cferdinandi/tabby/) Lightweight toggle-tabs.
-* [Modals.](https://github.com/cferdinandi/modals/) Simple, mobile-friendly modal dialogue windows.
-* [Form Saver.](https://github.com/cferdinandi/form-saver/) Let users save, reuse, and delete form data.
-* [X-Ray.](https://github.com/cferdinandi/x-ray/) Let users toggle password visibility.
-* [Right Height](https://github.com/cferdinandi/right-height/) Set variable content containers to equal height.
-* [Sticky Footer](https://github.com/cferdinandi/sticky-footer/) Dynamic, responsive sticky footers.
+- [Smooth Scroll.](https://github.com/cferdinandi/smooth-scroll/) Animate scrolling to anchor links.
+- [Gumshoe.](https://github.com/cferdinandi/gumshoe) A framework-agnostic scrollspy script.
+- [Astro.](https://github.com/cferdinandi/astro/) A collection of responsive, mobile-first navigation patterns.
+- [Drop.](https://github.com/cferdinandi/drop/) Mobile-friendly dropdown menus.
+- [Houdini.](https://github.com/cferdinandi/houdini/) A progressively enhanced expand-and-collapse widget and accordion.
+- [Tabby.](https://github.com/cferdinandi/tabby/) Lightweight toggle-tabs.
+- [Modals.](https://github.com/cferdinandi/modals/) Simple, mobile-friendly modal dialogue windows.
+- [Form Saver.](https://github.com/cferdinandi/form-saver/) Let users save, reuse, and delete form data.
+- [X-Ray.](https://github.com/cferdinandi/x-ray/) Let users toggle password visibility.
+- [Right Height](https://github.com/cferdinandi/right-height/) Set variable content containers to equal height.
+- [Sticky Footer](https://github.com/cferdinandi/sticky-footer/) Dynamic, responsive sticky footers.
 
 
 ### CSS Components
 
-* [Social Sharing.](https://github.com/cferdinandi/social-sharing/) Links and buttons without the bloat.
-* [Snapshot.](https://github.com/cferdinandi/snapshot/) Basic image styling.
-* [Progress Bars.](https://github.com/cferdinandi/progress-bars/) Lightweight CSS progress bars.
-* [Alerts.](https://github.com/cferdinandi/alerts/) Simple alert messages.
-* [Labels.](https://github.com/cferdinandi/labels/) Lightweight CSS labels.
+- [Social Sharing.](https://github.com/cferdinandi/social-sharing/) Links and buttons without the bloat.
+- [Snapshot.](https://github.com/cferdinandi/snapshot/) Basic image styling.
+- [Progress Bars.](https://github.com/cferdinandi/progress-bars/) Lightweight CSS progress bars.
+- [Alerts.](https://github.com/cferdinandi/alerts/) Simple alert messages.
+- [Labels.](https://github.com/cferdinandi/labels/) Lightweight CSS labels.
 
 
 ### Other People's Stuff
 
-* [FluidVids.js.](https://github.com/toddmotto/fluidvids) A lightweight javascript snippet for fluid iframes.
-* [Prism.](http://prismjs.com/) A lightweight syntax highlighter by Lea Verou.
-* [.htaccess.](https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess) Best practice server rules for making web pages fast and secure.
+- [FluidVids.js.](https://github.com/toddmotto/fluidvids) A lightweight javascript snippet for fluid iframes.
+- [Prism.](http://prismjs.com/) A lightweight syntax highlighter by Lea Verou.
+- [FitText.js.](https://github.com/adactio/FitText.js) Create scalable headlines.
+- [.htaccess.](https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess) Best practice server rules for making web pages fast and secure.
 
 <hr>
 

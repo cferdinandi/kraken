@@ -57,7 +57,7 @@
 								<li><a href="https://github.com/cferdinandi/kraken">GitHub</a></li>
 							</ul>
 
-							<div class="nav-section" data-toc></div>
+							<div class="nav-section" data-toc data-gumshoe></div>
 						</nav>
 					</header>
 
@@ -150,7 +150,8 @@
 		<!-- Javascript -->
 		<script src="assets/js/toc.js"></script>
 		<script src="assets/js/highlight-active-nav.js"></script>
-		<script src="assets/js/smooth-scroll.js"></script>
+		<script src="assets/js/smooth-scroll.min.js"></script>
+		<script src="assets/js/gumshoe.min.js"></script>
 		<script src="assets/js/prism.js"></script>
 		<script>
 			tableOfContents.init({
@@ -165,6 +166,9 @@
 					}
 					smoothScroll.init();
 				}
+			});
+			gumshoe.init({
+				offset: 5
 			});
 			highlightActiveNav.init({
 				urlPrefix: '/kraken/'

@@ -52,6 +52,10 @@
 	visibility: hidden;
 }
 
+.nav-section a.active {
+	color: #808080;
+}
+
 @media (min-width: 40em) {
 	.nav-section {
 		display: block;
