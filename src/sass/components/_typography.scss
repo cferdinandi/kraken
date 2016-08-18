@@ -22,33 +22,36 @@ p {
 
 /**
  * Hyperlink styling
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
 
 a {
-	background-color: transparent;
+	background-color: transparent; /* 1 */
 	color: $color-primary;
 	text-decoration: none;
 	word-wrap: break-word;
-}
+	-webkit-text-decoration-skip: objects; /* 2 */
 
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-a:active,
-a:hover {
-	outline: 0;
-}
+	/**
+	 * Improve readability when focused and also mouse hovered in all browsers.
+	 */
+	&:active,
+	&:hover {
+		outline: 0;
+	}
 
-a:hover,
-a:focus,
-a:active {
-	color: darken( $color-primary, 15% );
-	text-decoration: underline;
-}
+	&:active,
+	&:focus,
+	&:hover {
+		color: darken( $color-primary, 15% );
+		text-decoration: underline;
+	}
 
-a img {
-	border: none;
-	background: none;
+	img {
+		border: none;
+		background: none;
+	}
 }
 
 
@@ -178,15 +181,28 @@ h4,
  */
 
 hr {
-	margin: calc-em(32px) auto;
 	border: 0;
 	border-top: calc-em(1px) solid $color-gray-light;
 	border-bottom: 0 solid $color-white;
+	box-sizing: content-box;
+	margin: calc-em(32px) auto;
+	overflow: visible;
 }
 
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
 b,
 strong {
-	font-weight: bold;
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
 }
 
 i,
@@ -195,10 +211,13 @@ em {
 }
 
 /**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-	border-bottom: calc-em(1px) dotted;
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -213,6 +232,7 @@ dfn {
  */
 mark {
 	background: #ff0;
+	color: #000000;
 }
 
 /**
