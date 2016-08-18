@@ -348,7 +348,8 @@ Here's a basic HTML template page to get you started.
 			Navigation content
 		</nav>
 
-		<main id="#main">
+		<!-- tabindex="-1" hack for skipnav link: https://code.google.com/p/chromium/issues/detail?id=37721 -->
+		<main class="tabindex" tabindex="-1" id="#main">
 
 			<section class="container">
 

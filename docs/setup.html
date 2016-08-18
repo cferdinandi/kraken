@@ -61,7 +61,7 @@
 						</nav>
 					</header>
 
-				<main class="grid-three-fourths padding-top sticky-body" data-toc-content><h1 id="setup">Setup</h1>
+				<main class="grid-three-fourths padding-top sticky-body tabindex" tabindex="-1" data-toc-content><h1 id="setup">Setup</h1>
 <h2 id="download">Download</h2>
 <p>There are three ways to use Kraken on your project:</p>
 <ol>
@@ -357,7 +357,8 @@ $grid-dynamic: (
             Navigation content
         &lt;/nav&gt;
 
-        &lt;main id=&quot;#main&quot;&gt;
+        &lt;!-- tabindex=&quot;-1&quot; hack for skipnav link: https://code.google.com/p/chromium/issues/detail?id=37721 --&gt;
+        &lt;main class=&quot;tabindex&quot; tabindex=&quot;-1&quot; id=&quot;#main&quot;&gt;
 
             &lt;section class=&quot;container&quot;&gt;
 
