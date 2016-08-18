@@ -164,3 +164,11 @@ svg:not(:root) {
 figure {
 	margin: 0;
 }
+
+/**
+ * @workaround Remove focus from <main> element when using tabindex="-1" hack for skipnav link
+ * @link https://code.google.com/p/chromium/issues/detail?id=37721
+ */
+.tabindex:focus {
+    outline: none;
+}

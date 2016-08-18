@@ -61,7 +61,7 @@
 						</nav>
 					</header>
 
-				<main class="grid-three-fourths padding-top sticky-body" data-toc-content><h1 id="components">Components</h1>
+				<main class="grid-three-fourths padding-top sticky-body tabindex" tabindex="-1" data-toc-content><h1 id="components">Components</h1>
 <h2 id="branding-elements">Branding Elements</h2>
 <p>These are the default colors and typefaces in Kraken. Update them to suite your project.</p>
 <h3 id="colors">Colors</h3>
@@ -979,6 +979,16 @@ You can also include superscripts&lt;sup&gt;1&lt;/sup&gt; and subscripts&lt;sub&
 </code></pre>
 <p>For visually hidden content that should become visible on focus (such as a <a href="http://webaim.org/techniques/skipnav/">skip nav link</a> for sighted users navigating by keyboard), add the <code>.screen-reader-focusable</code> class.</p>
 <pre><code class="lang-markup">&lt;a class=&quot;screen-reader screen-reader-focusable&quot; href=&quot;#main&quot;&gt;Skip to content&lt;/a&gt;
+</code></pre>
+<h2 id="accessibility">Accessibility</h2>
+<p>Accessibility covers a wide range of topics, but Kraken includes one small styling tweak for one small accessibility enhancement that I wanted to make you aware of.</p>
+<p>I strongly recommend include a <a href="https://cferdinandi.github.io/kraken/components.html#visibility">skip navigation link</a> for people who navigate via keyboard. In order for focus to be properly set in certain browsers, you need to add <code>tabindex=&quot;-1&quot;</code> to the container your skip nav link points to.</p>
+<p>Kraken includes the <code>.tabindex</code> class, which removes the outline normally applied to focused content. You should <strong>always</strong> leave this outline on links, inputs, and so on. But when applying focus to a <code>&lt;div&gt;</code> or other content container, it can be removed.</p>
+<pre><code class="lang-markup">&lt;a class=&quot;screen-reader screen-reader-focusable&quot; href=&quot;#main&quot;&gt;Skip to content&lt;/a&gt;
+...
+&lt;main class=&quot;tabindex&quot; id=&quot;main&quot; tabindex=&quot;-1&quot;&gt;
+    ...
+&lt;/main&gt;
 </code></pre>
 					</section><!-- /.container -->
 

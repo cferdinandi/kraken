@@ -989,3 +989,19 @@ For visually hidden content that should become visible on focus (such as a [skip
 ```markup
 <a class="screen-reader screen-reader-focusable" href="#main">Skip to content</a>
 ```
+
+## Accessibility
+
+Accessibility covers a wide range of topics, but Kraken includes one small styling tweak for one small accessibility enhancement that I wanted to make you aware of.
+
+I strongly recommend include a [skip navigation link](https://cferdinandi.github.io/kraken/components.html#visibility) for people who navigate via keyboard. In order for focus to be properly set in certain browsers, you need to add `tabindex="-1"` to the container your skip nav link points to.
+
+Kraken includes the `.tabindex` class, which removes the outline normally applied to focused content. You should **always** leave this outline on links, inputs, and so on. But when applying focus to a `<div>` or other content container, it can be removed.
+
+```markup
+<a class="screen-reader screen-reader-focusable" href="#main">Skip to content</a>
+...
+<main class="tabindex" id="main" tabindex="-1">
+	...
+</main>
+```
