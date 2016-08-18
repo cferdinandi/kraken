@@ -89,9 +89,9 @@ textarea {
 	overflow: auto;
 }
 
-input[type="image"],
-input[type="checkbox"],
-input[type="radio"] {
+[type="image"],
+[type="checkbox"],
+[type="radio"] {
 	cursor: pointer;
 	display: inline-block;
 	height: auto;
@@ -105,8 +105,8 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
 	height: auto;
 }
 
@@ -118,8 +118,8 @@ textarea:focus {
 	outline: thin dotted \9;
 }
 
-input[type="file"]:focus,
-input[type="checkbox"]:focus,
+[type="file"]:focus,
+[type="checkbox"]:focus,
 select:focus {
 	outline: thin dotted;
 	outline: calc-em(5px) auto -webkit-focus-ring-color;
@@ -146,7 +146,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+	outline: 1px dotted ButtonText;
 }
 
 
@@ -198,8 +198,8 @@ button:-moz-focusring,
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
