@@ -57,7 +57,7 @@
 								<li><a href="https://github.com/cferdinandi/kraken">GitHub</a></li>
 							</ul>
 
-							<div class="nav-section" data-toc></div>
+							<div class="nav-section" data-toc data-gumshoe></div>
 						</nav>
 					</header>
 
@@ -95,6 +95,7 @@
 <ul>
 <li><a href="https://github.com/toddmotto/fluidvids">FluidVids.js.</a> A lightweight javascript snippet for fluid iframes.</li>
 <li><a href="http://prismjs.com/">Prism.</a> A lightweight syntax highlighter by Lea Verou.</li>
+<li><a href="https://github.com/adactio/FitText.js">FitText.js.</a> Create scalable headlines.</li>
 <li><a href="https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess">.htaccess.</a> Best practice server rules for making web pages fast and secure.</li>
 </ul>
 <hr>
@@ -204,7 +205,8 @@
 		<!-- Javascript -->
 		<script src="assets/js/toc.js"></script>
 		<script src="assets/js/highlight-active-nav.js"></script>
-		<script src="assets/js/smooth-scroll.js"></script>
+		<script src="assets/js/smooth-scroll.min.js"></script>
+		<script src="assets/js/gumshoe.min.js"></script>
 		<script src="assets/js/prism.js"></script>
 		<script>
 			tableOfContents.init({
@@ -219,6 +221,9 @@
 					}
 					smoothScroll.init();
 				}
+			});
+			gumshoe.init({
+				offset: 5
 			});
 			highlightActiveNav.init({
 				urlPrefix: '/kraken/'

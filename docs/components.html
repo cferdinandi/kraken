@@ -57,7 +57,7 @@
 								<li><a href="https://github.com/cferdinandi/kraken">GitHub</a></li>
 							</ul>
 
-							<div class="nav-section" data-toc></div>
+							<div class="nav-section" data-toc data-gumshoe></div>
 						</nav>
 					</header>
 
@@ -998,7 +998,8 @@ You can also include superscripts&lt;sup&gt;1&lt;/sup&gt; and subscripts&lt;sub&
 		<!-- Javascript -->
 		<script src="assets/js/toc.js"></script>
 		<script src="assets/js/highlight-active-nav.js"></script>
-		<script src="assets/js/smooth-scroll.js"></script>
+		<script src="assets/js/smooth-scroll.min.js"></script>
+		<script src="assets/js/gumshoe.min.js"></script>
 		<script src="assets/js/prism.js"></script>
 		<script>
 			tableOfContents.init({
@@ -1013,6 +1014,9 @@ You can also include superscripts&lt;sup&gt;1&lt;/sup&gt; and subscripts&lt;sub&
 					}
 					smoothScroll.init();
 				}
+			});
+			gumshoe.init({
+				offset: 5
 			});
 			highlightActiveNav.init({
 				urlPrefix: '/kraken/'
