@@ -1,5 +1,5 @@
 /*!
- * Kraken v7.4.0: A lightweight front-end boilerplate
+ * Kraken v7.4.1: A lightweight front-end boilerplate
  * (c) 2016 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/kraken
@@ -430,16 +430,10 @@ a:active, .link-block-styled:active, a:focus, .link-block-styled:focus, a:hover,
   text-decoration: underline;
 }
 
-/* line 51, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
-a img, .link-block-styled img {
-  border: none;
-  background: none;
-}
-
 /**
  * Creates block-level links
  */
-/* line 62, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 57, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 a.link-block, .link-block.link-block-styled {
   color: #272727;
   display: block;
@@ -449,14 +443,14 @@ a.link-block, .link-block.link-block-styled {
 /**
  * List styling
  */
-/* line 81, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 76, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 ul,
 ol {
   margin: 0 0 1.5625em 2em;
   padding: 0;
 }
 
-/* line 87, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 82, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -464,19 +458,19 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 94, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 89, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 dl,
 dd {
   margin: 0;
   padding: 0;
 }
 
-/* line 100, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 95, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 dd {
   margin-bottom: 1.5625em;
 }
 
-/* line 104, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 99, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 dt {
   font-weight: bold;
 }
@@ -485,7 +479,7 @@ dt {
  * Removes list styling.
  * For semantic reasons, should only be used on unordered lists.
  */
-/* line 112, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 107, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 .list-unstyled {
   margin-left: 0;
   list-style: none;
@@ -494,7 +488,7 @@ dt {
 /**
  * Display lists on a single line.
  */
-/* line 121, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 116, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 .list-inline {
   list-style: none;
   margin-left: -0.5em;
@@ -502,7 +496,7 @@ dt {
   padding: 0;
 }
 
-/* line 128, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 123, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 .list-inline > li {
   display: inline;
   margin-left: 0.5em;
@@ -513,7 +507,7 @@ dt {
  * Heading styling for h1 through h6 elements.
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
  */
-/* line 140, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 135, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: 1.2;
@@ -522,7 +516,7 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
-/* line 148, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 143, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h1,
 .h1 {
   font-size: 1.5em;
@@ -530,32 +524,32 @@ h1,
 }
 
 @media (min-width: 40em) {
-  /* line 148, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+  /* line 143, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
   h1,
   .h1 {
     font-size: 1.75em;
   }
 }
 
-/* line 158, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 153, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h2,
 .h2 {
   font-size: 1.3125em;
 }
 
-/* line 163, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 158, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h3,
 .h3 {
   font-size: 1.1875em;
 }
 
-/* line 168, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 163, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h4, h5, h6,
 .h4, .h5, .h6 {
   font-size: 1em;
 }
 
-/* line 173, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 168, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 h4,
 .h4 {
   text-transform: uppercase;
@@ -564,7 +558,7 @@ h4,
 /**
  * Lines, Quotes and Emphasis
  */
-/* line 183, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 178, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 hr {
   border: 0;
   border-top: 1px solid #e5e5e5;
@@ -577,7 +571,7 @@ hr {
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
-/* line 195, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 190, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 b,
 strong {
   font-weight: inherit;
@@ -586,23 +580,17 @@ strong {
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-/* line 203, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 198, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 b,
 strong {
   font-weight: bolder;
-}
-
-/* line 208, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
-i,
-em {
-  font-style: italic;
 }
 
 /**
  * 1. Remove the bottom border in Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-/* line 217, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 207, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -615,7 +603,7 @@ abbr[title] {
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 226, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 216, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 dfn {
   font-style: italic;
 }
@@ -623,7 +611,7 @@ dfn {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 233, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 223, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 mark {
   background: #ff0;
   color: #000000;
@@ -632,7 +620,7 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 241, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 231, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 small {
   font-size: 80%;
 }
@@ -640,7 +628,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 248, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 238, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 sub,
 sup {
   font-size: 75%;
@@ -649,12 +637,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 256, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 246, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 260, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 250, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 sub {
   bottom: -0.25em;
 }
@@ -662,7 +650,7 @@ sub {
 /**
  * Blockquotes
  */
-/* line 269, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 259, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote {
   font-size: 1.1875em;
   font-style: italic;
@@ -671,20 +659,20 @@ blockquote {
   padding-right: 0.84211em;
 }
 
-/* line 276, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 266, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote cite {
   color: #808080;
   font-size: 0.84211em;
   padding-top: 1em;
 }
 
-/* line 283, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 273, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote,
 q {
   quotes: none;
 }
 
-/* line 288, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
+/* line 278, /Users/cferdinandi/Sites/kraken/src/sass/components/_typography.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -973,9 +961,9 @@ textarea {
 }
 
 /* line 92, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
-input[type="image"],
-input[type="checkbox"],
-input[type="radio"] {
+[type="image"],
+[type="checkbox"],
+[type="radio"] {
   cursor: pointer;
   display: inline-block;
   height: auto;
@@ -990,8 +978,8 @@ input[type="radio"] {
  * decrement button to change from `default` to `text`.
  */
 /* line 108, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -1005,8 +993,8 @@ textarea:focus {
 }
 
 /* line 121, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
-input[type="file"]:focus,
-input[type="checkbox"]:focus,
+[type="file"]:focus,
+[type="checkbox"]:focus,
 select:focus {
   outline: thin dotted;
   outline: 0.3125em auto -webkit-focus-ring-color;
@@ -1088,8 +1076,8 @@ button:-moz-focusring,
  * padding (and `textfield` appearance).
  */
 /* line 201, /Users/cferdinandi/Sites/kraken/src/sass/components/_forms.scss */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
