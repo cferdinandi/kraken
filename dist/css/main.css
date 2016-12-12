@@ -1,5 +1,5 @@
 /*!
- * Kraken v7.5.1: A lightweight front-end boilerplate
+ * Kraken v7.5.2: A lightweight front-end boilerplate
  * (c) 2016 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/kraken
@@ -1417,6 +1417,7 @@ td {
   overflow: hidden;
   padding: 0;
   position: absolute;
+  white-space: nowrap;
   width: 1px;
 }
 
@@ -1425,7 +1426,7 @@ td {
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  * @link https://www.drupal.org/node/897638
  */
-/* line 167, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
+/* line 168, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
 .screen-reader-focusable:active,
 .screen-reader-focusable:focus {
   clip: auto;
@@ -1433,6 +1434,7 @@ td {
   margin: 0;
   overflow: visible;
   position: static;
+  white-space: normal;
   width: auto;
 }
 
@@ -1441,7 +1443,7 @@ td {
  * @affected IE 8/9/10
  * @link http://juicystudio.com/article/screen-readers-display-none.php
  */
-/* line 182, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
+/* line 184, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
 [hidden], template {
   display: none;
   visibility: hidden;
@@ -1452,7 +1454,7 @@ td {
  * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  */
-/* line 194, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
+/* line 196, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
 .clearfix:before, .container:before,
 .row:before,
 .clearfix:after,
@@ -1462,7 +1464,7 @@ td {
   content: " ";
 }
 
-/* line 200, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
+/* line 202, /Users/cferdinandi/Sites/kraken/src/sass/components/_overrides.scss */
 .clearfix:after, .container:after,
 .row:after {
   clear: both;
