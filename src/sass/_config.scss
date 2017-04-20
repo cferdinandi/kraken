@@ -8,43 +8,43 @@
 
 
 // Colors
-$color-primary: #0088cc;
-$color-black: #272727;
-$color-white: #ffffff;
+$color-primary: #0088cc !default;
+$color-black: #272727 !default;
+$color-white: #ffffff !default;
 
-$color-info: #0088cc; // Blue
-$color-success: #377f31; // Green
-$color-danger: #880e14; // Red
-$color-warning: #dba909; // Yellow
-$color-code: #dd1144;
+$color-info: #0088cc !default; // Blue
+$color-success: #377f31 !default; // Green
+$color-danger: #880e14 !default; // Red
+$color-warning: #dba909 !default; // Yellow
+$color-code: #dd1144 !default;
 
-$color-gray-dark: #808080;
-$color-gray-light: #e5e5e5;
+$color-gray-dark: #808080 !default;
+$color-gray-light: #e5e5e5 !default;
 
 
 // Font Stacks
-$font-primary: "Helvetica Neue", Arial, sans-serif;
-$font-secondary: Georgia, Times, serif;
-$font-monospace: Menlo, Monaco, "Courier New", monospace;
+$font-primary: "Helvetica Neue", Arial, sans-serif !default;
+$font-secondary: Georgia, Times, serif !default;
+$font-monospace: Menlo, Monaco, "Courier New", monospace !default;
 
 
 // Breakpoints
-$bp-xsmall: 20em;
-$bp-small: 30em;
-$bp-medium: 40em;
-$bp-large: 60em;
-$bp-xlarge: 80em;
+$bp-xsmall: 20em !default;
+$bp-small: 30em !default;
+$bp-medium: 40em !default;
+$bp-large: 60em !default;
+$bp-xlarge: 80em !default;
 
 
 // Sizing
-$font-size: 100%;
-$spacing: 1.5625em;
-$container-width: 88%;
-$container-max-width: 80em;
+$font-size: 100% !default;
+$spacing: 1.5625em !default;
+$container-width: 88% !default;
+$container-max-width: 80em !default;
 
 
 // Grid
-$grid-margins: 1.4%;
+$grid-margins: 1.4% !default;
 $grid-sizes: (
 	// Grid width options
 	// Add/remove grid's as needed
@@ -57,7 +57,7 @@ $grid-sizes: (
 	two-thirds: 66.666666666667%,
 	three-fourths: 75%,
 	full: 100%
-);
+) !default;
 $grid-breakpoints: (
 	// Breakpoints at which to activate grid
 	// Add/remove breakpoints as needed
@@ -68,7 +68,7 @@ $grid-breakpoints: (
 	($bp-xsmall, ".row-start-xsmall", false),
 	($bp-small, ".row-start-small", false),
 	($bp-medium, null, true),
-);
+) !default;
 $grid-dynamic: (
 	// Create grid classes that vary in size at different breakpoints
 	// Add/remove classes, breakpoints, and sizes as needed
@@ -79,4 +79,4 @@ $grid-dynamic: (
 	(".grid-dynamic", $bp-xsmall, map-get($grid-sizes, half))
 	(".grid-dynamic", $bp-small, map-get($grid-sizes, third))
 	(".grid-dynamic", $bp-medium, map-get($grid-sizes, fourth))
-);
+) !default;
