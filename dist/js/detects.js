@@ -1,8 +1,9 @@
 /*!
- * Kraken v7.5.2: A lightweight front-end boilerplate
- * (c) 2017 Chris Ferdinandi
+ * Kraken v7.6.0: A lightweight front-end boilerplate
+ * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/kraken
+ * Open Source Credits: 
  */
 
 ;(function (window, document, undefined) {
