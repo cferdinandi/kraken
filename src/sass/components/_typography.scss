@@ -30,8 +30,8 @@ a {
 	background-color: transparent; /* 1 */
 	color: $color-primary;
 	text-decoration: none;
+	text-decoration-skip: objects; /* 2 */
 	word-wrap: break-word;
-	-webkit-text-decoration-skip: objects; /* 2 */
 
 	/**
 	 * Improve readability when focused and also mouse hovered in all browsers.
@@ -175,13 +175,17 @@ h4,
  * Lines, Quotes and Emphasis
  */
 
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
 hr {
 	border: 0;
 	border-top: calc-em(1px) solid $color-gray-light;
-	border-bottom: 0 solid $color-white;
-	box-sizing: content-box;
+	border-bottom: 0 solid transparent;
+	box-sizing: content-box; /* 1 */
 	margin: calc-em(32px) auto;
-	overflow: visible;
+	overflow: visible; /* 2 */
 }
 
 /**
@@ -221,8 +225,8 @@ dfn {
  * Address styling not present in IE 8/9.
  */
 mark {
-	background: #ff0;
-	color: #000000;
+	background: #fbf89a;
+	color: $color-primary;
 }
 
 /**

@@ -43,19 +43,17 @@ summary {
 
 
 /**
- * 1. Set default font family to default.
- * 2. Force scrollbar display to prevent jumping on pages.
- * 3. Prevent iOS text size adjust after orientation change, without disabling
+ * 1. Force scrollbar display to prevent jumping on pages.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
 html {
-	font-family: $font-primary; /* 1 */
-	overflow-y: scroll; /* 2 */
-	text-size-adjust: 100%; /* 3 */
+	overflow-y: scroll; /* 1 */
+	text-size-adjust: 100%; /* 2 */
 }
 
 /**
- * Remove default margin.
+ * Remove the margin in all browsers (opinionated).
  */
 body {
 	margin: 0;
@@ -147,7 +145,7 @@ template {
  * 2. Prevents IE from making scaled images look like crap
  */
 img {
-	border: 0; /* 1 */
+	border-style: none; /* 1 */
 	-ms-interpolation-mode: bicubic; /* 2 */
 }
 
@@ -169,6 +167,6 @@ figure {
  * @workaround Remove focus from <main> element when using tabindex="-1" hack for skipnav link
  * @link https://code.google.com/p/chromium/issues/detail?id=37721
  */
-.tabindex:focus {
+[tabindex="-1"]:focus {
     outline: none;
 }
