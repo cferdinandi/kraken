@@ -46,7 +46,7 @@
 									<span class="text-large">Kraken</span>
 								</a>
 							</strong><br>
-							<span class="text-small text-muted">Version 7</span>
+							<span class="text-small text-muted">Version 8</span>
 						</p>
 						<nav class="nav">
 							<ul class="list-unstyled nav-primary" data-nav-highlight>
@@ -104,22 +104,10 @@
 <hr>
 
 
-<h2 id="what-s-new-in-kraken-7-">What&#39;s new in Kraken 7?</h2>
+<h2 id="what-s-new-in-kraken-8-">What&#39;s new in Kraken 8?</h2>
 <dl>
-    <dt>Switched to Normalize.css</dt>
-    <dd><a href="http://meyerweb.com/eric/tools/css/reset/">Meyer&#39;s CSS reset</a> is great, but it can create styling issues when doing things like <a href="http://gomakethings.com/inlining-critical-css-for-better-web-performance/">inlining critical path CSS</a>. <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> is a lightweight alternative that nudges and tweaks browser styles instead of resetting everything to zero.</dd>
-
-    <dt>Table Styles</dt>
-    <dd>In previous versions of Kraken, table styling was an optional add-on. Now, they&#39;re baked right in, and include CSS-only responsive tables for smaller viewports.</dd>
-
-    <dt>Search Form Styling</dt>
-    <dd>Kraken now includes <a href="components.html#search-forms">classes for custom search form styles</a>.</dd>
-
-    <dt>Switched to LibSass</dt>
-    <dd>Now that <a href="http://sass-lang.com/libsass">LibSass</a> supports most Sass 3 APIs, it&#39;s time to make the switch. This gets you faster builds, and no Ruby dependency.</dd>
-
-    <dt>Removed directionless space nudge-and-tweak classes</dt>
-    <dd>The <code>.no-margin</code> and <code>.no-padding</code> classes are gone. You should use <code>.no-padding-top</code>, <code>.no-margin-bottom</code>, <a href="components.html#alignment-spacing-visibility">and so on</a> to suite your needs.</dd>
+    <dt>Switched to Flexbox</dt>
+    <dd>The old float-based CSS grid is gone in favor of Flexbox. This makes setting up grids easier than ever and gives you more layout flexibility and control than previous versions.</dd>
 </dl>
 
 <hr>
@@ -128,7 +116,7 @@
 <h2 id="browser-compatibility">Browser Compatibility</h2>
 <p>The web is for everyone, but <a href="http://bradfrostweb.com/blog/mobile/support-vs-optimization/">support is not the same as optimization</a>.</p>
 <p>Rather than trying to provide the same level of functionality for older browsers, Kraken uses progressive enhancement to serve a basic experience to all browsers (even Netscape and IE 5). Newer browsers that support modern APIs and techniques get a better layout, more visually attractive elements, and an enhanced experience.</p>
-<p>Kraken works in all browsers, but it&#39;s optimized for modern browsers and IE 9+.</p>
+<p>Kraken works in all browsers, but it&#39;s optimized for modern browsers and IE 11 and above.</p>
 <h3 id="vendor-prefixing">Vendor Prefixing</h3>
 <p>Kraken uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, and is configured to only add prefixes if required by the last two versions of a browser.</p>
 <p>If a feature isn&#39;t working (for example, the grid does not work in Firefox 28 and lower), it may simply need a vendor prefix. You can add these manually, or adjust the Autoprefixer settings in <code>gulpfile.js</code> if you&#39;re working with the source code.</p>

@@ -46,7 +46,7 @@
 									<span class="text-large">Kraken</span>
 								</a>
 							</strong><br>
-							<span class="text-small text-muted">Version 7</span>
+							<span class="text-small text-muted">Version 8</span>
 						</p>
 						<nav class="nav">
 							<ul class="list-unstyled nav-primary" data-nav-highlight>
@@ -238,17 +238,7 @@ $grid-breakpoints: (
     ($bp-small, &quot;.row-start-small&quot;, false),
     ($bp-medium, null, true),
 );
-$grid-dynamic: (
-    // Create grid classes that vary in size at different breakpoints
-    // Add/remove classes, breakpoints, and sizes as needed
-    // ($class, $breakpoint, $width)
-    // $class - {string} the grid class
-    // $breakpoint - {string|variable} the breakpoint
-    // $width - {string|variable} width of the grid at the breakpoint
-    (&quot;.grid-dynamic&quot;, $bp-xsmall, map-get($grid-sizes, half))
-    (&quot;.grid-dynamic&quot;, $bp-small, map-get($grid-sizes, third))
-    (&quot;.grid-dynamic&quot;, $bp-medium, map-get($grid-sizes, fourth))
-);
+$grid-wrap: true;
 </code></pre>
 <h4 id="-_mixins-scss-"><code>_mixins.scss</code></h4>
 <p>The <code>_mixins.scss</code> file contains just a handful of mixins and functions to speed up development.</p>
@@ -274,7 +264,7 @@ $grid-dynamic: (
 <h4 id="unit-testing">Unit Testing</h4>
 <p>If you&#39;ve written <a href="http://jasmine.github.io/">Jasmine unit tests</a> for any of your scripts, place them in the <code>test</code> &gt; <code>spec</code> directory and they will automatically run on compile.</p>
 <p>Results are displayed in both the terminal window and <code>test</code> &gt; <code>results</code>. You can see how much coverage each unit test provides in the <code>test</code> &gt; <code>coverage</code> directory.</p>
-<h3 id="continous-integration">Continous Integration</h3>
+<h3 id="continuous-integration">Continuous Integration</h3>
 <p>Kraken includes a configuration file for <a href="http://docs.travis-ci.com/user/getting-started/">Travis CI</a>, a continuous integration service for GitHub.</p>
 <p>If you sign-up and activate it for your repository, Travis CI will run your build and execute any processes to make sure everything is working as expected. This is particularly useful when working with a team or managing open source projects with multiple contributors.</p>
 <p>The <code>.travis.yml</code> file is pre-configured for Kraken&#39;s build system. Even if you add files or update the Gulp tasks, you shouldn&#39;t need to change anything for it to work.</p>
@@ -346,7 +336,7 @@ $grid-dynamic: (
     &lt;body&gt;
 
         &lt;!-- Old Browser Warning --&gt;
-        &lt;!--[if lt IE 9]&gt;
+        &lt;!--[if lt IE 11]&gt;
             &lt;section class=&quot;container&quot;&gt;
                 Did you know that your web browser is a bit old? Some of the content on this site might not work right as a result. &lt;a href=&quot;http://whatbrowser.org&quot;&gt;Upgrade your browser&lt;/a&gt; for a faster, better, and safer web experience.
             &lt;/section&gt;
@@ -375,17 +365,6 @@ $grid-dynamic: (
         &lt;!-- In the footer for better performance --&gt;
         &lt;script src=&quot;dist/js/main.js&quot;&gt;&lt;/script&gt;
 
-        &lt;!-- Google Analytics: change UA-XXXXX-X to be your site&#39;s ID. --&gt;
-        &lt;!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) --&gt;
-        &lt;script&gt;
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src=&#39;//www.google-analytics.com/analytics.js&#39;;
-            r.parentNode.insertBefore(e,r)}(window,document,&#39;script&#39;,&#39;ga&#39;));
-            ga(&#39;create&#39;,&#39;UA-XXXXX-X&#39;);ga(&#39;send&#39;,&#39;pageview&#39;);
-        &lt;/script&gt;
-
     &lt;/body&gt;
 
 &lt;/html&gt;
@@ -412,9 +391,6 @@ $grid-dynamic: (
 
     <dt>JavaScript in the Footer</dt>
     <dd>For faster loading and better site performance, JavaScript files are included in the footer, not the header.</dd>
-
-    <dt>Google Analytics</dt>
-    <dd>An optimized version of Google Analytics is preloaded for you. Just add your site&#39;s ID (or replace the code altogether if you&#39;re using another analytics platform). <a href="http://html5boilerplate.com/">Adapted from HTML5 Boilerplate.</a></dd>
 </dl>					</section><!-- /.container -->
 
 					<footer class="bg-muted padding-top padding-bottom">
