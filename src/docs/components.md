@@ -34,35 +34,53 @@ These are the default colors and typefaces in Kraken. Update them to suite your 
 
 ## The Grid
 
-Kraken uses a fluid, mobile-first grid system based on simple fractions&mdash;halves, thirds, and fourths. It supports nesting, and includes special classes for offsets, content choreography, and dynamic grids.
+Kraken uses a fluid, mobile-first grid system based on simple fractions&mdash;halves, thirds, and fourths. It supports nesting, and includes special classes for offsets and content choreography.
 
 ### The Base Grid
 
-The `.container` class centers content on the page and restricts it to a maximum width. To create a grid, add a `<div>` with a `.row` class. You can create grids within a row by creating `<div>` elements with the `.grid-$size` class.
+The `.container` class centers content on the page and restricts it to a maximum width.
+
+To create a grid, add a `<div>` with a `.row` class. You can create grids within a row by creating `<div>` elements with the `.grid-$size` class. The `.grid-auto` class will scale the content to fit whatever space is available.
 
 <div class="row">
-	<div class="grid-third"><div class="grid-highlight">.grid-third</div></div>
-	<div class="grid-two-thirds"><div class="grid-highlight">.grid-two-thirds</div></div>
+	<div class="grid-auto grid-highlight">.grid-auto</div>
+	<div class="grid-auto grid-highlight">.grid-auto</div>
+	<div class="grid-auto grid-highlight">.grid-auto</div>
+	<div class="grid-auto grid-highlight">.grid-auto</div>
+	<div class="grid-auto grid-highlight">.grid-auto</div>
 </div>
 
 <div class="row">
-	<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-	<div class="grid-three-fourths"><div class="grid-highlight">.grid-three-fourths</div></div>
+	<div class="grid-third grid-highlight">.grid-third</div>
+	<div class="grid-two-thirds grid-highlight">.grid-two-thirds</div>
 </div>
 
 <div class="row">
-	<div class="grid-half"><div class="grid-highlight">.grid-half</div></div>
-	<div class="grid-half"><div class="grid-highlight">.grid-half</div></div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+	<div class="grid-three-fourths grid-highlight">.grid-three-fourths</div>
 </div>
 
 <div class="row">
-	<div class="grid-full"><div class="grid-highlight">.grid-full</div></div>
+	<div class="grid-half grid-highlight">.grid-half</div>
+	<div class="grid-half grid-highlight">.grid-half</div>
+</div>
+
+<div class="row">
+	<div class="grid-full grid-highlight">.grid-full</div>
 </div>
 
 ```markup
 <div class="container">
 
 	<p>Kraken uses a fluid, mobile-first grid system...</p>
+
+	<div class="row">
+		<div class="grid-auto">.grid-auto</div>
+		<div class="grid-auto">.grid-auto</div>
+		<div class="grid-auto">.grid-auto</div>
+		<div class="grid-auto">.grid-auto</div>
+		<div class="grid-auto">.grid-auto</div>
+	</div>
 
 	<div class="row">
 		<div class="grid-third">.grid-third</div>
@@ -89,19 +107,15 @@ The `.container` class centers content on the page and restricts it to a maximum
 
 ### Offsets
 
-Push grids to the right by adding an `.offset-$size` class. Center grids with the `.float-center` class.
+Push grids to the right by adding an `.offset-$size` class.
 
 <div class="row">
-	<div class="grid-three-fourths offset-fourth"><div class="grid-highlight">.grid-three-fourths .offset-fourth</div></div>
+	<div class="grid-three-fourths offset-fourth grid-highlight">.grid-three-fourths .offset-fourth</div>
 </div>
 
 <div class="row">
-	<div class="grid-third"><div class="grid-highlight">.grid-third</div></div>
-	<div class="grid-third offset-third"><div class="grid-highlight">.grid-third .offset-third</div></div>
-</div>
-
-<div class="row">
-	<div class="grid-two-thirds float-center"><div class="grid-highlight">.grid-two-thirds .float-center</div></div>
+	<div class="grid-third grid-highlight">.grid-third</div>
+	<div class="grid-third offset-third grid-highlight">.grid-third .offset-third</div>
 </div>
 
 ```markup
@@ -113,9 +127,76 @@ Push grids to the right by adding an `.offset-$size` class. Center grids with th
 	<div class="grid-third">.grid-third</div>
 	<div class="grid-third offset-third">.grid-third .offset-third</div>
 </div>
+```
 
-<div class="row">
-	<div class="grid-two-thirds float-center">.grid-two-thirds .float-center</div>
+
+### Alignment
+
+Align content at the beginning of the row by adding the `.row-start` class, to the end of the row by adding the `.row-end` class, and in the center by adding the `.row-center` class.
+
+<div class="row row-start">
+	<div class="grid-half grid-highlight">.row-start > .grid-half</div>
+</div>
+
+<div class="row row-center">
+	<div class="grid-half grid-highlight">.row-center > .grid-half</div>
+</div>
+
+<div class="row row-end">
+	<div class="grid-half grid-highlight">.row-end > .grid-half</div>
+</div>
+
+```markup
+<div class="row row-start">
+	<div class="grid-three-fourths">.row-start > .grid-half</div>
+</div>
+
+<div class="row row-center">
+	<div class="grid-three-fourths">.row-center > .grid-half</div>
+</div>
+
+<div class="row row-end">
+	<div class="grid-three-fourths">.row-end > .grid-half</div>
+</div>
+```
+
+Align content at the top by adding the `.row-top` class, in the middle with the `.row-middle` class, and at the bottom with the `.row-bottom` class.
+
+<div class="row row-top">
+	<div class="grid-third grid-highlight"><br>.row-top > .grid-third<br><br></div>
+	<div class="grid-third grid-highlight">.row-top > .grid-third</div>
+	<div class="grid-third grid-highlight"><br>.row-top > .grid-third<br><br></div>
+</div>
+
+<div class="row row-middle">
+	<div class="grid-third grid-highlight"><br>.row-middle > .grid-third<br><br></div>
+	<div class="grid-third grid-highlight">.row-middle > .grid-third</div>
+	<div class="grid-third grid-highlight"><br>.row-middle > .grid-third<br><br></div>
+</div>
+
+<div class="row row-bottom">
+	<div class="grid-third grid-highlight"><br>.row-bottom > .grid-third<br><br></div>
+	<div class="grid-third grid-highlight">.row-bottom > .grid-third</div>
+	<div class="grid-third grid-highlight"><br>.row-bottom > .grid-third<br><br></div>
+</div>
+
+```markup
+<div class="row row-top">
+	<div class="grid-third"><br>.grid-third<br><br></div>
+	<div class="grid-third">.grid-third</div>
+	<div class="grid-third"><br>.grid-third<br><br></div>
+</div>
+
+<div class="row row-middle">
+	<div class="grid-third"><br>.grid-third<br><br></div>
+	<div class="grid-third">.grid-third</div>
+	<div class="grid-third"><br>.grid-third<br><br></div>
+</div>
+
+<div class="row row-bottom">
+	<div class="grid-third"><br>.grid-third<br><br></div>
+	<div class="grid-third">.grid-third</div>
+	<div class="grid-third"><br>.grid-third<br><br></div>
 </div>
 ```
 
@@ -128,18 +209,18 @@ If you're [working with the source files](setup.html#working-with-the-source-fil
 
 **Extra Small Screens**
 <div class="row row-start-xsmall">
-	<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-	<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-	<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-	<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
 </div>
 
 **Small Screens**
 <div class="row row-start-small">
-	<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-	<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-	<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
-	<div class="grid-fourth"><div class="grid-highlight">.grid-fourth</div></div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
 </div>
 
 ```markup
@@ -163,56 +244,80 @@ Small Screens
 
 ### Content Choreography
 
-Flip the order of a grid on bigger screens by adding the `.grid-flip` class.
+You can flip the order of grid items on bigger screens with a series of helper classes. Add the `.grid-first` class to move content to the beginning of a row, and the `.grid-last` class to move it to the end. Add the `.row-reverse` class to reverse the entire order of content in a row.
 
 <div class="row">
-	<div class="grid-third grid-flip"><div class="grid-highlight">First in HTML</div></div>
-	<div class="grid-two-thirds"><div class="grid-highlight">Second in HTML</div></div>
+	<div class="grid-third grid-highlight">1</div>
+	<div class="grid-third grid-first grid-highlight">2</div>
+	<div class="grid-third grid-highlight">3</div>
+</div>
+
+<div class="row">
+	<div class="grid-third grid-highlight">1</div>
+	<div class="grid-third grid-last grid-highlight">2</div>
+	<div class="grid-third grid-highlight">3</div>
+</div>
+
+<div class="row row-reverse">
+	<div class="grid-third grid-highlight">1</div>
+	<div class="grid-third grid-highlight">2</div>
+	<div class="grid-third grid-highlight">3</div>
 </div>
 
 ```markup
 <div class="row">
-	<div class="grid-third grid-flip">First in HTML</div>
-	<div class="grid-two-thirds">Second in HTML</div>
+	<div class="grid-third">1</div>
+	<div class="grid-third grid-first">2</div>
+	<div class="grid-third">3</div>
+</div>
+
+<div class="row">
+	<div class="grid-third">1</div>
+	<div class="grid-third grid-last">2</div>
+	<div class="grid-third">3</div>
+</div>
+
+<div class="row row-reverse">
+	<div class="grid-third">1</div>
+	<div class="grid-third">2</div>
+	<div class="grid-third">3</div>
 </div>
 ```
 
 
-### Dynamic Grids
+### Wrapping Grids
 
-Create grids that vary in size based on screen width using the `.grid-dynamic` class&mdash;great for creating images galleries! For content that may vary in height, you may want to use the [Right Height add-on](https://github.com/cferdinandi/right-height/).
+You can create grids that dynamically wrap content based on available spacing by adding the `.row-wrap` class and using the `.grid-auto` class. The content inside each grid also needs to have a `width` or `max-width` assigned to it.
 
-If you're [working with the source files](setup.html#working-with-the-source-files), you easily adjust the grid breakpoints and even create additional grids with different layout patterns.
-
-<div class="row">
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
-	<div class="grid-dynamic"><p><img src="http://placehold.it/350x350" title="Picture an emu"></p></div>
+<div class="row row-start-xsmall row-wrap text-center">
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
 </div>
 
 ```markup
-<div class="row">
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
-	<div class="grid-dynamic"><img src="emu.jpg"></div>
+<div class="row row-start-xsmall row-wrap text-center">
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
+	<div class="grid-auto"><p><img height="150" width="150" src="http://placehold.it/350x350" alt="placeholder graphic"></p></div>
 </div>
 ```
 

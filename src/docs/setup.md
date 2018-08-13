@@ -189,17 +189,7 @@ $grid-breakpoints: (
 	($bp-small, ".row-start-small", false),
 	($bp-medium, null, true),
 );
-$grid-dynamic: (
-	// Create grid classes that vary in size at different breakpoints
-	// Add/remove classes, breakpoints, and sizes as needed
-	// ($class, $breakpoint, $width)
-	// $class - {string} the grid class
-	// $breakpoint - {string|variable} the breakpoint
-	// $width - {string|variable} width of the grid at the breakpoint
-	(".grid-dynamic", $bp-xsmall, map-get($grid-sizes, half))
-	(".grid-dynamic", $bp-small, map-get($grid-sizes, third))
-	(".grid-dynamic", $bp-medium, map-get($grid-sizes, fourth))
-);
+$grid-wrap: true;
 ```
 
 #### `_mixins.scss`
@@ -249,7 +239,7 @@ If you've written [Jasmine unit tests](http://jasmine.github.io/) for any of you
 Results are displayed in both the terminal window and `test` > `results`. You can see how much coverage each unit test provides in the `test` > `coverage` directory.
 
 
-### Continous Integration
+### Continuous Integration
 
 Kraken includes a configuration file for [Travis CI](http://docs.travis-ci.com/user/getting-started/), a continuous integration service for GitHub.
 
@@ -336,7 +326,7 @@ Here's a basic HTML template page to get you started.
 	<body>
 
 		<!-- Old Browser Warning -->
-		<!--[if lt IE 9]>
+		<!--[if lt IE 11]>
 			<section class="container">
 				Did you know that your web browser is a bit old? Some of the content on this site might not work right as a result. <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, better, and safer web experience.
 			</section>
@@ -364,17 +354,6 @@ Here's a basic HTML template page to get you started.
 		<!-- Javascript -->
 		<!-- In the footer for better performance -->
 		<script src="dist/js/main.js"></script>
-
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) -->
-		<script>
-			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-			e.src='//www.google-analytics.com/analytics.js';
-			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-			ga('create','UA-XXXXX-X');ga('send','pageview');
-		</script>
 
 	</body>
 
@@ -404,7 +383,4 @@ Here's a basic HTML template page to get you started.
 
 	<dt>JavaScript in the Footer</dt>
 	<dd>For faster loading and better site performance, JavaScript files are included in the footer, not the header.</dd>
-
-	<dt>Google Analytics</dt>
-	<dd>An optimized version of Google Analytics is preloaded for you. Just add your site's ID (or replace the code altogether if you're using another analytics platform). [Adapted from HTML5 Boilerplate.](http://html5boilerplate.com/)</dd>
 </dl>

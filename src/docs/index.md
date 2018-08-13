@@ -67,23 +67,11 @@ Classes can be mixed, matched and reused throughout a project.
 <hr>
 
 
-## What's new in Kraken 7?
+## What's new in Kraken 8?
 
 <dl>
-	<dt>Switched to Normalize.css</dt>
-	<dd><a href="http://meyerweb.com/eric/tools/css/reset/">Meyer's CSS reset</a> is great, but it can create styling issues when doing things like <a href="http://gomakethings.com/inlining-critical-css-for-better-web-performance/">inlining critical path CSS</a>. <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> is a lightweight alternative that nudges and tweaks browser styles instead of resetting everything to zero.</dd>
-
-	<dt>Table Styles</dt>
-	<dd>In previous versions of Kraken, table styling was an optional add-on. Now, they're baked right in, and include CSS-only responsive tables for smaller viewports.</dd>
-
-	<dt>Search Form Styling</dt>
-	<dd>Kraken now includes <a href="components.html#search-forms">classes for custom search form styles</a>.</dd>
-
-	<dt>Switched to LibSass</dt>
-	<dd>Now that <a href="http://sass-lang.com/libsass">LibSass</a> supports most Sass 3 APIs, it's time to make the switch. This gets you faster builds, and no Ruby dependency.</dd>
-
-	<dt>Removed directionless space nudge-and-tweak classes</dt>
-	<dd>The <code>.no-margin</code> and <code>.no-padding</code> classes are gone. You should use <code>.no-padding-top</code>, <code>.no-margin-bottom</code>, <a href="components.html#alignment-spacing-visibility">and so on</a> to suite your needs.</dd>
+	<dt>Switched to Flexbox</dt>
+	<dd>The old float-based CSS grid is gone in favor of Flexbox. This makes setting up grids easier than ever and gives you more layout flexibility and control than previous versions.</dd>
 </dl>
 
 <hr>
@@ -95,7 +83,7 @@ The web is for everyone, but [support is not the same as optimization](http://br
 
 Rather than trying to provide the same level of functionality for older browsers, Kraken uses progressive enhancement to serve a basic experience to all browsers (even Netscape and IE 5). Newer browsers that support modern APIs and techniques get a better layout, more visually attractive elements, and an enhanced experience.
 
-Kraken works in all browsers, but it's optimized for modern browsers and IE 9+.
+Kraken works in all browsers, but it's optimized for modern browsers and IE 11 and above.
 
 ### Vendor Prefixing
 

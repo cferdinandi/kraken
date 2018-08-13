@@ -69,14 +69,4 @@ $grid-breakpoints: (
 	($bp-small, ".row-start-small", false),
 	($bp-medium, null, true),
 );
-$grid-dynamic: (
-	// Create grid classes that vary in size at different breakpoints
-	// Add/remove classes, breakpoints, and sizes as needed
-	// ($class, $breakpoint, $width)
-	// $class - {string} the grid class
-	// $breakpoint - {string|variable} the breakpoint
-	// $width - {string|variable} width of the grid at the breakpoint
-	(".grid-dynamic", $bp-xsmall, map-get($grid-sizes, half))
-	(".grid-dynamic", $bp-small, map-get($grid-sizes, third))
-	(".grid-dynamic", $bp-medium, map-get($grid-sizes, fourth))
-);
+$grid-wrap: true;
