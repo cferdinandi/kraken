@@ -78,10 +78,6 @@
 	margin-right: $grid-margins;
 }
 
-.grid-auto {
-	@extend %grid-base;
-}
-
 @each $grid, $width in ($grid-sizes) {
 	.grid-#{$grid} {
 		@extend %grid-base;
@@ -98,17 +94,25 @@
 			flex-wrap: nowrap;
 		}
 
+		%grid-with-padding {
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: $grid-margins;
+			padding-right: $grid-margins;
+		}
+
 		@if $grid-wrap {
 			.row-wrap#{$prefix} {
 				flex-wrap: wrap;
 
-				@each $grid in ($grid-sizes) {
+				@each $grid, $width in ($grid-sizes) {
 					.grid-#{$grid} {
-						margin-left: auto;
-						margin-right: auto;
-						padding-left: $grid-margins;
-						padding-right: $grid-margins;
+						@extend %grid-with-padding;
 					}
+				}
+
+				.grid-auto {
+					@extend %grid-with-padding;
 				}
 			}
 		}
