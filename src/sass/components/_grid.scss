@@ -94,25 +94,34 @@
 			flex-wrap: nowrap;
 		}
 
-		%grid-with-padding {
-			margin-left: 0;
-			margin-right: 0;
-			padding-left: $grid-margins;
-			padding-right: $grid-margins;
-		}
-
 		@if $grid-wrap {
+
 			.row-wrap#{$prefix} {
 				flex-wrap: wrap;
 
 				@each $grid, $width in ($grid-sizes) {
+					%grid-with-padding {
+						margin-left: 0;
+						margin-right: 0;
+						padding-left: $grid-margins;
+						padding-right: $grid-margins;
+					}
+
 					.grid-#{$grid} {
-						@extend %grid-with-padding;
+						// @extend %grid-with-padding;
+						margin-left: 0;
+						margin-right: 0;
+						padding-left: $grid-margins;
+						padding-right: $grid-margins;
 					}
 				}
 
 				.grid-auto {
-					@extend %grid-with-padding;
+					// @extend %grid-with-padding;
+					margin-left: 0;
+					margin-right: 0;
+					padding-left: $grid-margins;
+					padding-right: $grid-margins;
 				}
 			}
 		}
