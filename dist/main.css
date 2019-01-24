@@ -1,9 +1,9 @@
 /*!
- * Kraken v8.0.1: A lightweight front-end boilerplate
- * (c) 2018 Chris Ferdinandi
+ * Kraken v9.0.0
+ * A lightweight CSS boilerplate for front-end developers.
+ * (c) 2019 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/kraken
- * Open Source Credits: 
  */
 
 /**
@@ -13,39 +13,9 @@
  * @link http://necolas.github.io/normalize.css/
  */
 /**
-  * Mobile screen resizing
-  * @link http://dev.w3.org/csswg/css-device-adapt/
-  */
-@-webkit-viewport {
-  width: device-width;
-  zoom: 1.0;
-}
-
-@-moz-viewport {
-  width: device-width;
-  zoom: 1.0;
-}
-
-@-ms-viewport {
-  width: device-width;
-  zoom: 1.0;
-}
-
-@-o-viewport {
-  width: device-width;
-  zoom: 1.0;
-}
-
-@viewport {
-  width: device-width;
-  zoom: 1.0;
-}
-
-/**
  * Remove the tap delay in webkit
  * @link https://medium.com/@adactio/delay-a9df9edceef3#.7dmbl3xow
  */
-/* line 23, src/sass/components/_normalize.scss */
 a, .link-block-styled,
 button,
 input,
@@ -61,11 +31,11 @@ summary {
  * Add box sizing to everything
  * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  */
-/* line 38, src/sass/components/_normalize.scss */
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /**
@@ -73,11 +43,11 @@ summary {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 50, src/sass/components/_normalize.scss */
 html {
   overflow-y: scroll;
   /* 1 */
   -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
   /* 2 */
@@ -86,7 +56,6 @@ html {
 /**
  * Remove the margin in all browsers (opinionated).
  */
-/* line 58, src/sass/components/_normalize.scss */
 body {
   margin: 0;
 }
@@ -97,7 +66,6 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 68, src/sass/components/_normalize.scss */
 article,
 aside,
 cite,
@@ -117,7 +85,6 @@ section {
 /*
  * Add the correct display in all browsers.
  */
-/* line 87, src/sass/components/_normalize.scss */
 summary {
   display: list-item;
 }
@@ -125,7 +92,6 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-/* line 94, src/sass/components/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -137,7 +103,6 @@ video {
 /**
  * Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 104, src/sass/components/_normalize.scss */
 progress {
   vertical-align: baseline;
 }
@@ -146,7 +111,6 @@ progress {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 112, src/sass/components/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -155,7 +119,6 @@ audio:not([controls]) {
 /**
  * Prevent img and video elements from spilling outside of the page on smaller screens.
  */
-/* line 120, src/sass/components/_normalize.scss */
 img,
 video {
   max-width: 100%;
@@ -166,7 +129,6 @@ video {
  * Prevent iframe, object, and embed elements from spilling outside of the page on smaller screens.
  * height: auto causes iframes to smush, so it's omitted here.
  */
-/* line 130, src/sass/components/_normalize.scss */
 iframe,
 object,
 embed {
@@ -180,7 +142,6 @@ embed {
  * 1. Remove border when inside `a` element in IE 8/9/10.
  * 2. Prevents IE from making scaled images look like crap
  */
-/* line 147, src/sass/components/_normalize.scss */
 img {
   border-style: none;
   /* 1 */
@@ -191,7 +152,6 @@ img {
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 155, src/sass/components/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -199,7 +159,6 @@ svg:not(:root) {
 /**
  * Address inconsistent margin.
  */
-/* line 162, src/sass/components/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -208,7 +167,6 @@ figure {
  * @workaround Remove focus from <main> element when using tabindex="-1" hack for skipnav link
  * @link https://code.google.com/p/chromium/issues/detail?id=37721
  */
-/* line 170, src/sass/components/_normalize.scss */
 [tabindex="-1"]:focus {
   outline: none;
 }
@@ -220,7 +178,6 @@ figure {
 /**
  * Base grid styles: single column
  */
-/* line 9, src/sass/components/_grid.scss */
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -228,7 +185,6 @@ figure {
   width: 88%;
 }
 
-/* line 17, src/sass/components/_grid.scss */
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,7 +203,6 @@ figure {
  * Alignment
  */
 /* Float content to the top */
-/* line 31, src/sass/components/_grid.scss */
 .row-top {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -255,7 +210,6 @@ figure {
 }
 
 /* Float content in the middle */
-/* line 36, src/sass/components/_grid.scss */
 .row-middle {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -263,7 +217,6 @@ figure {
 }
 
 /* Push content to the bottom */
-/* line 41, src/sass/components/_grid.scss */
 .row-bottom {
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -271,7 +224,6 @@ figure {
 }
 
 /* Move content to the start of the row */
-/* line 46, src/sass/components/_grid.scss */
 .row-start {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -279,7 +231,6 @@ figure {
 }
 
 /* Float content in the center of the row */
-/* line 51, src/sass/components/_grid.scss */
 .row-center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -287,7 +238,6 @@ figure {
 }
 
 /* Move content to the end of the row */
-/* line 56, src/sass/components/_grid.scss */
 .row-end {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -295,14 +245,12 @@ figure {
 }
 
 /* Add even spacing around each item */
-/* line 61, src/sass/components/_grid.scss */
 .row-around {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 /* Add even spacing between items */
-/* line 66, src/sass/components/_grid.scss */
 .row-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -310,7 +258,6 @@ figure {
 }
 
 /* Reverse content order */
-/* line 71, src/sass/components/_grid.scss */
 .row-reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -318,8 +265,7 @@ figure {
           flex-direction: row-reverse;
 }
 
-/* line 75, src/sass/components/_grid.scss */
-.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full {
+.grid-fourth, .grid-third, .grid-half, .grid-two-thirds, .grid-three-fourths, .grid-full, .grid-auto {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-left: 1.4%;
@@ -330,66 +276,56 @@ figure {
  * Add columns to grid on bigger screens
  */
 @media (min-width: 20em) {
-  /* line 93, src/sass/components/_grid.scss */
   .row.row-start-xsmall {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  /* line 99, src/sass/components/_grid.scss */
   .row-wrap.row-start-xsmall {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-xsmall .grid-fourth {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-xsmall .grid-third {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-xsmall .grid-half {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-xsmall .grid-two-thirds {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-xsmall .grid-three-fourths {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-xsmall .grid-full {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 119, src/sass/components/_grid.scss */
   .row-wrap.row-start-xsmall .grid-auto {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 129, src/sass/components/_grid.scss */
   .row-start-xsmall .grid-auto {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
@@ -397,49 +333,41 @@ figure {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-xsmall .grid-fourth {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-xsmall .grid-third {
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-xsmall .grid-half {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-xsmall .grid-two-thirds {
     -ms-flex-preferred-size: 66.66667%;
         flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-xsmall .grid-three-fourths {
     -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
     max-width: 75%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-xsmall .grid-full {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%;
   }
-  /* line 148, src/sass/components/_grid.scss */
   .row-start-xsmall .grid-first {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
         order: -1;
   }
-  /* line 153, src/sass/components/_grid.scss */
   .row-start-xsmall .grid-last {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
@@ -448,66 +376,56 @@ figure {
 }
 
 @media (min-width: 30em) {
-  /* line 93, src/sass/components/_grid.scss */
   .row.row-start-small {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  /* line 99, src/sass/components/_grid.scss */
   .row-wrap.row-start-small {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-small .grid-fourth {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-small .grid-third {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-small .grid-half {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-small .grid-two-thirds {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-small .grid-three-fourths {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap.row-start-small .grid-full {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 119, src/sass/components/_grid.scss */
   .row-wrap.row-start-small .grid-auto {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 129, src/sass/components/_grid.scss */
   .row-start-small .grid-auto {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
@@ -515,49 +433,41 @@ figure {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-small .grid-fourth {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-small .grid-third {
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-small .grid-half {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-small .grid-two-thirds {
     -ms-flex-preferred-size: 66.66667%;
         flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-small .grid-three-fourths {
     -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
     max-width: 75%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .row-start-small .grid-full {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%;
   }
-  /* line 148, src/sass/components/_grid.scss */
   .row-start-small .grid-first {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
         order: -1;
   }
-  /* line 153, src/sass/components/_grid.scss */
   .row-start-small .grid-last {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
@@ -566,66 +476,56 @@ figure {
 }
 
 @media (min-width: 40em) {
-  /* line 93, src/sass/components/_grid.scss */
   .row {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  /* line 99, src/sass/components/_grid.scss */
   .row-wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap .grid-fourth {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap .grid-third {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap .grid-half {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap .grid-two-thirds {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap .grid-three-fourths {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 110, src/sass/components/_grid.scss */
   .row-wrap .grid-full {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 119, src/sass/components/_grid.scss */
   .row-wrap .grid-auto {
     margin-left: 0;
     margin-right: 0;
     padding-left: 1.4%;
     padding-right: 1.4%;
   }
-  /* line 129, src/sass/components/_grid.scss */
   .grid-auto {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
@@ -633,73 +533,59 @@ figure {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .grid-fourth {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
     max-width: 25%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .grid-third {
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%;
     max-width: 33.33333%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .grid-half {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .grid-two-thirds {
     -ms-flex-preferred-size: 66.66667%;
         flex-basis: 66.66667%;
     max-width: 66.66667%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .grid-three-fourths {
     -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
     max-width: 75%;
   }
-  /* line 135, src/sass/components/_grid.scss */
   .grid-full {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%;
   }
-  /* line 142, src/sass/components/_grid.scss */
   .offset-fourth {
     margin-left: 25%;
   }
-  /* line 142, src/sass/components/_grid.scss */
   .offset-third {
     margin-left: 33.33333%;
   }
-  /* line 142, src/sass/components/_grid.scss */
   .offset-half {
     margin-left: 50%;
   }
-  /* line 142, src/sass/components/_grid.scss */
   .offset-two-thirds {
     margin-left: 66.66667%;
   }
-  /* line 142, src/sass/components/_grid.scss */
   .offset-three-fourths {
     margin-left: 75%;
   }
-  /* line 142, src/sass/components/_grid.scss */
   .offset-full {
     margin-left: 100%;
   }
-  /* line 148, src/sass/components/_grid.scss */
   .grid-first {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
         order: -1;
   }
-  /* line 153, src/sass/components/_grid.scss */
   .grid-last {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
@@ -711,7 +597,6 @@ figure {
  * @section Typography
  * Sets font styles for entire site
  */
-/* line 6, src/sass/components/_typography.scss */
 body {
   background: #ffffff;
   color: #272727;
@@ -721,13 +606,11 @@ body {
 }
 
 @media (min-width: 40em) {
-  /* line 6, src/sass/components/_typography.scss */
   body {
     line-height: 1.5625;
   }
 }
 
-/* line 18, src/sass/components/_typography.scss */
 p {
   margin: 0 0 1.5625em;
 }
@@ -737,7 +620,6 @@ p {
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
-/* line 29, src/sass/components/_typography.scss */
 a, .link-block-styled {
   background-color: transparent;
   /* 1 */
@@ -752,12 +634,10 @@ a, .link-block-styled {
 	 */
 }
 
-/* line 39, src/sass/components/_typography.scss */
 a:active, .link-block-styled:active, a:hover, .link-block-styled:hover, .link-block:hover .link-block-styled {
   outline: 0;
 }
 
-/* line 44, src/sass/components/_typography.scss */
 a:active, .link-block-styled:active, a:focus, .link-block-styled:focus, a:hover, .link-block-styled:hover, .link-block:hover .link-block-styled {
   color: #005580;
   text-decoration: underline;
@@ -766,7 +646,6 @@ a:active, .link-block-styled:active, a:focus, .link-block-styled:focus, a:hover,
 /**
  * Creates block-level links
  */
-/* line 57, src/sass/components/_typography.scss */
 a.link-block, .link-block.link-block-styled {
   color: #272727;
   display: block;
@@ -776,14 +655,12 @@ a.link-block, .link-block.link-block-styled {
 /**
  * List styling
  */
-/* line 76, src/sass/components/_typography.scss */
 ul,
 ol {
   margin: 0 0 1.5625em 2em;
   padding: 0;
 }
 
-/* line 82, src/sass/components/_typography.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -791,47 +668,55 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 89, src/sass/components/_typography.scss */
 dl,
 dd {
   margin: 0;
   padding: 0;
 }
 
-/* line 95, src/sass/components/_typography.scss */
 dd {
   margin-bottom: 1.5625em;
 }
 
-/* line 99, src/sass/components/_typography.scss */
 dt {
   font-weight: bold;
+}
+
+/**
+ * @bugfix Prevent webkit from removing list semantics
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+.list-unstyled, .list-inline {
+  list-style: none;
+}
+
+.list-unstyled > li:before, .list-inline > li:before {
+  content: "\200B";
+  /* 1 */
+  position: absolute;
+  /* 2 */
 }
 
 /**
  * Removes list styling.
  * For semantic reasons, should only be used on unordered lists.
  */
-/* line 107, src/sass/components/_typography.scss */
 .list-unstyled {
   margin-left: 0;
-  list-style: none;
 }
 
 /**
  * Display lists on a single line.
  */
-/* line 116, src/sass/components/_typography.scss */
 .list-inline {
-  list-style: none;
   margin-left: -0.5em;
   margin-right: -0.5em;
   padding: 0;
 }
 
-/* line 123, src/sass/components/_typography.scss */
 .list-inline > li {
-  display: inline;
+  display: inline-block;
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
@@ -840,7 +725,6 @@ dt {
  * Heading styling for h1 through h6 elements.
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
  */
-/* line 135, src/sass/components/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: 1.2;
@@ -849,7 +733,6 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
-/* line 143, src/sass/components/_typography.scss */
 h1,
 .h1 {
   font-size: 1.5em;
@@ -857,32 +740,27 @@ h1,
 }
 
 @media (min-width: 40em) {
-  /* line 143, src/sass/components/_typography.scss */
   h1,
   .h1 {
     font-size: 1.75em;
   }
 }
 
-/* line 153, src/sass/components/_typography.scss */
 h2,
 .h2 {
   font-size: 1.3125em;
 }
 
-/* line 158, src/sass/components/_typography.scss */
 h3,
 .h3 {
   font-size: 1.1875em;
 }
 
-/* line 163, src/sass/components/_typography.scss */
 h4, h5, h6,
 .h4, .h5, .h6 {
   font-size: 1em;
 }
 
-/* line 168, src/sass/components/_typography.scss */
 h4,
 .h4 {
   text-transform: uppercase;
@@ -895,12 +773,12 @@ h4,
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-/* line 182, src/sass/components/_typography.scss */
 hr {
   border: 0;
   border-top: 1px solid #e5e5e5;
   border-bottom: 0 solid transparent;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   margin: 2em auto;
   overflow: visible;
@@ -910,7 +788,6 @@ hr {
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
-/* line 194, src/sass/components/_typography.scss */
 b,
 strong {
   font-weight: inherit;
@@ -919,7 +796,6 @@ strong {
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-/* line 202, src/sass/components/_typography.scss */
 b,
 strong {
   font-weight: bolder;
@@ -929,20 +805,19 @@ strong {
  * 1. Remove the bottom border in Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-/* line 211, src/sass/components/_typography.scss */
 abbr[title] {
   border-bottom: none;
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 220, src/sass/components/_typography.scss */
 dfn {
   font-style: italic;
 }
@@ -950,16 +825,14 @@ dfn {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 227, src/sass/components/_typography.scss */
 mark {
-  background: #fbf89a;
-  color: #0088cc;
+  background: #fbf9c9;
+  color: #272727;
 }
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 235, src/sass/components/_typography.scss */
 small {
   font-size: 80%;
 }
@@ -967,7 +840,6 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 242, src/sass/components/_typography.scss */
 sub,
 sup {
   font-size: 75%;
@@ -976,12 +848,10 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 250, src/sass/components/_typography.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 254, src/sass/components/_typography.scss */
 sub {
   bottom: -0.25em;
 }
@@ -989,29 +859,25 @@ sub {
 /**
  * Blockquotes
  */
-/* line 263, src/sass/components/_typography.scss */
 blockquote {
   font-size: 1.1875em;
   font-style: italic;
   margin: 0 0 1.5625em;
-  padding-left: 0.84211em;
-  padding-right: 0.84211em;
+  padding-left: 0.8421052632em;
+  padding-right: 0.8421052632em;
 }
 
-/* line 270, src/sass/components/_typography.scss */
 blockquote cite {
   color: #808080;
-  font-size: 0.84211em;
+  font-size: 0.8421052632em;
   padding-top: 1em;
 }
 
-/* line 277, src/sass/components/_typography.scss */
 blockquote,
 q {
   quotes: none;
 }
 
-/* line 282, src/sass/components/_typography.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -1023,7 +889,6 @@ q:after {
  * @section Code
  * Styling for code and preformatted text.
  */
-/* line 6, src/sass/components/_code.scss */
 code,
 kbd,
 pre,
@@ -1033,7 +898,6 @@ samp {
   font-size: 0.875em;
 }
 
-/* line 15, src/sass/components/_code.scss */
 code {
   background-color: #f7f7f7;
   color: #dd1144;
@@ -1041,7 +905,6 @@ code {
   word-wrap: break-word;
 }
 
-/* line 22, src/sass/components/_code.scss */
 pre {
   background-color: #f4f4f4;
   display: block;
@@ -1056,7 +919,6 @@ pre {
   word-break: break-all;
 }
 
-/* line 33, src/sass/components/_code.scss */
 pre code {
   background-color: transparent;
   border: 0;
@@ -1072,7 +934,6 @@ pre code {
 /**
  * Primary buttons
  */
-/* line 10, src/sass/components/_buttons.scss */
 .btn {
   background-color: #0088cc;
   border: 1px solid #0088cc;
@@ -1085,13 +946,10 @@ pre code {
   margin-right: 0.3125em;
   margin-bottom: 0.3125em;
   padding: 0.5em 0.6875em;
+  text-decoration: none;
 }
 
-/* line 23, src/sass/components/_buttons.scss */
-.btn:hover,
-a .btn:hover, .link-block-styled .btn:hover, .btn:focus,
-a .btn:focus, .link-block-styled .btn:focus, .btn:active,
-a .btn:active, .link-block-styled .btn:active, .btn.active {
+.btn:hover, .btn:active, .btn.active {
   background-color: #005580;
   border-color: #005580;
   color: #ffffff;
@@ -1101,17 +959,12 @@ a .btn:active, .link-block-styled .btn:active, .btn.active {
 /**
  * Secondary buttons
  */
-/* line 41, src/sass/components/_buttons.scss */
 .btn-secondary {
   background-color: #808080;
   border-color: #808080;
 }
 
-/* line 45, src/sass/components/_buttons.scss */
-.btn-secondary:hover,
-a .btn-secondary:hover, .link-block-styled .btn-secondary:hover, .btn-secondary:focus,
-a .btn-secondary:focus, .link-block-styled .btn-secondary:focus, .btn-secondary:active,
-a .btn-secondary:active, .link-block-styled .btn-secondary:active, .btn-secondary.active {
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary.active {
   background-color: #5a5a5a;
   border-color: #5a5a5a;
 }
@@ -1119,20 +972,19 @@ a .btn-secondary:active, .link-block-styled .btn-secondary:active, .btn-secondar
 /**
  * Active state
  */
-/* line 61, src/sass/components/_buttons.scss */
 .btn:active,
 .btn.active {
-  box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
   outline: 0;
 }
 
 /**
  * Disabled state
  */
-/* line 71, src/sass/components/_buttons.scss */
-.btn.disabled,
 .btn[disabled] {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: not-allowed;
   opacity: 0.5;
   pointer-events: none;
@@ -1141,7 +993,6 @@ a .btn-secondary:active, .link-block-styled .btn-secondary:active, .btn-secondar
 /**
  * Button size
  */
-/* line 83, src/sass/components/_buttons.scss */
 .btn-large {
   font-size: 1em;
   line-height: normal;
@@ -1151,7 +1002,6 @@ a .btn-secondary:active, .link-block-styled .btn-secondary:active, .btn-secondar
 /**
  * Block-level buttons
  */
-/* line 93, src/sass/components/_buttons.scss */
 .btn-block,
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
@@ -1166,7 +1016,6 @@ input[type="button"].btn-block {
 /**
  * General styles
  */
-/* line 108, src/sass/components/_buttons.scss */
 .btn,
 button,
 html input[type="button"],
@@ -1185,7 +1034,6 @@ input[type="submit"] {
 /**
  * Remove right margin on last element and inputs
  */
-/* line 129, src/sass/components/_buttons.scss */
 .btn:last-child,
 input.btn {
   margin-right: 0;
@@ -1195,19 +1043,16 @@ input.btn {
  * @section Forms
  * Styling for form elements.
  */
-/* line 6, src/sass/components/_forms.scss */
 form,
 fieldset {
   margin-bottom: 1.5625em;
 }
 
-/* line 11, src/sass/components/_forms.scss */
 fieldset {
   border: 0;
   padding: 0;
 }
 
-/* line 16, src/sass/components/_forms.scss */
 legend,
 label {
   display: block;
@@ -1222,7 +1067,6 @@ label {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 30, src/sass/components/_forms.scss */
 button,
 input,
 optgroup,
@@ -1240,7 +1084,6 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 44, src/sass/components/_forms.scss */
 button {
   overflow: visible;
 }
@@ -1251,13 +1094,11 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 54, src/sass/components/_forms.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 59, src/sass/components/_forms.scss */
 input,
 textarea,
 select {
@@ -1270,7 +1111,6 @@ select {
 }
 
 @media (min-width: 40em) {
-  /* line 59, src/sass/components/_forms.scss */
   input,
   textarea,
   select {
@@ -1282,24 +1122,20 @@ select {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 78, src/sass/components/_forms.scss */
 optgroup {
   font-weight: bold;
 }
 
-/* line 82, src/sass/components/_forms.scss */
 form button,
 form .button {
   margin-bottom: 1.1875em;
 }
 
-/* line 87, src/sass/components/_forms.scss */
 textarea {
   height: 12em;
   overflow: auto;
 }
 
-/* line 92, src/sass/components/_forms.scss */
 [type="image"],
 [type="checkbox"],
 [type="radio"] {
@@ -1316,22 +1152,20 @@ textarea {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 108, src/sass/components/_forms.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/* line 113, src/sass/components/_forms.scss */
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
   outline: 0;
   outline: thin dotted \9;
 }
 
-/* line 121, src/sass/components/_forms.scss */
 [type="file"]:focus,
 [type="checkbox"]:focus,
 select:focus {
@@ -1343,7 +1177,6 @@ select:focus {
 /**
  * Remove the inner border and padding in Firefox.
  */
-/* line 133, src/sass/components/_forms.scss */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -1355,7 +1188,6 @@ button::-moz-focus-inner,
 /**
  * Restore the focus styles unset by the previous rule.
  */
-/* line 145, src/sass/components/_forms.scss */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
@@ -1367,7 +1199,6 @@ button:-moz-focusring,
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-/* line 157, src/sass/components/_forms.scss */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
@@ -1378,7 +1209,6 @@ button:-moz-focusring,
 /**
  * Inline inputs
  */
-/* line 166, src/sass/components/_forms.scss */
 .input-inline {
   display: inline-block;
   vertical-align: middle;
@@ -1388,7 +1218,6 @@ button:-moz-focusring,
 /**
  * Condensed inputs
  */
-/* line 176, src/sass/components/_forms.scss */
 .input-condensed {
   padding: 1px 0.3125em;
   font-size: 0.9375em;
@@ -1401,7 +1230,6 @@ button:-moz-focusring,
   * 1. Correct the odd appearance in Chrome and Safari.
   * 2. Correct the outline style in Safari.
   */
-/* line 191, src/sass/components/_forms.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -1414,7 +1242,6 @@ button:-moz-focusring,
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 201, src/sass/components/_forms.scss */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -1423,17 +1250,16 @@ button:-moz-focusring,
 /**
  * Create rounded search bar
  */
-/* line 210, src/sass/components/_forms.scss */
 .input-search {
   width: 85%;
   padding-left: 0.9375em;
   padding-right: 2.5em;
   border-radius: 1.3125em;
+  -webkit-transition: width 300ms ease-in;
   transition: width 300ms ease-in;
 }
 
 @media (min-width: 40em) {
-  /* line 210, src/sass/components/_forms.scss */
   .input-search {
     width: 65%;
   }
@@ -1442,7 +1268,6 @@ button:-moz-focusring,
 /**
  * Special styling for search icon as button
  */
-/* line 226, src/sass/components/_forms.scss */
 .btn-search {
   display: inline;
   color: #808080;
@@ -1452,53 +1277,22 @@ button:-moz-focusring,
   margin-bottom: 0;
 }
 
-/* line 234, src/sass/components/_forms.scss */
 .btn-search .icon {
   fill: #808080;
 }
 
-/* line 238, src/sass/components/_forms.scss */
 .btn-search:hover {
   color: #5a5a5a;
 }
 
-/* line 241, src/sass/components/_forms.scss */
 .btn-search:hover .icon {
   fill: #5a5a5a;
 }
 
 /**
- * @section SVGs
- * SVG icon sprite styling.
- * @link http://css-tricks.com/svg-sprites-use-better-icon-fonts/
- * @link http://css-tricks.com/svg-use-external-source/
- */
-/**
- * Basic styles
- * Only displayed when SVGs are supported to avoid large empty spaces
- */
-/* line 12, src/sass/components/_svg.scss */
-.icon {
-  display: inline-block;
-  fill: currentColor;
-  height: 0;
-  width: 0;
-}
-
-/* line 18, src/sass/components/_svg.scss */
-.svg .icon {
-  height: 1em;
-  width: 1em;
-}
-
-/**
- * Hide fallback text if browser supports SVG
- */
-/**
  * @section Tables
  * Styling for tables
  */
-/* line 6, src/sass/components/_tables.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -1507,21 +1301,18 @@ table {
   width: 100%;
 }
 
-/* line 14, src/sass/components/_tables.scss */
 th,
 td {
   text-align: left;
   padding: 0.5em;
 }
 
-/* line 20, src/sass/components/_tables.scss */
 th {
   border-bottom: 0.125em solid #e5e5e5;
   font-weight: bold;
   vertical-align: bottom;
 }
 
-/* line 27, src/sass/components/_tables.scss */
 td {
   border-top: 1px solid #e5e5e5;
   vertical-align: top;
@@ -1530,7 +1321,6 @@ td {
 /**
  * Adds zebra striping
  */
-/* line 35, src/sass/components/_tables.scss */
 .table-striped tbody tr:nth-child(odd) {
   background-color: #f7f7f7;
 }
@@ -1538,41 +1328,9 @@ td {
 /**
  * Reduces padding on condensed tables
  */
-/* line 43, src/sass/components/_tables.scss */
 .table-condensed th,
 .table-condensed td {
   padding: 0.25em;
-}
-
-/**
- * Pure CSS responsive tables
- * Adds label to each cell using the [data-label] attribute
- * @link https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/
- */
-@media (max-width: 40em) {
-  /* line 57, src/sass/components/_tables.scss */
-  .table-responsive thead {
-    display: none;
-    visibility: hidden;
-  }
-  /* line 62, src/sass/components/_tables.scss */
-  .table-responsive tr {
-    border-top: 1px solid #ededed;
-    display: block;
-    padding: 0.5em;
-  }
-  /* line 68, src/sass/components/_tables.scss */
-  .table-responsive td {
-    border: 0;
-    display: block;
-    padding: 0.25em;
-  }
-  /* line 73, src/sass/components/_tables.scss */
-  .table-responsive td:before {
-    content: attr(data-label);
-    display: block;
-    font-weight: bold;
-  }
 }
 
 /**
@@ -1580,21 +1338,25 @@ td {
  * Nudge and tweak alignment, spacing, and visibility.
  */
 /**
+ * Background colors
+ */
+.bg-muted {
+  background-color: #f7f7f7;
+}
+
+/**
  * Text sizes
  */
-/* line 11, src/sass/components/_overrides.scss */
 .text-small {
   font-size: 0.9375em;
 }
 
-/* line 15, src/sass/components/_overrides.scss */
 .text-large {
   font-size: 1.1875em;
   line-height: 1.4;
 }
 
 @media (min-width: 40em) {
-  /* line 15, src/sass/components/_overrides.scss */
   .text-large {
     font-size: 1.3125em;
   }
@@ -1603,7 +1365,6 @@ td {
 /**
  * Text colors
  */
-/* line 29, src/sass/components/_overrides.scss */
 .text-muted {
   color: #808080;
 }
@@ -1611,23 +1372,19 @@ td {
 /**
  * Text alignment
  */
-/* line 38, src/sass/components/_overrides.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 42, src/sass/components/_overrides.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 46, src/sass/components/_overrides.scss */
 .text-left {
   text-align: left;
 }
 
 @media (min-width: 40em) {
-  /* line 51, src/sass/components/_overrides.scss */
   .text-right-medium {
     text-align: right;
   }
@@ -1636,19 +1393,16 @@ td {
 /**
  * Floats
  */
-/* line 61, src/sass/components/_overrides.scss */
 .float-left {
   float: left;
 }
 
-/* line 65, src/sass/components/_overrides.scss */
 .float-center {
   float: none;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 71, src/sass/components/_overrides.scss */
 .float-right {
   float: right;
 }
@@ -1656,32 +1410,26 @@ td {
 /**
  * Margins
  */
-/* line 80, src/sass/components/_overrides.scss */
 .no-margin-top {
   margin-top: 0;
 }
 
-/* line 84, src/sass/components/_overrides.scss */
 .no-margin-bottom {
   margin-bottom: 0;
 }
 
-/* line 88, src/sass/components/_overrides.scss */
 .margin-top {
   margin-top: 1.5625em;
 }
 
-/* line 92, src/sass/components/_overrides.scss */
 .margin-bottom {
   margin-bottom: 1.5625em;
 }
 
-/* line 96, src/sass/components/_overrides.scss */
 .margin-bottom-small {
   margin-bottom: 0.5em;
 }
 
-/* line 100, src/sass/components/_overrides.scss */
 .margin-bottom-large {
   margin-bottom: 2em;
 }
@@ -1689,42 +1437,34 @@ td {
 /**
  * Padding
  */
-/* line 109, src/sass/components/_overrides.scss */
 .no-padding-top {
   padding-top: 0;
 }
 
-/* line 113, src/sass/components/_overrides.scss */
 .no-padding-bottom {
   padding-bottom: 0;
 }
 
-/* line 117, src/sass/components/_overrides.scss */
 .padding-top {
   padding-top: 1.5625em;
 }
 
-/* line 121, src/sass/components/_overrides.scss */
 .padding-top-small {
   padding-top: 0.5em;
 }
 
-/* line 125, src/sass/components/_overrides.scss */
 .padding-top-large {
   padding-top: 2em;
 }
 
-/* line 129, src/sass/components/_overrides.scss */
 .padding-bottom {
   padding-bottom: 1.5625em;
 }
 
-/* line 133, src/sass/components/_overrides.scss */
 .padding-bottom-small {
   padding-bottom: 0.5em;
 }
 
-/* line 137, src/sass/components/_overrides.scss */
 .padding-bottom-large {
   padding-bottom: 2em;
 }
@@ -1732,13 +1472,15 @@ td {
 /**
  * Visibility
  */
-/**
- * Visually hide an element, but leave it available for screen readers
- * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
- * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+/*
+ * Hide only visually, but have it available for screen readers:
+ * @link https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
-/* line 151, src/sass/components/_overrides.scss */
-.screen-reader, .svg .icon-fallback-text {
+.visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1747,23 +1489,22 @@ td {
   padding: 0;
   position: absolute;
   white-space: nowrap;
+  /* 1 */
   width: 1px;
 }
 
-/**
- * Extends the .screen-reader class to allow the element to be focusable when navigated to via the keyboard
- * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard
  * @link https://www.drupal.org/node/897638
  */
-/* line 168, src/sass/components/_overrides.scss */
-.screen-reader-focusable:active,
-.screen-reader-focusable:focus {
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   position: static;
-  white-space: normal;
+  white-space: inherit;
   width: auto;
 }
 
@@ -1772,7 +1513,6 @@ td {
  * @affected IE 8/9/10
  * @link http://juicystudio.com/article/screen-readers-display-none.php
  */
-/* line 184, src/sass/components/_overrides.scss */
 [hidden], template {
   display: none;
   visibility: hidden;
@@ -1783,7 +1523,6 @@ td {
  * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  */
-/* line 196, src/sass/components/_overrides.scss */
 .clearfix:before, .container:before,
 .clearfix:after,
 .container:after {
@@ -1791,8 +1530,9 @@ td {
   content: " ";
 }
 
-/* line 202, src/sass/components/_overrides.scss */
-.clearfix:after, .container:after {
+
+.clearfix:after,
+.container:after {
   clear: both;
 }
 
@@ -1806,11 +1546,11 @@ td {
 	 * Universal selector.
 	 * Reset all content to transparent background, black color, and remove box and text shadows.
 	 */
-  /* line 13, src/sass/components/_print.scss */
   * {
     background: transparent !important;
     color: #000 !important;
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important;
   }
   /**
@@ -1822,7 +1562,6 @@ td {
   /**
 	 * Underline all links
 	 */
-  /* line 30, src/sass/components/_print.scss */
   a, .link-block-styled,
   a:visited,
   .link-block-styled:visited {
@@ -1831,21 +1570,18 @@ td {
   /**
 	 * Show URL after links
 	 */
-  /* line 38, src/sass/components/_print.scss */
-  a[href]:after, [href].link-block-styled:after {
+  a[href]:after, .link-block-styled[href]:after {
     content: " (" attr(href) ")";
   }
   /**
 	 * Don't show URL for internal links
 	 */
-  /* line 45, src/sass/components/_print.scss */
-  a[href^="#"]:after, [href^="#"].link-block-styled:after {
+  a[href^="#"]:after, .link-block-styled[href^="#"]:after {
     content: "";
   }
   /**
 	 * Specifies the minimum number of lines to print at the top and bottom of a page.
 	 */
-  /* line 52, src/sass/components/_print.scss */
   p,
   h1, h2, h3 {
     orphans: 3;
@@ -1854,7 +1590,6 @@ td {
   /**
 	 * Avoid inserting a page break after headers
 	 */
-  /* line 61, src/sass/components/_print.scss */
   h1, h2, h3 {
     page-break-after: avoid;
   }
@@ -1862,7 +1597,6 @@ td {
 	 * Change border color on blockquotes and preformatted text.
 	 * Avoid page breaks inside the content
 	 */
-  /* line 69, src/sass/components/_print.scss */
   pre,
   blockquote {
     border-color: #999;
@@ -1871,14 +1605,12 @@ td {
   /**
 	 * Displayed as a table header row group
 	 */
-  /* line 78, src/sass/components/_print.scss */
   thead {
     display: table-header-group;
   }
   /**
 	 * Avoid inserting a page break inside table rows and images
 	 */
-  /* line 85, src/sass/components/_print.scss */
   tr,
   img {
     page-break-inside: avoid;

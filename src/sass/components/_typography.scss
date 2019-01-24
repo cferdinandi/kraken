@@ -75,7 +75,7 @@ a.link-block {
 
 ul,
 ol {
-	margin: 0 0 $spacing calc-em(32px);
+	margin: 0 0 $spacing 2em;
 	padding: 0;
 }
 
@@ -101,12 +101,26 @@ dt {
 }
 
 /**
+ * @bugfix Prevent webkit from removing list semantics
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+%list-style-none {
+	list-style: none;
+
+	& > li:before {
+		content: "\200B"; /* 1 */
+		position: absolute; /* 2 */
+	}
+}
+
+/**
  * Removes list styling.
  * For semantic reasons, should only be used on unordered lists.
  */
 .list-unstyled {
+	@extend %list-style-none;
 	margin-left: 0;
-	list-style: none;
 }
 
 /**
@@ -114,16 +128,16 @@ dt {
  */
 
 .list-inline {
-	list-style: none;
-	margin-left: calc-em(-8px);
-	margin-right: calc-em(-8px);
+	@extend %list-style-none;
+	margin-left: -0.5em;
+	margin-right: -0.5em;
 	padding: 0;
 }
 
 .list-inline > li {
-	display: inline;
-	margin-left: calc-em(8px);
-	margin-right: calc-em(8px);
+	display: inline-block;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 }
 
 
@@ -142,27 +156,27 @@ h1, h2, h3, h4, h5, h6 {
 
 h1,
 .h1 {
-	font-size: calc-em(24px);
+	font-size: 1.5em;
 	padding-top: .5em;
 
 	@media (min-width: $bp-medium) {
-		font-size: calc-em(28px);
+		font-size: 1.75em;
 	}
 }
 
 h2,
 .h2 {
-	font-size: calc-em(21px);
+	font-size: 1.3125em;
 }
 
 h3,
 .h3 {
-	font-size: calc-em(19px);
+	font-size: 1.1875em;
 }
 
 h4, h5, h6,
 .h4, .h5, .h6 {
-	font-size: calc-em(16px);
+	font-size: 1em;
 }
 
 h4,
@@ -181,10 +195,10 @@ h4,
  */
 hr {
 	border: 0;
-	border-top: calc-em(1px) solid $color-gray-light;
+	border-top: 1px solid $color-gray-light;
 	border-bottom: 0 solid transparent;
 	box-sizing: content-box; /* 1 */
-	margin: calc-em(32px) auto;
+	margin: 2em auto;
 	overflow: visible; /* 2 */
 }
 
@@ -225,8 +239,8 @@ dfn {
  * Address styling not present in IE 8/9.
  */
 mark {
-	background: #fbf89a;
-	color: $color-primary;
+	background: #fbf9c9;
+	color: $color-black;
 }
 
 /**
@@ -261,16 +275,16 @@ sub {
  */
 
 blockquote {
-	font-size: calc-em(19px);
+	font-size: 1.1875em;
 	font-style: italic;
 	margin: 0 0 $spacing;
-	padding-left: calc-em(16px, 19px);
-	padding-right: calc-em(16px, 19px);
+	padding-left: 0.8421052632em;
+	padding-right: 0.8421052632em;
 
 	cite {
 		color: $color-gray-dark;
-		font-size: calc-em(16px, 19px);
-		padding-top: calc-em(16px);
+		font-size: 0.8421052632em;
+		padding-top: 1em;
 	}
 }
 

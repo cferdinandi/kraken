@@ -7,15 +7,15 @@
  kbd,
  pre,
  samp {
- 	border-radius: calc-em(1px);
+ 	border-radius: 1px;
 	font-family: $font-monospace;
-	font-size: calc-em(14px);
+	font-size: 0.875em;
 }
 
 code {
 	background-color: lighten( $color-gray-light, 7% );
 	color: $color-code;
-	padding: calc-em(4px);
+	padding: 0.25em;
 	word-wrap: break-word;
 }
 
@@ -25,7 +25,7 @@ pre {
 	line-height: 1.5;
 	margin-bottom: $spacing;
 	overflow: auto;
-	padding: calc-em(13px);
+	padding: 0.8125em;
 	tab-size: 4;
 	white-space: pre-wrap;
 	word-break: break-all;

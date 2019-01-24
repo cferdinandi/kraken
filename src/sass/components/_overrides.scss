@@ -5,19 +5,28 @@
 
 
 /**
+ * Background colors
+ */
+
+.bg-muted {
+	background-color: $color-gray-lighter;
+}
+
+
+/**
  * Text sizes
  */
 
 .text-small {
-	font-size: calc-em(15px);
+	font-size: 0.9375em;
 }
 
 .text-large {
-	font-size: calc-em(19px);
+	font-size: 1.1875em;
 	line-height: 1.4;
 
 	@media (min-width: $bp-medium) {
-		font-size: calc-em(21px);
+		font-size: 1.3125em;
 	}
 }
 
@@ -94,11 +103,11 @@
 }
 
 .margin-bottom-small {
-	margin-bottom: calc-em(8px);
+	margin-bottom: 0.5em;
 }
 
 .margin-bottom-large {
-	margin-bottom: calc-em(32px);
+	margin-bottom: 2em;
 }
 
 
@@ -119,11 +128,11 @@
 }
 
 .padding-top-small {
-	padding-top: calc-em(8px);
+	padding-top: 0.5em;
 }
 
 .padding-top-large {
-	padding-top: calc-em(32px);
+	padding-top: 2em;
 }
 
 .padding-bottom {
@@ -131,11 +140,11 @@
 }
 
 .padding-bottom-small {
-	padding-bottom: calc-em(8px);
+	padding-bottom: 0.5em;
 }
 
 .padding-bottom-large {
-	padding-bottom: calc-em(32px);
+	padding-bottom: 2em;
 }
 
 
@@ -143,37 +152,39 @@
  * Visibility
  */
 
-/**
- * Visually hide an element, but leave it available for screen readers
- * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
- * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+/*
+ * Hide only visually, but have it available for screen readers:
+ * @link https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
-.screen-reader {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap; /* 1 */
+    width: 1px;
 }
 
-/**
- * Extends the .screen-reader class to allow the element to be focusable when navigated to via the keyboard
- * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard
  * @link https://www.drupal.org/node/897638
  */
-.screen-reader-focusable:active,
-.screen-reader-focusable:focus {
-	clip: auto;
-	height: auto;
-	margin: 0;
-	overflow: visible;
-	position: static;
-	white-space: normal;
-	width: auto;
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
 }
 
 /**

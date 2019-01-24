@@ -84,6 +84,10 @@
 	}
 }
 
+.grid-auto {
+	@extend %grid-base;
+}
+
 
 /**
  * Add columns to grid on bigger screens
