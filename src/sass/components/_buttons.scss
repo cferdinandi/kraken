@@ -10,7 +10,6 @@
 .btn {
 	background-color: $color-primary;
 	border: 1px solid $color-primary;
-	border-radius: 1px;
 	color: $color-white;
 	display: inline-block;
 	font-size: 0.9375em;
@@ -20,6 +19,7 @@
 	margin-bottom: 0.3125em;
 	padding: 0.5em 0.6875em;
 	text-decoration: none;
+	white-space: normal;
 
 	&:hover,
 	&:active,

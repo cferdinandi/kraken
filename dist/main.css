@@ -1,5 +1,5 @@
 /*!
- * Kraken v9.0.0
+ * Kraken v9.0.1
  * A lightweight CSS boilerplate for front-end developers.
  * (c) 2019 Chris Ferdinandi
  * MIT License
@@ -893,7 +893,6 @@ code,
 kbd,
 pre,
 samp {
-  border-radius: 1px;
   font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 0.875em;
 }
@@ -937,7 +936,6 @@ pre code {
 .btn {
   background-color: #0088cc;
   border: 1px solid #0088cc;
-  border-radius: 1px;
   color: #ffffff;
   display: inline-block;
   font-size: 0.9375em;
@@ -947,6 +945,7 @@ pre code {
   margin-bottom: 0.3125em;
   padding: 0.5em 0.6875em;
   text-decoration: none;
+  white-space: normal;
 }
 
 .btn:hover, .btn:active, .btn.active {
@@ -1103,7 +1102,6 @@ input,
 textarea,
 select {
   border: 1px solid #b8b8b8;
-  border-radius: 1px;
   display: block;
   line-height: 1.5;
   margin-bottom: 1.1875em;
@@ -1337,13 +1335,6 @@ td {
  * @section Overrides
  * Nudge and tweak alignment, spacing, and visibility.
  */
-/**
- * Background colors
- */
-.bg-muted {
-  background-color: #f7f7f7;
-}
-
 /**
  * Text sizes
  */
