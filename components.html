@@ -470,7 +470,7 @@ Default text
 <mark>Highlighted text</mark>
 ```
 
-_Because Kraken uses relative sizing, you should always apply `.text-tall` and `.text-small` classes to a `<span>` element and not directly to a `<p>`. Otherwise, your spacing will get all messed up. The `.text-*` classes can be found in `_overrides.scss` for better cascade inheritance._
+_Because Kraken uses relative sizing, you should always apply `.text-large` and `.text-small` classes to a `span` element and not directly to a `p`. Otherwise, your spacing will get all messed up. The `.text-*` classes can be found in `_overrides.scss` for better cascade inheritance._
 
 <hr>
 
@@ -656,7 +656,7 @@ Add lines to your markup using the `<hr>` element.
 
 ## Buttons
 
-Button styles can be applied to anything with the `.btn` class applied. However, typically you'll want to apply these to only `<a>`, `<button>`, and `<input type="submit">` elements for the best rendering.
+Button styles can be applied to anything with the `.btn` class applied. However, typically you'll want to apply these to only `a`, `button`, and `<input type="submit">` elements for the best rendering.
 
 ### Basic Buttons
 
@@ -938,7 +938,7 @@ Labels, legends and inputs are styled as full width block elements (with the exc
 </form>
 ```
 
-*Wrap checkboxes and radio buttons inside a `<label>` to make them easier to click.*
+*Wrap checkboxes and radio buttons inside a `label` to make them easier to click.*
 
 
 ### Form Layouts
@@ -1017,7 +1017,7 @@ For smaller forms, add the `.input-condensed` class to your input fields. For in
 Apply special styling to search form elements using the `.input-search` and `.btn-search` classes. You'll also need to use the `.input-inline` class.
 
 <form>
-	<label class="screen-reader" for="search">Search this site</label>
+	<label class="visually-hidden" for="search">Search this site</label>
 	<input type="text" class="input-inline input-search no-margin-bottom" id="search" name="search" placeholder="Your search terms..." value="">
 	<button type="submit" class="btn-search" id="searchsubmit">
 		<svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 32 32" aria-describedby="search-button-title"><title id="search-button-title">Search</title><path fill="currentColor" d="M31.008 27.23l-7.58-6.446c-.784-.705-1.622-1.03-2.3-.998C22.92 17.69 24 14.97 24 12 24 5.37 18.627 0 12 0S0 5.37 0 12c0 6.626 5.374 12 12 12 2.973 0 5.692-1.082 7.788-2.87-.03.676.293 1.514.998 2.298l6.447 7.58c1.105 1.226 2.908 1.33 4.008.23s.997-2.903-.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"/></svg>
@@ -1026,7 +1026,7 @@ Apply special styling to search form elements using the `.input-search` and `.bt
 
 ```html
 <form>
-	<label class="screen-reader" for="search">Search this site</label>
+	<label class="visually-hidden" for="search">Search this site</label>
 	<input type="text" class="input-inline input-search no-margin-bottom" id="search" name="search" placeholder="Your search terms..." value="">
 	<button type="submit" class="btn-search" id="searchsubmit">
 		<svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 32 32" aria-describedby="search-button-title"><title id="search-button-title">Search</title><path fill="currentColor" d="M31.008 27.23l-7.58-6.446c-.784-.705-1.622-1.03-2.3-.998C22.92 17.69 24 14.97 24 12 24 5.37 18.627 0 12 0S0 5.37 0 12c0 6.626 5.374 12 12 12 2.973 0 5.692-1.082 7.788-2.87-.03.676.293 1.514.998 2.298l6.447 7.58c1.105 1.226 2.908 1.33 4.008.23s.997-2.903-.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"/></svg>
@@ -1059,7 +1059,7 @@ You can adjust text alignment, spacing, and visibility using a few simple CSS cl
 | `.float-center` | Centered |
 | `.float-right`  | Right    |
 
-*Clear floats by wrapping floated content in a `<div>` with the `.clearfix` class.*
+*Clear floats by wrapping floated content in a `div` with the `.clearfix` class.*
 
 ```html
 <div class="clearfix">
@@ -1127,7 +1127,7 @@ If you need to programmatically add focus to an element that's not normally focu
 Kraken removes the default outline from items with `[tabindex="-1"]`.
 
 ```html
-<a class="screen-reader screen-reader-focusable" href="#main">Skip to content</a>
+<a class="visually-hidden focusable" href="#main">Skip to content</a>
 ...
 <main id="main" tabindex="-1">
 	...
