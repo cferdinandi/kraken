@@ -18,8 +18,6 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin-left: $grid-margins * -1;
-	margin-right: $grid-margins * -1;
 }
 
 
@@ -74,8 +72,8 @@
 
 %grid-base {
 	flex-basis: 100%;
-	margin-left: $grid-margins;
-	margin-right: $grid-margins;
+	padding-left: $grid-margins;
+	padding-right: $grid-margins;
 }
 
 @each $grid, $width in ($grid-sizes) {
@@ -99,34 +97,8 @@
 		}
 
 		@if $grid-wrap {
-
 			.row-wrap#{$prefix} {
 				flex-wrap: wrap;
-
-				@each $grid, $width in ($grid-sizes) {
-					%grid-with-padding {
-						margin-left: 0;
-						margin-right: 0;
-						padding-left: $grid-margins;
-						padding-right: $grid-margins;
-					}
-
-					.grid-#{$grid} {
-						// @extend %grid-with-padding;
-						margin-left: 0;
-						margin-right: 0;
-						padding-left: $grid-margins;
-						padding-right: $grid-margins;
-					}
-				}
-
-				.grid-auto {
-					// @extend %grid-with-padding;
-					margin-left: 0;
-					margin-right: 0;
-					padding-left: $grid-margins;
-					padding-right: $grid-margins;
-				}
 			}
 		}
 
