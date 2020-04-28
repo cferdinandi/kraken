@@ -30,22 +30,24 @@
 			 * Grid
 			 */
 
-			.nav {
-				align-items: center;
-				display: grid;
-				grid-template-columns: 1fr 3fr;
-				grid-template-rows: 1fr;
-				grid-column-gap: 0;
-				grid-row-gap: 0;
-			}
+			@media (min-width: 40em) {
+				.nav {
+					align-items: center;
+					display: grid;
+					grid-template-columns: 1fr 3fr;
+					grid-template-rows: 1fr;
+					grid-column-gap: 0;
+					grid-row-gap: 0;
+				}
 
-			.row-thirds {
-				align-items: center;
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				grid-template-rows: 1fr;
-				grid-column-gap: 0;
-				grid-row-gap: 0;
+				.row-thirds {
+					align-items: center;
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					grid-template-rows: 1fr;
+					grid-column-gap: 0;
+					grid-row-gap: 0;
+				}
 			}
 
 
