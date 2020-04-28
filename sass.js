@@ -5,7 +5,7 @@ var pkg = require('./package.json');
 
 // Configs
 var configs = {
-	name: 'BuildToolsCookbook',
+	name: 'Kraken',
 	files: ['main.scss'],
 	pathIn: 'src/scss',
 	pathOut: 'dist',
