@@ -1,4 +1,4 @@
-/*! BuildToolsCookbook v10.0.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
+/*! BuildToolsCookbook v11.0.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -670,13 +670,6 @@ td {
 
 .float-right {
 	float: right;
-}
-
-/**
- * Add top margin to all child element in a set except the first
- */
-.flow > * + * {
-	margin-top: 1em;
 }
 
 /**

@@ -1,6 +1,6 @@
 # Components
 
-## Container
+## Grid
 
 The `.container` class centers content on the page and restricts it to a maximum width.
 
@@ -10,6 +10,19 @@ The `.container` class centers content on the page and restricts it to a maximum
 </div>
 ```
 
+Kraken no longer has a built-in grid system.
+
+Modern CSS makes building powerful layouts a lot easier, and the old one-size-fits-most system had become more bloated than useful.
+
+<p class="margin-bottom-small">As a replacement, check out:</p>
+
+- [CSS Grid Generator](https://cssgrid-generator.netlify.app/)
+- [Flexbox Grid](http://flexboxgrid.com/)
+
+<p class="margin-bottom-small">You can also learn how to roll your own from:</p>
+
+- [Every Layout](https://every-layout.dev/)
+- [Common Flexbox Patterns](https://tobiasahlin.com/blog/common-flexbox-patterns/)
 
 ## Typography
 

@@ -182,15 +182,19 @@
 <li>Common form components</li>
 <li>A set of utility classes for nudging and tweaking the layout</li>
 </ul>
-<h2 id="the-kraken-approach">The Kraken Approach</h2>
-<p>Kraken is built to be flexible and modular, with performance and accessibility in mind.</p>
-<ul>
-<li><strong>Ugly on purpose.</strong> Out-of-the-box, Kraken is a bit ugly. That&#39;s intentional. Kraken isn&#39;t supposed to be a finished product. It&#39;s a starting point that you can adapt to any project you&#39;re working on. Add components. Remove components. Tweak the colors and font stack. Make Kraken your own.<br><br></li>
-<li><strong>Feature-light.</strong> If you&#39;re looking for a feature-packed framework, look elsewhere. Adding code is easy. Removing code is a lot harder. Kraken includes just enough to get you started.<br><br></li>
-<li><strong>Object-Oriented CSS.</strong> Kraken takes an <a href="http://www.slideshare.net/stubbornella/object-oriented-css">OOCSS approach</a> to web development. Throughout the stylesheet, you&#39;ll see base styles and modifying styles. Classes can be mixed, matched and reused throughout a project.<br><br>For example, <code>.btn</code> sets the default button styles and behavior, while <code>.btn-secondary</code> changes the color and <code>.btn-large</code> changes the size. A big button with secondary colors would look like this:<pre><code class="language-html">&lt;button class=&quot;btn btn-secondary btn-large&quot;&gt;A Big Button&lt;/button&gt;</code></pre>
-</li>
-</ul>
+<p>Kraken isn&#39;t supposed to be a finished product. It&#39;s a starting point that you can adapt to any project you&#39;re working on. Add components. Remove components. Tweak the colors and font stack. Make Kraken your own.</p>
+<h2 id="object-oriented-css">Object-Oriented CSS</h2>
+<p>Kraken takes an <a href="http://www.slideshare.net/stubbornella/object-oriented-css">OOCSS approach</a> to web development.</p>
+<p>Throughout the stylesheet, you&#39;ll see base styles and modifying styles. Classes can be mixed, matched and reused throughout a project.</p>
+<p>For example, <code>.btn</code> sets the default button styles and behavior, while <code>.btn-secondary</code> changes the color and <code>.btn-large</code> changes the size. A big button with secondary colors would look like this:</p>
+<pre><code class="language-html">&lt;button class=&quot;btn btn-secondary btn-large&quot;&gt;A Big Button&lt;/button&gt;</code></pre>
 <h2 id="whats-new">What&#39;s new?</h2>
+<h3 id="version-11">Version 11</h3>
+<p>Kraken 11 is all about simplifying.</p>
+<ul>
+<li>The built-in grid system was remove entirely. Between Flexbox and CSS Grid, CSS layouts are incredibly powerful today. As a result, there&#39;s no good way to do a &quot;one-size fits most&quot; system.</li>
+<li>The <code>normalize.css</code> reset has been dropped in favor of a more modern, minimal reset that reflects how good modern browser are at rendering things consistently.</li>
+</ul>
 <h3 id="version-10">Version 10</h3>
 <p>Kraken 10 changed the way spacing between grids works. Grids now sit tight against one another, and using padding to provide space between content instead of magins.</p>
 <p>This is a break change, and the only reason for the major version bump.</p>
