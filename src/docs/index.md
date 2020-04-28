@@ -53,8 +53,6 @@ Kraken 9 is about removing a lot of the kruft from older versions.
 
 ## Browser Support
 
-The web is for everyone, but [support is not the same as optimization](http://bradfrostweb.com/blog/mobile/support-vs-optimization/).
+Kraken works in all browsers, but it's optimized for modern browsers, and IE 11 and above.
 
-Kraken works in all browsers, but it's optimized for browsers that support Flexbox. That includes all modern browsers, and IE 11 and above.
-
-Older browsers will receive a more basic experience, including a single-column layout instead of a grid.
+(_[Support is not the same as optimization.](http://bradfrostweb.com/blog/mobile/support-vs-optimization/)_)
