@@ -47,12 +47,6 @@
 	text-align: left;
 }
 
-@media (min-width: $bp-medium) {
-	.text-right-medium {
-		text-align: right;
-	}
-}
-
 
 /**
  * Floats
@@ -140,7 +134,7 @@
 
 
 /**
- * Visibility
+ * Accessibility
  */
 
 /*
@@ -178,29 +172,15 @@
     width: auto;
 }
 
-/**
- * @workaround
- * @affected IE 8/9/10
- * @link http://juicystudio.com/article/screen-readers-display-none.php
- */
-[hidden] {
-	display: none;
-	visibility: hidden;
-}
-
 
 /**
- * Contain floats
- * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
- * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * Remove all animations and transitions for people that prefer not to see them
  */
-
-.clearfix:before,
-.clearfix:after {
-	display: table;
-	content: " ";
-}
-
-.clearfix:after {
-	clear: both;
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }

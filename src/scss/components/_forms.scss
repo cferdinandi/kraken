@@ -1,0 +1,146 @@
+/**
+ * @section Forms
+ * Styling for form elements.
+ */
+
+form,
+fieldset {
+	margin-bottom: $spacing;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+}
+
+legend,
+label {
+	display: block;
+	margin: 0 0 0.3125em;
+	padding: 0;
+}
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: lighten($color-black, 18%); /* 1 */
+	font: inherit; /* 2 */
+	margin: 0; /* 3 */
+	padding: 0.3125em;
+}
+
+input,
+textarea,
+select {
+	border: 1px solid lighten( $color-gray-dark, 22% );
+	display: block;
+	line-height: 1.5;
+	margin-bottom: 1.1875em;
+	width: 100%;
+
+	@media (min-width: $bp-medium) {
+		line-height: 1.5625;
+	}
+}
+
+form button,
+form .btn {
+	margin-bottom: 1.1875em;
+}
+
+textarea {
+	height: 8em;
+	overflow: auto;
+	resize: vertical;
+}
+
+[type="image"],
+[type="checkbox"],
+[type="radio"] {
+	cursor: pointer;
+	display: inline-block;
+	height: auto;
+	margin-bottom: 0.3125em;
+	padding: 0;
+	width: auto;
+}
+
+input:focus,
+textarea:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0;
+	outline: thin dotted \9;
+}
+
+[type="file"]:focus,
+[type="checkbox"]:focus,
+select:focus {
+	outline: thin dotted;
+	outline: 0.3125em auto -webkit-focus-ring-color;
+	outline-offset: -0.125em;
+}
+
+
+/**
+ * Inline inputs
+ */
+.input-inline {
+	display: inline-block;
+	vertical-align: middle;
+	width: auto;
+}
+
+
+/**
+ * Condensed inputs
+ */
+.input-condensed {
+	padding: 1px 0.3125em;
+	font-size: 0.9375em;
+}
+
+
+/**
+ * Search
+ */
+
+
+/**
+ * Create rounded search bar
+ */
+.input-search {
+	width: 85%;
+	padding-left: 0.9375em;
+	padding-right: 2.5em;
+	border-radius: 1.3125em;
+	transition: width 300ms ease-in;
+
+	@media (min-width: $bp-medium) {
+		width: 65%;
+	}
+}
+
+
+/**
+ * Special styling for search icon as button
+ */
+.btn-search {
+	display: inline;
+	color: $color-gray-dark;
+	border: none;
+	background: none;
+	margin-left: -2.5em;
+	margin-bottom: 0;
+
+	&:hover {
+		color: darken($color-gray-dark, 15%);
+	}
+}

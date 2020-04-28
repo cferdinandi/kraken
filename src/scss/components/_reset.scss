@@ -1,0 +1,75 @@
+/**
+ * @section CSS Reset
+ * Adapted from Andy Bell's modern CSS reset
+ * @link https://hankchizljaw.com/wrote/a-modern-css-reset/
+ */
+
+/**
+ * Add box sizing to everything
+ * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/**
+ * Remove the tap delay in webkit
+ * @link https://medium.com/@adactio/delay-a9df9edceef3#.7dmbl3xow
+ */
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary {
+	touch-action: manipulation;
+}
+
+/**
+ * 1. Force scrollbar display to prevent jumping on pages.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+	overflow-y: scroll; /* 1 */
+	text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * 1. Remove the margin in all browsers (opinionated).
+ * 2. For the body to fill the viewport
+ */
+body {
+	margin: 0; /* 1 */
+	min-height: 100vh; /* 2 */
+}
+
+/**
+ * Prevent img and video elements from spilling outside of the page on smaller screens.
+ */
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+/**
+ * Prevent iframe, object, and embed elements from spilling outside of the page on smaller screens.
+ * height: auto causes iframes to smush, so it's omitted here.
+ */
+iframe,
+object,
+embed {
+	max-width: 100%;
+}
+
+/**
+ * @workaround Remove focus from tabindex="-1" elements which are only script focusable
+ * @link https://code.google.com/p/chromium/issues/detail?id=37721
+ */
+[tabindex="-1"]:focus {
+    outline: none;
+}
