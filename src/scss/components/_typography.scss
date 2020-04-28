@@ -1,0 +1,197 @@
+/**
+ * @section Typography
+ * Sets font styles for entire site
+ */
+
+body {
+	background: $color-white;
+	color: $color-black;
+	font-family: $font-primary;
+	font-size: $font-size;
+	line-height: 1.5;
+	scroll-behavior: smooth;
+
+	@media (min-width: $bp-medium) {
+		line-height: 1.5625;
+	}
+}
+
+p {
+	margin: 0 0 $spacing;
+}
+
+
+/**
+ * Hyperlink styling
+ */
+
+a {
+	color: $color-primary;
+	text-decoration-skip-ink: auto;
+	word-wrap: break-word;
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: darken($color-primary, 15%);
+	}
+}
+
+
+/**
+ * List styling
+ */
+
+ul,
+ol {
+	margin: 0 0 $spacing 2em;
+	padding: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+dl,
+dd {
+	margin: 0;
+	padding: 0;
+}
+
+dd {
+	margin-bottom: $spacing;
+}
+
+dt {
+	font-weight: bold;
+}
+
+/**
+ * @bugfix Prevent webkit from removing list semantics
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+%list-style-none {
+	list-style: none;
+	margin-left: 0;
+
+	& > li::before {
+		content: "\200B"; /* 1 */
+		position: absolute; /* 2 */
+	}
+}
+
+/**
+ * Removes list styling.
+ * For semantic reasons, should only be used on unordered lists.
+ */
+.list-unstyled {
+	@extend %list-style-none;
+	margin-left: 0;
+}
+
+/**
+ * Display lists on a single line.
+ */
+
+.list-inline {
+	@extend %list-style-none;
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+	padding: 0;
+
+	& > li {
+		display: inline-block;
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
+}
+
+
+/**
+ * Heading styling for h1 through h6 elements.
+ * Heading class lets you use one heading type for semantics, but style it as another heading type.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	margin: 0 0 1em;
+	padding: 1em 0 0;
+	word-wrap: break-word;
+}
+
+h1,
+.h1 {
+	font-size: 1.5em;
+	padding-top: .5em;
+
+	@media (min-width: $bp-medium) {
+		font-size: 1.75em;
+	}
+}
+
+h2,
+.h2 {
+	font-size: 1.3125em;
+}
+
+h3,
+.h3 {
+	font-size: 1.1875em;
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+	font-size: 1em;
+}
+
+h4,
+.h4 {
+	font-size: 0.8125em;
+	text-transform: uppercase;
+}
+
+
+/**
+ * Lines, Quotes and Emphasis
+ */
+
+/**
+ * Lines
+ */
+hr {
+	border: 0;
+	border-top: 1px solid $color-gray-light;
+	margin: 2em auto;
+}
+
+/**
+ * Use a lighter yellow for better readability
+ */
+mark {
+	background: #fbf9c9;
+	color: $color-black;
+}
+
+
+/**
+ * Blockquotes
+ */
+
+blockquote {
+	font-size: 1.1875em;
+	font-style: italic;
+	margin: 0 0 $spacing;
+	padding-left: 0.8125em;
+	padding-right: 0.8125em;
+}
+
+cite {
+	color: $color-gray-dark;
+	display: block;
+	font-size: 0.8125em;
+	padding-top: 1em;
+}

@@ -12,14 +12,12 @@
 }
 
 code {
-	background-color: lighten( $color-gray-light, 7% );
 	color: $color-code;
-	padding: 0.25em;
 	word-wrap: break-word;
 }
 
 pre {
-	background-color: lighten( $color-gray-light, 6% );
+	background-color: lighten($color-gray-light, 6%);
 	display: block;
 	line-height: 1.5;
 	margin-bottom: $spacing;
@@ -30,10 +28,7 @@ pre {
 	word-break: break-all;
 
 	code {
-		background-color: transparent;
-		border: 0;
 		color: inherit;
 		font-size: 1em;
-		padding: 0;
 	}
 }

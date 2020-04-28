@@ -32,7 +32,7 @@ td {
  * Adds zebra striping
  */
 .table-striped tbody tr:nth-child(odd) {
-	background-color: lighten( $color-gray-light, 7% );
+	background-color: lighten($color-gray-light, 7%);
 }
 
 
