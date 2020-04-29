@@ -10,19 +10,125 @@ The `.container` class centers content on the page and restricts it to a maximum
 </div>
 ```
 
-Kraken no longer has a built-in grid system.
+Kraken also includes a simple, mobile-first grid system built with flexbox.
 
-Modern CSS makes building powerful layouts a lot easier, and the old one-size-fits-most system had become more bloated than useful.
+It's designed to be a starting point you can modify and build on (or delete altogether) depending on your project. You could also swap it out for [CSS Grid](https://cssgrid-generator.netlify.app/), or replace it with [a more fully featured flexbox grid](http://flexboxgrid.com/).
 
-<p class="margin-bottom-small">As a replacement, check out:</p>
+### Fraction-based layouts
 
-- [CSS Grid Generator](https://cssgrid-generator.netlify.app/)
-- [Flexbox Grid](http://flexboxgrid.com/)
+Kraken uses fraction-based grids, because it makes the math of grid-based layouts easier.
 
-<p class="margin-bottom-small">You can also learn how to roll your own from:</p>
+To create a grid, add a `<div>` with a `.row` class. You can create grids within a row by creating `<div>` elements with the `.grid-*` class.
 
-- [Every Layout](https://every-layout.dev/)
-- [Common Flexbox Patterns](https://tobiasahlin.com/blog/common-flexbox-patterns/)
+<div class="row">
+	<div class="grid-third grid-highlight">.grid-third</div>
+	<div class="grid-two-thirds grid-highlight">.grid-two-thirds</div>
+</div>
+
+<div class="row">
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+	<div class="grid-three-fourths grid-highlight">.grid-three-fourths</div>
+</div>
+
+<div class="row">
+	<div class="grid-half grid-highlight">.grid-half</div>
+	<div class="grid-half grid-highlight">.grid-half</div>
+</div>
+
+<div class="row">
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+	<div class="grid-half grid-highlight">.grid-half</div>
+	<div class="grid-fourth grid-highlight">.grid-fourth</div>
+</div>
+
+```html
+<div class="row">
+	<div class="grid-third">.grid-third</div>
+	<div class="grid-two-thirds">.grid-two-thirds</div>
+</div>
+
+<div class="row">
+	<div class="grid-fourth">.grid-fourth</div>
+	<div class="grid-three-fourths">.grid-three-fourths</div>
+</div>
+
+<div class="row">
+	<div class="grid-half">.grid-half</div>
+	<div class="grid-half">.grid-half</div>
+</div>
+
+<div class="row">
+	<div class="grid-fourth">.grid-fourth</div>
+	<div class="grid-half">.grid-half</div>
+	<div class="grid-fourth">.grid-fourth</div>
+</div>
+```
+
+### Automatically scaling grids
+
+The `.grid-auto` class will scale the content to fit whatever space is available.
+
+<div class="row">
+	<div class="grid-auto grid-highlight">.grid-auto</div>
+	<div class="grid-auto grid-highlight">.grid-auto</div>
+	<div class="grid-auto grid-highlight">.grid-auto</div>
+	<div class="grid-auto grid-highlight">.grid-auto</div>
+	<div class="grid-auto grid-highlight">.grid-auto</div>
+</div>
+
+```html
+<div class="row">
+	<div class="grid-auto">.grid-auto</div>
+	<div class="grid-auto">.grid-auto</div>
+	<div class="grid-auto">.grid-auto</div>
+	<div class="grid-auto">.grid-auto</div>
+	<div class="grid-auto">.grid-auto</div>
+</div>
+```
+
+### Content Choreography
+
+You can flip the order of grid items on bigger screens with a series of helper classes.
+
+Add the `.grid-first` class to move content to the beginning of a row, and the `.grid-last` class to move it to the end. Add the `.row-reverse` class to reverse the entire order of content in a row.
+
+<div class="row">
+	<div class="grid-third grid-highlight">1</div>
+	<div class="grid-third grid-first grid-highlight">2</div>
+	<div class="grid-third grid-highlight">3</div>
+</div>
+
+<div class="row">
+	<div class="grid-third grid-highlight">1</div>
+	<div class="grid-third grid-last grid-highlight">2</div>
+	<div class="grid-third grid-highlight">3</div>
+</div>
+
+<div class="row row-reverse">
+	<div class="grid-third grid-highlight">1</div>
+	<div class="grid-third grid-highlight">2</div>
+	<div class="grid-third grid-highlight">3</div>
+</div>
+
+```html
+<div class="row">
+	<div class="grid-third">1</div>
+	<div class="grid-third grid-first">2</div>
+	<div class="grid-third">3</div>
+</div>
+
+<div class="row">
+	<div class="grid-third">1</div>
+	<div class="grid-third grid-last">2</div>
+	<div class="grid-third">3</div>
+</div>
+
+<div class="row row-reverse">
+	<div class="grid-third">1</div>
+	<div class="grid-third">2</div>
+	<div class="grid-third">3</div>
+</div>
+```
 
 ## Typography
 

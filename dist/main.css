@@ -1,20 +1,10 @@
-/*! Kraken v11.0.2 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
+/*! Kraken v12.0.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
 @charset "UTF-8";
 /**
  * @section CSS Reset
  * Adapted from Andy Bell's modern CSS reset
  * @link https://hankchizljaw.com/wrote/a-modern-css-reset/
  */
-/**
- * Add box sizing to everything
- * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
 /**
  * Remove the tap delay in webkit
  * @link https://medium.com/@adactio/delay-a9df9edceef3#.7dmbl3xow
@@ -27,6 +17,16 @@ textarea,
 label,
 summary {
 	touch-action: manipulation;
+}
+
+/**
+ * Add box sizing to everything
+ * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
 }
 
 /**
@@ -84,7 +84,7 @@ embed {
  * Structure and layout
  */
 /**
- * Base grid styles: single column
+ * Base wrapper class
  */
 .container {
 	margin-left: auto;
@@ -94,18 +94,62 @@ embed {
 }
 
 /**
- * Clear any floats
+ * Grids
  */
-.container::before,
-.container::after {
-	display: table;
-	content: " ";
-}
+@media (min-width: 40em) {
+	.row {
+		display: flex;
+		margin-left: -0.4375em;
+		margin-right: -0.4375em;
+		justify-content: space-between;
+	}
 
-.container::after {
-	clear: both;
-}
+	.row-reverse {
+		flex-direction: row-reverse;
+	}
 
+	.grid-auto,
+.grid-fourth,
+.grid-third,
+.grid-two-thirds,
+.grid-half,
+.grid-three-fourths {
+		margin-left: 0.4375em;
+		margin-right: 0.4375em;
+	}
+
+	.grid-auto {
+		flex: 1 1;
+	}
+
+	.grid-fourth {
+		width: 25%;
+	}
+
+	.grid-third {
+		width: 33.33333%;
+	}
+
+	.grid-two-thirds {
+		width: 66.66666%;
+	}
+
+	.grid-half {
+		width: 50%;
+	}
+
+	.grid-three-fourths {
+		width: 75%;
+	}
+
+	.grid-first {
+		order: -1;
+	}
+
+	.grid-last {
+		order: 1;
+	}
+}
 /**
  * @section Typography
  * Sets font styles for entire site
@@ -784,6 +828,20 @@ td {
 		scroll-behavior: auto !important;
 	}
 }
+/**
+ * Clear any floats
+ */
+.clearfix:before, .container:before,
+.clearfix:after,
+.container:after {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after, .container:after {
+	clear: both;
+}
+
 /**
  * @section Print
  * Styling for printed content. Adapted from HTML5BP.
