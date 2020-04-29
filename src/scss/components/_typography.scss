@@ -3,13 +3,16 @@
  * Sets font styles for entire site
  */
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: $color-white;
 	color: $color-black;
 	font-family: $font-primary;
 	font-size: $font-size;
 	line-height: 1.5;
-	scroll-behavior: smooth;
 
 	@media (min-width: $bp-medium) {
 		line-height: 1.5625;

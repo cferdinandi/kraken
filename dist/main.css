@@ -1,4 +1,4 @@
-/*! Kraken v12.0.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
+/*! Kraken v12.0.1 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -154,13 +154,16 @@ embed {
  * @section Typography
  * Sets font styles for entire site
  */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: #ffffff;
 	color: #272727;
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	scroll-behavior: smooth;
 }
 @media (min-width: 40em) {
 	body {
