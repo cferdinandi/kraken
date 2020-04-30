@@ -21,6 +21,12 @@
 	text-decoration: none;
 	white-space: normal;
 
+	&,
+	&:focus,
+	&:visited {
+		color: $color-white;
+	}
+
 	&:hover,
 	&:active {
 		background-color: darken( $color-primary, 15% );

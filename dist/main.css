@@ -1,4 +1,4 @@
-/*! Kraken v12.0.2 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
+/*! Kraken v12.0.3 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -390,6 +390,9 @@ pre code {
 	padding: 0.5em 0.6875em;
 	text-decoration: none;
 	white-space: normal;
+}
+.btn, .btn:focus, .btn:visited {
+	color: #ffffff;
 }
 .btn:hover, .btn:active {
 	background-color: #005580;
