@@ -1,4 +1,4 @@
-/*! Kraken v12.0.1 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
+/*! Kraken v12.0.2 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/kraken */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -552,16 +552,6 @@ textarea {
 input:focus,
 textarea:focus {
 	border-color: rgba(82, 168, 236, 0.8);
-	outline: 0;
-	outline: thin dotted \9 ;
-}
-
-[type=file]:focus,
-[type=checkbox]:focus,
-select:focus {
-	outline: thin dotted;
-	outline: 0.3125em auto -webkit-focus-ring-color;
-	outline-offset: -0.125em;
 }
 
 /**

@@ -76,16 +76,6 @@ textarea {
 input:focus,
 textarea:focus {
 	border-color: rgba(82, 168, 236, 0.8);
-	outline: 0;
-	outline: thin dotted \9;
-}
-
-[type="file"]:focus,
-[type="checkbox"]:focus,
-select:focus {
-	outline: thin dotted;
-	outline: 0.3125em auto -webkit-focus-ring-color;
-	outline-offset: -0.125em;
 }
 
 
