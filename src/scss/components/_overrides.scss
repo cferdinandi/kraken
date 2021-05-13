@@ -27,7 +27,7 @@
  */
 
 .text-muted {
-	color: $color-gray-dark;
+	color: var(--color-gray-dark);
 }
 
 
@@ -80,11 +80,11 @@
 }
 
 .margin-top {
-	margin-top: $spacing;
+	margin-top: var(--spacing);
 }
 
 .margin-bottom {
-	margin-bottom: $spacing;
+	margin-bottom: var(--spacing);
 }
 
 .margin-bottom-small {
@@ -109,7 +109,7 @@
 }
 
 .padding-top {
-	padding-top: $spacing;
+	padding-top: var(--spacing);
 }
 
 .padding-top-small {
@@ -121,7 +121,7 @@
 }
 
 .padding-bottom {
-	padding-bottom: $spacing;
+	padding-bottom: var(--spacing);
 }
 
 .padding-bottom-small {

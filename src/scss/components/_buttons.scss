@@ -8,9 +8,9 @@
  * Primary buttons
  */
 .btn {
-	background-color: $color-primary;
-	border: 1px solid $color-primary;
-	color: $color-white;
+	background-color: var(--color-primary);
+	border: 1px solid var(--color-primary);
+	color: var(--color-white);
 	display: inline-block;
 	font-size: 0.9375em;
 	font-weight: normal;
@@ -24,14 +24,14 @@
 	&,
 	&:focus,
 	&:visited {
-		color: $color-white;
+		color: var(--color-white);
 	}
 
 	&:hover,
 	&:active {
-		background-color: darken( $color-primary, 15% );
-		border-color: darken( $color-primary, 15% );
-		color: $color-white;
+		background-color: var(--color-primary-dark);
+		border-color: var(--color-primary-dark);
+		color: var(--color-white);
 		text-decoration: none;
 	}
 }
@@ -41,13 +41,13 @@
  * Secondary buttons
  */
 .btn-secondary {
-	background-color: $color-gray-dark;
-	border-color: $color-gray-dark;
+	background-color: var(--color-secondary);
+	border-color: var(--color-secondary);
 
 	&:hover,
 	&:active {
-		background-color: darken( $color-gray-dark, 15% );
-		border-color: darken( $color-gray-dark, 15% );
+		background-color: var(--color-secondary-dark);
+		border-color: var(--color-secondary-dark);
 	}
 }
 

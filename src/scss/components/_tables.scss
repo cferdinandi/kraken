@@ -6,7 +6,7 @@
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	margin-bottom: $spacing;
+	margin-bottom: var(--spacing);
 	max-width: 100%;
 	width: 100%;
 }
@@ -18,13 +18,13 @@ td {
 }
 
 th {
-	border-bottom: 0.125em solid $color-gray-light;
+	border-bottom: 0.125em solid var(--color-gray-light);
 	font-weight: bold;
 	vertical-align: bottom;
 }
 
 td {
-	border-top: 1px solid $color-gray-light;
+	border-top: 1px solid var(--color-gray-light);
 	vertical-align: top;
 }
 
@@ -32,7 +32,7 @@ td {
  * Adds zebra striping
  */
 .table-striped tbody tr:nth-child(odd) {
-	background-color: lighten($color-gray-light, 7%);
+	background-color: var(--color-gray-lighter);
 }
 
 

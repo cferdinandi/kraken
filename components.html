@@ -193,8 +193,8 @@
 <pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
     &lt;p&gt;The &lt;code&gt;.container&lt;/code&gt; class centers content on the page and restricts it to a maximum width.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-<p>Kraken also includes a simple, mobile-first grid system built with flexbox.</p>
-<p>It&#39;s designed to be a starting point you can modify and build on (or delete altogether) depending on your project. You could also swap it out for <a href="https://cssgrid-generator.netlify.app/">CSS Grid</a>, or replace it with <a href="http://flexboxgrid.com/">a more fully featured flexbox grid</a>.</p>
+<p>Kraken also includes a simple, mobile-first grid system built with CSS Grid.</p>
+<p>It&#39;s designed to be a starting point you can modify and build on (or delete altogether) depending on your project. Modify as needed.</p>
 <h3 id="fraction-based-layouts">Fraction-based layouts</h3>
 <p>Kraken uses fraction-based grids, because it makes the math of grid-based layouts easier.</p>
 <p>To create a grid, add a <code>&lt;div&gt;</code> with a <code>.row</code> class. You can create grids within a row by creating <code>&lt;div&gt;</code> elements with the <code>.grid-*</code> class.</p>
@@ -239,60 +239,85 @@
     &lt;div class=&quot;grid-half&quot;&gt;.grid-half&lt;/div&gt;
     &lt;div class=&quot;grid-fourth&quot;&gt;.grid-fourth&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<h3 id="automatically-scaling-grids">Automatically scaling grids</h3>
-<p>The <code>.grid-auto</code> class will scale the content to fit whatever space is available.</p>
-<div class="row">
-    <div class="grid-auto grid-highlight">.grid-auto</div>
-    <div class="grid-auto grid-highlight">.grid-auto</div>
-    <div class="grid-auto grid-highlight">.grid-auto</div>
-    <div class="grid-auto grid-highlight">.grid-auto</div>
-    <div class="grid-auto grid-highlight">.grid-auto</div>
+<h3 id="more-or-less-space-between-columns">More or less space between columns</h3>
+<p>You can double the space between columns in a grid by adding the <code>.row-gap-large</code> class, or remove it altogether by adding the <code>.row-no-gap</code> class.</p>
+<div class="row row-gap-large">
+    <div class="grid-third grid-highlight">.grid-third</div>
+    <div class="grid-third grid-highlight">.grid-third</div>
+    <div class="grid-third grid-highlight">.grid-third</div>
 </div>
 
-<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;grid-auto&quot;&gt;.grid-auto&lt;/div&gt;
-    &lt;div class=&quot;grid-auto&quot;&gt;.grid-auto&lt;/div&gt;
-    &lt;div class=&quot;grid-auto&quot;&gt;.grid-auto&lt;/div&gt;
-    &lt;div class=&quot;grid-auto&quot;&gt;.grid-auto&lt;/div&gt;
-    &lt;div class=&quot;grid-auto&quot;&gt;.grid-auto&lt;/div&gt;
+<div class="row row-no-gap">
+    <div class="grid-third grid-highlight">.grid-third</div>
+    <div class="grid-third grid-highlight">.grid-third</div>
+    <div class="grid-third grid-highlight">.grid-third</div>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;row row-gap-large&quot;&gt;
+    &lt;div class=&quot;grid-third&quot;&gt;.grid-third&lt;/div&gt;
+    &lt;div class=&quot;grid-third&quot;&gt;.grid-third&lt;/div&gt;
+    &lt;div class=&quot;grid-third&quot;&gt;.grid-third&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row row-no-gap&quot;&gt;
+    &lt;div class=&quot;grid-third&quot;&gt;.grid-third&lt;/div&gt;
+    &lt;div class=&quot;grid-third&quot;&gt;.grid-third&lt;/div&gt;
+    &lt;div class=&quot;grid-third&quot;&gt;.grid-third&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3 id="automatically-scaling-grids">Automatically scaling grids</h3>
+<p>The <code>.row-auto</code> class will scale the content to fit whatever space is available.</p>
+<div class="row row-auto">
+    <div class="grid-highlight">Auto Scales</div>
+    <div class="grid-highlight">Auto Scales</div>
+    <div class="grid-highlight">Auto Scales</div>
+    <div class="grid-highlight">Auto Scales</div>
+    <div class="grid-highlight">Auto Scales</div>
+</div>
+
+<pre><code class="language-html">&lt;div class=&quot;row row-auto&quot;&gt;
+    &lt;div&gt;Auto Scales&lt;/div&gt;
+    &lt;div&gt;Auto Scales&lt;/div&gt;
+    &lt;div&gt;Auto Scales&lt;/div&gt;
+    &lt;div&gt;Auto Scales&lt;/div&gt;
+    &lt;div&gt;Auto Scales&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 <h3 id="content-choreography">Content Choreography</h3>
 <p>You can flip the order of grid items on bigger screens with a series of helper classes.</p>
-<p>Add the <code>.grid-first</code> class to move content to the beginning of a row, and the <code>.grid-last</code> class to move it to the end. Add the <code>.row-reverse</code> class to reverse the entire order of content in a row.</p>
+<p>Add the <code>.grid-start-first</code> class to move content to the beginning of a row. Use <code>.grid-start-{fraction}</code> classes start content at a specific spot in a grid.</p>
 <div class="row">
     <div class="grid-third grid-highlight">1</div>
-    <div class="grid-third grid-first grid-highlight">2</div>
+    <div class="grid-third grid-start-first grid-highlight">2</div>
     <div class="grid-third grid-highlight">3</div>
 </div>
 
 <div class="row">
     <div class="grid-third grid-highlight">1</div>
-    <div class="grid-third grid-last grid-highlight">2</div>
+    <div class="grid-third grid-start-two-thirds grid-highlight">2</div>
     <div class="grid-third grid-highlight">3</div>
 </div>
 
-<div class="row row-reverse">
-    <div class="grid-third grid-highlight">1</div>
-    <div class="grid-third grid-highlight">2</div>
-    <div class="grid-third grid-highlight">3</div>
+<div class="row">
+    <div class="grid-third grig-start-two-thirds grid-highlight">1</div>
+    <div class="grid-third grid-start-third grid-highlight">2</div>
+    <div class="grid-third grid-start-first grid-highlight">3</div>
 </div>
 
 <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;grid-third&quot;&gt;1&lt;/div&gt;
-    &lt;div class=&quot;grid-third grid-first&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;grid-third grid-start-first&quot;&gt;2&lt;/div&gt;
     &lt;div class=&quot;grid-third&quot;&gt;3&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;grid-third&quot;&gt;1&lt;/div&gt;
-    &lt;div class=&quot;grid-third grid-last&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;grid-third grid-start-two-thirds&quot;&gt;2&lt;/div&gt;
     &lt;div class=&quot;grid-third&quot;&gt;3&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row row-reverse&quot;&gt;
-    &lt;div class=&quot;grid-third&quot;&gt;1&lt;/div&gt;
-    &lt;div class=&quot;grid-third&quot;&gt;2&lt;/div&gt;
-    &lt;div class=&quot;grid-third&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;grid-third grig-start-two-thirds&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;grid-third grid-start-third&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;grid-third grid-start-first&quot;&gt;3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 <h2 id="typography">Typography</h2>
 <p>Kraken uses relative sizing (ems and %, not pixels) for everything.</p>

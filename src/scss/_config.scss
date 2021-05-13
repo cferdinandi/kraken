@@ -6,27 +6,38 @@
 // 1px, 4px, 5px, 8px, 9px, 11px, 12px, 13px, 15px, 16px, 19px, 21px, 24px, 28px, 32px, 48px, 64px, 80px, 96px
 // line height: 1.5em on small screens, 1.5625em on big screens
 
+/**
+ * Configs
+ */
+:root {
 
-// Colors
-$color-primary: #0088cc;
-$color-black: #272727;
-$color-white: #ffffff;
+	/* Colors */
+	--color-primary: #0088cc;
+	--color-primary-dark: #005580;
+	--color-secondary: #377f31;
+	--color-secondary-dark: #2C6327;
+	--color-code: #dd1144;
+	--color-highlight: #fbf9c9;
 
-$color-info: #0088cc;
-$color-success: #377f31;
-$color-danger: #880e14;
-$color-warning: #dba909;
-$color-code: #dd1144;
+	--color-black: #272727;
+	--color-white: #ffffff;
+	--color-gray-dark: #808080;
+	--color-gray-darker: #555555;
+	--color-gray-medium: #B8B8B8;
+	--color-gray-light: #e5e5e5;
+	--color-gray-lighter: #f7f7f7;
 
-$color-gray-dark: #808080;
-$color-gray-light: #e5e5e5;
-$color-gray-lighter: #f7f7f7;
+	/* Fonts */
+	--font-primary: "Helvetica Neue", Arial, sans-serif;
+	--font-monospace: Menlo, Monaco, "Courier New", monospace;
 
+	/* Sizes */
+	--font-size: 100%;
+	--spacing: 1.5625em;
+	--container-width: 88%;
+	--container-max-width: 80em;
 
-// Font Stacks
-$font-primary: "Helvetica Neue", Arial, sans-serif;
-$font-monospace: Menlo, Monaco, "Courier New", monospace;
-
+}
 
 // Breakpoints
 $bp-xsmall: 20em;
@@ -34,10 +45,3 @@ $bp-small: 30em;
 $bp-medium: 40em;
 $bp-large: 60em;
 $bp-xlarge: 80em;
-
-
-// Sizing
-$font-size: 100%;
-$spacing: 1.5625em;
-$container-width: 88%;
-$container-max-width: 80em;

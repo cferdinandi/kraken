@@ -8,10 +8,10 @@ html {
 }
 
 body {
-	background: $color-white;
-	color: $color-black;
-	font-family: $font-primary;
-	font-size: $font-size;
+	background: var(--color-white);
+	color: var(--color-black);
+	font-family: var(--font-primary);
+	font-size: var(--font-size);
 	line-height: 1.5;
 
 	@media (min-width: $bp-medium) {
@@ -20,7 +20,7 @@ body {
 }
 
 p {
-	margin: 0 0 $spacing;
+	margin: 0 0 var(--spacing);
 }
 
 
@@ -29,14 +29,14 @@ p {
  */
 
 a {
-	color: $color-primary;
+	color: var(--color-primary);
 	text-decoration-skip-ink: auto;
 	word-wrap: break-word;
 
 	&:active,
 	&:focus,
 	&:hover {
-		color: darken($color-primary, 15%);
+		color: var(--color-primary-dark);
 	}
 }
 
@@ -47,7 +47,7 @@ a {
 
 ul,
 ol {
-	margin: 0 0 $spacing 2em;
+	margin: 0 0 var(--spacing) 2em;
 	padding: 0;
 }
 
@@ -65,7 +65,7 @@ dd {
 }
 
 dd {
-	margin-bottom: $spacing;
+	margin-bottom: var(--spacing);
 }
 
 dt {
@@ -167,7 +167,7 @@ h4,
  */
 hr {
 	border: 0;
-	border-top: 1px solid $color-gray-light;
+	border-top: 1px solid var(--color-gray-light);
 	margin: 2em auto;
 }
 
@@ -175,8 +175,8 @@ hr {
  * Use a lighter yellow for better readability
  */
 mark {
-	background: #fbf9c9;
-	color: $color-black;
+	background: var(--color-highlight);
+	color: var(--color-black);
 }
 
 
@@ -187,13 +187,13 @@ mark {
 blockquote {
 	font-size: 1.1875em;
 	font-style: italic;
-	margin: 0 0 $spacing;
+	margin: 0 0 var(--spacing);
 	padding-left: 0.8125em;
 	padding-right: 0.8125em;
 }
 
 cite {
-	color: $color-gray-dark;
+	color: var(--color-gray-dark);
 	display: block;
 	font-size: 0.8125em;
 	padding-top: 1em;

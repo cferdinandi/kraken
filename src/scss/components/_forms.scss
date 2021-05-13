@@ -5,7 +5,7 @@
 
 form,
 fieldset {
-	margin-bottom: $spacing;
+	margin-bottom: var(--spacing);
 }
 
 fieldset {
@@ -31,7 +31,7 @@ input,
 optgroup,
 select,
 textarea {
-	color: lighten($color-black, 18%); /* 1 */
+	color: var(--color-gray-darker); /* 1 */
 	font: inherit; /* 2 */
 	margin: 0; /* 3 */
 	padding: 0.3125em;
@@ -40,7 +40,7 @@ textarea {
 input,
 textarea,
 select {
-	border: 1px solid lighten( $color-gray-dark, 22% );
+	border: 1px solid var(--color-gray-medium);
 	display: block;
 	line-height: 1.5;
 	margin-bottom: 1.1875em;
@@ -124,13 +124,13 @@ textarea:focus {
  */
 .btn-search {
 	display: inline;
-	color: $color-gray-dark;
+	color: var(--color-gray-dark);
 	border: none;
 	background: none;
 	margin-left: -2.5em;
 	margin-bottom: 0;
 
 	&:hover {
-		color: darken($color-gray-dark, 15%);
+		color: var(--color-gray-darker);
 	}
 }

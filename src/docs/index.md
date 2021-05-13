@@ -25,6 +25,13 @@ Kraken is built to be flexible and modular, with performance and accessibility i
 
 ## What's new?
 
+### Version 13
+
+Kraken 13 adds modern CSS updates.
+
+- Switched from flexbox to CSS Grid for more predictability and control over layouts.
+- Implemented CSS custom properties (also known as CSS variables) for all colors, typefaces, and sizes, making customization faster and easier.
+
 ### Version 12
 
 Added a simple flexbox grid back in. The new grid is designed to be a starting point (and possibly removed altogether) rather than a complete templating system.

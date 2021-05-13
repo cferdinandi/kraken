@@ -10,9 +10,9 @@ The `.container` class centers content on the page and restricts it to a maximum
 </div>
 ```
 
-Kraken also includes a simple, mobile-first grid system built with flexbox.
+Kraken also includes a simple, mobile-first grid system built with CSS Grid.
 
-It's designed to be a starting point you can modify and build on (or delete altogether) depending on your project. You could also swap it out for [CSS Grid](https://cssgrid-generator.netlify.app/), or replace it with [a more fully featured flexbox grid](http://flexboxgrid.com/).
+It's designed to be a starting point you can modify and build on (or delete altogether) depending on your project. Modify as needed.
 
 ### Fraction-based layouts
 
@@ -64,25 +64,55 @@ To create a grid, add a `<div>` with a `.row` class. You can create grids within
 </div>
 ```
 
-### Automatically scaling grids
+### More or less space between columns
 
-The `.grid-auto` class will scale the content to fit whatever space is available.
+You can double the space between columns in a grid by adding the `.row-gap-large` class, or remove it altogether by adding the `.row-no-gap` class.
 
-<div class="row">
-	<div class="grid-auto grid-highlight">.grid-auto</div>
-	<div class="grid-auto grid-highlight">.grid-auto</div>
-	<div class="grid-auto grid-highlight">.grid-auto</div>
-	<div class="grid-auto grid-highlight">.grid-auto</div>
-	<div class="grid-auto grid-highlight">.grid-auto</div>
+<div class="row row-gap-large">
+	<div class="grid-third grid-highlight">.grid-third</div>
+	<div class="grid-third grid-highlight">.grid-third</div>
+	<div class="grid-third grid-highlight">.grid-third</div>
+</div>
+
+<div class="row row-no-gap">
+	<div class="grid-third grid-highlight">.grid-third</div>
+	<div class="grid-third grid-highlight">.grid-third</div>
+	<div class="grid-third grid-highlight">.grid-third</div>
 </div>
 
 ```html
-<div class="row">
-	<div class="grid-auto">.grid-auto</div>
-	<div class="grid-auto">.grid-auto</div>
-	<div class="grid-auto">.grid-auto</div>
-	<div class="grid-auto">.grid-auto</div>
-	<div class="grid-auto">.grid-auto</div>
+<div class="row row-gap-large">
+	<div class="grid-third">.grid-third</div>
+	<div class="grid-third">.grid-third</div>
+	<div class="grid-third">.grid-third</div>
+</div>
+
+<div class="row row-no-gap">
+	<div class="grid-third">.grid-third</div>
+	<div class="grid-third">.grid-third</div>
+	<div class="grid-third">.grid-third</div>
+</div>
+```
+
+### Automatically scaling grids
+
+The `.row-auto` class will scale the content to fit whatever space is available.
+
+<div class="row row-auto">
+	<div class="grid-highlight">Auto Scales</div>
+	<div class="grid-highlight">Auto Scales</div>
+	<div class="grid-highlight">Auto Scales</div>
+	<div class="grid-highlight">Auto Scales</div>
+	<div class="grid-highlight">Auto Scales</div>
+</div>
+
+```html
+<div class="row row-auto">
+	<div>Auto Scales</div>
+	<div>Auto Scales</div>
+	<div>Auto Scales</div>
+	<div>Auto Scales</div>
+	<div>Auto Scales</div>
 </div>
 ```
 
@@ -90,43 +120,43 @@ The `.grid-auto` class will scale the content to fit whatever space is available
 
 You can flip the order of grid items on bigger screens with a series of helper classes.
 
-Add the `.grid-first` class to move content to the beginning of a row, and the `.grid-last` class to move it to the end. Add the `.row-reverse` class to reverse the entire order of content in a row.
+Add the `.grid-start-first` class to move content to the beginning of a row. Use `.grid-start-{fraction}` classes start content at a specific spot in a grid.
 
 <div class="row">
 	<div class="grid-third grid-highlight">1</div>
-	<div class="grid-third grid-first grid-highlight">2</div>
+	<div class="grid-third grid-start-first grid-highlight">2</div>
 	<div class="grid-third grid-highlight">3</div>
 </div>
 
 <div class="row">
 	<div class="grid-third grid-highlight">1</div>
-	<div class="grid-third grid-last grid-highlight">2</div>
+	<div class="grid-third grid-start-two-thirds grid-highlight">2</div>
 	<div class="grid-third grid-highlight">3</div>
 </div>
 
-<div class="row row-reverse">
-	<div class="grid-third grid-highlight">1</div>
-	<div class="grid-third grid-highlight">2</div>
-	<div class="grid-third grid-highlight">3</div>
+<div class="row">
+	<div class="grid-third grig-start-two-thirds grid-highlight">1</div>
+	<div class="grid-third grid-start-third grid-highlight">2</div>
+	<div class="grid-third grid-start-first grid-highlight">3</div>
 </div>
 
 ```html
 <div class="row">
 	<div class="grid-third">1</div>
-	<div class="grid-third grid-first">2</div>
+	<div class="grid-third grid-start-first">2</div>
 	<div class="grid-third">3</div>
 </div>
 
 <div class="row">
 	<div class="grid-third">1</div>
-	<div class="grid-third grid-last">2</div>
+	<div class="grid-third grid-start-two-thirds">2</div>
 	<div class="grid-third">3</div>
 </div>
 
-<div class="row row-reverse">
-	<div class="grid-third">1</div>
-	<div class="grid-third">2</div>
-	<div class="grid-third">3</div>
+<div class="row">
+	<div class="grid-third grig-start-two-thirds">1</div>
+	<div class="grid-third grid-start-third">2</div>
+	<div class="grid-third grid-start-first">3</div>
 </div>
 ```
 

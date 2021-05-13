@@ -7,20 +7,20 @@
  kbd,
  pre,
  samp {
-	font-family: $font-monospace;
+	font-family: var(--font-monospace);
 	font-size: 0.875em;
 }
 
 code {
-	color: $color-code;
+	color: var(--color-code);
 	word-wrap: break-word;
 }
 
 pre {
-	background-color: lighten($color-gray-light, 6%);
+	background-color: var(--color-gray-lighter);
 	display: block;
 	line-height: 1.5;
-	margin-bottom: $spacing;
+	margin-bottom: var(--spacing);
 	overflow: auto;
 	padding: 0.8125em;
 	tab-size: 4;
