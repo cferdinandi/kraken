@@ -21,7 +21,7 @@
 		"buildwin": "cmd /c npm run cleanwin && npm run css && npm run docs"
 	},
 	"devDependencies": {
-		"marked": "^1.0.0",
+		"marked": "^4.0.10",
 		"sass": "^1.26.5"
 	}
 }
